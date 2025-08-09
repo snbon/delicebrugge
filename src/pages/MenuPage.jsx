@@ -85,7 +85,7 @@ export default function MenuPage() {
                     )}
                   </div>
                   {it.desc && (
-                    <div className="mt-1 text-sm text-neutral-700 leading-relaxed">{it.desc}</div>
+                    <div className="mt-1 text-sm text-neutral-700 leading-relaxed whitespace-pre-line">{it.desc}</div>
                   )}
                 </div>
               ))}

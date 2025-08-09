@@ -21,7 +21,8 @@
         {"id":"picon","names":{"en":"Picon White Wine","nl":"Picon Wit Wijn"},"price":10.00},
         {"id":"sangria","names":{"en":"Sangria Red","nl":"Sangria Rood"},"price":11.00},
         {"id":"nona","names":{"en":"Nona","nl":"Nona"},"descriptions":{"en":"Non-alcoholic gin"},"price":9.00},
-        {"id":"funny-pisang","names":{"en":"Funny Pisang Orange","nl":"Funny Pisang Orange"},"price":8.00},
+        {"id":"funny-pisang","names":{"en":"Funny Pisang Orange","nl":"Funny Pisang Orange"},"descriptions":{"en":"Non-alcoholic"},"price":8.00},
+        {"id":"sterk-dranken","names":{"en":"SPIRITS","nl":"STERKE DRANKEN"}},
         {"id":"whisky-jb","names":{"en":"J&B","nl":"J&B"},"price":9.50},
         {"id":"whisky-jw","names":{"en":"Johnnie Walker Red","nl":"Johnnie Walker Red"},"price":10.00},
         {"id":"whisky-jd","names":{"en":"Jack Daniels","nl":"Jack Daniels"},"price":11.00},
@@ -44,16 +45,64 @@
       "id": "house-wines",
       "titles": {"en":"House Wines & Sparkling","nl":"Huiswijn & Schuimwijn"},
       "items": [
-        {"id":"delice-chardonnay-gl","names":{"en":"Delice Chardonnay (glass)","nl":"Delice Chardonnay (glas)"},"price":6.50},
-        {"id":"sauvignon-gl","names":{"en":"Sauvignon Blanc (glass)","nl":"Sauvignon Blanc (glas)"},"price":7.00},
-        {"id":"merlot-gl","names":{"en":"Delice Merlot (glass)","nl":"Delice Merlot (glas)"},"price":6.50},
-        {"id":"ventoux-gl","names":{"en":"Ventoux (glass)","nl":"Ventoux (glas)"},"price":7.00},
-        {"id":"gris-gl","names":{"en":"Gris D’Amelie (glass)","nl":"Gris D’Amelie (glas)"},"price":7.00},
-        {"id":"cava-gl","names":{"en":"Cava (glass)","nl":"Cava (glas)"},"price":8.00},
-        {"id":"prosecco-rose-gl","names":{"en":"Prosecco Rosé (glass)","nl":"Prosecco Rosé (glas)"},"price":9.00},
-        {"id":"coupe-champagne","names":{"en":"Coupe Champagne (Cru)","nl":"Coupe Champagne (Cru)"},"price":12.00},
-        {"id":"delice-chardonnay-50","names":{"en":"Delice Chardonnay (50cl)","nl":"Delice Chardonnay (50cl)"},"price":22.00},
-        {"id":"sauvignon-50","names":{"en":"Sauvignon Blanc (50cl)","nl":"Sauvignon Blanc (50cl)"},"price":25.00}
+        {"id":"delice-chardonnay-gl",
+          "names":
+            {
+              "en":"White: Delice Chardonnay (glass)",
+              "nl":"Wit:Delice Chardonnay (glas)"},
+          "descriptions":
+            {
+              "en":"50CL €22.00 \n 75CL €32.00"
+              },
+          "price":6.50
+        },
+        {
+          "id":"sauvignon-gl",
+          "names":{"en":"White Wine: Sauvignon Blanc (glass)","nl":"Wit: Sauvignon Blanc (glas)"},
+          "descriptions":{"en":"50CL €25.00 \n 75CL €35.00"},
+          "price":7.00
+        },
+        {
+          "id":"merlot-gl",
+          "names":{"en":"Red: Delice Merlot (glass)","nl":"Rood:Delice Merlot (glas)"},
+          "descriptions":{"en":"50CL €22.00 \n 75CL €32.00"},
+          "price":6.50
+        },
+        {
+          "id":"ventoux-gl",
+          "names":{"en":"Red: Ventoux (glass)","nl":"Rood:Ventoux (glas)"},
+          "descriptions":{"en":"50CL €25.00 \n 75CL €35.00"},
+          "price":7.00
+        },
+        {
+          "id":"gris-gl",
+          "names":{"en":"Rosé:Gris D’Amelie (glass)","nl":"Rosé: Gris D’Amelie (glas)"},
+          "descriptions":{"en":"50CL €25.00 \n 75CL €35.00"},
+          "price":7.00
+        },
+        {
+          "id":"zoet-wijn",
+          "names":{"en":"Sweet wine (glass)","nl":"Zoetwijn (glas)"},
+          "descriptions":{"en":"50CL €25.00 \n 75CL €35.00"},
+          "price":7.00
+        },
+        {
+          "id":"cava-gl",
+          "names":{"en":"Sparkling:Cava (glass)","nl":"Schuinwijn: Cava (glas)"},
+          "descriptions":{"en":"75CL €40.00"},
+          "price":8.00
+        },
+        {
+          "id":"prosecco-rose-gl",
+          "names":{"en":"Sparkling: Prosecco Rosé (glass)","nl":"Schuimwijn:Prosecco Rosé (glas)"},
+          "descriptions":{"en":"75CL €45.00"},
+          "price":9.00
+        },
+        {
+          "id":"coupe-champagne",
+          "names":{"en":"Coupe Champagne (Cru)","nl":"Coupe Champagne (Cru)"},
+          "price":12.00
+        }
       ]
     },
     {
@@ -133,13 +182,13 @@
       "id": "voorgerechten",
       "titles": {"en":"Starters • Soups","nl":"Koude & Warme Voorgerechten • Soep"},
       "items": [
-        {"id":"pate","names":{"en":"Paté with onion jam & toast, salad","nl":"Paté met Uienconfituur & toast, salade"},"price":16.00},
-        {"id":"zalm","names":{"en":"Smoked salmon with toast & salad","nl":"Gerookte zalm met toast & salade"},"price":21.00},
-        {"id":"carpaccio","names":{"en":"Beef carpaccio","nl":"Carpaccio van rund"},"price":21.00},
-        {"id":"kaaskroket","names":{"en":"Homemade cheese croquettes (2)","nl":"Huisgemaakte kaaskroketten (2st.)"},"price":17.00},
-        {"id":"garnaalkroket","names":{"en":"Homemade shrimp croquettes (2)","nl":"Huisgemaakte garnaalkroketten (2st.)"},"price":19.00},
-        {"id":"duo-kroket","names":{"en":"Duo croquettes (2)","nl":"Duo kroketten (2st.)"},"price":21.00},
-        {"id":"scampi-5","names":{"en":"Scampi in garlic butter (5)","nl":"Scampi in lookboter (5st.)"},"price":19.00},
+        {"id":"pate","names":{"en":"Cold: Paté with onion jam & toast, salad","nl":"Koud: Paté met Uienconfituur & toast, salade"},"price":16.00},
+        {"id":"zalm","names":{"en":"Cold: Smoked salmon with toast & salad","nl":"Koud: Gerookte zalm met toast & salade"},"price":21.00},
+        {"id":"carpaccio","names":{"en":"Cold: Beef carpaccio","nl":"Koud: Carpaccio van rund"},"price":21.00},
+        {"id":"kaaskroket","names":{"en":"Hot:Homemade cheese croquettes (2)","nl":"Warm: Huisgemaakte kaaskroketten (2st.)"},"price":17.00},
+        {"id":"garnaalkroket","names":{"en":"Hot: Homemade shrimp croquettes (2)","nl":"Warm: Huisgemaakte garnaalkroketten (2st.)"},"price":19.00},
+        {"id":"duo-kroket","names":{"en":"Hot: Duo croquettes (2)","nl":"Warm: Duo kroketten (2st.)"},"price":21.00},
+        {"id":"scampi-5","names":{"en":"Hot: Scampi in garlic butter (5)","nl":"Warm: Scampi in lookboter (5st.)"},"price":19.00},
         {"id":"soep-dag","names":{"en":"Soup of the day","nl":"Soep van de dag"},"price":8.50},
         {"id":"vissoep","names":{"en":"Fish soup","nl":"Vissoep"},"price":16.00}
       ]
@@ -184,7 +233,7 @@
         {"id":"scampi-9","names":{"en":"Scampi in garlic butter (9) with fries","nl":"Scampi in lookboter (9st.) met frieten"},"price":27.00},
         {"id":"scampi-chef","names":{"en":"Scampi of the Chef (9)","nl":"Scampi van de Chef (9st.)"},"price":30.00},
         {"id":"fish-casserole","names":{"en":"Fish casserole with mashed potatoes","nl":"Vispannetje met puree"},"price":27.00},
-        {"id":"sliptong","names":{"en":"Sole pan-fried in butter with salad & fries","nl":"Sliptongen (3st.) in boter gebakken met salade en frieten"},"price":31.00},
+        {"id":"sliptong","names":{"en":"Sole pan-fried in butter with salad & fries","nl":"Sliptongen in boter gebakken met salade en frieten"},"price":29.00},
         {"id":"fish-chips","names":{"en":"Fish N’Chips","nl":"Fish N’Chips"},"price":20.00},
         {"id":"mussels-nature","names":{"en":"Mussels nature","nl":"Mosselen Natuur"},"price":26.00},
         {"id":"mussels-white-wine","names":{"en":"Mussels with white wine","nl":"Mosselen met Witte Wijn"},"price":28.00},
