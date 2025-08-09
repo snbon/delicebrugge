@@ -1,0 +1,224 @@
+{
+  "currency": "€",
+  "sections": [
+    {
+      "id": "aperitief",
+      "titles": {"en":"Aperitif & Spirits","nl":"Aperitief Sterke Dranken","fr":"Apéritifs & Spiritueux","de":"Aperitifs & Spirituosen","es":"Aperitivos y licores"},
+      "items": [
+        {"id":"aperitief-maison","names":{"en":"Aperitief Maison","nl":"Aperitief Maison"},"descriptions":{"en":"Apricot, Gordon gin, white wine, orange juice"},"price":12.00},
+        {"id":"aperol","names":{"en":"Aperol Spritz","nl":"Aperol Spritz"},"price":11.00},
+        {"id":"cava","names":{"en":"Cava","nl":"Cava"},"price":8.00},
+        {"id":"prosecco-rose","names":{"en":"Prosecco Rosé","nl":"Prosecco Rosé"},"price":9.00},
+        {"id":"kirr","names":{"en":"Kirr","nl":"Kirr"},"price":7.00},
+        {"id":"kirr-royale","names":{"en":"Kirr Royale","nl":"Kirr Royale"},"price":11.00},
+        {"id":"martini","names":{"en":"Martini White/Red","nl":"Martini Wit/Rood"},"price":6.50},
+        {"id":"porto","names":{"en":"Porto White/Red","nl":"Porto Wit/Rood"},"price":6.50},
+        {"id":"sherry","names":{"en":"Sherry Dry","nl":"Sherry Dry"},"price":6.50},
+        {"id":"pineau","names":{"en":"Pineau Des Charentes","nl":"Pineau Des Charentes"},"price":6.50},
+        {"id":"ricard","names":{"en":"Ricard","nl":"Ricard"},"price":9.00},
+        {"id":"pisang-orange","names":{"en":"Pisang Orange","nl":"Pisang Orange"},"price":10.00},
+        {"id":"campari-orange","names":{"en":"Campari Orange","nl":"Campari Orange"},"price":10.00},
+        {"id":"picon","names":{"en":"Picon White Wine","nl":"Picon Wit Wijn"},"price":10.00},
+        {"id":"sangria","names":{"en":"Sangria Red","nl":"Sangria Rood"},"price":11.00},
+        {"id":"nona","names":{"en":"Nona","nl":"Nona"},"descriptions":{"en":"Non-alcoholic gin"},"price":9.00},
+        {"id":"funny-pisang","names":{"en":"Funny Pisang Orange","nl":"Funny Pisang Orange"},"price":8.00},
+        {"id":"whisky-jb","names":{"en":"J&B","nl":"J&B"},"price":9.50},
+        {"id":"whisky-jw","names":{"en":"Johnnie Walker Red","nl":"Johnnie Walker Red"},"price":10.00},
+        {"id":"whisky-jd","names":{"en":"Jack Daniels","nl":"Jack Daniels"},"price":11.00},
+        {"id":"cognac","names":{"en":"Cognac Martell","nl":"Cognac Martell"},"price":11.00},
+        {"id":"calvados","names":{"en":"Calvados","nl":"Calvados"},"price":10.00},
+        {"id":"gordon","names":{"en":"Gordon’s Gin","nl":"Gordon’s Gin"},"price":9.50},
+        {"id":"bombay","names":{"en":"Bombay Safari","nl":"Bombay Safari"},"price":11.00},
+        {"id":"amaretto","names":{"en":"Amaretto","nl":"Amaretto"},"price":10.00},
+        {"id":"baileys","names":{"en":"Baileys","nl":"Baileys"},"price":10.00},
+        {"id":"cointreau","names":{"en":"Cointreau","nl":"Cointreau"},"price":10.00},
+        {"id":"grand-marnier","names":{"en":"Grand Marnier","nl":"Grand Marnier"},"price":11.00},
+        {"id":"jenever","names":{"en":"Jenever Bokma Young/Old","nl":"Jenever Bokma Jong/oud"},"price":7.50},
+        {"id":"limoncello","names":{"en":"Limoncello","nl":"Limoncello"},"price":7.50},
+        {"id":"bacardi","names":{"en":"Bacardi","nl":"Bacardi"},"price":10.00},
+        {"id":"vodka","names":{"en":"Vodka Smirnoff","nl":"Vodka Smirnoff"},"price":10.00},
+        {"id":"softdrinks","names":{"en":"+ Soft drinks","nl":"+ frisdranken"},"price":4.00}
+      ]
+    },
+    {
+      "id": "house-wines",
+      "titles": {"en":"House Wines & Sparkling","nl":"Huiswijn & Schuimwijn"},
+      "items": [
+        {"id":"delice-chardonnay-gl","names":{"en":"Delice Chardonnay (glass)","nl":"Delice Chardonnay (glas)"},"price":6.50},
+        {"id":"sauvignon-gl","names":{"en":"Sauvignon Blanc (glass)","nl":"Sauvignon Blanc (glas)"},"price":7.00},
+        {"id":"merlot-gl","names":{"en":"Delice Merlot (glass)","nl":"Delice Merlot (glas)"},"price":6.50},
+        {"id":"ventoux-gl","names":{"en":"Ventoux (glass)","nl":"Ventoux (glas)"},"price":7.00},
+        {"id":"gris-gl","names":{"en":"Gris D’Amelie (glass)","nl":"Gris D’Amelie (glas)"},"price":7.00},
+        {"id":"cava-gl","names":{"en":"Cava (glass)","nl":"Cava (glas)"},"price":8.00},
+        {"id":"prosecco-rose-gl","names":{"en":"Prosecco Rosé (glass)","nl":"Prosecco Rosé (glas)"},"price":9.00},
+        {"id":"coupe-champagne","names":{"en":"Coupe Champagne (Cru)","nl":"Coupe Champagne (Cru)"},"price":12.00},
+        {"id":"delice-chardonnay-50","names":{"en":"Delice Chardonnay (50cl)","nl":"Delice Chardonnay (50cl)"},"price":22.00},
+        {"id":"sauvignon-50","names":{"en":"Sauvignon Blanc (50cl)","nl":"Sauvignon Blanc (50cl)"},"price":25.00}
+      ]
+    },
+    {
+      "id": "wijn-champagne",
+      "titles": {"en":"Wines & Champagne","nl":"Wijn & Champagne"},
+      "items": [
+        {"id":"vina-zorzal","names":{"en":"Viña Zorzal (Spain)","nl":"Viña Zorzal - Spain"},"price":37.00},
+        {"id":"chablis","names":{"en":"Chablis (France)","nl":"Chablis - France"},"price":50.00},
+        {"id":"sancerre","names":{"en":"Sancerre (France)","nl":"Sancerre - France"},"price":57.00},
+        {"id":"aplanta","names":{"en":"Aplanta (Portugal)","nl":"Aplanta - Portugal"},"price":35.00},
+        {"id":"el-inquilino","names":{"en":"El Inquilino (Spain)","nl":"El Inquilino - Spain"},"price":37.00},
+        {"id":"cdr","names":{"en":"Côtes du Rhône (France)","nl":"Côtes du Rhône - France"},"price":39.00},
+        {"id":"barbera","names":{"en":"Barbera d'Alba (Italy)","nl":"Barbera d'Alba - Italy"},"price":49.00},
+        {"id":"commanderie","names":{"en":"De La Commanderie (France)","nl":"De La Commanderie - France"},"price":59.00},
+        {"id":"premier-cru","names":{"en":"Premier Cru Marie-Forget","nl":"Premier Cru Marie-Forget"},"price":60.00},
+        {"id":"laurent-perrier","names":{"en":"Laurent Perrier","nl":"Laurent Perrier"},"price":90.00}
+      ]
+    },
+    {
+      "id": "bieren",
+      "titles": {"en":"Beers & Soft Drinks","nl":"Bieren Local Bier • Fris"},
+      "items": [
+        {"id":"jupiler","names":{"en":"Jupiler 25cl","nl":"Jupiler 25cl"},"price":5.00},
+        {"id":"hoegaarden","names":{"en":"Hoegaarden 25cl","nl":"Hoegaarden 25cl"},"price":5.00},
+        {"id":"kriek","names":{"en":"Kriek","nl":"Kriek"},"price":5.00},
+        {"id":"leffe-blond","names":{"en":"Leffe Blond 33cl","nl":"Leffe Blond 33cl"},"price":6.00},
+        {"id":"leffe-bruin","names":{"en":"Leffe Bruin 33cl","nl":"Leffe Bruin 33cl"},"price":6.00},
+        {"id":"duvel","names":{"en":"Duvel","nl":"Duvel"},"price":6.50},
+        {"id":"karmeliet","names":{"en":"Tripel Karmeliet","nl":"Tripple Karmeliet"},"price":6.50},
+        {"id":"zot-33","names":{"en":"Brugse Zot Blond Draft 33cl","nl":"Brugse Zot Blond Draft 33cl"},"price":6.00},
+        {"id":"zot-50","names":{"en":"Brugse Zot Blond Draft 50cl","nl":"Brugse Zot Blond Draft 50cl"},"price":10.00},
+        {"id":"hendrik-33","names":{"en":"Straffe Hendrik Tripel Draft 33cl","nl":"Straffe Hendrik Tripel Draft 33cl"},"price":6.50},
+        {"id":"zot-bru","names":{"en":"Brugse Zot Bruin 33cl","nl":"Brugse Zot Bruin 33cl"},"price":6.50},
+        {"id":"jupiler-na","names":{"en":"Jupiler N/A","nl":"Jupiler n/a"},"price":5.00},
+        {"id":"sportzot","names":{"en":"Brugse Zot Sportzot","nl":"Brugse Zot Sportzot"},"price":6.00},
+        {"id":"cola","names":{"en":"Coca Cola (Normal/Zero)","nl":"Coca Cola (Normal/Zero)"},"price":4.00},
+        {"id":"fanta","names":{"en":"Fanta","nl":"Fanta"},"price":4.00},
+        {"id":"sprite","names":{"en":"Sprite","nl":"Sprite"},"price":4.00},
+        {"id":"icetea","names":{"en":"Ice Tea","nl":"Ice Tea"},"price":4.50},
+        {"id":"gini","names":{"en":"Gini","nl":"Gini"},"price":4.50},
+        {"id":"looza","names":{"en":"Looza (Apple/Orange)","nl":"Looza (Appel/Sinaas)"},"price":4.50},
+        {"id":"schweppes-tonic","names":{"en":"Schweppes Tonic","nl":"Schweppes Tonic"},"price":4.50},
+        {"id":"schweppes-agrum","names":{"en":"Schweppes Agrum","nl":"Schweppes Agrum"},"price":4.50},
+        {"id":"water-bru","names":{"en":"Water BRU (still/sparkling)","nl":"Water BRU (plat/bruis)"},"price":3.50},
+        {"id":"water-bru-50","names":{"en":"Water BRU 50cl (still/sparkling)","nl":"Water BRU 50cl (plat/bruis)"},"price":6.50}
+      ]
+    },
+    {
+      "id": "hapjes-croques",
+      "titles": {"en":"Snacks • Croques","nl":"Aperitief & Hapjes • Croques"},
+      "items": [
+        {"id":"garlic-bread","names":{"en":"Garlic bread","nl":"Lookbroodjes"},"price":4.00},
+        {"id":"olives","names":{"en":"Olives","nl":"Portie olijven"},"price":6.00},
+        {"id":"bitterballen","names":{"en":"Bitterballen","nl":"Bitterballen"},"price":10.00},
+        {"id":"hotmix","names":{"en":"Hotmix platter","nl":"Portie Hotmix"},"descriptions":{"en":"Chicken wings, spring roll, onion rings, bitterbal, torpedo shrimp"},"price":14.00},
+        {"id":"croque-monsieur","names":{"en":"Croque Monsieur (with salad)","nl":"Croque Monsieur (met salade)"},"price":13.00},
+        {"id":"croque-madame","names":{"en":"Croque Madame (with salad)","nl":"Croque Madame (met salade)"},"price":15.00},
+        {"id":"croque-boem","names":{"en":"Croque Boem-Boem (spaghetti sauce, salad)","nl":"Croque Boem-Boem (spaghettisaus en salade)"},"price":16.00}
+      ]
+    },
+    {
+      "id": "omeletten-salades",
+      "titles": {"en":"Omelettes • Salads","nl":"Omeletten • Salades"},
+      "items": [
+        {"id":"omelet-natuur","names":{"en":"Plain omelette","nl":"Omelet natuur"},"price":14.00},
+        {"id":"omelet-ham","names":{"en":"Omelette with ham","nl":"Omelet met ham"},"price":16.00},
+        {"id":"omelet-kaas","names":{"en":"Omelette with cheese","nl":"Omelet met kaas"},"price":16.00},
+        {"id":"omelet-ham-kaas","names":{"en":"Omelette with ham & cheese","nl":"Omelet met ham & kaas"},"price":17.00},
+        {"id":"boeren-omelet","names":{"en":"Farmer’s omelette","nl":"Boeren omelet"},"descriptions":{"en":"Ham, cheese, mushroom, tomato"},"price":19.00},
+        {"id":"salade-grieks","names":{"en":"Greek salad","nl":"Griekse salade"},"price":18.00},
+        {"id":"salade-caesar","names":{"en":"Chicken Caesar salad","nl":"Caesar kip salade"},"price":20.00},
+        {"id":"salade-zalm","names":{"en":"Smoked salmon salad","nl":"Salade gerookte zalm"},"price":22.00},
+        {"id":"salade-geitenkaas","names":{"en":"Warm goat cheese salad (with honey)","nl":"Salade warm geitenkaas (met honing)"},"price":22.00}
+      ]
+    },
+    {
+      "id": "voorgerechten",
+      "titles": {"en":"Starters • Soups","nl":"Koude & Warme Voorgerechten • Soep"},
+      "items": [
+        {"id":"pate","names":{"en":"Paté with onion jam & toast, salad","nl":"Paté met Uienconfituur & toast, salade"},"price":16.00},
+        {"id":"zalm","names":{"en":"Smoked salmon with toast & salad","nl":"Gerookte zalm met toast & salade"},"price":21.00},
+        {"id":"carpaccio","names":{"en":"Beef carpaccio","nl":"Carpaccio van rund"},"price":21.00},
+        {"id":"kaaskroket","names":{"en":"Homemade cheese croquettes (2)","nl":"Huisgemaakte kaaskroketten (2st.)"},"price":17.00},
+        {"id":"garnaalkroket","names":{"en":"Homemade shrimp croquettes (2)","nl":"Huisgemaakte garnaalkroketten (2st.)"},"price":19.00},
+        {"id":"duo-kroket","names":{"en":"Duo croquettes (2)","nl":"Duo kroketten (2st.)"},"price":21.00},
+        {"id":"scampi-5","names":{"en":"Scampi in garlic butter (5)","nl":"Scampi in lookboter (5st.)"},"price":19.00},
+        {"id":"soep-dag","names":{"en":"Soup of the day","nl":"Soep van de dag"},"price":8.50},
+        {"id":"vissoep","names":{"en":"Fish soup","nl":"Vissoep"},"price":16.00}
+      ]
+    },
+    {
+      "id": "pasta",
+      "titles": {"en":"Pasta & Kids","nl":"Pasta • Kids"},
+      "items": [
+        {"id":"veg-spaghetti","names":{"en":"Vegetarian spaghetti","nl":"Vegetarische Spaghetti"},"price":17.50},
+        {"id":"veg-lasagne","names":{"en":"Vegetarian lasagne","nl":"Vegetarische Lasagne"},"price":18.50},
+        {"id":"spag-bolo","names":{"en":"Spaghetti bolognese","nl":"Spaghetti Bolognaise"},"price":18.50},
+        {"id":"lasag-bolo","names":{"en":"Lasagne bolognese","nl":"Lasagne Bolognaise"},"price":19.50},
+        {"id":"tagliatelle-pesto","names":{"en":"Tagliatelle pesto (veg)","nl":"Tagliatelle Pesto (Vegi)"},"price":20.00},
+        {"id":"tagliatelle-chicken","names":{"en":"Tagliatelle with chicken","nl":"Tagliatelle met kip"},"price":21.00},
+        {"id":"tagliatelle-salmon","names":{"en":"Tagliatelle with salmon","nl":"Tagliatelle met zalm"},"price":23.00},
+        {"id":"kids-spag","names":{"en":"Kids spaghetti bolognese","nl":"Kinder spaghetti bolognaise"},"price":12.50},
+        {"id":"kids-nuggets","names":{"en":"Kids chicken nuggets with fries","nl":"Kip nuggets met friet"},"price":12.50}
+      ]
+    },
+    {
+      "id": "vlees-burgers",
+      "titles": {"en":"Meat Dishes • Burgers","nl":"Vleesgerechten • Burgers"},
+      "items": [
+        {"id":"steak","names":{"en":"Steak filet (grill) with salad & fries","nl":"Steak filet natuur (grill) met salade & frieten"},"descriptions":{"en":"Sauces +€4: mushroom, pepper, provençale"},"price":26.00},
+        {"id":"half-chicken","names":{"en":"Roasted half chicken with salad & fries","nl":"Gebraden Halve kip met salade & frieten"},"price":22.00},
+        {"id":"schnitzel","names":{"en":"Schnitzel with salad & fries","nl":"Schnitzel met salade & frieten"},"price":20.00},
+        {"id":"lamb-chop","names":{"en":"Lamb chop in garlic butter with salad & fries","nl":"Lamskoteletten in Look met salade en frieten"},"price":30.00},
+        {"id":"stoof","names":{"en":"Flemish beef stew with salad & fries","nl":"Vlaamse stoofcarbonaden met salade & frieten"},"price":24.00},
+        {"id":"waterzooi","names":{"en":"Waterzooi (chicken) in cream sauce with vegetables","nl":"Waterzooi van kip"},"price":23.00},
+        {"id":"rabbit","names":{"en":"Flemish rabbit with salad & croquettes","nl":"Konijn op Vlaamse wijze met salade & kroketten"},"price":25.00},
+        {"id":"veggie-burger","names":{"en":"Veggie burger with fries","nl":"Veggie Burger met frieten"},"price":17.00},
+        {"id":"chicken-burger","names":{"en":"Chicken burger with fries","nl":"Kipburger met frieten"},"price":18.00},
+        {"id":"angus-burger","names":{"en":"Angus beefburger 100% with fries","nl":"Angus Beefburger 100% Rundvlees met frieten"},"price":20.00},
+        {"id":"sides","names":{"en":"Side dishes","nl":"Extra / Bijgerechten"},"descriptions":{"en":"Sauces €1.50 (ketchup/mayo/mustard), Mixed salad €8, Warm veggies €8, Bread & butter €3, Fries/croquettes €5, Extra couvert €3"}}
+      ]
+    },
+    {
+      "id": "vis-mosselen",
+      "titles": {"en":"Fish Dishes • Mussels (1kg)","nl":"Visgerechten • Mosselen (1kg)"},
+      "items": [
+        {"id":"salmon-bearnaise","names":{"en":"Baked salmon, Béarnaise, warm vegetables & fries","nl":"Gebakken zalm met Béarnaisesaus, warme groenten en frieten"},"price":26.00},
+        {"id":"scampi-9","names":{"en":"Scampi in garlic butter (9) with fries","nl":"Scampi in lookboter (9st.) met frieten"},"price":27.00},
+        {"id":"scampi-chef","names":{"en":"Scampi of the Chef (9)","nl":"Scampi van de Chef (9st.)"},"price":30.00},
+        {"id":"fish-casserole","names":{"en":"Fish casserole with mashed potatoes","nl":"Vispannetje met puree"},"price":27.00},
+        {"id":"sliptong","names":{"en":"Sole pan-fried in butter with salad & fries","nl":"Sliptongen (3st.) in boter gebakken met salade en frieten"},"price":31.00},
+        {"id":"fish-chips","names":{"en":"Fish N’Chips","nl":"Fish N’Chips"},"price":20.00},
+        {"id":"mussels-nature","names":{"en":"Mussels nature","nl":"Mosselen Natuur"},"price":26.00},
+        {"id":"mussels-white-wine","names":{"en":"Mussels with white wine","nl":"Mosselen met Witte Wijn"},"price":28.00},
+        {"id":"mussels-garlic","names":{"en":"Mussels with garlic","nl":"Mosselen met knoflook"},"price":28.00},
+        {"id":"mussels-ww-garlic","names":{"en":"Mussels with white wine & garlic","nl":"Mosselen met witte wijn & knoflook"},"price":30.00},
+        {"id":"mussels-maison","names":{"en":"Mussels Maison Chef (wine, garlic, cream, curry)","nl":"Mosselen Maison Chef (witte wijn, knoflook, room & curry)"},"price":34.00}
+      ]
+    },
+    {
+      "id": "desserts-ice",
+      "titles": {"en":"Tea Room • Desserts • Ice cream","nl":"Tea Room • Desserts • Ice-cream"},
+      "items": [
+        {"id":"wafel-boter","names":{"en":"Waffle with butter & sugar","nl":"Wafel met boter & suiker"},"price":6.50},
+        {"id":"wafel-slag","names":{"en":"Waffle with whipped cream","nl":"Wafel met slagroom"},"price":7.50},
+        {"id":"wafel-choco","names":{"en":"Waffle with chocolate","nl":"Wafel met chocolade"},"price":7.50},
+        {"id":"mikado","names":{"en":"Mikado (ice cream & chocolate sauce)","nl":"Mikado (ijs & chocoladesaus)"},"price":10.00},
+        {"id":"maison","names":{"en":"Maison (fresh fruit, ice cream & chocolate sauce)","nl":"Maison (vers fruit, ijs & chocoladesaus)"},"price":14.00},
+        {"id":"aardbeien","names":{"en":"With strawberries (season)","nl":"Met aardbeien (seizoen)"},"price":12.00},
+        {"id":"warme-kersen","names":{"en":"With hot cherries (season)","nl":"Met Warme Kersen (seizoen)"},"price":12.00},
+        {"id":"appeltaart","names":{"en":"Apple pie with ice & whipped cream","nl":"Appeltaart met ijs & slagroom"},"price":10.00},
+        {"id":"profiterols","names":{"en":"Profiteroles","nl":"Profiterols"},"price":8.50},
+        {"id":"chocomousse","names":{"en":"Chocolate mousse","nl":"Chocolademousse"},"price":8.00},
+        {"id":"dame-blanche","names":{"en":"Dame Blanche","nl":"Dame Blanche"},"descriptions":{"en":"Vanilla ice cream with chocolate sauce and whipped cream"},"price":10.00},
+        {"id":"coupe-vanille","names":{"en":"Coupe Vanille (with whipped cream)","nl":"Coupe Vanille (met slagroom)"},"price":9.00},
+        {"id":"coupe-bresilienne","names":{"en":"Coupe Bresilienne (vanilla & mocha, caramel sauce, whipped cream)","nl":"Coupe Bresilienne (vanille & mokka, karamelsaus, slagroom)"},"price":12.00},
+        {"id":"coupe-aardbei","names":{"en":"Coupe Strawberry (season) with whipped cream)","nl":"Coupe Aardbeien (seizoen) met slagroom"},"price":12.00},
+        {"id":"coupe-maison","names":{"en":"Coupe Maison (with whipped cream)","nl":"Coupe Maison (met slagroom)"},"price":14.00},
+        {"id":"banana-split","names":{"en":"Banana Split (with whipped cream)","nl":"Banana Split (met slagroom)"},"price":12.00},
+        {"id":"sorbet-citroen","names":{"en":"Lemon sorbet","nl":"Sorbet Citroen"},"price":11.00},
+        {"id":"kinderijs","names":{"en":"Kids ice cream (with whipped cream)","nl":"Kinderijsje (met slagroom)"},"price":6.50},
+        {"id":"supplement","names":{"en":"Supplement","nl":"Supplement"},"descriptions":{"en":"chocolate sauce / whipped cream / 1 scoop vanilla"},"price":2.00}
+      ]
+    }
+  ]
+}
+
+

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --font-display: 'Playfair Display', serif;
+}
+
+.display-font {
+  font-family: var(--font-display);
+}
+
+.surface {
+  @apply rounded-3xl border border-neutral-200 bg-white shadow-xl shadow-neutral-200/60;
+}
+
+.pill {
+  @apply rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold;
+}
+
+.pill-active {
+  @apply bg-neutral-900 text-white border-neutral-900;
+}
+
+.hero-bg {
+  background-image: radial-gradient(60% 60% at 20% 10%, rgba(124, 45, 18, 0.10), transparent),
+    radial-gradient(40% 40% at 90% 0%, rgba(127, 29, 29, 0.10), transparent);
+}
+
+

@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles aligned with brand vibe */
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root { height: 100%; width: 100%; overflow-x: hidden; }
+
+body {
+  @apply bg-cream text-neutral-800 antialiased;
+}
+
+.container-responsive {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-burgundy text-white px-5 py-3 text-sm font-semibold shadow-sm hover:bg-burgundy/90 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-gold-40 bg-white text-neutral-900 px-5 py-3 text-sm font-semibold shadow-sm hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 transition;
+}
+
+/* Display font and themed helpers (inlined to avoid @import order issues) */
+@layer base {
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Playfair Display');
+  }
+}
+
+.display-font {
+  font-family: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.surface {
+  @apply rounded-3xl border border-neutral-200 bg-white shadow-xl shadow-neutral-200/60;
+}
+
+/* Softer elevated card for content like About */
+.surface-soft {
+  @apply rounded-3xl bg-white/90 backdrop-blur-sm border border-neutral-200 shadow-[0_12px_30px_rgba(0,0,0,0.06)];
+}
+
+/* Readable copy block */
+.typography {
+  @apply leading-7 text-neutral-700;
+}
+.typography p + p { margin-top: 1rem; }
+
+.pill {
+  @apply rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold;
+}
+
+.pill-active {
+  @apply bg-neutral-900 text-white border-neutral-900;
+}
+
+.hero-bg {
+  background-image: radial-gradient(60% 60% at 20% 10%, rgba(124, 45, 18, 0.10), transparent),
+    radial-gradient(40% 40% at 90% 0%, rgba(127, 29, 29, 0.10), transparent);
+}
+
+/* Ensure custom color utilities exist when used with @apply */
+@layer utilities {
+  .bg-cream { background-color: #f9f5f0; }
+  .bg-burgundy { background-color: #7a0019; }
+  .border-gold-40 { border-color: rgb(176 137 104 / 0.40); }
+  .leader:after { content: ""; display: block; border-bottom: 1px dotted rgba(0,0,0,0.3); margin: 0 .5rem; transform: translateY(-2px); }
+  /* Hide scrollbar only for designated elements */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .scroll-x-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; touch-action: pan-x; }
+  .snap-x-mandatory { scroll-snap-type: x mandatory; }
+  .snap-start { scroll-snap-align: start; }
+}
