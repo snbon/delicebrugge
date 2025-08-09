@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import heroImage from '../assets/delicebrugge-tagliatellekip.JPG';
 
@@ -34,8 +35,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 flex items-center gap-3"
           >
-            <a className="btn-primary" href="/reserve">{t('common.cta.bookNow')}</a>
-            <a className="btn-secondary" href="/menu">{t('common.cta.viewMenu')}</a>
+            <NavLink className="btn-primary" to="/reserve">{t('common.cta.bookNow')}</NavLink>
+            <NavLink className="btn-secondary" to="/menu">{t('common.cta.viewMenu')}</NavLink>
           </motion.div>
           <div className="mt-6 text-sm text-neutral-200">{t('common.travellersChoice')}</div>
         </div>
