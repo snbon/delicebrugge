@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
+import { Routes, Route, NavLink, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage.jsx';
 import MenuPage from './pages/MenuPage.jsx';
 import ReservePage from './pages/ReservePage.jsx';
 import GroupMenuPage from './pages/GroupMenuPage.jsx';
+import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, getLanguageFromPath, getPathWithoutLanguage, buildLocalizedUrl } from './utils/languageUtils.js';
 import './App.css';
 
 function ScrollToTop() {
@@ -18,6 +19,10 @@ function ScrollToTop() {
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPath = getPathWithoutLanguage(location.pathname);
+  
   const languages = [
     { code: 'en', label: 'EN' },
     { code: 'nl', label: 'NL' },
@@ -25,11 +30,28 @@ function LanguageSwitcher() {
     { code: 'de', label: 'DE' },
     { code: 'es', label: 'ES' },
   ];
+  
   const changeLang = (code) => {
+    console.log('Language switcher - changing to:', code);
+    console.log('Current path:', location.pathname);
+    console.log('Current path without language:', currentPath);
+    
     i18n.changeLanguage(code);
     localStorage.setItem('lang', code);
     document.documentElement.lang = code;
+    
+    // Navigate to the localized URL using React Router
+    const newUrl = buildLocalizedUrl(currentPath, code);
+    console.log('New URL:', newUrl);
+    
+    if (newUrl !== location.pathname) {
+      console.log('Navigating to:', newUrl);
+      navigate(newUrl);
+    } else {
+      console.log('No navigation needed, URL is the same');
+    }
   };
+  
   return (
     <div className="flex items-center gap-2">
       {languages.map((lng) => (
@@ -51,7 +73,11 @@ function LanguageSwitcher() {
 
 function FooterLanguageSwitcher() {
   const { i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const currentPath = getPathWithoutLanguage(location.pathname);
+  
   const languages = [
     { code: 'en', label: 'English', flag: '🇺🇸' },
     { code: 'nl', label: 'Nederlands', flag: '🇧🇪' },
@@ -63,9 +89,25 @@ function FooterLanguageSwitcher() {
   const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0];
   
   const changeLang = (code) => {
+    console.log('Footer language switcher - changing to:', code);
+    console.log('Current path:', location.pathname);
+    console.log('Current path without language:', currentPath);
+    
     i18n.changeLanguage(code);
     localStorage.setItem('lang', code);
     document.documentElement.lang = code;
+    
+    // Navigate to the localized URL using React Router
+    const newUrl = buildLocalizedUrl(currentPath, code);
+    console.log('New URL:', newUrl);
+    
+    if (newUrl !== location.pathname) {
+      console.log('Navigating to:', newUrl);
+      navigate(newUrl);
+    } else {
+      console.log('No navigation needed, URL is the same');
+    }
+    
     setIsOpen(false);
   };
 
@@ -120,23 +162,90 @@ function FooterLanguageSwitcher() {
 }
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
+  const location = useLocation();
+  
+  // Show loading state while i18n is initializing
+  if (!ready) {
+    return (
+      <div className="min-h-dvh flex items-center justify-center bg-spotlight">
+        <div className="text-center">
+          <div className="text-lg text-neutral-600">Loading...</div>
+        </div>
+      </div>
+    );
+  }
+  
   useEffect(() => {
     document.title = t('common.seo.title');
   }, [t]);
 
+  // Handle language initialization from URL
+  useEffect(() => {
+    const urlLanguage = getLanguageFromPath(location.pathname);
+    const savedLanguage = localStorage.getItem('lang');
+    
+    // Priority: URL language > saved language > default
+    const languageToUse = urlLanguage !== DEFAULT_LANGUAGE ? urlLanguage : (savedLanguage || DEFAULT_LANGUAGE);
+    
+    console.log('Language initialization:', {
+      urlLanguage,
+      savedLanguage,
+      languageToUse,
+      currentI18nLanguage: i18n.language,
+      pathname: location.pathname
+    });
+    
+    // If we're on the root URL (/) and the current language is not English,
+    // force switch to English
+    if (location.pathname === '/' && i18n.language !== DEFAULT_LANGUAGE) {
+      console.log('On root URL, forcing switch to English');
+      i18n.changeLanguage(DEFAULT_LANGUAGE);
+      localStorage.setItem('lang', DEFAULT_LANGUAGE);
+      document.documentElement.lang = DEFAULT_LANGUAGE;
+    }
+    // Otherwise, use the normal logic
+    else if (languageToUse !== i18n.language) {
+      console.log('Changing language from', i18n.language, 'to', languageToUse);
+      i18n.changeLanguage(languageToUse);
+      localStorage.setItem('lang', languageToUse);
+      document.documentElement.lang = languageToUse;
+    }
+  }, [i18n, location.pathname]);
+
   return (
     <div className="min-h-dvh flex flex-col bg-spotlight overflow-x-hidden">
       <ScrollToTop />
-      {/* Header moved into individual pages for sticky/blur effect */}
 
       <main className="flex-1">
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <Routes>
+            {/* English routes (default) */}
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/reserve" element={<ReservePage />} />
             <Route path="/groupmenu" element={<GroupMenuPage />} />
+            
+            {/* Localized routes for other languages */}
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}`} element={<Navigate to={`/${language}/`} replace />} />
+            ))}
+            
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}/`} element={<HomePage />} />
+            ))}
+            
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}/menu`} element={<MenuPage />} />
+            ))}
+            
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}/reserve`} element={<ReservePage />} />
+            ))}
+            
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}/groupmenu`} element={<GroupMenuPage />} />
+            ))}
           </Routes>
         </motion.div>
       </main>
