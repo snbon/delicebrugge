@@ -85,6 +85,7 @@ export default function Header({ transparent = false }) {
         <nav className="flex items-center gap-4">
           <NavLink to="/" className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.home')}</NavLink>
           <NavLink to="/menu" className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.menu')}</NavLink>
+          <NavLink to="/groupmenu" className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.groupMenu')}</NavLink>
           <NavLink to="/reserve" className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.reserve')}</NavLink>
           <div className="hidden md:block"><LanguageSwitcher /></div>
           {/* Desktop book now */}
@@ -111,6 +112,7 @@ export default function Header({ transparent = false }) {
         <div className="container-responsive py-4 flex flex-col gap-3">
           <NavLink onClick={() => setOpen(false)} to="/" className="text-base font-semibold text-neutral-900">{t('common.nav.home')}</NavLink>
           <NavLink onClick={() => setOpen(false)} to="/menu" className="text-base font-semibold text-neutral-900">{t('common.nav.menu')}</NavLink>
+          <NavLink onClick={() => setOpen(false)} to="/groupmenu" className="text-base font-semibold text-neutral-900">{t('common.nav.groupMenu')}</NavLink>
           <NavLink onClick={() => setOpen(false)} to="/reserve" className="text-base font-semibold text-neutral-900">{t('common.nav.reserve')}</NavLink>
           <div className="pt-2"><LanguageSwitcher /></div>
         </div>

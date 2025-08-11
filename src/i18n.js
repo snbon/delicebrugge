@@ -10,6 +10,7 @@ const resources = {
         nav: {
           home: 'Home',
           menu: 'Menu',
+          groupMenu: 'Group Menu',
           reserve: 'Reserve',
           language: 'Language',
         },
@@ -118,6 +119,76 @@ const resources = {
           heading: 'Reserve a table',
           intro: 'Book instantly via our partner widget.',
         },
+        groupMenu: {
+          heading: 'GROUP MENU €36.00',
+          appetizer: {
+            title: 'Appetizer',
+            option1: {
+              name: 'Huisgemaakte Kaaskroketten',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Huisgemaakte Garnaalkroketten',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Main Course',
+            option1: {
+              name: 'Steak Natuur',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Gebakken Zalm',
+              translations: {
+                en: 'Baked salmon',
+                fr: 'Saumon cuit',
+                de: 'Gebackener Lachs',
+                es: 'Salmón horneado'
+              }
+            }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: {
+              name: 'Koffie/Thee',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
+          separator: 'of',
+          stars: '★ ★ ★',
+          description: 'Perfect for group bookings and special occasions. This pre-fixed menu offers a selection of our finest dishes at an excellent value.',
+          contactInfo: 'For group reservations, please contact us directly.'
+        },
         footer: {
           rights: 'All rights reserved.',
           btw: 'VAT',
@@ -130,7 +201,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Travellers\' Choice 2022, 2023 & 2024',
-        nav: { home: 'Home', menu: 'Menu', reserve: 'Reserveren', language: 'Taal' },
+        nav: { home: 'Home', menu: 'Menu', groupMenu: 'Groepsmenu', reserve: 'Reserveren', language: 'Taal' },
         cta: { bookNow: 'Reserveer nu', viewMenu: 'Bekijk menu' },
         address: {
           heading: 'Locatie',
@@ -153,7 +224,7 @@ const resources = {
           copy:
             'In het hart van het Minnewaterpark in Brugge verwelkomt Délice Brugge u met warme, familiale gastvrijheid. Wij maken uw bezoek aan Brugge onvergetelijk met authentieke Belgische keuken in een knusse, gezellige sfeer.',
           extraSeo:
-            'Signatuurgerechten: stoofvlees, verse mosselen, konijn met pruimen en seizoensgerechten. Ideaal voor families, koppels en groepen, op wandelafstand van het Minnewaterpark.',
+            'Signatuurgerechten: stoofvlees, verse mosselen, konijn met pruimen en seizoensgerechten. Ideal voor families, koppels en groepen, op wandelafstand van het Minnewaterpark.',
         },
         reviews: {
           heading: 'Wat gasten zeggen',
@@ -197,6 +268,76 @@ const resources = {
           disclaimer: 'Het PDF-menu staat hieronder. Geselecteerde favorieten kunnen per seizoen wijzigen.',
         },
         reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },
+        groupMenu: {
+          heading: 'GROUP MENU €35.00',
+          appetizer: {
+            title: 'Voorgerecht',
+            option1: {
+              name: 'Huisgemaakte Kaaskroketten',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Huisgemaakte Garnaalkroketten',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Hoofdgerecht',
+            option1: {
+              name: 'Steak Natuur',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Gebakken Zalm',
+              translations: {
+                en: 'Baked salmon',
+                fr: 'Saumon cuit',
+                de: 'Gebackener Lachs',
+                es: 'Salmón horneado'
+              }
+            }
+          },
+          dessert: {
+            title: 'Nagerecht',
+            option1: {
+              name: 'Koffie/Thee',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
+          separator: 'of',
+          stars: '★ ★ ★',
+          description: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Dit vooraf vastgesteld menu biedt een selectie van onze beste gerechten tegen een uitstekende waarde.',
+          contactInfo: 'Voor groepsboekingen, neem dan contact met ons op.'
+        },
         footer: { rights: 'Alle rechten voorbehouden.', btw: 'BTW' },
       },
     },
@@ -206,7 +347,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Travellers\' Choice 2022, 2023 & 2024',
-        nav: { home: 'Accueil', menu: 'Menu', reserve: 'Réserver', language: 'Langue' },
+        nav: { home: 'Accueil', menu: 'Menu', groupMenu: 'Menu Groupe', reserve: 'Réserver', language: 'Langue' },
         cta: { bookNow: 'Réserver', viewMenu: 'Voir le menu' },
         address: {
           heading: 'Nous trouver',
@@ -273,6 +414,76 @@ const resources = {
           disclaimer: 'Le menu PDF en direct est disponible ci-dessous. Les plats peuvent varier selon la saison.',
         },
         reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },
+        groupMenu: {
+          heading: 'MENU GROUPE €35.00',
+          appetizer: {
+            title: 'Entrée',
+            option1: {
+              name: 'Croquettes de fromage maison',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Croquettes de crevettes maison',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Plat principal',
+            option1: {
+              name: 'Steak nature',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Saumon cuit',
+              translations: {
+                en: 'Baked salmon',
+                fr: 'Saumon cuit',
+                de: 'Gebackener Lachs',
+                es: 'Salmón horneado'
+              }
+            }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: {
+              name: 'Café/Thé',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
+          separator: 'ou',
+          stars: '★ ★ ★',
+          description: 'Parfait pour les réservations de groupe et les occasions spéciales. Ce menu préfixé offre une sélection de nos meilleurs plats à un excellent prix.',
+          contactInfo: 'Pour les réservations de groupe, veuillez nous contacter directement.'
+        },
         footer: { rights: 'Tous droits réservés.', btw: 'TVA' },
       },
     },
@@ -282,7 +493,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Travellers\' Choice 2022, 2023 & 2024',
-        nav: { home: 'Start', menu: 'Speisekarte', reserve: 'Reservieren', language: 'Sprache' },
+        nav: { home: 'Start', menu: 'Speisekarte', groupMenu: 'Gruppenmenü', reserve: 'Reservieren', language: 'Sprache' },
         cta: { bookNow: 'Jetzt reservieren', viewMenu: 'Speisekarte ansehen' },
         address: {
           heading: 'Anfahrt',
@@ -349,6 +560,76 @@ const resources = {
           disclaimer: 'Das PDF-Menü steht unten bereit. Saisonale Änderungen möglich.',
         },
         reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
+        groupMenu: {
+          heading: 'MENÜ FÜR GRUPPEN €35.00',
+          appetizer: {
+            title: 'Vorspeise',
+            option1: {
+              name: 'Käsekroketten',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Hausgemachte Garnelenkroketten',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Hauptgericht',
+            option1: {
+              name: 'Steak Natur',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Gebackener Lachs',
+              translations: {
+                en: 'Baked salmon',
+                fr: 'Saumon cuit',
+                de: 'Gebackener Lachs',
+                es: 'Salmón horneado'
+              }
+            }
+          },
+          dessert: {
+            title: 'Nachspeise',
+            option1: {
+              name: 'Kaffee/Thee',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
+          separator: 'oder',
+          stars: '★ ★ ★',
+          description: 'Ideal für Gruppenbuchungen und besondere Anlässe. Dieses vorgefertigte Menü bietet eine Auswahl unserer besten Gerichte zu einem hervorragenden Preis.',
+          contactInfo: 'Für Gruppenbuchungen wenden Sie sich bitte direkt an uns.'
+        },
         footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' },
       },
     },
@@ -358,7 +639,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Traveller\'s Choice 2022, 2023 y 2024',
-        nav: { home: 'Inicio', menu: 'Menú', reserve: 'Reservas', language: 'Idioma' },
+        nav: { home: 'Inicio', menu: 'Menú', groupMenu: 'Menú Grupos', reserve: 'Reservas', language: 'Idioma' },
         cta: { bookNow: 'Reservar ahora', viewMenu: 'Ver menú' },
         address: {
           heading: 'Dónde estamos',
@@ -425,6 +706,76 @@ const resources = {
           disclaimer: 'El menú en PDF está disponible a continuación. Los platos pueden variar según la temporada.',
         },
         reserve: { heading: 'Reservar mesa', intro: 'Reserva al instante con nuestro widget.' },
+        groupMenu: {
+          heading: 'MENÚ PARA GRUPOS €35.00',
+          appetizer: {
+            title: 'Entrante',
+            option1: {
+              name: 'Croquetas de queso caseras',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Croquetas de gambas caseras',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Plato principal',
+            option1: {
+              name: 'Bistec natural',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Salmón horneado',
+              translations: {
+                en: 'Baked salmon',
+                fr: 'Saumon cuit',
+                de: 'Gebackener Lachs',
+                es: 'Salmón horneado'
+              }
+            }
+          },
+          dessert: {
+            title: 'Postre',
+            option1: {
+              name: 'Café/Té',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
+          separator: 'o',
+          stars: '★ ★ ★',
+          description: 'Ideal para reservas de grupos y ocasiones especiales. Este menú prefijado ofrece una selección de nuestros mejores platos a un excelente precio.',
+          contactInfo: 'Para reservas de grupos, por favor, póngase en contacto con nosotros directamente.'
+        },
         footer: { rights: 'Todos los derechos reservados.', btw: 'IVA' },
       },
     },
