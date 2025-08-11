@@ -4,24 +4,27 @@ import Header from '../components/Header.jsx';
 import Section from '../components/Section.jsx';
 
 export default function GroupMenuPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   const MenuChoice = ({ option1, option2, courseTitle }) => {
-    const { i18n } = useTranslation();
-    const currentLang = i18n.language;
-    
     // Get translated names for current language
     const getTranslatedName = (option) => {
-      return option.translations[currentLang] || option.translations.en || option.name;
+      // The name field contains the text in the current language section
+      // So we should always use the name field first, then fallback to translations
+      return option.name || option.translations[currentLang] || option.translations.en;
     };
 
     return (
       <div className="space-y-6">
         {/* Course Header */}
         <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold text-neutral-900 mb-3">
-            {courseTitle} <span className="text-lg font-normal text-brand-600">· choose one</span>
+          <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+            {courseTitle}
           </h3>
+          <p className="text-lg font-normal text-brand-600 mb-3">
+            {t('common.groupMenu.chooseOne')}
+          </p>
           <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
         </div>
 
@@ -71,6 +74,8 @@ export default function GroupMenuPage() {
     );
   };
 
+
+
   return (
     <div className="overflow-x-hidden">
       <Header />
@@ -86,14 +91,17 @@ export default function GroupMenuPage() {
                 transition={{ duration: 0.6 }}
                 className="max-w-4xl mx-auto"
               >
-                <div className="inline-block mb-6">
-                  <h1 className="display-font text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 mb-4">
+                <div className="inline-block mb-4">
+                  <h1 className="display-font text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 mb-2">
                     {t('common.groupMenu.heading')}
                   </h1>
+                  <p className="text-sm text-neutral-600 mb-2">
+                    {t('common.groupMenu.perPerson')}
+                  </p>
                   <div className="w-24 h-1 bg-gradient-to-r from-brand-500 to-brand-600 mx-auto rounded-full"></div>
                 </div>
                 <p className="text-lg sm:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-                  Perfect for group bookings and special occasions. Each course offers two delicious options - choose your preference.
+                  {t('common.groupMenu.heroDescription')}
                 </p>
               </motion.div>
             </div>
@@ -133,37 +141,35 @@ export default function GroupMenuPage() {
           </Section>
 
           {/* Group Booking Information */}
-          <Section title="Ready to Book Your Group?" muted>
+          <Section title={t('common.groupMenu.bookingSection.title')} muted>
             <div className="surface-soft p-8 sm:p-10 lg:p-12">
               <div className="text-center max-w-4xl mx-auto">
                 <div className="mb-8 sm:mb-10">
                   <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-6">
-                    Let's Make Your Group Dining Special
+                    {t('common.groupMenu.bookingSection.heading')}
                   </h2>
                   <div className="typography mb-6">
                     <p className="mb-4 text-lg">{t('common.groupMenu.description')}</p>
                     <p className="font-semibold text-xl text-neutral-800 mb-4">{t('common.groupMenu.contactInfo')}</p>
                     <p className="text-base text-neutral-700 leading-relaxed">
-                      Please provide your details including:
+                      {t('common.groupMenu.bookingSection.detailsIntro')}
                     </p>
                     <ul className="text-base text-neutral-700 leading-relaxed mt-2 space-y-1">
-                      <li>• Number of people in your group</li>
-                      <li>• Preferred date and time</li>
-                      <li>• Dish preferences for each person (Option 1 or Option 2)</li>
-                      <li>• Any special dietary requirements or allergies</li>
-                      <li>• Contact information for confirmation</li>
+                      {t('common.groupMenu.bookingSection.detailsList', { returnObjects: true }).map((item, index) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </div>
                 </div>
                 
                 <div className="flex justify-center">
                   <motion.a
-                    href={`mailto:${t('common.address.email')}?subject=Group Booking Request&body=Hello,%0D%0A%0D%0AI would like to make a group booking with the following details:%0D%0A%0D%0ANumber of people:%0D%0APreferred date:%0D%0APreferred time:%0D%0A%0D%0ADish preferences:%0D%0A- Appetizer: Option 1 or 2%0D%0A- Main Course: Option 1 or 2%0D%0A- Dessert: Option 1 or 2%0D%0A%0D%0ASpecial requirements:%0D%0A%0D%0AThank you!`}
+                    href={`mailto:${t('common.address.email')}?subject=${encodeURIComponent(t('common.groupMenu.bookingSection.emailSubject'))}&body=${encodeURIComponent(t('common.groupMenu.bookingSection.emailBody'))}`}
                     className="btn-secondary inline-flex items-center justify-center text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 shadow-lg hover:shadow-xl transition-shadow"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    ✉️ Email Your Group Booking Request
+                    {t('common.groupMenu.bookingSection.emailButton')}
                   </motion.a>
                 </div>
               </div>

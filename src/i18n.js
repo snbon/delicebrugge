@@ -10,7 +10,6 @@ const resources = {
         nav: {
           home: 'Home',
           menu: 'Menu',
-          groupMenu: 'Group Menu',
           reserve: 'Reserve',
           language: 'Language',
         },
@@ -32,14 +31,14 @@ const resources = {
         seo: {
           title: 'Délice Brugge | Authentic Belgian Restaurant in Minnewaterpark, Bruges',
           description:
-            'Family-owned Belgian restaurant in the heart of Bruges. Enjoy Carbonade Flamande, mussels, rabbit with prunes, and local beers in a cozy setting near Minnewaterpark. Traveller\'s Choice 2022–2024.',
+            'Family-owned Belgian restaurant in the heart of Bruges. Enjoy Carbonade Flamande, mussels, steak, and local beers in a cozy setting near Minnewaterpark. Traveller\'s Choice 2022–2024.',
         },
         about: {
           heading: 'About us',
           copy:
             'Nestled in the heart of Minnewaterpark in Bruges, Délice Brugge is a cherished Belgian restaurant that captures the warmth of family-owned hospitality. Our passion is to make every visitor’s experience in Bruges unforgettable, offering authentic Belgian cuisine in a cozy, welcoming atmosphere. Loved by locals and travelers alike, Délice Brugge is where the charm of Belgium comes alive, one delicious meal at a time.',
           extraSeo:
-            'Signature dishes include Carbonade Flamande (Flemish beef stew), fresh mussels, rabbit with prunes, and seasonal specials. Ideal for families, couples, and groups exploring Bruges. Located steps from Minnewaterpark, with friendly service and great value.',
+            'Signature dishes include Carbonade Flamande (Flemish beef stew), fresh mussels, steak, and seasonal specials. Ideal for families, couples, and groups exploring Bruges. Located steps from Minnewaterpark, with friendly service and great value.',
         },
         reviews: {
           heading: 'Guests say',
@@ -47,7 +46,7 @@ const resources = {
             '“Perfect place to experience traditional Belgian food… Carbonade Flamande and mussels were so tasty.”',
             '“Fish and chips were perfect… I had carbonade/stoofvlees. The beef melted in the mouth.”',
             '“Scampi in garlic butter with fresh salad and frites… highly recommend eating here.”',
-            '“Lovely small bistro… fish stew with mussels was thoroughly enjoyed. I had the rabbit with prunes, delicious and jammy.”',
+            '“Lovely small bistro… fish stew with mussels was thoroughly enjoyed. I had the steak, delicious and tender."',
           ],
         },
         home: {
@@ -67,7 +66,6 @@ const resources = {
         },
         menu: {
           heading: 'Menu',
-          viewPdf: 'View full menu (PDF)',
           sections: {
             classics: 'Belgian Classics',
             seafood: 'Seafood',
@@ -83,44 +81,21 @@ const resources = {
               name: 'Mussels',
               desc: 'Fresh mussels prepared in classic Belgian style.',
             },
-            fishChips: {
-              name: 'Fish & Chips',
-              desc: 'Crispy golden batter, flaky white fish, hand-cut fries.',
-            },
-            fishStew: {
-              name: 'Fish Stew with Mussels',
-              desc: 'Hearty seafood stew with mussels and aromatic herbs.',
-            },
             rabbitPrunes: {
-              name: 'Rabbit with Prunes',
-              desc: 'Traditional sweet-savory Belgian specialty.',
-            },
-            scampi: {
-              name: 'Scampi in Garlic Butter',
-              desc: 'Juicy prawns cooked in garlic butter, salad, and frites.',
-            },
-            chickenCream: {
-              name: 'Chicken in Cream Sauce',
-              desc: 'Comforting classic with velvety cream sauce.',
-            },
-            vegLasagne: {
-              name: 'Vegetarian Lasagne',
-              desc: 'Layers of vegetables, tomato, and cheese, oven-baked.',
-            },
-            chocMousse: {
-              name: 'Chocolate Mousse',
-              desc: 'Rich and airy Belgian chocolate mousse.',
+              name: 'Steak',
+              desc: 'Traditional Belgian steak specialty.',
             },
           },
-          disclaimer:
-            'The live PDF menu is available below. Items shown are highlights based on guest favorites and may vary by season.',
         },
         reserve: {
           heading: 'Reserve a table',
           intro: 'Book instantly via our partner widget.',
         },
         groupMenu: {
-          heading: 'GROUP MENU €36.00',
+          heading: 'GROUP MENU €36.50',
+          perPerson: 'per person',
+          chooseOne: 'choose one',
+          heroDescription: 'Perfect for group bookings and special occasions. Each course offers two delicious options - choose your preference.',
           appetizer: {
             title: 'Appetizer',
             option1: {
@@ -128,7 +103,7 @@ const resources = {
               translations: {
                 en: 'Homemade cheese croquettes',
                 fr: 'Croquettes de fromage maison',
-                de: 'Käsekroketten',
+                de: 'Hausgemachte Käsekroketten',
                 es: 'Croquetas de queso caseras'
               }
             },
@@ -154,12 +129,12 @@ const resources = {
               }
             },
             option2: {
-              name: 'Gebakken Zalm',
+              name: 'Gebakken Zalm met Béarnaisesaus',
               translations: {
-                en: 'Baked salmon',
-                fr: 'Saumon cuit',
-                de: 'Gebackener Lachs',
-                es: 'Salmón horneado'
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
               }
             }
           },
@@ -184,10 +159,23 @@ const resources = {
               }
             }
           },
-          separator: 'of',
-          stars: '★ ★ ★',
           description: 'Perfect for group bookings and special occasions. This pre-fixed menu offers a selection of our finest dishes at an excellent value.',
-          contactInfo: 'For group reservations, please contact us directly.'
+          contactInfo: 'For group reservations, please contact us directly.',
+          bookingSection: {
+            title: 'Ready to Book Your Group?',
+            heading: 'Let\'s Make Your Group Dining Special',
+            detailsIntro: 'Please provide your details including:',
+            detailsList: [
+              'Number of people in your group',
+              'Preferred date and time',
+              'Dish preferences for each person (Option 1 or Option 2)',
+              'Any special dietary requirements or allergies',
+              'Contact information for confirmation'
+            ],
+            emailButton: '✉️ Email Your Group Booking Request',
+            emailSubject: 'Group Booking Request',
+            emailBody: 'Hello,\n\nI would like to make a group booking with the following details:\n\nTotal number of people:\nPreferred date:\nPreferred time:\n\nDish preferences (please specify how many people want each option):\n- Appetizer:\n  • Option 1 (Homemade cheese croquettes): ___ people\n  • Option 2 (Homemade shrimp croquettes): ___ people\n- Main Course:\n  • Option 1 (Natural steak): ___ people\n  • Option 2 (Baked salmon with béarnaise sauce): ___ people\n- Dessert:\n  • Option 1 (Coffee/Tea): ___ people\n  • Option 2 (Dame Blanche): ___ people\n\nSpecial requirements or allergies:\n\nThank you!'
+          }
         },
         footer: {
           rights: 'All rights reserved.',
@@ -201,7 +189,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Travellers\' Choice 2022, 2023 & 2024',
-        nav: { home: 'Home', menu: 'Menu', groupMenu: 'Groepsmenu', reserve: 'Reserveren', language: 'Taal' },
+        nav: { home: 'Home', menu: 'Menu', reserve: 'Reserveren', language: 'Taal' },
         cta: { bookNow: 'Reserveer nu', viewMenu: 'Bekijk menu' },
         address: {
           heading: 'Locatie',
@@ -217,14 +205,14 @@ const resources = {
         seo: {
           title: 'Délice Brugge | Authentiek Belgisch restaurant in Minnewaterpark, Brugge',
           description:
-            'Familierestaurant in het hart van Brugge. Geniet van stoofvlees, mosselen, konijn met pruimen en lokale bieren in een gezellige sfeer nabij Minnewaterpark.',
+            'Familierestaurant in het hart van Brugge. Geniet van stoofvlees, mosselen, steak en lokale bieren in een gezellige sfeer nabij Minnewaterpark.',
         },
         about: {
           heading: 'Over ons',
           copy:
             'In het hart van het Minnewaterpark in Brugge verwelkomt Délice Brugge u met warme, familiale gastvrijheid. Wij maken uw bezoek aan Brugge onvergetelijk met authentieke Belgische keuken in een knusse, gezellige sfeer.',
           extraSeo:
-            'Signatuurgerechten: stoofvlees, verse mosselen, konijn met pruimen en seizoensgerechten. Ideal voor families, koppels en groepen, op wandelafstand van het Minnewaterpark.',
+            'Signatuurgerechten: stoofvlees, verse mosselen, steak en seizoensgerechten. Ideal voor families, koppels en groepen, op wandelafstand van het Minnewaterpark.',
         },
         reviews: {
           heading: 'Wat gasten zeggen',
@@ -232,7 +220,7 @@ const resources = {
             '“Perfecte plek voor traditionele Belgische keuken… Stoofvlees en mosselen waren heerlijk.”',
             '“Fish and chips waren perfect… Het stoofvlees smolt op de tong.”',
             '“Scampi in lookboter met frisse salade en frietjes… absolute aanrader.”',
-            '“Kleine, gezellige bistro… visstoofpot met mosselen smaakte uitstekend. Konijn met pruimen was heerlijk.”',
+            '“Kleine, gezellige bistro… visstoofpot met mosselen smaakte uitstekend. Steak was heerlijk.”',
           ],
         },
         home: {
@@ -252,24 +240,19 @@ const resources = {
         },
         menu: {
           heading: 'Menu',
-          viewPdf: 'Volledig menu (PDF)',
           sections: { classics: 'Belgische klassiekers', seafood: 'Zeevruchten', pastaVeg: 'Pasta & Vegetarisch', desserts: 'Desserts' },
           items: {
             carbonade: { name: 'Stoofvlees', desc: 'Belgische runderstoof met bier, geserveerd met frietjes.' },
             mussels: { name: 'Mosselen', desc: 'Verse mosselen op klassieke Belgische wijze.' },
-            fishChips: { name: 'Fish & Chips', desc: 'Krokant beslag, malse witte vis, handgesneden friet.' },
-            fishStew: { name: 'Visstoof met mosselen', desc: 'Rijke stoofpot met vis en mosselen.' },
-            rabbitPrunes: { name: 'Konijn met pruimen', desc: 'Traditionele zoet-hartige specialiteit.' },
-            scampi: { name: 'Scampi in lookboter', desc: 'Sappige scampi in lookboter, met salade en friet.' },
-            chickenCream: { name: 'Kip in roomsaus', desc: 'Comfortgerecht met romige saus.' },
-            vegLasagne: { name: 'Vegetarische lasagne', desc: 'Groentelaagjes met tomaat en kaas, uit de oven.' },
-            chocMousse: { name: 'Chocolademousse', desc: 'Rijke, luchtige Belgische chocolademousse.' },
+            rabbitPrunes: { name: 'Steak', desc: 'Traditionele Belgische steak specialiteit.' },
           },
-          disclaimer: 'Het PDF-menu staat hieronder. Geselecteerde favorieten kunnen per seizoen wijzigen.',
         },
         reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },
         groupMenu: {
-          heading: 'GROEP MENU €36.00',
+          heading: 'GROEP MENU €36.50',
+          perPerson: 'per persoon',
+          chooseOne: 'kies er één',
+          heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt twee heerlijke opties - kies uw voorkeur.',
           appetizer: {
             title: 'Voorgerecht',
             option1: {
@@ -277,7 +260,7 @@ const resources = {
               translations: {
                 en: 'Homemade cheese croquettes',
                 fr: 'Croquettes de fromage maison',
-                de: 'Käsekroketten',
+                de: 'Hausgemachte Käsekroketten',
                 es: 'Croquetas de queso caseras'
               }
             },
@@ -303,12 +286,12 @@ const resources = {
               }
             },
             option2: {
-              name: 'Gebakken Zalm',
+              name: 'Gebakken Zalm met Béarnaisesaus',
               translations: {
-                en: 'Baked salmon',
-                fr: 'Saumon cuit',
-                de: 'Gebackener Lachs',
-                es: 'Salmón horneado'
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
               }
             }
           },
@@ -333,10 +316,23 @@ const resources = {
               }
             }
           },
-          separator: 'of',
-          stars: '★ ★ ★',
           description: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Dit vooraf vastgesteld menu biedt een selectie van onze beste gerechten tegen een uitstekende waarde.',
-          contactInfo: 'Voor groepsboekingen, neem dan contact met ons op.'
+          contactInfo: 'Voor groepsboekingen, neem dan contact met ons op.',
+          bookingSection: {
+            title: 'Klaar om uw groep te boeken?',
+            heading: 'Laten we uw groepsdining speciaal maken',
+            detailsIntro: 'Geef alstublieft uw gegevens op, inclusief:',
+            detailsList: [
+              'Aantal mensen in uw groep',
+              'Gewenste datum en tijd',
+              'Gerechtvoorkeuren voor elke persoon (Optie 1 of 2)',
+              'Eventuele speciale dieetwensen of allergieën',
+              'Contactgegevens voor bevestiging'
+            ],
+            emailButton: '✉️ E-mail uw groepsboekingsverzoek',
+            emailSubject: 'Groepsboekingsverzoek',
+            emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 2 (Huisgemaakte garnaalkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Steak Natuur): ___ mensen\n  • Optie 2 (Gebakken zalm met béarnaisesaus): ___ mensen\n- Nagerecht:\n  • Optie 1 (Koffie/Thee): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nSpeciale wensen of allergieën:\n\nBedankt!'
+          }
         },
         footer: { rights: 'Alle rechten voorbehouden.', btw: 'BTW' },
       },
@@ -347,7 +343,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Travellers\' Choice 2022, 2023 & 2024',
-        nav: { home: 'Accueil', menu: 'Menu', groupMenu: 'Menu Groupe', reserve: 'Réserver', language: 'Langue' },
+        nav: { home: 'Accueil', menu: 'Menu', reserve: 'Réserver', language: 'Langue' },
         cta: { bookNow: 'Réserver', viewMenu: 'Voir le menu' },
         address: {
           heading: 'Nous trouver',
@@ -363,14 +359,14 @@ const resources = {
         seo: {
           title: 'Délice Brugge | Restaurant belge authentique à Bruges',
           description:
-            'Restaurant familial au cœur de Bruges. Dégustez carbonade flamande, moules, lapin aux pruneaux et bières locales dans une ambiance chaleureuse près du Minnewaterpark.',
+            'Restaurant familial au cœur de Bruges. Dégustez carbonade flamande, moules, steak et bières locales dans une ambiance chaleureuse près du Minnewaterpark.',
         },
         about: {
           heading: 'À propos',
           copy:
             'Situé au cœur du Minnewaterpark à Bruges, Délice Brugge incarne la chaleureuse hospitalité familiale belge, avec une cuisine authentique dans une ambiance conviviale.',
           extraSeo:
-            'Plats signature : carbonade flamande, moules fraîches, lapin aux pruneaux, suggestions de saison. Idéal pour familles, couples et groupes, à deux pas du Minnewaterpark.',
+            'Plats signature : carbonade flamande, moules fraîches, steak, suggestions de saison. Idéal pour familles, couples et groupes, à deux pas du Minnewaterpark.',
         },
         reviews: {
           heading: 'Avis des clients',
@@ -378,7 +374,7 @@ const resources = {
             '« Endroit parfait pour goûter la cuisine belge traditionnelle… Carbonade et moules délicieuses. »',
             '« Fish and chips parfait… La carbonade fond dans la bouche. »',
             '« Scampi au beurre à l’ail avec salade fraîche et frites… fortement recommandé. »',
-            '« Petit bistrot chaleureux… la soupe de poisson avec moules était excellente. Lapin aux pruneaux délicieux. »',
+            '« Petit bistrot chaleureux… la soupe de poisson avec moules était excellente. Steak délicieux. »',
           ],
         },
         home: { 
@@ -403,19 +399,21 @@ const resources = {
           items: {
             carbonade: { name: 'Carbonade flamande', desc: 'Bœuf mijoté à la bière, servi avec frites.' },
             mussels: { name: 'Moules', desc: 'Moules fraîches à la belge.' },
-            fishChips: { name: 'Fish & Chips', desc: 'Poisson blanc croustillant, frites.' },
-            fishStew: { name: 'Soupe de poisson aux moules', desc: 'Ragoût de fruits de mer aux herbes.' },
-            rabbitPrunes: { name: 'Lapin aux pruneaux', desc: 'Spécialité douce-salée traditionnelle.' },
+
+            rabbitPrunes: { name: 'Steak', desc: 'Spécialité belge traditionnelle.' },
             scampi: { name: 'Scampi au beurre à l’ail', desc: 'Crevettes au beurre d’ail, salade et frites.' },
             chickenCream: { name: 'Poulet à la crème', desc: 'Classique réconfortant à la sauce crémeuse.' },
             vegLasagne: { name: 'Lasagne végétarienne', desc: 'Légumes, tomate et fromage, gratinés.' },
             chocMousse: { name: 'Mousse au chocolat', desc: 'Mousse au chocolat belge riche et aérienne.' },
           },
-          disclaimer: 'Le menu PDF en direct est disponible ci-dessous. Les plats peuvent varier selon la saison.',
+
         },
         reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },
         groupMenu: {
-          heading: 'MENU GROUPE €36.00',
+          heading: 'MENU GROUPE €36.50',
+          perPerson: 'par personne',
+          chooseOne: 'choisissez-en un',
+          heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat propose deux délicieuses options - choisissez votre préférence.',
           appetizer: {
             title: 'Entrée',
             option1: {
@@ -423,7 +421,7 @@ const resources = {
               translations: {
                 en: 'Homemade cheese croquettes',
                 fr: 'Croquettes de fromage maison',
-                de: 'Käsekroketten',
+                de: 'Hausgemachte Käsekroketten',
                 es: 'Croquetas de queso caseras'
               }
             },
@@ -449,12 +447,12 @@ const resources = {
               }
             },
             option2: {
-              name: 'Saumon cuit',
+              name: 'Saumon cuit avec sauce béarnaise',
               translations: {
-                en: 'Baked salmon',
-                fr: 'Saumon cuit',
-                de: 'Gebackener Lachs',
-                es: 'Salmón horneado'
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
               }
             }
           },
@@ -479,10 +477,24 @@ const resources = {
               }
             }
           },
-          separator: 'ou',
-          stars: '★ ★ ★',
+
           description: 'Parfait pour les réservations de groupe et les occasions spéciales. Ce menu préfixé offre une sélection de nos meilleurs plats à un excellent prix.',
-          contactInfo: 'Pour les réservations de groupe, veuillez nous contacter directement.'
+          contactInfo: 'Pour les réservations de groupe, veuillez nous contacter directement.',
+          bookingSection: {
+            title: 'Prêt à réserver votre groupe ?',
+            heading: 'Rendons votre dîner de groupe spécial',
+            detailsIntro: 'Veuillez fournir vos détails, y compris :',
+            detailsList: [
+              'Nombre de personnes dans votre groupe',
+              'Date et heure préférées',
+              'Préférences de plats pour chaque personne (Option 1 ou 2)',
+              'Exigences alimentaires spéciales ou allergies',
+              'Informations de contact pour confirmation'
+            ],
+            emailButton: '✉️ Envoyer votre demande de réservation de groupe',
+            emailSubject: 'Demande de réservation de groupe',
+            emailBody: 'Bonjour,\n\nJe souhaiterais faire une réservation de groupe avec les détails suivants :\n\nNombre total de personnes :\nDate préférée :\nHeure préférée :\n\nPréférences de plats (veuillez spécifier combien de personnes veulent chaque option) :\n- Entrée :\n  • Option 1 (Croquettes de fromage maison) : ___ personnes\n  • Option 2 (Croquettes de crevettes maison) : ___ personnes\n- Plat principal :\n  • Option 1 (Steak nature) : ___ personnes\n  • Option 2 (Saumon cuit avec sauce béarnaise) : ___ personnes\n- Dessert :\n  • Option 1 (Café/Thé) : ___ personnes\n  • Option 2 (Dame Blanche) : ___ personnes\n\nExigences spéciales ou allergies :\n\nMerci !'
+          }
         },
         footer: { rights: 'Tous droits réservés.', btw: 'TVA' },
       },
@@ -493,7 +505,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Travellers\' Choice 2022, 2023 & 2024',
-        nav: { home: 'Start', menu: 'Speisekarte', groupMenu: 'Gruppenmenü', reserve: 'Reservieren', language: 'Sprache' },
+        nav: { home: 'Start', menu: 'Speisekarte', reserve: 'Reservieren', language: 'Sprache' },
         cta: { bookNow: 'Jetzt reservieren', viewMenu: 'Speisekarte ansehen' },
         address: {
           heading: 'Anfahrt',
@@ -509,14 +521,14 @@ const resources = {
         seo: {
           title: 'Délice Brugge | Authentisches belgisches Restaurant in Brügge',
           description:
-            'Familiengeführtes belgisches Restaurant in Brügge. Genießen Sie Carbonade Flamande, Muscheln, Kaninchen mit Pflaumen und lokale Biere in gemütlicher Atmosphäre nahe dem Minnewaterpark.',
+            'Familiengeführtes belgisches Restaurant in Brügge. Genießen Sie Carbonade Flamande, Muscheln, Steak und lokale Biere in gemütlicher Atmosphäre nahe dem Minnewaterpark.',
         },
         about: {
           heading: 'Über uns',
           copy:
             'Im Herzen des Minnewaterparks in Brügge bietet Délice Brugge herzliche, familiengeführte Gastfreundschaft und authentische belgische Küche in gemütlicher Atmosphäre.',
           extraSeo:
-            'Signature-Gerichte: Carbonade Flamande, frische Muscheln, Kaninchen mit Pflaumen, saisonale Spezialitäten. Ideal für Familien, Paare und Gruppen nahe dem Minnewaterpark.',
+            'Signature-Gerichte: Carbonade Flamande, frische Muscheln, Steak, saisonale Spezialitäten. Ideal für Familien, Paare und Gruppen nahe dem Minnewaterpark.',
         },
         reviews: {
           heading: 'Gästestimmen',
@@ -524,7 +536,7 @@ const resources = {
             '„Perfekter Ort für traditionelle belgische Küche… Carbonade und Muscheln waren köstlich.“',
             '„Fish and Chips perfekt… Das Schmorgericht zart wie Butter.“',
             '„Scampi in Knoblauchbutter mit frischem Salat und Pommes… sehr zu empfehlen.“',
-            '„Kleines, gemütliches Bistro… Fischeintopf mit Muscheln hervorragend. Kaninchen mit Pflaumen köstlich.“',
+            '„Kleines, gemütliches Bistro… Fischeintopf mit Muscheln hervorragend. Steak köstlich.“',
           ],
         },
         home: { 
@@ -544,32 +556,27 @@ const resources = {
         },
         menu: {
           heading: 'Speisekarte',
-          viewPdf: 'Vollständiges Menü (PDF)',
           sections: { classics: 'Belgische Klassiker', seafood: 'Meeresfrüchte', pastaVeg: 'Pasta & Vegetarisch', desserts: 'Desserts' },
           items: {
             carbonade: { name: 'Carbonade Flamande', desc: 'Belgischer Bierschmorbraten, mit Pommes.' },
             mussels: { name: 'Miesmuscheln', desc: 'Frische Muscheln nach belgischer Art.' },
-            fishChips: { name: 'Fish & Chips', desc: 'Knuspriger Teig, zarter Fisch, Pommes.' },
-            fishStew: { name: 'Fischeintopf mit Muscheln', desc: 'Kräftiger Eintopf mit Meeresaromen.' },
-            rabbitPrunes: { name: 'Kaninchen mit Pflaumen', desc: 'Traditionelle süß-herzhafte Spezialität.' },
-            scampi: { name: 'Scampi in Knoblauchbutter', desc: 'Saftige Garnelen mit Salat und Pommes.' },
-            chickenCream: { name: 'Hähnchen in Sahnesoße', desc: 'Klassiker mit cremiger Soße.' },
-            vegLasagne: { name: 'Vegetarische Lasagne', desc: 'Gemüse, Tomate, Käse, überbacken.' },
-            chocMousse: { name: 'Schokoladenmousse', desc: 'Reiches, luftiges belgisches Mousse.' },
+            rabbitPrunes: { name: 'Steak', desc: 'Traditionelle belgische Steak-Spezialität.' },
           },
-          disclaimer: 'Das PDF-Menü steht unten bereit. Saisonale Änderungen möglich.',
         },
         reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
         groupMenu: {
-          heading: 'MENÜ FÜR GRUPPEN €36.00',
+          heading: 'MENÜ FÜR GRUPPEN €36.50',
+          perPerson: 'pro Person',
+          chooseOne: 'wählen Sie eine',
+          heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet zwei köstliche Optionen - wählen Sie Ihre Präferenz.',
           appetizer: {
             title: 'Vorspeise',
             option1: {
-              name: 'Käsekroketten',
+              name: 'Hausgemachte Käsekroketten',
               translations: {
                 en: 'Homemade cheese croquettes',
                 fr: 'Croquettes de fromage maison',
-                de: 'Käsekroketten',
+                de: 'Hausgemachte Käsekroketten',
                 es: 'Croquetas de queso caseras'
               }
             },
@@ -595,19 +602,19 @@ const resources = {
               }
             },
             option2: {
-              name: 'Gebackener Lachs',
+              name: 'Gebackener Lachs mit Béarnaisesauce',
               translations: {
-                en: 'Baked salmon',
-                fr: 'Saumon cuit',
-                de: 'Gebackener Lachs',
-                es: 'Salmón horneado'
-              }
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
+          }
             }
           },
           dessert: {
             title: 'Nachspeise',
             option1: {
-              name: 'Kaffee/Thee',
+              name: 'Kaffee/Tee',
               translations: {
                 en: 'Coffee/Tea',
                 fr: 'Café/Thé',
@@ -625,10 +632,24 @@ const resources = {
               }
             }
           },
-          separator: 'oder',
-          stars: '★ ★ ★',
+
           description: 'Ideal für Gruppenbuchungen und besondere Anlässe. Dieses vorgefertigte Menü bietet eine Auswahl unserer besten Gerichte zu einem hervorragenden Preis.',
-          contactInfo: 'Für Gruppenbuchungen wenden Sie sich bitte direkt an uns.'
+          contactInfo: 'Für Gruppenbuchungen wenden Sie sich bitte direkt an uns.',
+          bookingSection: {
+            title: 'Bereit, Ihre Gruppe zu buchen?',
+            heading: 'Lassen Sie uns Ihr Gruppenessen besonders machen',
+            detailsIntro: 'Bitte geben Sie Ihre Details an, einschließlich:',
+            detailsList: [
+              'Anzahl der Personen in Ihrer Gruppe',
+              'Bevorzugtes Datum und Uhrzeit',
+              'Gerichtsvorlieben für jede Person (Option 1 oder 2)',
+              'Besondere Ernährungsanforderungen oder Allergien',
+              'Kontaktinformationen zur Bestätigung'
+            ],
+            emailButton: '✉️ E-Mail-Anfrage für Gruppenbuchung senden',
+            emailSubject: 'Anfrage für Gruppenbuchung',
+            emailBody: 'Hallo,\n\nIch möchte eine Gruppenbuchung mit den folgenden Details machen:\n\nGesamtanzahl der Personen:\nBevorzugtes Datum:\nBevorzugte Uhrzeit:\n\nGerichtsvorlieben (bitte geben Sie an, wie viele Personen jede Option möchten):\n- Vorspeise:\n  • Option 1 (Hausgemachte Käsekroketten): ___ Personen\n  • Option 2 (Hausgemachte Garnelenkroketten): ___ Personen\n- Hauptgericht:\n  • Option 1 (Steak Natur): ___ Personen\n  • Option 2 (Gebackener Lachs mit Béarnaisesauce): ___ Personen\n- Nachspeise:\n  • Option 1 (Kaffee/Tee): ___ Personen\n  • Option 2 (Dame Blanche): ___ Personen\n\nBesondere Anforderungen oder Allergien:\n\nVielen Dank!'
+          }
         },
         footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' },
       },
@@ -639,7 +660,7 @@ const resources = {
       common: {
         brandName: 'Délice Brugge',
         travellersChoice: 'Traveller\'s Choice 2022, 2023 y 2024',
-        nav: { home: 'Inicio', menu: 'Menú', groupMenu: 'Menú Grupos', reserve: 'Reservas', language: 'Idioma' },
+        nav: { home: 'Inicio', menu: 'Menú', reserve: 'Reservas', language: 'Idioma' },
         cta: { bookNow: 'Reservar ahora', viewMenu: 'Ver menú' },
         address: {
           heading: 'Dónde estamos',
@@ -655,14 +676,14 @@ const resources = {
         seo: {
           title: 'Délice Brugge | Restaurante belga auténtico en Brujas',
           description:
-            'Restaurante familiar en el corazón de Brujas. Carbonade flamande, mejillones, conejo con ciruelas y cervezas locales en un ambiente acogedor cerca del Minnewaterpark.',
+            'Restaurante familiar en el corazón de Brujas. Carbonade flamande, mejillones, bistec y cervezas locales en un ambiente acogedor cerca del Minnewaterpark.',
         },
         about: {
           heading: 'Quiénes somos',
           copy:
             'En el corazón del Minnewaterpark en Brujas, Délice Brugge ofrece hospitalidad familiar y cocina belga auténtica en un ambiente cálido y acogedor.',
           extraSeo:
-            'Platos destacados: carbonade flamande, mejillones frescos, conejo con ciruelas y especialidades de temporada. Ideal para familias, parejas y grupos cerca del Minnewaterpark.',
+            'Platos destacados: carbonade flamande, mejillones frescos, bistec y especialidades de temporada. Ideal para familias, parejas y grupos cerca del Minnewaterpark.',
         },
         reviews: {
           heading: 'Opiniones',
@@ -670,7 +691,7 @@ const resources = {
             '“Lugar perfecto para probar la comida belga tradicional… Carbonade y mejillones deliciosos.”',
             '“Fish and chips perfecto… la carbonade se deshacía en la boca.”',
             '“Gambas al ajillo con ensalada fresca y patatas fritas… muy recomendable.”',
-            '“Pequeño bistró acogedor… guiso de pescado con mejillones excelente. Conejo con ciruelas delicioso.”',
+            '“Pequeño bistró acogedor… guiso de pescado con mejillones excelente. Bistec delicioso.”',
           ],
         },
         home: { 
@@ -690,24 +711,19 @@ const resources = {
         },
         menu: {
           heading: 'Menú',
-          viewPdf: 'Ver menú completo (PDF)',
           sections: { classics: 'Clásicos belgas', seafood: 'Mariscos', pastaVeg: 'Pasta y vegetariano', desserts: 'Postres' },
           items: {
             carbonade: { name: 'Carbonade flamande', desc: 'Estofado de ternera a la cerveza belga con patatas fritas.' },
             mussels: { name: 'Mejillones', desc: 'Mejillones frescos al estilo belga.' },
-            fishChips: { name: 'Fish & Chips', desc: 'Rebozado crujiente, pescado blanco, patatas.' },
-            fishStew: { name: 'Guiso de pescado con mejillones', desc: 'Guiso de mariscos con hierbas aromáticas.' },
-            rabbitPrunes: { name: 'Conejo con ciruelas', desc: 'Especialidad tradicional agridulce.' },
-            scampi: { name: 'Gambas al ajillo', desc: 'Gambas en mantequilla de ajo, ensalada y patatas.' },
-            chickenCream: { name: 'Pollo en salsa de crema', desc: 'Clásico reconfortante con salsa cremosa.' },
-            vegLasagne: { name: 'Lasaña vegetariana', desc: 'Capas de verduras, tomate y queso al horno.' },
-            chocMousse: { name: 'Mousse de chocolate', desc: 'Mousse belga rica y esponjosa.' },
+            rabbitPrunes: { name: 'Bistec', desc: 'Especialidad belga tradicional.' },
           },
-          disclaimer: 'El menú en PDF está disponible a continuación. Los platos pueden variar según la temporada.',
         },
         reserve: { heading: 'Reservar mesa', intro: 'Reserva al instante con nuestro widget.' },
         groupMenu: {
-          heading: 'MENÚ PARA GRUPOS €36.00',
+          heading: 'MENÚ PARA GRUPOS €36.50',
+          perPerson: 'por persona',
+          chooseOne: 'elija uno',
+          heroDescription: 'Ideal para reservas de grupos y ocasiones especiales. Cada plato ofrece dos deliciosas opciones - elija su preferencia.',
           appetizer: {
             title: 'Entrante',
             option1: {
@@ -715,7 +731,7 @@ const resources = {
               translations: {
                 en: 'Homemade cheese croquettes',
                 fr: 'Croquettes de fromage maison',
-                de: 'Käsekroketten',
+                de: 'Hausgemachte Käsekroketten',
                 es: 'Croquetas de queso caseras'
               }
             },
@@ -741,12 +757,12 @@ const resources = {
               }
             },
             option2: {
-              name: 'Salmón horneado',
+              name: 'Salmón horneado con salsa bearnesa',
               translations: {
-                en: 'Baked salmon',
-                fr: 'Saumon cuit',
-                de: 'Gebackener Lachs',
-                es: 'Salmón horneado'
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
               }
             }
           },
@@ -771,10 +787,24 @@ const resources = {
               }
             }
           },
-          separator: 'o',
-          stars: '★ ★ ★',
+
           description: 'Ideal para reservas de grupos y ocasiones especiales. Este menú prefijado ofrece una selección de nuestros mejores platos a un excelente precio.',
-          contactInfo: 'Para reservas de grupos, por favor, póngase en contacto con nosotros directamente.'
+          contactInfo: 'Para reservas de grupos, por favor, póngase en contacto con nosotros directamente.',
+          bookingSection: {
+            title: '¿Listo para reservar su grupo?',
+            heading: 'Hagamos especial su cena de grupo',
+            detailsIntro: 'Por favor, proporcione sus detalles, incluyendo:',
+            detailsList: [
+              'Número de personas en su grupo',
+              'Fecha y hora preferidas',
+              'Preferencias de platos para cada persona (Opción 1 o 2)',
+              'Cualquier requisito dietético especial o alergias',
+              'Información de contacto para confirmación'
+            ],
+            emailButton: '✉️ Enviar su solicitud de reserva de grupo',
+            emailSubject: 'Solicitud de reserva de grupo',
+            emailBody: 'Hola,\n\nMe gustaría hacer una reserva de grupo con los siguientes detalles:\n\nNúmero total de personas:\nFecha preferida:\nHora preferida:\n\nPreferencias de platos (por favor especifique cuántas personas quieren cada opción):\n- Entrante:\n  • Opción 1 (Croquetas de queso caseras): ___ personas\n  • Opción 2 (Croquetas de gambas caseras): ___ personas\n- Plato principal:\n  • Opción 1 (Bistec natural): ___ personas\n  • Opción 2 (Salmón horneado con salsa bearnesa): ___ personas\n- Postre:\n  • Opción 1 (Café/Té): ___ personas\n  • Opción 2 (Dame Blanche): ___ personas\n\nRequisitos especiales o alergias:\n\n¡Gracias!'
+          }
         },
         footer: { rights: 'Todos los derechos reservados.', btw: 'IVA' },
       },
