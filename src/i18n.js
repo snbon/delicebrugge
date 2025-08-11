@@ -92,7 +92,7 @@ const resources = {
           intro: 'Book instantly via our partner widget.',
         },
         groupMenu: {
-          heading: 'GROUP MENU €36.50',
+          heading: 'MENU €36.50',
           perPerson: 'per person',
           chooseOne: 'choose one',
           heroDescription: 'Perfect for group bookings and special occasions. Each course offers two delicious options - choose your preference.',
@@ -249,7 +249,7 @@ const resources = {
         },
         reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },
         groupMenu: {
-          heading: 'GROEP MENU €36.50',
+          heading: 'MENU €36.50',
           perPerson: 'per persoon',
           chooseOne: 'kies er één',
           heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt twee heerlijke opties - kies uw voorkeur.',
@@ -410,7 +410,7 @@ const resources = {
         },
         reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },
         groupMenu: {
-          heading: 'MENU GROUPE €36.50',
+          heading: 'MENU €36.50',
           perPerson: 'par personne',
           chooseOne: 'choisissez-en un',
           heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat propose deux délicieuses options - choisissez votre préférence.',
@@ -565,7 +565,7 @@ const resources = {
         },
         reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
         groupMenu: {
-          heading: 'MENÜ FÜR GRUPPEN €36.50',
+          heading: 'MENÜ €36.50',
           perPerson: 'pro Person',
           chooseOne: 'wählen Sie eine',
           heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet zwei köstliche Optionen - wählen Sie Ihre Präferenz.',
@@ -720,7 +720,7 @@ const resources = {
         },
         reserve: { heading: 'Reservar mesa', intro: 'Reserva al instante con nuestro widget.' },
         groupMenu: {
-          heading: 'MENÚ PARA GRUPOS €36.50',
+          heading: 'MENÚ €36.50',
           perPerson: 'por persona',
           chooseOne: 'elija uno',
           heroDescription: 'Ideal para reservas de grupos y ocasiones especiales. Cada plato ofrece dos deliciosas opciones - elija su preferencia.',
