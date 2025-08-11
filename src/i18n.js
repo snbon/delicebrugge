@@ -269,7 +269,7 @@ const resources = {
         },
         reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },
         groupMenu: {
-          heading: 'GROUP MENU €35.00',
+          heading: 'GROEP MENU €36.00',
           appetizer: {
             title: 'Voorgerecht',
             option1: {
@@ -415,7 +415,7 @@ const resources = {
         },
         reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },
         groupMenu: {
-          heading: 'MENU GROUPE €35.00',
+          heading: 'MENU GROUPE €36.00',
           appetizer: {
             title: 'Entrée',
             option1: {
@@ -561,7 +561,7 @@ const resources = {
         },
         reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
         groupMenu: {
-          heading: 'MENÜ FÜR GRUPPEN €35.00',
+          heading: 'MENÜ FÜR GRUPPEN €36.00',
           appetizer: {
             title: 'Vorspeise',
             option1: {
@@ -707,7 +707,7 @@ const resources = {
         },
         reserve: { heading: 'Reservar mesa', intro: 'Reserva al instante con nuestro widget.' },
         groupMenu: {
-          heading: 'MENÚ PARA GRUPOS €35.00',
+          heading: 'MENÚ PARA GRUPOS €36.00',
           appetizer: {
             title: 'Entrante',
             option1: {
