@@ -116,19 +116,19 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
           {renderSummarySection(t('common.groupBooking.summary.guestInfo'), (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-neutral-600">Name</p>
+                <p className="text-sm text-neutral-600">{t('common.groupBooking.summary.labels.name')}</p>
                 <p className="font-medium text-neutral-900">{state.name}</p>
               </div>
               <div>
-                <p className="text-sm text-neutral-600">Email</p>
+                <p className="text-sm text-neutral-600">{t('common.groupBooking.summary.labels.email')}</p>
                 <p className="font-medium text-neutral-900">{state.email}</p>
               </div>
               <div>
-                <p className="text-sm text-neutral-600">Phone</p>
+                <p className="text-sm text-neutral-600">{t('common.groupBooking.summary.labels.phone')}</p>
                 <p className="font-medium text-neutral-900">{state.phone}</p>
               </div>
               <div>
-                <p className="text-sm text-neutral-600">Number of Guests</p>
+                <p className="text-sm text-neutral-600">{t('common.groupBooking.summary.labels.numberOfGuests')}</p>
                 <p className="font-medium text-neutral-900">{state.guests}</p>
               </div>
             </div>
@@ -138,11 +138,11 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
           {renderSummarySection(t('common.groupBooking.summary.bookingDetails'), (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-neutral-600">Date</p>
+                <p className="text-sm text-neutral-600">{t('common.groupBooking.summary.labels.date')}</p>
                 <p className="font-medium text-neutral-900">{formatDate(state.date)}</p>
               </div>
               <div>
-                <p className="text-sm text-neutral-600">Time</p>
+                <p className="text-sm text-neutral-600">{t('common.groupBooking.summary.labels.time')}</p>
                 <p className="font-medium text-neutral-900">{state.time}</p>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
                     {getDishName(dishId)}
                   </span>
                   <span className="text-neutral-600">
-                    Quantity: {quantity}
+                    {t('common.groupBooking.summary.labels.quantity')}: {quantity}
                   </span>
                 </div>
               ))}
@@ -191,13 +191,15 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
 
           {/* Total Price (for Group Menu only) */}
           {state.menuOption === 'groupMenu' && renderSummarySection(t('common.groupBooking.summary.totalPrice'), (
-            <div className="flex justify-between items-center">
-              <span className="text-lg font-medium text-neutral-900">
-                Total for {state.guests} guests
-              </span>
-              <span className="text-2xl font-bold text-brand-600">
-                €{calculateTotalPrice().toFixed(2)}
-              </span>
+            <div className="space-y-3">
+              <div className="flex justify-end">
+                <span className="text-2xl font-bold text-brand-600">
+                  €{calculateTotalPrice().toFixed(2)}
+                </span>
+              </div>
+              <p className="text-sm text-neutral-600 text-right">
+                {t('common.groupBooking.quantities.priceNote')}
+              </p>
             </div>
           ))}
 

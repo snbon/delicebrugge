@@ -36,17 +36,17 @@ const resources = {
         about: {
           heading: 'About us',
           copy:
-            'Nestled in the heart of Minnewaterpark in Bruges, Délice Brugge is a cherished Belgian restaurant that captures the warmth of family-owned hospitality. Our passion is to make every visitor’s experience in Bruges unforgettable, offering authentic Belgian cuisine in a cozy, welcoming atmosphere. Loved by locals and travelers alike, Délice Brugge is where the charm of Belgium comes alive, one delicious meal at a time.',
+            "Nestled in the heart of Minnewaterpark in Bruges, Délice Brugge is a cherished Belgian restaurant that captures the warmth of family-owned hospitality. Our passion is to make every visitor's experience in Bruges unforgettable, offering authentic Belgian cuisine in a cozy, welcoming atmosphere. Loved by locals and travelers alike, Délice Brugge is where the charm of Belgium comes alive, one delicious meal at a time.",
           extraSeo:
             'Signature dishes include Carbonade Flamande (Flemish beef stew), fresh mussels, steak, and seasonal specials. Ideal for families, couples, and groups exploring Bruges. Located steps from Minnewaterpark, with friendly service and great value.',
         },
         reviews: {
           heading: 'Guests say',
           items: [
-            '“Perfect place to experience traditional Belgian food… Carbonade Flamande and mussels were so tasty.”',
-            '“Fish and chips were perfect… I had carbonade/stoofvlees. The beef melted in the mouth.”',
-            '“Scampi in garlic butter with fresh salad and frites… highly recommend eating here.”',
-            '“Lovely small bistro… fish stew with mussels was thoroughly enjoyed. I had the steak, delicious and tender."',
+            '"Perfect place to experience traditional Belgian food… Carbonade Flamande and mussels were so tasty."',
+            '"Fish and chips were perfect… I had carbonade/stoofvlees. The beef melted in the mouth."',
+            '"Scampi in garlic butter with fresh salad and frites… highly recommend eating here."',
+            '"Lovely small bistro… fish stew with mussels was thoroughly enjoyed. I had the steak, delicious and tender."',
           ],
         },
         home: {
@@ -233,17 +233,24 @@ const resources = {
             starters: 'Starters',
             mains: 'Main Dishes',
             desserts: 'Desserts',
-              selectExactly: 'Select exactly',
-              selectUpTo: 'Select up to',
-              items: 'items',
-              groupMenu: {
-                appetizer: 'Appetizer',
-                mainCourse: 'Main Course',
-                dessert: 'Dessert',
-                chooseOne: 'Choose one option per course'
-              },
-              next: 'Next'
+            selectExactly: 'Select exactly',
+            selectUpTo: 'Select up to',
+            items: 'items',
+            sections: {
+              vleesgerechten: 'Meat Dishes',
+              visgerechtenMosselen: 'Fish Dishes & Mussels',
+              pasta: 'Pasta',
+              kidsMenu: 'Kids Menu'
             },
+            groupMenu: {
+              appetizer: 'Appetizer',
+              mainCourse: 'Main Course',
+              dessert: 'Dessert',
+              chooseOne: 'Choose one option per course',
+              or: 'or'
+            },
+            next: 'Next'
+          },
           quantities: {
             title: 'Assign Quantities & Special Requests',
             quantity: 'Quantity',
@@ -263,7 +270,17 @@ const resources = {
             totalPrice: 'Total Price',
             confirmAgreement: 'I confirm the above details are correct and understand that a deposit will be required to secure the booking.',
             submit: 'Submit Booking',
-            submitting: 'Submitting...'
+            submitting: 'Submitting...',
+            labels: {
+              name: 'Name',
+              email: 'Email',
+              phone: 'Phone',
+              numberOfGuests: 'Number of Guests',
+              date: 'Date',
+              time: 'Time',
+              quantity: 'Quantity',
+              totalForGuests: 'Total for {guests} guests'
+            }
           },
           thankYou: {
             title: 'Thank You!',
@@ -327,10 +344,10 @@ const resources = {
         reviews: {
           heading: 'Wat gasten zeggen',
           items: [
-            '“Perfecte plek voor traditionele Belgische keuken… Stoofvlees en mosselen waren heerlijk.”',
-            '“Fish and chips waren perfect… Het stoofvlees smolt op de tong.”',
-            '“Scampi in lookboter met frisse salade en frietjes… absolute aanrader.”',
-            '“Kleine, gezellige bistro… visstoofpot met mosselen smaakte uitstekend. Steak was heerlijk.”',
+            '"Perfecte plek voor traditionele Belgische keuken… Stoofvlees en mosselen waren heerlijk."',
+            '"Fish and chips waren perfect… Het stoofvlees smolt op de tong."',
+            '"Scampi in lookboter met frisse salade en frietjes… absolute aanrader."',
+            '"Kleine, gezellige bistro… visstoofpot met mosselen smaakte uitstekend. Steak was heerlijk."',
           ],
         },
         home: {
@@ -503,11 +520,18 @@ const resources = {
               selectExactly: 'Selecteer precies',
               selectUpTo: 'Selecteer maximaal',
               items: 'items',
+              sections: {
+                vleesgerechten: 'Vleesgerechten',
+                visgerechtenMosselen: 'Visgerechten & Mosselen',
+                pasta: 'Pasta',
+                kidsMenu: 'Kids Menu'
+              },
               groupMenu: {
                 appetizer: 'Voorgerecht',
                 mainCourse: 'Hoofdgerecht',
                 dessert: 'Nagerecht',
-                chooseOne: 'Kies één optie per gang'
+                chooseOne: 'Kies één optie per gang',
+                or: 'of'
               },
               next: 'Volgende'
             },
@@ -530,7 +554,17 @@ const resources = {
             totalPrice: 'Totaalprijs',
             confirmAgreement: 'Ik bevestig dat de bovenstaande gegevens correct zijn en begrijp dat een aanbetaling vereist zal zijn om de boeking te bevestigen.',
             submit: 'Boeking indienen',
-            submitting: 'Indienen...'
+            submitting: 'Indienen...',
+            labels: {
+              name: 'Naam',
+              email: 'E-mail',
+              phone: 'Telefoon',
+              numberOfGuests: 'Aantal gasten',
+              date: 'Datum',
+              time: 'Tijd',
+              quantity: 'Aantal',
+              totalForGuests: 'Totaal voor {guests} gasten'
+            }
           },
           thankYou: {
             title: 'Bedankt!',
@@ -636,11 +670,11 @@ const resources = {
               'Contactgegevens voor bevestiging'
             ],
             emailButton: '✉️ E-mail uw groepsboekingsverzoek',
-            emailSubject: 'Groepsboekingsverzoek',
-            emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 2 (Huisgemaakte garnaalkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Steak Natuur): ___ mensen\n  • Optie 2 (Gebakken zalm met béarnaisesaus): ___ mensen\n- Nagerecht:\n  • Optie 1 (Koffie/Thee): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nSpeciale wensen of allergieën:\n\nBedankt!'
+            emailSubject: 'Anfrage für Gruppenbuchung',
+            emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 2 (Huisgemaakte garnalenkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Steak Natuur): ___ mensen\n  • Optie 2 (Gebakken zalm met béarnaisesaus): ___ mensen\n- Nagerecht:\n  • Optie 1 (Koffie/Thee): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nBesondere Anforderungen oder Allergien:\n\nVielen Dank!'
           }
         },
-        footer: { rights: 'Alle rechten voorbehouden.', btw: 'BTW' },
+        footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' },
       },
     },
   },
@@ -677,10 +711,10 @@ const resources = {
         reviews: {
           heading: 'Avis des clients',
           items: [
-            '« Endroit parfait pour goûter la cuisine belge traditionnelle… Carbonade et moules délicieuses. »',
-            '« Fish and chips parfait… La carbonade fond dans la bouche. »',
-            '« Scampi au beurre à l’ail avec salade fraîche et frites… fortement recommandé. »',
-            '« Petit bistrot chaleureux… la soupe de poisson avec moules était excellente. Steak délicieux. »',
+            '"Endroit parfait pour goûter la cuisine belge traditionnelle… Carbonade et moules délicieuses."',
+            '"Fish and chips parfait… La carbonade fond dans la bouche."',
+            '"Scampi au beurre à l\'ail avec salade fraîche et frites… fortement recommandé."',
+            '"Petit bistrot chaleureux… la soupe de poisson avec moules était excellente. Steak délicieux."',
           ],
         },
         home: { 
@@ -707,7 +741,7 @@ const resources = {
             mussels: { name: 'Moules', desc: 'Moules fraîches à la belge.' },
 
             rabbitPrunes: { name: 'Steak', desc: 'Spécialité belge traditionnelle.' },
-            scampi: { name: 'Scampi au beurre à l’ail', desc: 'Crevettes au beurre d’ail, salade et frites.' },
+            scampi: { name: 'Scampi au beurre à l\'ail', desc: 'Crevettes au beurre d\'ail, salade et frites.' },
             chickenCream: { name: 'Poulet à la crème', desc: 'Classique réconfortant à la sauce crémeuse.' },
             vegLasagne: { name: 'Lasagne végétarienne', desc: 'Légumes, tomate et fromage, gratinés.' },
             chocMousse: { name: 'Mousse au chocolat', desc: 'Mousse au chocolat belge riche et aérienne.' },
@@ -860,11 +894,18 @@ const resources = {
               selectExactly: 'Sélectionnez exactement',
               selectUpTo: 'Sélectionnez jusqu\'à',
               items: 'plats',
+              sections: {
+                vleesgerechten: 'Plats de viande',
+                visgerechtenMosselen: 'Plats de poissons et de moules',
+                pasta: 'Pâtes',
+                kidsMenu: 'Menu enfant'
+              },
               groupMenu: {
                 appetizer: 'Entrée',
                 mainCourse: 'Plat Principal',
                 dessert: 'Dessert',
-                chooseOne: 'Choisissez une option par plat'
+                chooseOne: 'Choisissez une option par plat',
+                or: 'ou'
               },
               next: 'Suivant'
             },
@@ -887,7 +928,17 @@ const resources = {
             totalPrice: 'Prix Total',
             confirmAgreement: 'Je confirme que les détails ci-dessus sont corrects et je comprends qu\'un acompte sera requis pour confirmer la réservation.',
             submit: 'Soumettre la Réservation',
-            submitting: 'Soumission...'
+            submitting: 'Soumission...',
+            labels: {
+              name: 'Nom',
+              email: 'E-mail',
+              phone: 'Téléphone',
+              numberOfGuests: 'Nombre d\'invités',
+              date: 'Date',
+              time: 'Heure',
+              quantity: 'Quantité',
+              totalForGuests: 'Total pour {guests} invités'
+            }
           },
           thankYou: {
             title: 'Merci!',
@@ -1035,10 +1086,10 @@ const resources = {
         reviews: {
           heading: 'Gästestimmen',
           items: [
-            '„Perfekter Ort für traditionelle belgische Küche… Carbonade und Muscheln waren köstlich.“',
-            '„Fish and Chips perfekt… Das Schmorgericht zart wie Butter.“',
-            '„Scampi in Knoblauchbutter mit frischem Salat und Pommes… sehr zu empfehlen.“',
-            '„Kleines, gemütliches Bistro… Fischeintopf mit Muscheln hervorragend. Steak köstlich.“',
+            '"Perfekter Ort für traditionelle belgische Küche… Carbonade und Muscheln waren köstlich."',
+            '"Fish and Chips perfekt… Das Schmorgericht zart wie Butter."',
+            '"Scampi in Knoblauchbutter mit frischem Salat und Pommes… sehr zu empfehlen."',
+            '"Kleines, gemütliches Bistro… Fischeintopf mit Muscheln hervorragend. Steak köstlich."',
           ],
         },
         home: { 
@@ -1211,12 +1262,19 @@ const resources = {
             selectExactly: 'Wählen Sie genau',
             selectUpTo: 'Wählen Sie bis zu',
             items: 'Gerichte',
-                          groupMenu: {
-                appetizer: 'Vorspeise',
-                mainCourse: 'Hauptgericht',
-                dessert: 'Dessert',
-                chooseOne: 'Wählen Sie eine Option pro Gang'
-              },
+            sections: {
+              vleesgerechten: 'Fleischgerichte',
+              visgerechtenMosselen: 'Fischgerichte & Miesmuscheln',
+              pasta: 'Pasta',
+              kidsMenu: 'Kindermenü'
+            },
+            groupMenu: {
+              appetizer: 'Vorspeise',
+              mainCourse: 'Hauptgericht',
+              dessert: 'Dessert',
+              chooseOne: 'Wählen Sie eine Option pro Gang',
+              or: 'oder'
+            },
             next: 'Weiter'
           },
           quantities: {
@@ -1238,7 +1296,17 @@ const resources = {
             totalPrice: 'Gesamtpreis',
             confirmAgreement: 'Ich bestätige, dass die obigen Details korrekt sind und verstehe, dass eine Anzahlung erforderlich sein wird, um die Buchung zu sichern.',
             submit: 'Buchung einreichen',
-            submitting: 'Einreichen...'
+            submitting: 'Einreichen...',
+            labels: {
+              name: 'Name',
+              email: 'E-Mail',
+              phone: 'Telefon',
+              numberOfGuests: 'Anzahl der Gäste',
+              date: 'Datum',
+              time: 'Zeit',
+              quantity: 'Menge',
+              totalForGuests: 'Gesamt für {guests} Gäste'
+            }
           },
           thankYou: {
             title: 'Danke!',
@@ -1306,7 +1374,7 @@ const resources = {
                 fr: 'Saumon cuit avec sauce béarnaise',
                 de: 'Gebackener Lachs mit Béarnaisesauce',
                 es: 'Salmón horneado con salsa bearnesa'
-          }
+              }
             }
           },
           dessert: {
@@ -1386,10 +1454,10 @@ const resources = {
         reviews: {
           heading: 'Opiniones',
           items: [
-            '“Lugar perfecto para probar la comida belga tradicional… Carbonade y mejillones deliciosos.”',
-            '“Fish and chips perfecto… la carbonade se deshacía en la boca.”',
-            '“Gambas al ajillo con ensalada fresca y patatas fritas… muy recomendable.”',
-            '“Pequeño bistró acogedor… guiso de pescado con mejillones excelente. Bistec delicioso.”',
+            '"Lugar perfecto para probar la comida belga tradicional… Carbonade y mejillones deliciosos."',
+            '"Fish and chips perfecto… la carbonade se deshacía en la boca."',
+            '"Gambas al ajillo con ensalada fresca y patatas fritas… muy recomendable."',
+            '"Pequeño bistró acogedor… guiso de pescado con mejillones excelente. Bistec delicioso."',
           ],
         },
         home: { 
@@ -1562,12 +1630,19 @@ const resources = {
             selectExactly: 'Seleccione exactamente',
             selectUpTo: 'Seleccione hasta',
             items: 'platos',
-                          groupMenu: {
-                appetizer: 'Entrante',
-                mainCourse: 'Plato Principal',
+            sections: {
+              vleesgerechten: 'Platos de Carne',
+              visgerechtenMosselen: 'Platos de Pescado y Mejillones',
+              pasta: 'Pasta',
+              kidsMenu: 'Menú Infantil'
+            },
+            groupMenu: {
+              appetizer: 'Entrante',
+                              mainCourse: 'Plato Principal',
                 dessert: 'Postre',
-                chooseOne: 'Elija una opción por plato'
-              },
+                chooseOne: 'Elija una opción por plato',
+                or: 'o'
+            },
             next: 'Siguiente'
           },
           quantities: {
@@ -1589,7 +1664,17 @@ const resources = {
             totalPrice: 'Precio Total',
             confirmAgreement: 'Confirmo que los detalles anteriores son correctos y entiendo que se requerirá un depósito para asegurar la reserva.',
             submit: 'Enviar Reserva',
-            submitting: 'Enviando...'
+            submitting: 'Enviando...',
+            labels: {
+              name: 'Nombre',
+              email: 'Correo electrónico',
+              phone: 'Teléfono',
+              numberOfGuests: 'Número de invitados',
+              date: 'Fecha',
+              time: 'Hora',
+              quantity: 'Cantidad',
+              totalForGuests: 'Total para {guests} invitados'
+            }
           },
           thankYou: {
             title: '¡Gracias!',

@@ -473,11 +473,6 @@ export default function GroupBookingPage() {
             </div>
           )}
         </div>
-        <div className="text-center">
-          <span className="text-xs sm:text-sm text-neutral-600">
-            {currentStep === 0 ? 'Welcome' : steps[effectiveStep - 1]}
-          </span>
-        </div>
       </div>
     );
   };

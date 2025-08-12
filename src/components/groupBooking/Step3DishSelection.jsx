@@ -193,27 +193,26 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
     }
 
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {dishes.map((dish) => (
-          <div key={dish.id} className="surface p-4 h-full">
-            <div className="text-center">
-              <h4 className="font-semibold text-neutral-900 mb-2">{dish.name}</h4>
-              <div className="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-brand-600 text-sm">✓</span>
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+          {dishes.map((dish) => (
+            <div key={dish.id} className="surface p-5 h-24 flex flex-col justify-center">
+              <div className="text-center">
+                <h4 className="font-semibold text-neutral-900 text-base leading-tight">{dish.name}</h4>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     );
   };
 
   const renderMainDishesWithCategories = () => {
     const categories = [
-      { title: 'Vleesgerechten', items: vleesgerechten || [], icon: '🥩', clickable: true },
-      { title: 'Visgerechten & Mosselen', items: visgerechten || [], icon: '🐟', clickable: true },
-      { title: 'Pasta', items: pastaOnly || [], icon: '🍝', clickable: true },
-      { title: 'Kids Menu', items: kids || [], icon: '👶', clickable: true }
+      { title: t('common.groupBooking.dishSelection.sections.vleesgerechten'), items: vleesgerechten || [], icon: '🥩', clickable: true },
+      { title: t('common.groupBooking.dishSelection.sections.visgerechtenMosselen'), items: visgerechten || [], icon: '🐟', clickable: true },
+      { title: t('common.groupBooking.dishSelection.sections.pasta'), items: pastaOnly || [], icon: '🍝', clickable: true },
+      { title: t('common.groupBooking.dishSelection.sections.kidsMenu'), items: kids || [], icon: '👶', clickable: true }
     ];
 
     return (
@@ -333,25 +332,43 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
     <div className="space-y-8">
       {/* Appetizer */}
       <div>
-        <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-          {t('common.groupMenu.appetizer.title')}
-        </h3>
+        <div className="text-center mb-6">
+          <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+            {t('common.groupMenu.appetizer.title')}
+          </h3>
+          <p className="text-base font-normal text-brand-600 mb-3">
+            {t('common.groupMenu.chooseOne')}
+          </p>
+          <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+        </div>
         {renderGroupMenuDishes('starters', groupMenuDishes.starters)}
       </div>
 
       {/* Main Course */}
       <div>
-        <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-          {t('common.groupMenu.mainCourse.title')}
-        </h3>
+        <div className="text-center mb-6">
+          <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+            {t('common.groupMenu.mainCourse.title')}
+          </h3>
+          <p className="text-base font-normal text-brand-600 mb-3">
+            {t('common.groupMenu.chooseOne')}
+          </p>
+          <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+        </div>
         {renderGroupMenuDishes('mains', groupMenuDishes.mains)}
       </div>
 
       {/* Dessert */}
       <div>
-        <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-          {t('common.groupMenu.dessert.title')}
-        </h3>
+        <div className="text-center mb-6">
+          <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+            {t('common.groupMenu.dessert.title')}
+          </h3>
+          <p className="text-base font-normal text-brand-600 mb-3">
+            {t('common.groupMenu.chooseOne')}
+          </p>
+          <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+        </div>
         {renderGroupMenuDishes('desserts', groupMenuDishes.desserts)}
       </div>
     </div>
