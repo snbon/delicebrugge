@@ -180,6 +180,19 @@ const resources = {
         groupBooking: {
           heading: 'Group Booking',
           subtitle: 'For groups of 6 or more guests',
+          welcome: {
+            greeting: 'Dear Guest,',
+            description: 'For group bookings, we have 2 formulas that you have to choose in advance with a deposit. We do this for efficiency and to guarantee quality.',
+            option1: {
+              title: 'Option 1: À la Carte',
+              description: 'Choose 5 different main dishes and 5 starters if applicable, from our à la carte menu.'
+            },
+            option2: {
+              title: 'Option 2: Menu',
+              description: 'Choose our well-known and popular menu. Please provide your choices of the 3-course meal in advance.'
+            },
+            bookNow: 'Book Now'
+          },
           steps: {
             step1: 'Guest Details',
             step2: 'Menu Selection',
@@ -207,18 +220,19 @@ const resources = {
               description: 'Choose 5 starters and 5 mains from our full restaurant menu. This option allows you to personalize your group meal from our à la carte offerings.'
             },
             option2: {
-              title: 'Group Menu',
-              description: 'Enjoy our popular fixed 3-course group menu. Perfect for a hassle-free experience with carefully curated dishes.',
+              title: 'Menu',
+              description: 'Enjoy our popular fixed 3-course menu. Perfect for a hassle-free experience with carefully curated dishes.',
               price: '€36.50 per person'
             },
             select: 'Select this option',
             next: 'Next'
           },
-                      dishSelection: {
-              title: 'Dish Selection',
-              starters: 'Starters',
-              mains: 'Main Dishes',
-              desserts: 'Desserts',
+                                dishSelection: {
+            title: 'Dish Selection',
+            subtitle: 'You can specify quantities in the next step',
+            starters: 'Starters',
+            mains: 'Main Dishes',
+            desserts: 'Desserts',
               selectExactly: 'Select exactly',
               selectUpTo: 'Select up to',
               items: 'items',
@@ -226,8 +240,7 @@ const resources = {
                 appetizer: 'Appetizer',
                 mainCourse: 'Main Course',
                 dessert: 'Dessert',
-                chooseOne: 'Choose one option per course',
-                description: 'These dishes are included in your Group Menu. You can specify quantities in the next step.'
+                chooseOne: 'Choose one option per course'
               },
               next: 'Next'
             },
@@ -434,6 +447,19 @@ const resources = {
         groupBooking: {
           heading: 'Groepsboeking',
           subtitle: 'Voor groepen van 6 of meer gasten',
+          welcome: {
+            greeting: 'Beste Gast,',
+            description: 'Voor groepsboekingen hebben we 2 formules die u van tevoren moet kiezen met een aanbetaling. We doen dit voor efficiëntie en om kwaliteit te garanderen.',
+            option1: {
+              title: 'Optie 1: À la Carte',
+              description: 'Kies 5 verschillende hoofdgerechten en 5 voorgerechten indien van toepassing, uit ons à la carte menu.'
+            },
+            option2: {
+              title: 'Optie 2: Menu',
+              description: 'Kies ons bekende en populaire menu. Geef alstublieft van tevoren uw keuzes voor de 3-gangen maaltijd op.'
+            },
+            bookNow: 'Nu Boeken'
+          },
           steps: {
             step1: 'Gastgegevens',
             step2: 'Menukeuze',
@@ -461,18 +487,19 @@ const resources = {
               description: 'Kies 5 voorgerechten en 5 hoofdgerechten uit ons volledige restaurantmenu. Deze optie stelt u in staat om uw groepsmaaltijd te personaliseren uit onze à la carte aanbiedingen.'
             },
             option2: {
-              title: 'Groepsmenu',
-              description: 'Geniet van ons populaire vaste 3-gangen groepsmenu. Perfect voor een zorgeloze ervaring met zorgvuldig samengestelde gerechten.',
+              title: 'Menu',
+              description: 'Geniet van ons populaire vaste 3-gangen menu. Perfect voor een zorgeloze ervaring met zorgvuldig samengestelde gerechten.',
               price: '€36.50 per persoon'
             },
             select: 'Selecteer deze optie',
             next: 'Volgende'
           },
-                      dishSelection: {
-              title: 'Gerechtselectie',
-              starters: 'Voorgerechten',
-              mains: 'Hoofdgerechten',
-              desserts: 'Desserts',
+                                dishSelection: {
+            title: 'Gerechtselectie',
+            subtitle: 'U kunt de hoeveelheden specificeren in de volgende stap',
+            starters: 'Voorgerechten',
+            mains: 'Hoofdgerechten',
+            desserts: 'Desserts',
               selectExactly: 'Selecteer precies',
               selectUpTo: 'Selecteer maximaal',
               items: 'items',
@@ -480,8 +507,7 @@ const resources = {
                 appetizer: 'Voorgerecht',
                 mainCourse: 'Hoofdgerecht',
                 dessert: 'Nagerecht',
-                chooseOne: 'Kies één optie per gang',
-                description: 'Deze gerechten zijn inbegrepen in uw Groepsmenu. U kunt de hoeveelheden specificeren in de volgende stap.'
+                chooseOne: 'Kies één optie per gang'
               },
               next: 'Volgende'
             },
@@ -778,6 +804,19 @@ const resources = {
         groupBooking: {
           heading: 'Réservation de Groupe',
           subtitle: 'Pour les groupes de 6 personnes ou plus',
+          welcome: {
+            greeting: 'Cher Invité,',
+            description: 'Pour les réservations de groupe, nous avons 2 formules que vous devez choisir à l\'avance avec un acompte. Nous le faisons pour l\'efficacité et pour garantir la qualité.',
+            option1: {
+              title: 'Option 1: À la Carte',
+              description: 'Choisissez 5 plats principaux différents et 5 entrées si applicable, dans notre menu à la carte.'
+            },
+            option2: {
+              title: 'Option 2: Menu',
+              description: 'Choisissez notre menu populaire et bien connu. Veuillez fournir vos choix pour le repas en 3 plats à l\'avance.'
+            },
+            bookNow: 'Réserver Maintenant'
+          },
           steps: {
             step1: 'Détails des Invités',
             step2: 'Sélection du Menu',
@@ -805,18 +844,19 @@ const resources = {
               description: 'Choisissez 5 entrées et 5 plats principaux dans notre menu complet du restaurant. Cette option vous permet de personnaliser votre repas de groupe à partir de nos offres à la carte.'
             },
             option2: {
-              title: 'Menu de Groupe',
-              description: 'Profitez de notre menu de groupe fixe en 3 plats populaire. Parfait pour une expérience sans souci avec des plats soigneusement sélectionnés.',
+              title: 'Menu',
+              description: 'Profitez de notre menu fixe en 3 plats populaire. Parfait pour une expérience sans souci avec des plats soigneusement sélectionnés.',
               price: '€36.50 par personne'
             },
             select: 'Sélectionner cette option',
             next: 'Suivant'
           },
-                      dishSelection: {
-              title: 'Sélection des Plats',
-              starters: 'Entrées',
-              mains: 'Plats Principaux',
-              desserts: 'Desserts',
+                                dishSelection: {
+            title: 'Sélection des Plats',
+            subtitle: 'Vous pouvez spécifier les quantités à l\'étape suivante',
+            starters: 'Entrées',
+            mains: 'Plats Principaux',
+            desserts: 'Desserts',
               selectExactly: 'Sélectionnez exactement',
               selectUpTo: 'Sélectionnez jusqu\'à',
               items: 'plats',
@@ -824,8 +864,7 @@ const resources = {
                 appetizer: 'Entrée',
                 mainCourse: 'Plat Principal',
                 dessert: 'Dessert',
-                chooseOne: 'Choisissez une option par plat',
-                description: 'Ces plats sont inclus dans votre Menu de Groupe. Vous pouvez spécifier les quantités à l\'étape suivante.'
+                chooseOne: 'Choisissez une option par plat'
               },
               next: 'Suivant'
             },
@@ -1116,6 +1155,19 @@ const resources = {
         groupBooking: {
           heading: 'Gruppenbuchung',
           subtitle: 'Für Gruppen von 6 oder mehr Gästen',
+          welcome: {
+            greeting: 'Lieber Gast,',
+            description: 'Für Gruppenbuchungen haben wir 2 Formeln, die Sie im Voraus mit einer Anzahlung wählen müssen. Wir tun dies für Effizienz und um Qualität zu garantieren.',
+            option1: {
+              title: 'Option 1: À la Carte',
+              description: 'Wählen Sie 5 verschiedene Hauptgerichte und 5 Vorspeisen, falls zutreffend, aus unserem À-la-Carte-Menü.'
+            },
+            option2: {
+              title: 'Option 2: Menü',
+              description: 'Wählen Sie unser bekanntes und beliebtes Menü. Bitte geben Sie im Voraus Ihre Wünsche für das 3-Gänge-Menü an.'
+            },
+            bookNow: 'Jetzt Buchen'
+          },
           steps: {
             step1: 'Gastdetails',
             step2: 'Menüauswahl',
@@ -1143,8 +1195,8 @@ const resources = {
               description: 'Wählen Sie 5 Vorspeisen und 5 Hauptgerichte aus unserem vollständigen Restaurantmenü. Diese Option ermöglicht es Ihnen, Ihre Gruppenmahlzeit aus unseren À-la-Carte-Angeboten zu personalisieren.'
             },
             option2: {
-              title: 'Gruppenmenü',
-              description: 'Genießen Sie unser beliebtes festes 3-Gänge-Gruppenmenü. Perfekt für ein sorgenfreies Erlebnis mit sorgfältig kuratierten Gerichten.',
+              title: 'Menü',
+              description: 'Genießen Sie unser beliebtes festes 3-Gänge-Menü. Perfekt für ein sorgenfreies Erlebnis mit sorgfältig kuratierten Gerichten.',
               price: '€36.50 pro Person'
             },
             select: 'Diese Option auswählen',
@@ -1152,19 +1204,19 @@ const resources = {
           },
           dishSelection: {
             title: 'Gerichtsauswahl',
+            subtitle: 'Sie können die Mengen im nächsten Schritt angeben',
             starters: 'Vorspeisen',
             mains: 'Hauptgerichte',
             desserts: 'Desserts',
             selectExactly: 'Wählen Sie genau',
             selectUpTo: 'Wählen Sie bis zu',
             items: 'Gerichte',
-            groupMenu: {
-              appetizer: 'Vorspeise',
-              mainCourse: 'Hauptgericht',
-              dessert: 'Dessert',
-              chooseOne: 'Wählen Sie eine Option pro Gang',
-              description: 'Diese Gerichte sind in Ihrem Gruppenmenü enthalten. Sie können die Mengen im nächsten Schritt angeben.'
-            },
+                          groupMenu: {
+                appetizer: 'Vorspeise',
+                mainCourse: 'Hauptgericht',
+                dessert: 'Dessert',
+                chooseOne: 'Wählen Sie eine Option pro Gang'
+              },
             next: 'Weiter'
           },
           quantities: {
@@ -1454,6 +1506,19 @@ const resources = {
         groupBooking: {
           heading: 'Reserva de Grupo',
           subtitle: 'Para grupos de 6 o más invitados',
+          welcome: {
+            greeting: 'Estimado Invitado,',
+            description: 'Para reservas de grupo, tenemos 2 fórmulas que debe elegir por adelantado con un depósito. Lo hacemos por eficiencia y para garantizar la calidad.',
+            option1: {
+              title: 'Opción 1: À la Carte',
+              description: 'Elija 5 platos principales diferentes y 5 entrantes si corresponde, de nuestro menú à la carte.'
+            },
+            option2: {
+              title: 'Opción 2: Menú',
+              description: 'Elija nuestro conocido y popular menú. Por favor proporcione sus elecciones para la comida de 3 platos por adelantado.'
+            },
+            bookNow: 'Reservar Ahora'
+          },
           steps: {
             step1: 'Detalles de Invitados',
             step2: 'Selección de Menú',
@@ -1481,8 +1546,8 @@ const resources = {
               description: 'Elija 5 entrantes y 5 platos principales de nuestro menú completo del restaurante. Esta opción le permite personalizar su comida de grupo de nuestras ofertas à la carte.'
             },
             option2: {
-              title: 'Menú de Grupo',
-              description: 'Disfrute de nuestro popular menú de grupo fijo de 3 platos. Perfecto para una experiencia sin complicaciones con platos cuidadosamente seleccionados.',
+              title: 'Menú',
+              description: 'Disfrute de nuestro popular menú fijo de 3 platos. Perfecto para una experiencia sin complicaciones con platos cuidadosamente seleccionados.',
               price: '€36.50 por persona'
             },
             select: 'Seleccionar esta opción',
@@ -1490,19 +1555,19 @@ const resources = {
           },
           dishSelection: {
             title: 'Selección de Platos',
+            subtitle: 'Puede especificar las cantidades en el siguiente paso',
             starters: 'Entrantes',
             mains: 'Platos Principales',
             desserts: 'Postres',
             selectExactly: 'Seleccione exactamente',
             selectUpTo: 'Seleccione hasta',
             items: 'platos',
-            groupMenu: {
-              appetizer: 'Entrante',
-              mainCourse: 'Plato Principal',
-              dessert: 'Postre',
-              chooseOne: 'Elija una opción por plato',
-              description: 'Estos platos están incluidos en su Menú de Grupo. Puede especificar las cantidades en el siguiente paso.'
-            },
+                          groupMenu: {
+                appetizer: 'Entrante',
+                mainCourse: 'Plato Principal',
+                dessert: 'Postre',
+                chooseOne: 'Elija una opción por plato'
+              },
             next: 'Siguiente'
           },
           quantities: {

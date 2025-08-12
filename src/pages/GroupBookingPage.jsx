@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs.js';
 import Header from '../components/Header.jsx';
 import Section from '../components/Section.jsx';
+import Step0WelcomeMessage from '../components/groupBooking/Step0WelcomeMessage.jsx';
 import Step1GuestDetails from '../components/groupBooking/Step1GuestDetails.jsx';
 import Step2MenuSelection from '../components/groupBooking/Step2MenuSelection.jsx';
 import Step3DishSelection from '../components/groupBooking/Step3DishSelection.jsx';
@@ -155,7 +156,7 @@ function bookingReducer(state, action) {
 
 export default function GroupBookingPage() {
   const { t } = useTranslation();
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(0);
   const [state, dispatch] = useReducer(bookingReducer, initialState);
 
   // Get tomorrow's date for the default date picker
@@ -178,7 +179,7 @@ export default function GroupBookingPage() {
   };
 
   const prevStep = () => {
-    if (currentStep > 1) {
+    if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
     }
   };
@@ -333,7 +334,7 @@ export default function GroupBookingPage() {
         booking_date: state.date,
         booking_time: state.time,
         number_of_guests: state.guests,
-        menu_option: state.menuOption === 'aLaCarte' ? 'À la Carte' : 'Group Menu',
+                    menu_option: state.menuOption === 'aLaCarte' ? 'À la Carte' : 'Menu',
 
         quantities_summary: state.menuOption === 'groupMenu'
           ? `Starters:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('cheese') || dish.includes('shrimp')).map(([dish, qty]) => `  ${qty}x ${dish.includes('cheese') ? 'Homemade cheese croquettes' : 'Homemade shrimp croquettes'}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('steak') || dish.includes('salmon')).map(([dish, qty]) => `  ${qty}x ${dish.includes('steak') ? 'Natural steak' : 'Baked salmon with béarnaise sauce'}`).join('\n')}\n\nDesserts:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('coffee') || dish.includes('dame')).map(([dish, qty]) => `  ${qty}x ${dish.includes('coffee') ? 'Coffee/Tea' : 'Dame Blanche'}`).join('\n')}`
@@ -376,6 +377,8 @@ export default function GroupBookingPage() {
     };
 
     switch (currentStep) {
+      case 0:
+        return <Step0WelcomeMessage onNext={handleNext} />;
       case 1:
         return <Step1GuestDetails {...stepProps} />;
       case 2:
@@ -389,7 +392,7 @@ export default function GroupBookingPage() {
       case 6:
         return <Step6ThankYou {...stepProps} />;
       default:
-        return <Step1GuestDetails {...stepProps} />;
+        return <Step0WelcomeMessage onNext={handleNext} />;
     }
   };
 
@@ -404,7 +407,7 @@ export default function GroupBookingPage() {
       t('common.groupBooking.steps.step6')
     ];
 
-    const effectiveStep = currentStep;
+    const effectiveStep = currentStep === 0 ? 1 : currentStep;
     
     // On mobile, show only 3 steps around current step
     const getVisibleSteps = () => {
@@ -472,7 +475,7 @@ export default function GroupBookingPage() {
         </div>
         <div className="text-center">
           <span className="text-xs sm:text-sm text-neutral-600">
-            {steps[effectiveStep - 1]}
+            {currentStep === 0 ? 'Welcome' : steps[effectiveStep - 1]}
           </span>
         </div>
       </div>
@@ -507,10 +510,12 @@ export default function GroupBookingPage() {
             </div>
           </div>
 
-          {/* Step Indicator */}
-          <div className="mb-4">
-            <StepIndicator />
-          </div>
+          {/* Step Indicator - Only show after welcome step */}
+          {currentStep > 0 && (
+            <div className="mb-4">
+              <StepIndicator />
+            </div>
+          )}
 
           {/* Step Content */}
           <div>

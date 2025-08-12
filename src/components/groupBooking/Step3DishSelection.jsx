@@ -336,9 +336,6 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
         <h3 className="text-xl font-semibold text-neutral-900 mb-4">
           {t('common.groupMenu.appetizer.title')}
         </h3>
-        <p className="text-sm text-neutral-600 mb-4">
-          {t('common.groupBooking.dishSelection.groupMenu.description')}
-        </p>
         {renderGroupMenuDishes('starters', groupMenuDishes.starters)}
       </div>
 
@@ -347,9 +344,6 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
         <h3 className="text-xl font-semibold text-neutral-900 mb-4">
           {t('common.groupMenu.mainCourse.title')}
         </h3>
-        <p className="text-sm text-neutral-600 mb-4">
-          {t('common.groupBooking.dishSelection.groupMenu.description')}
-        </p>
         {renderGroupMenuDishes('mains', groupMenuDishes.mains)}
       </div>
 
@@ -358,9 +352,6 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
         <h3 className="text-xl font-semibold text-neutral-900 mb-4">
           {t('common.groupMenu.dessert.title')}
         </h3>
-        <p className="text-sm text-neutral-600 mb-4">
-          {t('common.groupBooking.dishSelection.groupMenu.description')}
-        </p>
         {renderGroupMenuDishes('desserts', groupMenuDishes.desserts)}
       </div>
     </div>
@@ -369,9 +360,12 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
   return (
     <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="surface p-4 sm:p-6 lg:p-8">
-        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 text-center">
+        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-2 text-center">
           {t('common.groupBooking.dishSelection.title')}
         </h2>
+        <p className="text-sm text-neutral-600 mb-4 sm:mb-6 text-center">
+          {t('common.groupBooking.dishSelection.subtitle')}
+        </p>
 
         {state.menuOption === 'aLaCarte' && renderALaCarteSelection()}
         {state.menuOption === 'groupMenu' && renderGroupMenuSelection()}
