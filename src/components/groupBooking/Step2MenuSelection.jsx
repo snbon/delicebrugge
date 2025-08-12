@@ -28,7 +28,7 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
           {/* Option 1: À la Carte */}
           <motion.div
             className={`cursor-pointer transition-all duration-300 ${
-              state.menuOption === 'aLaCarte' ? 'ring-2 ring-brand-500' : ''
+              state.menuOption === 'aLaCarte' ? 'ring-2 ring-brand-500 rounded-3xl' : ''
             }`}
             whileHover={{ y: -4 }}
             whileTap={{ scale: 0.98 }}
@@ -65,7 +65,7 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
           {/* Option 2: Group Menu */}
           <motion.div
             className={`cursor-pointer transition-all duration-300 ${
-              state.menuOption === 'groupMenu' ? 'ring-2 ring-brand-500' : ''
+              state.menuOption === 'groupMenu' ? 'ring-2 ring-brand-500 rounded-3xl' : ''
             }`}
             whileHover={{ y: -4 }}
             whileTap={{ scale: 0.98 }}
