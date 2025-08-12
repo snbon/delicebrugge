@@ -99,7 +99,7 @@ const resources = {
           appetizer: {
             title: 'Appetizer',
             option1: {
-              name: 'Huisgemaakte Kaaskroketten',
+              name: 'Homemade cheese croquettes',
               translations: {
                 en: 'Homemade cheese croquettes',
                 fr: 'Croquettes de fromage maison',
@@ -108,7 +108,7 @@ const resources = {
               }
             },
             option2: {
-              name: 'Huisgemaakte Garnaalkroketten',
+              name: 'Homemade shrimp croquettes',
               translations: {
                 en: 'Homemade shrimp croquettes',
                 fr: 'Croquettes de crevettes maison',
@@ -120,7 +120,7 @@ const resources = {
           mainCourse: {
             title: 'Main Course',
             option1: {
-              name: 'Steak Natuur',
+              name: 'Natural steak',
               translations: {
                 en: 'Natural steak',
                 fr: 'Steak nature',
@@ -129,7 +129,7 @@ const resources = {
               }
             },
             option2: {
-              name: 'Gebakken Zalm met Béarnaisesaus',
+              name: 'Baked salmon with béarnaise sauce',
               translations: {
                 en: 'Baked salmon with béarnaise sauce',
                 fr: 'Saumon cuit avec sauce béarnaise',
@@ -141,7 +141,7 @@ const resources = {
           dessert: {
             title: 'Dessert',
             option1: {
-              name: 'Koffie/Thee',
+              name: 'Coffee/Tea',
               translations: {
                 en: 'Coffee/Tea',
                 fr: 'Café/Thé',
