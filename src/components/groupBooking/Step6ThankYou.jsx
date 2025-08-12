@@ -190,17 +190,72 @@ export default function Step6ThankYou({ state }) {
 
             {/* Dishes & Quantities */}
             {renderSummarySection(t('common.groupBooking.summary.dishes'), (
-              <div className="space-y-4">
-                {Object.entries(state.quantities).map(([dishId, quantity]) => (
-                  <div key={dishId} className="flex justify-between items-center py-2 border-b border-neutral-200 last:border-b-0">
-                    <span className="font-medium text-neutral-900">
-                      {getDishName(dishId)}
-                    </span>
-                    <span className="text-neutral-600">
-                      Quantity: {quantity}
-                    </span>
+              <div className="space-y-6">
+                {/* Starters */}
+                <div>
+                  <h4 className="font-semibold text-neutral-800 mb-3 text-brand-600 border-b border-brand-200 pb-1">
+                    Starters
+                  </h4>
+                  <div className="space-y-2">
+                    {Object.entries(state.quantities)
+                      .filter(([dishId]) => state.selectedDishes.starters?.includes(dishId))
+                      .map(([dishId, quantity]) => (
+                        <div key={dishId} className="flex justify-between items-center py-2 px-3 bg-neutral-50 rounded">
+                          <span className="font-medium text-neutral-900">
+                            {getDishName(dishId)}
+                          </span>
+                          <span className="text-neutral-600 font-semibold">
+                            {quantity}x
+                          </span>
+                        </div>
+                      ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Main Dishes */}
+                <div>
+                  <h4 className="font-semibold text-neutral-800 mb-3 text-brand-600 border-b border-brand-200 pb-1">
+                    Main Dishes
+                  </h4>
+                  <div className="space-y-2">
+                    {Object.entries(state.quantities)
+                      .filter(([dishId]) => state.selectedDishes.mains?.includes(dishId))
+                      .map(([dishId, quantity]) => (
+                        <div key={dishId} className="flex justify-between items-center py-2 px-3 bg-neutral-50 rounded">
+                          <span className="font-medium text-neutral-900">
+                            {getDishName(dishId)}
+                          </span>
+                          <span className="text-neutral-600 font-semibold">
+                            {quantity}x
+                          </span>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+
+                {/* Desserts (for Group Menu) */}
+                {state.menuOption === 'groupMenu' && (
+                  <div>
+                    <h4 className="font-semibold text-neutral-800 mb-3 text-brand-600 border-b border-brand-200 pb-1">
+                      Desserts
+                    </h4>
+                    <div className="space-y-2">
+                      {Object.entries(state.quantities)
+                        .filter(([dishId]) => state.selectedDishes.desserts?.includes(dishId))
+                        .map(([dishId, quantity]) => (
+                          <div key={dishId} className="flex justify-between items-center py-2 px-3 bg-neutral-50 rounded">
+                            <span className="font-medium text-neutral-900">
+                              {getDishName(dishId)}
+                            </span>
+                            <span className="text-neutral-600 font-semibold">
+                              {quantity}x
+                            </span>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                )}
+
                 {Object.keys(state.quantities).length === 0 && (
                   <p className="text-neutral-500 italic">No quantities specified</p>
                 )}

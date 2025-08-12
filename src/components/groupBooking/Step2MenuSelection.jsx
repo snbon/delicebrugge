@@ -18,13 +18,13 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="surface p-8">
-        <h2 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="surface p-4 sm:p-6 lg:p-8">
+        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 text-center">
           {t('common.groupBooking.menuSelection.title')}
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
           {/* Option 1: À la Carte */}
           <motion.div
             className={`cursor-pointer transition-all duration-300 ${
@@ -111,10 +111,10 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
         )}
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between">
+        <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
           <motion.button
             onClick={onBack}
-            className="px-6 py-3 border border-neutral-300 rounded-lg text-neutral-700 hover:bg-neutral-50 transition-colors"
+            className="px-4 sm:px-6 py-3 border border-neutral-300 rounded-lg text-neutral-700 hover:bg-neutral-50 transition-colors text-sm sm:text-base"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -124,7 +124,7 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
           <motion.button
             onClick={onNext}
             disabled={!isFormValid()}
-            className={`px-6 py-3 rounded-lg font-semibold text-white transition-all ${
+            className={`px-4 sm:px-6 py-3 rounded-lg font-semibold text-white transition-all text-sm sm:text-base ${
               isFormValid()
                 ? 'bg-brand-600 hover:bg-brand-700 cursor-pointer'
                 : 'bg-neutral-300 cursor-not-allowed'

@@ -1,6 +1,8 @@
 import { useState, useReducer } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs.js';
 import Header from '../components/Header.jsx';
 import Section from '../components/Section.jsx';
 import Step1GuestDetails from '../components/groupBooking/Step1GuestDetails.jsx';
@@ -65,17 +67,31 @@ function bookingReducer(state, action) {
       };
     
     case ACTIONS.SET_MENU_OPTION:
-      return {
-        ...state,
-        menuOption: action.value,
-        // Reset dish selection when menu option changes
-        selectedDishes: {
-          starters: [],
-          mains: [],
-          desserts: []
-        },
-        quantities: {}
-      };
+      if (action.value === 'groupMenu') {
+        // For Group Menu, automatically select all dishes
+        return {
+          ...state,
+          menuOption: action.value,
+          selectedDishes: {
+            starters: ['cheese-croquettes', 'shrimp-croquettes'],
+            mains: ['natural-steak', 'baked-salmon'],
+            desserts: ['coffee-tea', 'dame-blanche']
+          },
+          quantities: {}
+        };
+      } else {
+        // For À la Carte, reset dish selection
+        return {
+          ...state,
+          menuOption: action.value,
+          selectedDishes: {
+            starters: [],
+            mains: [],
+            desserts: []
+          },
+          quantities: {}
+        };
+      }
     
     case ACTIONS.SELECT_DISH:
       const { course, dishId, isSelected } = action.payload;
@@ -201,10 +217,10 @@ export default function GroupBookingPage() {
     const errors = {};
     
     if (state.menuOption === 'aLaCarte') {
-      if (state.selectedDishes.starters.length !== 5) {
+      if (state.selectedDishes.starters.length < 1) {
         errors.starters = 'selectDishes';
       }
-      if (state.selectedDishes.mains.length !== 5) {
+      if (state.selectedDishes.mains.length < 1) {
         errors.mains = 'selectDishes';
       }
     } else if (state.menuOption === 'groupMenu') {
@@ -227,9 +243,20 @@ export default function GroupBookingPage() {
     const errors = {};
     
     if (state.menuOption === 'groupMenu') {
-      // For group menu, validate that quantities match guest count
-      const totalQuantities = Object.values(state.quantities).reduce((sum, qty) => sum + (qty || 0), 0);
-      if (totalQuantities !== state.guests) {
+      // For group menu, validate that each course has quantities equal to guest count
+      const starterQuantities = Object.entries(state.quantities)
+        .filter(([dishId]) => state.selectedDishes.starters?.includes(dishId))
+        .reduce((sum, [, qty]) => sum + (qty || 0), 0);
+      
+      const mainQuantities = Object.entries(state.quantities)
+        .filter(([dishId]) => state.selectedDishes.mains?.includes(dishId))
+        .reduce((sum, [, qty]) => sum + (qty || 0), 0);
+      
+      const dessertQuantities = Object.entries(state.quantities)
+        .filter(([dishId]) => state.selectedDishes.desserts?.includes(dishId))
+        .reduce((sum, [, qty]) => sum + (qty || 0), 0);
+      
+      if (starterQuantities !== state.guests || mainQuantities !== state.guests || dessertQuantities !== state.guests) {
         errors.quantities = 'quantitiesMismatch';
       }
     }
@@ -269,6 +296,7 @@ export default function GroupBookingPage() {
     
     if (Object.keys(errors).length === 0) {
       dispatch({ type: ACTIONS.CLEAR_ERRORS });
+      
       nextStep();
     } else {
       dispatch({ type: ACTIONS.SET_ERRORS, errors });
@@ -280,15 +308,56 @@ export default function GroupBookingPage() {
     dispatch({ type: ACTIONS.SET_SUBMITTING, value: true });
     
     try {
-      // Here you would integrate with EmailJS to send the booking data
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Check if EmailJS is properly configured
+      if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' || 
+          EMAILJS_CONFIG.TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
+          EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+        
+        console.warn('EmailJS not configured. Please set up your credentials in src/config/emailjs.js');
+        
+        // For testing purposes, simulate email sending
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        console.log('Simulated email sent (EmailJS not configured)');
+        
+        // Move to thank you step
+        nextStep();
+        return;
+      }
+
+      // Prepare email data for EmailJS template
+      const emailData = {
+        to_name: 'Delice Brugge Team',
+        from_name: state.name,
+        from_email: state.email,
+        from_phone: state.phone,
+        booking_date: state.date,
+        booking_time: state.time,
+        number_of_guests: state.guests,
+        menu_option: state.menuOption === 'aLaCarte' ? 'À la Carte' : 'Group Menu',
+
+        quantities_summary: state.menuOption === 'groupMenu'
+          ? `Starters:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('cheese') || dish.includes('shrimp')).map(([dish, qty]) => `  ${qty}x ${dish.includes('cheese') ? 'Homemade cheese croquettes' : 'Homemade shrimp croquettes'}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('steak') || dish.includes('salmon')).map(([dish, qty]) => `  ${qty}x ${dish.includes('steak') ? 'Natural steak' : 'Baked salmon with béarnaise sauce'}`).join('\n')}\n\nDesserts:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('coffee') || dish.includes('dame')).map(([dish, qty]) => `  ${qty}x ${dish.includes('coffee') ? 'Coffee/Tea' : 'Dame Blanche'}`).join('\n')}`
+          : `Starters:\n${Object.entries(state.quantities || {}).filter(([dish]) => state.selectedDishes.starters?.includes(dish)).map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {}).filter(([dish]) => state.selectedDishes.mains?.includes(dish)).map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}`,
+        special_requests: state.specialRequests || 'None',
+        total_price: state.menuOption === 'groupMenu' ? `€${(state.guests * 36.50).toFixed(2)}` : 'À la carte pricing'
+      };
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        emailData,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', result);
       
       // Move to thank you step
       nextStep();
     } catch (error) {
-      console.error('Error submitting booking:', error);
-      // Handle error appropriately
+      console.error('Error sending email:', error);
+      // Show error to user
+      alert('There was an error sending your booking request. Please try again or contact us directly.');
     } finally {
       dispatch({ type: ACTIONS.SET_SUBMITTING, value: false });
     }
@@ -335,31 +404,75 @@ export default function GroupBookingPage() {
       t('common.groupBooking.steps.step6')
     ];
 
+    const effectiveStep = currentStep;
+    
+    // On mobile, show only 3 steps around current step
+    const getVisibleSteps = () => {
+      if (window.innerWidth < 640) { // sm breakpoint
+        const visibleSteps = 3;
+        let startStep = Math.max(0, effectiveStep - Math.floor(visibleSteps / 2) - 1);
+        let endStep = Math.min(steps.length, startStep + visibleSteps);
+        
+        // Adjust if we're near the end
+        if (endStep === steps.length) {
+          startStep = Math.max(0, steps.length - visibleSteps);
+        }
+        
+        return { startStep, endStep, showEllipsis: true };
+      }
+      return { startStep: 0, endStep: steps.length, showEllipsis: false };
+    };
+
+    const { startStep, endStep, showEllipsis } = getVisibleSteps();
+    const visibleSteps = steps.slice(startStep, endStep);
+
     return (
-      <div className="mb-8">
-        <div className="flex items-center justify-center space-x-2 mb-4">
-          {steps.map((step, index) => (
-            <div key={index} className="flex items-center">
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
-                index + 1 === currentStep
-                  ? 'bg-brand-600 text-white'
-                  : index + 1 < currentStep
-                  ? 'bg-green-500 text-white'
-                  : 'bg-neutral-200 text-neutral-600'
-              }`}>
-                {index + 1 < currentStep ? '✓' : index + 1}
-              </div>
-              {index < steps.length - 1 && (
-                <div className={`w-12 h-0.5 mx-2 ${
-                  index + 1 < currentStep ? 'bg-green-500' : 'bg-neutral-200'
-                }`} />
-              )}
+      <div className="mb-3 sm:mb-4">
+        <div className="flex items-center justify-center space-x-1 sm:space-x-2 mb-2 overflow-x-auto">
+          {/* Show ellipsis if there are steps before */}
+          {showEllipsis && startStep > 0 && (
+            <div className="flex items-center flex-shrink-0">
+              <span className="text-neutral-400 text-xs sm:text-sm px-1 sm:px-2">...</span>
+              <div className="w-8 sm:w-12 h-0.5 bg-neutral-200" />
             </div>
-          ))}
+          )}
+          
+          {visibleSteps.map((step, index) => {
+            const stepNumber = startStep + index + 1;
+            const isCurrentStep = stepNumber === effectiveStep;
+            const isCompleted = stepNumber < effectiveStep;
+            
+            return (
+              <div key={stepNumber} className="flex items-center flex-shrink-0">
+                <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold ${
+                  isCurrentStep
+                    ? 'bg-brand-600 text-white'
+                    : isCompleted
+                    ? 'bg-green-500 text-white'
+                    : 'bg-neutral-200 text-neutral-600'
+                }`}>
+                  {isCompleted ? '✓' : stepNumber}
+                </div>
+                {stepNumber < steps.length && (
+                  <div className={`w-8 sm:w-12 h-0.5 mx-1 sm:mx-2 ${
+                    isCompleted ? 'bg-green-500' : 'bg-neutral-200'
+                  }`} />
+                )}
+              </div>
+            );
+          })}
+          
+          {/* Show ellipsis if there are steps after */}
+          {showEllipsis && endStep < steps.length && (
+            <div className="flex items-center flex-shrink-0">
+              <div className="w-8 sm:w-12 h-0.5 bg-neutral-200" />
+              <span className="text-neutral-400 text-xs sm:text-sm px-1 sm:px-2">...</span>
+            </div>
+          )}
         </div>
         <div className="text-center">
-          <span className="text-sm text-neutral-600">
-            {steps[currentStep - 1]}
+          <span className="text-xs sm:text-sm text-neutral-600">
+            {steps[effectiveStep - 1]}
           </span>
         </div>
       </div>
@@ -371,36 +484,36 @@ export default function GroupBookingPage() {
       <Header />
       
       <main className="pt-20">
-        <div className="container-responsive py-8 sm:py-12 lg:py-16">
+        <div className="container-responsive py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
-          <Section>
-            <div className="text-center mb-12 sm:mb-16">
+          <div className="py-4 sm:py-6">
+            <div className="text-center mb-4 sm:mb-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="max-w-4xl mx-auto"
               >
-                <div className="inline-block mb-4">
-                  <h1 className="display-font text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 mb-2">
+                <div className="inline-block mb-3">
+                  <h1 className="display-font text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight text-neutral-900 mb-2">
                     {t('common.groupBooking.heading')}
                   </h1>
-                  <p className="text-sm text-neutral-600 mb-2">
+                  <p className="text-xs sm:text-sm text-neutral-600 mb-2">
                     {t('common.groupBooking.subtitle')}
                   </p>
-                  <div className="w-24 h-1 bg-gradient-to-r from-brand-500 to-brand-600 mx-auto rounded-full"></div>
+                  <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-brand-500 to-brand-600 mx-auto rounded-full"></div>
                 </div>
               </motion.div>
             </div>
-          </Section>
+          </div>
 
           {/* Step Indicator */}
-          <Section>
+          <div className="mb-4">
             <StepIndicator />
-          </Section>
+          </div>
 
           {/* Step Content */}
-          <Section>
+          <div>
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentStep}
@@ -412,7 +525,7 @@ export default function GroupBookingPage() {
                 {renderStep()}
               </motion.div>
             </AnimatePresence>
-          </Section>
+          </div>
         </div>
       </main>
     </div>

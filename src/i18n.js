@@ -214,21 +214,23 @@ const resources = {
             select: 'Select this option',
             next: 'Next'
           },
-          dishSelection: {
-            title: 'Dish Selection',
-            starters: 'Starters',
-            mains: 'Main Dishes',
-            desserts: 'Desserts',
-            selectExactly: 'Select exactly',
-            items: 'items',
-            groupMenu: {
-              appetizer: 'Appetizer',
-              mainCourse: 'Main Course',
-              dessert: 'Dessert',
-              chooseOne: 'Choose one option per course'
+                      dishSelection: {
+              title: 'Dish Selection',
+              starters: 'Starters',
+              mains: 'Main Dishes',
+              desserts: 'Desserts',
+              selectExactly: 'Select exactly',
+              selectUpTo: 'Select up to',
+              items: 'items',
+              groupMenu: {
+                appetizer: 'Appetizer',
+                mainCourse: 'Main Course',
+                dessert: 'Dessert',
+                chooseOne: 'Choose one option per course',
+                description: 'These dishes are included in your Group Menu. You can specify quantities in the next step.'
+              },
+              next: 'Next'
             },
-            next: 'Next'
-          },
           quantities: {
             title: 'Assign Quantities & Special Requests',
             quantity: 'Quantity',
@@ -466,21 +468,23 @@ const resources = {
             select: 'Selecteer deze optie',
             next: 'Volgende'
           },
-          dishSelection: {
-            title: 'Gerechtselectie',
-            starters: 'Voorgerechten',
-            mains: 'Hoofdgerechten',
-            desserts: 'Desserts',
-            selectExactly: 'Selecteer precies',
-            items: 'items',
-            groupMenu: {
-              appetizer: 'Voorgerecht',
-              mainCourse: 'Hoofdgerecht',
-              dessert: 'Nagerecht',
-              chooseOne: 'Kies één optie per gang'
+                      dishSelection: {
+              title: 'Gerechtselectie',
+              starters: 'Voorgerechten',
+              mains: 'Hoofdgerechten',
+              desserts: 'Desserts',
+              selectExactly: 'Selecteer precies',
+              selectUpTo: 'Selecteer maximaal',
+              items: 'items',
+              groupMenu: {
+                appetizer: 'Voorgerecht',
+                mainCourse: 'Hoofdgerecht',
+                dessert: 'Nagerecht',
+                chooseOne: 'Kies één optie per gang',
+                description: 'Deze gerechten zijn inbegrepen in uw Groepsmenu. U kunt de hoeveelheden specificeren in de volgende stap.'
+              },
+              next: 'Volgende'
             },
-            next: 'Volgende'
-          },
           quantities: {
             title: 'Aantallen toewijzen & Speciale verzoeken',
             quantity: 'Aantal',
@@ -808,21 +812,23 @@ const resources = {
             select: 'Sélectionner cette option',
             next: 'Suivant'
           },
-          dishSelection: {
-            title: 'Sélection des Plats',
-            starters: 'Entrées',
-            mains: 'Plats Principaux',
-            desserts: 'Desserts',
-            selectExactly: 'Sélectionnez exactement',
-            items: 'plats',
-            groupMenu: {
-              appetizer: 'Entrée',
-              mainCourse: 'Plat Principal',
-              dessert: 'Dessert',
-              chooseOne: 'Choisissez une option par plat'
+                      dishSelection: {
+              title: 'Sélection des Plats',
+              starters: 'Entrées',
+              mains: 'Plats Principaux',
+              desserts: 'Desserts',
+              selectExactly: 'Sélectionnez exactement',
+              selectUpTo: 'Sélectionnez jusqu\'à',
+              items: 'plats',
+              groupMenu: {
+                appetizer: 'Entrée',
+                mainCourse: 'Plat Principal',
+                dessert: 'Dessert',
+                chooseOne: 'Choisissez une option par plat',
+                description: 'Ces plats sont inclus dans votre Menu de Groupe. Vous pouvez spécifier les quantités à l\'étape suivante.'
+              },
+              next: 'Suivant'
             },
-            next: 'Suivant'
-          },
           quantities: {
             title: 'Attribuer les Quantités & Demandes Spéciales',
             quantity: 'Quantité',
@@ -1150,12 +1156,14 @@ const resources = {
             mains: 'Hauptgerichte',
             desserts: 'Desserts',
             selectExactly: 'Wählen Sie genau',
+            selectUpTo: 'Wählen Sie bis zu',
             items: 'Gerichte',
             groupMenu: {
               appetizer: 'Vorspeise',
               mainCourse: 'Hauptgericht',
               dessert: 'Dessert',
-              chooseOne: 'Wählen Sie eine Option pro Gang'
+              chooseOne: 'Wählen Sie eine Option pro Gang',
+              description: 'Diese Gerichte sind in Ihrem Gruppenmenü enthalten. Sie können die Mengen im nächsten Schritt angeben.'
             },
             next: 'Weiter'
           },
@@ -1486,12 +1494,14 @@ const resources = {
             mains: 'Platos Principales',
             desserts: 'Postres',
             selectExactly: 'Seleccione exactamente',
+            selectUpTo: 'Seleccione hasta',
             items: 'platos',
             groupMenu: {
               appetizer: 'Entrante',
               mainCourse: 'Plato Principal',
               dessert: 'Postre',
-              chooseOne: 'Elija una opción por plato'
+              chooseOne: 'Elija una opción por plato',
+              description: 'Estos platos están incluidos en su Menú de Grupo. Puede especificar las cantidades en el siguiente paso.'
             },
             next: 'Siguiente'
           },

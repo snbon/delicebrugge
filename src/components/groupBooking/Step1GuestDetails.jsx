@@ -32,9 +32,9 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="surface p-8">
-        <h2 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+    <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="surface p-4 sm:p-6 lg:p-8">
+        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 text-center">
           {t('common.groupBooking.guestDetails.title')}
         </h2>
 
@@ -197,7 +197,7 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
             <motion.button
               onClick={onNext}
               disabled={!isFormValid()}
-              className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all ${
+              className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold text-white transition-all text-sm sm:text-base ${
                 isFormValid()
                   ? 'bg-brand-600 hover:bg-brand-700 cursor-pointer'
                   : 'bg-neutral-300 cursor-not-allowed'
