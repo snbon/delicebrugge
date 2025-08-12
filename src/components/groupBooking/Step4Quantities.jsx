@@ -131,14 +131,15 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
           <label className="text-sm text-neutral-600">
             {t('common.groupBooking.quantities.quantity')}:
           </label>
-          <input
-            type="number"
-            min="0"
-            max={state.guests}
+          <select
             value={quantity}
-            onChange={(e) => handleQuantityChange(dishId, e.target.value)}
-            className="w-20 px-3 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
-          />
+            onChange={(e) => handleQuantityChange(dishId, parseInt(e.target.value))}
+            className="w-24 px-3 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 bg-white"
+          >
+            {Array.from({ length: 31 }, (_, i) => i).map(num => (
+              <option key={num} value={num}>{num}</option>
+            ))}
+          </select>
         </div>
       </div>
     );

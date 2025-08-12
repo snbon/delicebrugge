@@ -134,15 +134,16 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
                   errors.time ? 'border-red-500' : 'border-neutral-300'
                 }`}
               >
-                <option value="17:00">17:00</option>
-                <option value="17:30">17:30</option>
-                <option value="18:00">18:00</option>
-                <option value="18:30">18:30</option>
-                <option value="19:00">19:00</option>
-                <option value="19:30">19:30</option>
-                <option value="20:00">20:00</option>
-                <option value="20:30">20:30</option>
-                <option value="21:00">21:00</option>
+                {Array.from({ length: 21 }, (_, i) => {
+                  const hour = Math.floor(i / 2) + 11;
+                  const minute = (i % 2) * 30;
+                  const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+                  return (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
+                  );
+                })}
               </select>
               {errors.time && (
                 <p className="mt-1 text-sm text-red-600">{getErrorMessage('time')}</p>
