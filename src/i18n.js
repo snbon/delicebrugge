@@ -162,9 +162,9 @@ const resources = {
           description: 'Perfect for group bookings and special occasions. This pre-fixed menu offers a selection of our finest dishes at an excellent value.',
           contactInfo: 'For group reservations, please contact us directly.',
           bookingSection: {
-            title: 'Ready to Book Your Group?',
-            heading: 'Let\'s Make Your Group Dining Special',
-            detailsIntro: 'Please provide your details including:',
+            title: 'Ready to book your group?',
+            heading: 'Let\'s make your group dinner special',
+            detailsIntro: 'Please provide your details, including:',
             detailsList: [
               'Number of people in your group',
               'Preferred date and time',
@@ -172,9 +172,104 @@ const resources = {
               'Any special dietary requirements or allergies',
               'Contact information for confirmation'
             ],
-            emailButton: '✉️ Email Your Group Booking Request',
-            emailSubject: 'Group Booking Request',
+            emailButton: '✉️ Send your group booking request',
+            emailSubject: 'Group booking request',
             emailBody: 'Hello,\n\nI would like to make a group booking with the following details:\n\nTotal number of people:\nPreferred date:\nPreferred time:\n\nDish preferences (please specify how many people want each option):\n- Appetizer:\n  • Option 1 (Homemade cheese croquettes): ___ people\n  • Option 2 (Homemade shrimp croquettes): ___ people\n- Main Course:\n  • Option 1 (Natural steak): ___ people\n  • Option 2 (Baked salmon with béarnaise sauce): ___ people\n- Dessert:\n  • Option 1 (Coffee/Tea): ___ people\n  • Option 2 (Dame Blanche): ___ people\n\nSpecial requirements or allergies:\n\nThank you!'
+          },
+        },
+        groupBooking: {
+          heading: 'Group Booking',
+          subtitle: 'For groups of 6 or more guests',
+          steps: {
+            step1: 'Guest Details',
+            step2: 'Menu Selection',
+            step3: 'Dish Selection',
+            step4: 'Quantities & Requests',
+            step5: 'Summary & Confirmation',
+            step6: 'Thank You'
+          },
+          guestDetails: {
+            title: 'Guest Details',
+            name: 'Name',
+            email: 'Email',
+            phone: 'Phone',
+            date: 'Date',
+            time: 'Time',
+            guests: 'Number of guests',
+            minGuests: 'Minimum 6 guests required',
+            depositAgreement: 'I agree to pay a deposit per group and accept the cancellation policy (non-refundable if cancelled within 6 hours before reservation).',
+            next: 'Next'
+          },
+          menuSelection: {
+            title: 'Menu Selection',
+            option1: {
+              title: 'À la Carte',
+              description: 'Choose 5 starters and 5 mains from our full restaurant menu. This option allows you to personalize your group meal from our à la carte offerings.'
+            },
+            option2: {
+              title: 'Group Menu',
+              description: 'Enjoy our popular fixed 3-course group menu. Perfect for a hassle-free experience with carefully curated dishes.',
+              price: '€36.50 per person'
+            },
+            select: 'Select this option',
+            next: 'Next'
+          },
+          dishSelection: {
+            title: 'Dish Selection',
+            starters: 'Starters',
+            mains: 'Main Dishes',
+            desserts: 'Desserts',
+            selectExactly: 'Select exactly',
+            items: 'items',
+            groupMenu: {
+              appetizer: 'Appetizer',
+              mainCourse: 'Main Course',
+              dessert: 'Dessert',
+              chooseOne: 'Choose one option per course'
+            },
+            next: 'Next'
+          },
+          quantities: {
+            title: 'Assign Quantities & Special Requests',
+            quantity: 'Quantity',
+            totalGuests: 'Total guests:',
+            validationError: 'Total quantities must equal total guest count',
+            specialRequests: 'Special requests (optional)',
+            priceNote: 'Note: This price does not include drinks or extras. This is an indication of the menu price.',
+            next: 'Next'
+          },
+          summary: {
+            title: 'Summary & Confirmation',
+            guestInfo: 'Guest Information',
+            bookingDetails: 'Booking Details',
+            menuOption: 'Menu Option',
+            dishes: 'Dishes & Quantities',
+            specialRequests: 'Special Requests',
+            totalPrice: 'Total Price',
+            confirmAgreement: 'I confirm the above details are correct and understand that a deposit will be required to secure the booking.',
+            submit: 'Submit Booking',
+            submitting: 'Submitting...'
+          },
+          thankYou: {
+            title: 'Thank You!',
+            message: 'Your group booking request has been received. We will review your details and confirm your reservation as soon as possible.',
+            summary: 'Booking Summary'
+          },
+          navigation: {
+            back: 'Back',
+            next: 'Next'
+          },
+          validation: {
+            required: 'This field is required',
+            invalidEmail: 'Please enter a valid email address',
+            invalidPhone: 'Please enter a valid phone number',
+            minGuests: 'Minimum 6 guests required',
+            invalidDate: 'Please select a future date',
+            invalidTime: 'Please select a valid time',
+            selectMenuOption: 'Please select a menu option',
+            selectDishes: 'Please select the required number of dishes',
+            quantitiesMismatch: 'Total quantities must equal total guest count',
+            agreementRequired: 'You must agree to the terms to continue'
           }
         },
         footer: {
@@ -248,6 +343,187 @@ const resources = {
           },
         },
         reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },
+        groupMenu: {
+          heading: 'MENU €36.50',
+          perPerson: 'per persoon',
+          chooseOne: 'kies er één',
+          heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt twee heerlijke opties - kies uw voorkeur.',
+          appetizer: {
+            title: 'Voorgerecht',
+            option1: {
+              name: 'Huisgemaakte kaaskroketten',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Hausgemachte Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Huisgemaakte garnalenkroketten',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Hoofdgerecht',
+            option1: {
+              name: 'Natuurlijke biefstuk',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Gebakken zalm met bearnaisesaus',
+              translations: {
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
+              }
+            }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: {
+              name: 'Koffie/Thee',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
+          description: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Dit vooraf vastgestelde menu biedt een selectie van onze beste gerechten tegen een uitstekende prijs.',
+          contactInfo: 'Voor groepsreserveringen, neem rechtstreeks contact met ons op.',
+          bookingSection: {
+            title: 'Klaar om uw groep te boeken?',
+            heading: 'Laten we uw groepsdiner speciaal maken',
+            detailsIntro: 'Geef alstublieft uw gegevens op, inclusief:',
+            detailsList: [
+              'Aantal mensen in uw groep',
+              'Gewenste datum en tijd',
+              'Gerechtvoorkeuren voor elke persoon (Optie 1 of 2)',
+              'Eventuele speciale dieetwensen of allergieën',
+              'Contactgegevens voor bevestiging'
+            ],
+            emailButton: '✉️ Verstuur uw groepsboekingsverzoek',
+            emailSubject: 'Groepsboekingsverzoek',
+            emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 2 (Huisgemaakte garnalenkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Natuurlijke biefstuk): ___ mensen\n  • Optie 2 (Gebakken zalm met bearnaisesaus): ___ mensen\n- Dessert:\n  • Optie 1 (Koffie/Thee): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nBijzondere wensen of allergieën:\n\nBedankt!'
+          },
+        },
+        groupBooking: {
+          heading: 'Groepsboeking',
+          subtitle: 'Voor groepen van 6 of meer gasten',
+          steps: {
+            step1: 'Gastgegevens',
+            step2: 'Menukeuze',
+            step3: 'Gerechtselectie',
+            step4: 'Aantallen & Verzoeken',
+            step5: 'Samenvatting & Bevestiging',
+            step6: 'Bedankt'
+          },
+          guestDetails: {
+            title: 'Gastgegevens',
+            name: 'Naam',
+            email: 'E-mail',
+            phone: 'Telefoon',
+            date: 'Datum',
+            time: 'Tijd',
+            guests: 'Aantal gasten',
+            minGuests: 'Minimum 6 gasten vereist',
+            depositAgreement: 'Ik ga akkoord met het betalen van een aanbetaling per groep en accepteer het annuleringsbeleid (niet-restitueerbaar indien geannuleerd binnen 6 uur voor de reservering).',
+            next: 'Volgende'
+          },
+          menuSelection: {
+            title: 'Menukeuze',
+            option1: {
+              title: 'À la Carte',
+              description: 'Kies 5 voorgerechten en 5 hoofdgerechten uit ons volledige restaurantmenu. Deze optie stelt u in staat om uw groepsmaaltijd te personaliseren uit onze à la carte aanbiedingen.'
+            },
+            option2: {
+              title: 'Groepsmenu',
+              description: 'Geniet van ons populaire vaste 3-gangen groepsmenu. Perfect voor een zorgeloze ervaring met zorgvuldig samengestelde gerechten.',
+              price: '€36.50 per persoon'
+            },
+            select: 'Selecteer deze optie',
+            next: 'Volgende'
+          },
+          dishSelection: {
+            title: 'Gerechtselectie',
+            starters: 'Voorgerechten',
+            mains: 'Hoofdgerechten',
+            desserts: 'Desserts',
+            selectExactly: 'Selecteer precies',
+            items: 'items',
+            groupMenu: {
+              appetizer: 'Voorgerecht',
+              mainCourse: 'Hoofdgerecht',
+              dessert: 'Nagerecht',
+              chooseOne: 'Kies één optie per gang'
+            },
+            next: 'Volgende'
+          },
+          quantities: {
+            title: 'Aantallen toewijzen & Speciale verzoeken',
+            quantity: 'Aantal',
+            totalGuests: 'Totaal gasten:',
+            validationError: 'Totaal aantallen moeten gelijk zijn aan totaal gastenaantal',
+            specialRequests: 'Speciale verzoeken (optioneel)',
+            priceNote: 'Opmerking: Deze prijs omvat geen dranken of extra\'s. Dit is een indicatie van de menuprijs.',
+            next: 'Volgende'
+          },
+          summary: {
+            title: 'Samenvatting & Bevestiging',
+            guestInfo: 'Gastinformatie',
+            bookingDetails: 'Boekingsgegevens',
+            menuOption: 'Menuoptie',
+            dishes: 'Gerechten & Aantallen',
+            specialRequests: 'Speciale verzoeken',
+            totalPrice: 'Totaalprijs',
+            confirmAgreement: 'Ik bevestig dat de bovenstaande gegevens correct zijn en begrijp dat een aanbetaling vereist zal zijn om de boeking te bevestigen.',
+            submit: 'Boeking indienen',
+            submitting: 'Indienen...'
+          },
+          thankYou: {
+            title: 'Bedankt!',
+            message: 'Uw groepsboekingsverzoek is ontvangen. We zullen uw gegevens bekijken en uw reservering zo spoedig mogelijk bevestigen.',
+            summary: 'Boekingssamenvatting'
+          },
+          navigation: {
+            back: 'Terug',
+            next: 'Volgende'
+          },
+          validation: {
+            required: 'Dit veld is verplicht',
+            invalidEmail: 'Voer een geldig e-mailadres in',
+            invalidPhone: 'Voer een geldig telefoonnummer in',
+            minGuests: 'Minimum 6 gasten vereist',
+            invalidDate: 'Selecteer een toekomstige datum',
+            invalidTime: 'Selecteer een geldige tijd',
+            selectMenuOption: 'Selecteer een menuoptie',
+            selectDishes: 'Selecteer het vereiste aantal gerechten',
+            quantitiesMismatch: 'Totaal aantallen moeten gelijk zijn aan totaal gastenaantal',
+            agreementRequired: 'U moet akkoord gaan met de voorwaarden om door te gaan'
+          }
+        },
         groupMenu: {
           heading: 'MENU €36.50',
           perPerson: 'per persoon',
@@ -477,6 +753,187 @@ const resources = {
               }
             }
           },
+          description: 'Parfait pour les réservations de groupe et les occasions spéciales. Ce menu préfixé offre une sélection de nos meilleurs plats à un excellent prix.',
+          contactInfo: 'Pour les réservations de groupe, veuillez nous contacter directement.',
+          bookingSection: {
+            title: 'Prêt à réserver votre groupe ?',
+            heading: 'Rendons votre dîner de groupe spécial',
+            detailsIntro: 'Veuillez fournir vos détails, y compris :',
+            detailsList: [
+              'Nombre de personnes dans votre groupe',
+              'Date et heure préférées',
+              'Préférences de plats pour chaque personne (Option 1 ou 2)',
+              'Exigences alimentaires spéciales ou allergies',
+              'Informations de contact pour confirmation'
+            ],
+            emailButton: '✉️ Envoyer votre demande de réservation de groupe',
+            emailSubject: 'Demande de réservation de groupe',
+            emailBody: 'Bonjour,\n\nJ\'aimerais faire une réservation de groupe avec les détails suivants :\n\nNombre total de personnes :\nDate préférée :\nHeure préférée :\n\nPréférences de plats (veuillez spécifier combien de personnes veulent chaque option) :\n- Entrée :\n  • Option 1 (Croquettes de fromage maison) : ___ personnes\n  • Option 2 (Croquettes de crevettes maison) : ___ personnes\n- Plat principal :\n  • Option 1 (Steak nature) : ___ personnes\n  • Option 2 (Saumon cuit avec sauce béarnaise) : ___ personnes\n- Dessert :\n  • Option 1 (Café/Thé) : ___ personnes\n  • Option 2 (Dame Blanche) : ___ personnes\n\nExigences spéciales ou allergies :\n\nMerci !'
+          },
+        },
+        groupBooking: {
+          heading: 'Réservation de Groupe',
+          subtitle: 'Pour les groupes de 6 personnes ou plus',
+          steps: {
+            step1: 'Détails des Invités',
+            step2: 'Sélection du Menu',
+            step3: 'Sélection des Plats',
+            step4: 'Quantités & Demandes',
+            step5: 'Résumé & Confirmation',
+            step6: 'Merci'
+          },
+          guestDetails: {
+            title: 'Détails des Invités',
+            name: 'Nom',
+            email: 'E-mail',
+            phone: 'Téléphone',
+            date: 'Date',
+            time: 'Heure',
+            guests: 'Nombre d\'invités',
+            minGuests: 'Minimum 6 invités requis',
+            depositAgreement: 'J\'accepte de payer un acompte par groupe et j\'accepte la politique d\'annulation (non remboursable si annulé dans les 6 heures précédant la réservation).',
+            next: 'Suivant'
+          },
+          menuSelection: {
+            title: 'Sélection du Menu',
+            option1: {
+              title: 'À la Carte',
+              description: 'Choisissez 5 entrées et 5 plats principaux dans notre menu complet du restaurant. Cette option vous permet de personnaliser votre repas de groupe à partir de nos offres à la carte.'
+            },
+            option2: {
+              title: 'Menu de Groupe',
+              description: 'Profitez de notre menu de groupe fixe en 3 plats populaire. Parfait pour une expérience sans souci avec des plats soigneusement sélectionnés.',
+              price: '€36.50 par personne'
+            },
+            select: 'Sélectionner cette option',
+            next: 'Suivant'
+          },
+          dishSelection: {
+            title: 'Sélection des Plats',
+            starters: 'Entrées',
+            mains: 'Plats Principaux',
+            desserts: 'Desserts',
+            selectExactly: 'Sélectionnez exactement',
+            items: 'plats',
+            groupMenu: {
+              appetizer: 'Entrée',
+              mainCourse: 'Plat Principal',
+              dessert: 'Dessert',
+              chooseOne: 'Choisissez une option par plat'
+            },
+            next: 'Suivant'
+          },
+          quantities: {
+            title: 'Attribuer les Quantités & Demandes Spéciales',
+            quantity: 'Quantité',
+            totalGuests: 'Total des invités:',
+            validationError: 'Les quantités totales doivent être égales au nombre total d\'invités',
+            specialRequests: 'Demandes spéciales (optionnel)',
+            priceNote: 'Note: Ce prix n\'inclut pas les boissons ou extras. Ceci est une indication du prix du menu.',
+            next: 'Suivant'
+          },
+          summary: {
+            title: 'Résumé & Confirmation',
+            guestInfo: 'Informations des Invités',
+            bookingDetails: 'Détails de la Réservation',
+            menuOption: 'Option de Menu',
+            dishes: 'Plats & Quantités',
+            specialRequests: 'Demandes Spéciales',
+            totalPrice: 'Prix Total',
+            confirmAgreement: 'Je confirme que les détails ci-dessus sont corrects et je comprends qu\'un acompte sera requis pour confirmer la réservation.',
+            submit: 'Soumettre la Réservation',
+            submitting: 'Soumission...'
+          },
+          thankYou: {
+            title: 'Merci!',
+            message: 'Votre demande de réservation de groupe a été reçue. Nous examinerons vos détails et confirmerons votre réservation dès que possible.',
+            summary: 'Résumé de la Réservation'
+          },
+          navigation: {
+            back: 'Retour',
+            next: 'Suivant'
+          },
+          validation: {
+            required: 'Ce champ est requis',
+            invalidEmail: 'Veuillez entrer une adresse e-mail valide',
+            invalidPhone: 'Veuillez entrer un numéro de téléphone valide',
+            minGuests: 'Minimum 6 invités requis',
+            invalidDate: 'Veuillez sélectionner une date future',
+            invalidTime: 'Veuillez sélectionner une heure valide',
+            selectMenuOption: 'Veuillez sélectionner une option de menu',
+            selectDishes: 'Veuillez sélectionner le nombre requis de plats',
+            quantitiesMismatch: 'Les quantités totales doivent être égales au nombre total d\'invités',
+            agreementRequired: 'Vous devez accepter les conditions pour continuer'
+          }
+        },
+        groupMenu: {
+          heading: 'MENU €36.50',
+          perPerson: 'par personne',
+          chooseOne: 'choisissez-en un',
+          heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre deux délicieuses options - choisissez votre préférence.',
+          appetizer: {
+            title: 'Entrée',
+            option1: {
+              name: 'Croquettes de fromage maison',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Hausgemachte Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Croquettes de crevettes maison',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Plat principal',
+            option1: {
+              name: 'Steak nature',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Saumon cuit avec sauce béarnaise',
+              translations: {
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
+              }
+            }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: {
+              name: 'Café/Thé',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
 
           description: 'Parfait pour les réservations de groupe et les occasions spéciales. Ce menu préfixé offre une sélection de nos meilleurs plats à un excellent prix.',
           contactInfo: 'Pour les réservations de groupe, veuillez nous contacter directement.',
@@ -564,6 +1021,187 @@ const resources = {
           },
         },
         reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
+        groupMenu: {
+          heading: 'MENÜ €36.50',
+          perPerson: 'pro Person',
+          chooseOne: 'wählen Sie eine',
+          heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet zwei köstliche Optionen - wählen Sie Ihre Präferenz.',
+          appetizer: {
+            title: 'Vorspeise',
+            option1: {
+              name: 'Hausgemachte Käsekroketten',
+              translations: {
+                en: 'Homemade cheese croquettes',
+                fr: 'Croquettes de fromage maison',
+                de: 'Hausgemachte Käsekroketten',
+                es: 'Croquetas de queso caseras'
+              }
+            },
+            option2: {
+              name: 'Hausgemachte Garnelenkroketten',
+              translations: {
+                en: 'Homemade shrimp croquettes',
+                fr: 'Croquettes de crevettes maison',
+                de: 'Hausgemachte Garnelenkroketten',
+                es: 'Croquetas de gambas caseras'
+              }
+            }
+          },
+          mainCourse: {
+            title: 'Hauptgericht',
+            option1: {
+              name: 'Steak Natur',
+              translations: {
+                en: 'Natural steak',
+                fr: 'Steak nature',
+                de: 'Steak Natur',
+                es: 'Bistec natural'
+              }
+            },
+            option2: {
+              name: 'Gebackener Lachs mit Béarnaisesauce',
+              translations: {
+                en: 'Baked salmon with béarnaise sauce',
+                fr: 'Saumon cuit avec sauce béarnaise',
+                de: 'Gebackener Lachs mit Béarnaisesauce',
+                es: 'Salmón horneado con salsa bearnesa'
+              }
+            }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: {
+              name: 'Kaffee/Tee',
+              translations: {
+                en: 'Coffee/Tea',
+                fr: 'Café/Thé',
+                de: 'Kaffee/Tee',
+                es: 'Café/Té'
+              }
+            },
+            option2: {
+              name: 'Dame Blanche',
+              translations: {
+                en: 'Dame Blanche',
+                fr: 'Dame Blanche',
+                de: 'Dame Blanche',
+                es: 'Dame Blanche'
+              }
+            }
+          },
+          description: 'Ideal für Gruppenbuchungen und besondere Anlässe. Dieses vorab festgelegte Menü bietet eine Auswahl unserer besten Gerichte zu einem ausgezeichneten Preis.',
+          contactInfo: 'Für Gruppenreservierungen kontaktieren Sie uns bitte direkt.',
+          bookingSection: {
+            title: 'Bereit, Ihre Gruppe zu buchen?',
+            heading: 'Lassen Sie uns Ihr Gruppendinner besonders machen',
+            detailsIntro: 'Bitte geben Sie Ihre Details an, einschließlich:',
+            detailsList: [
+              'Anzahl der Personen in Ihrer Gruppe',
+              'Bevorzugtes Datum und Uhrzeit',
+              'Gerichtsvorlieben für jede Person (Option 1 oder 2)',
+              'Besondere Ernährungsanforderungen oder Allergien',
+              'Kontaktinformationen zur Bestätigung'
+            ],
+            emailButton: '✉️ Senden Sie Ihre Gruppenbuchungsanfrage',
+            emailSubject: 'Gruppenbuchungsanfrage',
+            emailBody: 'Hallo,\n\nIch möchte eine Gruppenbuchung mit den folgenden Details machen:\n\nGesamtanzahl der Personen:\nBevorzugtes Datum:\nBevorzugte Uhrzeit:\n\nGerichtsvorlieben (bitte geben Sie an, wie viele Personen jede Option möchten):\n- Vorspeise:\n  • Option 1 (Hausgemachte Käsekroketten): ___ Personen\n  • Option 2 (Hausgemachte Garnelenkroketten): ___ Personen\n- Hauptgericht:\n  • Option 1 (Steak Natur): ___ Personen\n  • Option 2 (Gebackener Lachs mit Béarnaisesauce): ___ Personen\n- Dessert:\n  • Option 1 (Kaffee/Tee): ___ Personen\n  • Option 2 (Dame Blanche): ___ Personen\n\nBesondere Anforderungen oder Allergien:\n\nVielen Dank!'
+          },
+        },
+        groupBooking: {
+          heading: 'Gruppenbuchung',
+          subtitle: 'Für Gruppen von 6 oder mehr Gästen',
+          steps: {
+            step1: 'Gastdetails',
+            step2: 'Menüauswahl',
+            step3: 'Gerichtsauswahl',
+            step4: 'Mengen & Anfragen',
+            step5: 'Zusammenfassung & Bestätigung',
+            step6: 'Danke'
+          },
+          guestDetails: {
+            title: 'Gastdetails',
+            name: 'Name',
+            email: 'E-Mail',
+            phone: 'Telefon',
+            date: 'Datum',
+            time: 'Zeit',
+            guests: 'Anzahl der Gäste',
+            minGuests: 'Mindestens 6 Gäste erforderlich',
+            depositAgreement: 'Ich stimme zu, eine Anzahlung pro Gruppe zu leisten und akzeptiere die Stornierungsbedingungen (nicht erstattungsfähig bei Stornierung innerhalb von 6 Stunden vor der Reservierung).',
+            next: 'Weiter'
+          },
+          menuSelection: {
+            title: 'Menüauswahl',
+            option1: {
+              title: 'À la Carte',
+              description: 'Wählen Sie 5 Vorspeisen und 5 Hauptgerichte aus unserem vollständigen Restaurantmenü. Diese Option ermöglicht es Ihnen, Ihre Gruppenmahlzeit aus unseren À-la-Carte-Angeboten zu personalisieren.'
+            },
+            option2: {
+              title: 'Gruppenmenü',
+              description: 'Genießen Sie unser beliebtes festes 3-Gänge-Gruppenmenü. Perfekt für ein sorgenfreies Erlebnis mit sorgfältig kuratierten Gerichten.',
+              price: '€36.50 pro Person'
+            },
+            select: 'Diese Option auswählen',
+            next: 'Weiter'
+          },
+          dishSelection: {
+            title: 'Gerichtsauswahl',
+            starters: 'Vorspeisen',
+            mains: 'Hauptgerichte',
+            desserts: 'Desserts',
+            selectExactly: 'Wählen Sie genau',
+            items: 'Gerichte',
+            groupMenu: {
+              appetizer: 'Vorspeise',
+              mainCourse: 'Hauptgericht',
+              dessert: 'Dessert',
+              chooseOne: 'Wählen Sie eine Option pro Gang'
+            },
+            next: 'Weiter'
+          },
+          quantities: {
+            title: 'Mengen zuweisen & Besondere Anfragen',
+            quantity: 'Menge',
+            totalGuests: 'Gesamtgäste:',
+            validationError: 'Gesamtmengen müssen der Gesamtgästezahl entsprechen',
+            specialRequests: 'Besondere Anfragen (optional)',
+            priceNote: 'Hinweis: Dieser Preis umfasst keine Getränke oder Extras. Dies ist eine Angabe des Menüpreises.',
+            next: 'Weiter'
+          },
+          summary: {
+            title: 'Zusammenfassung & Bestätigung',
+            guestInfo: 'Gastinformationen',
+            bookingDetails: 'Buchungsdetails',
+            menuOption: 'Menüoption',
+            dishes: 'Gerichte & Mengen',
+            specialRequests: 'Besondere Anfragen',
+            totalPrice: 'Gesamtpreis',
+            confirmAgreement: 'Ich bestätige, dass die obigen Details korrekt sind und verstehe, dass eine Anzahlung erforderlich sein wird, um die Buchung zu sichern.',
+            submit: 'Buchung einreichen',
+            submitting: 'Einreichen...'
+          },
+          thankYou: {
+            title: 'Danke!',
+            message: 'Ihre Gruppenbuchungsanfrage wurde erhalten. Wir werden Ihre Details überprüfen und Ihre Reservierung so schnell wie möglich bestätigen.',
+            summary: 'Buchungszusammenfassung'
+          },
+          navigation: {
+            back: 'Zurück',
+            next: 'Weiter'
+          },
+          validation: {
+            required: 'Dieses Feld ist erforderlich',
+            invalidEmail: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+            invalidPhone: 'Bitte geben Sie eine gültige Telefonnummer ein',
+            minGuests: 'Mindestens 6 Gäste erforderlich',
+            invalidDate: 'Bitte wählen Sie ein zukünftiges Datum',
+            invalidTime: 'Bitte wählen Sie eine gültige Zeit',
+            selectMenuOption: 'Bitte wählen Sie eine Menüoption',
+            selectDishes: 'Bitte wählen Sie die erforderliche Anzahl von Gerichten',
+            quantitiesMismatch: 'Gesamtmengen müssen der Gesamtgästezahl entsprechen',
+            agreementRequired: 'Sie müssen den Bedingungen zustimmen, um fortzufahren'
+          }
+        },
         groupMenu: {
           heading: 'MENÜ €36.50',
           perPerson: 'pro Person',
@@ -787,7 +1425,6 @@ const resources = {
               }
             }
           },
-
           description: 'Ideal para reservas de grupos y ocasiones especiales. Este menú prefijado ofrece una selección de nuestros mejores platos a un excelente precio.',
           contactInfo: 'Para reservas de grupos, por favor, póngase en contacto con nosotros directamente.',
           bookingSection: {
@@ -804,6 +1441,101 @@ const resources = {
             emailButton: '✉️ Enviar su solicitud de reserva de grupo',
             emailSubject: 'Solicitud de reserva de grupo',
             emailBody: 'Hola,\n\nMe gustaría hacer una reserva de grupo con los siguientes detalles:\n\nNúmero total de personas:\nFecha preferida:\nHora preferida:\n\nPreferencias de platos (por favor especifique cuántas personas quieren cada opción):\n- Entrante:\n  • Opción 1 (Croquetas de queso caseras): ___ personas\n  • Opción 2 (Croquetas de gambas caseras): ___ personas\n- Plato principal:\n  • Opción 1 (Bistec natural): ___ personas\n  • Opción 2 (Salmón horneado con salsa bearnesa): ___ personas\n- Postre:\n  • Opción 1 (Café/Té): ___ personas\n  • Opción 2 (Dame Blanche): ___ personas\n\nRequisitos especiales o alergias:\n\n¡Gracias!'
+          }
+        },
+        groupBooking: {
+          heading: 'Reserva de Grupo',
+          subtitle: 'Para grupos de 6 o más invitados',
+          steps: {
+            step1: 'Detalles de Invitados',
+            step2: 'Selección de Menú',
+            step3: 'Selección de Platos',
+            step4: 'Cantidades & Solicitudes',
+            step5: 'Resumen & Confirmación',
+            step6: 'Gracias'
+          },
+          guestDetails: {
+            title: 'Detalles de Invitados',
+            name: 'Nombre',
+            email: 'Correo electrónico',
+            phone: 'Teléfono',
+            date: 'Fecha',
+            time: 'Hora',
+            guests: 'Número de invitados',
+            minGuests: 'Mínimo 6 invitados requeridos',
+            depositAgreement: 'Acepto pagar un depósito por grupo y acepto la política de cancelación (no reembolsable si se cancela dentro de las 6 horas antes de la reserva).',
+            next: 'Siguiente'
+          },
+          menuSelection: {
+            title: 'Selección de Menú',
+            option1: {
+              title: 'À la Carte',
+              description: 'Elija 5 entrantes y 5 platos principales de nuestro menú completo del restaurante. Esta opción le permite personalizar su comida de grupo de nuestras ofertas à la carte.'
+            },
+            option2: {
+              title: 'Menú de Grupo',
+              description: 'Disfrute de nuestro popular menú de grupo fijo de 3 platos. Perfecto para una experiencia sin complicaciones con platos cuidadosamente seleccionados.',
+              price: '€36.50 por persona'
+            },
+            select: 'Seleccionar esta opción',
+            next: 'Siguiente'
+          },
+          dishSelection: {
+            title: 'Selección de Platos',
+            starters: 'Entrantes',
+            mains: 'Platos Principales',
+            desserts: 'Postres',
+            selectExactly: 'Seleccione exactamente',
+            items: 'platos',
+            groupMenu: {
+              appetizer: 'Entrante',
+              mainCourse: 'Plato Principal',
+              dessert: 'Postre',
+              chooseOne: 'Elija una opción por plato'
+            },
+            next: 'Siguiente'
+          },
+          quantities: {
+            title: 'Asignar Cantidades & Solicitudes Especiales',
+            quantity: 'Cantidad',
+            totalGuests: 'Total de invitados:',
+            validationError: 'Las cantidades totales deben ser iguales al número total de invitados',
+            specialRequests: 'Solicitudes especiales (opcional)',
+            priceNote: 'Nota: Este precio no incluye bebidas o extras. Esto es una indicación del precio del menú.',
+            next: 'Siguiente'
+          },
+          summary: {
+            title: 'Resumen & Confirmación',
+            guestInfo: 'Información de Invitados',
+            bookingDetails: 'Detalles de la Reserva',
+            menuOption: 'Opción de Menú',
+            dishes: 'Platos & Cantidades',
+            specialRequests: 'Solicitudes Especiales',
+            totalPrice: 'Precio Total',
+            confirmAgreement: 'Confirmo que los detalles anteriores son correctos y entiendo que se requerirá un depósito para asegurar la reserva.',
+            submit: 'Enviar Reserva',
+            submitting: 'Enviando...'
+          },
+          thankYou: {
+            title: '¡Gracias!',
+            message: 'Su solicitud de reserva de grupo ha sido recibida. Revisaremos sus detalles y confirmaremos su reserva lo antes posible.',
+            summary: 'Resumen de la Reserva'
+          },
+          navigation: {
+            back: 'Atrás',
+            next: 'Siguiente'
+          },
+          validation: {
+            required: 'Este campo es requerido',
+            invalidEmail: 'Por favor ingrese una dirección de correo electrónico válida',
+            invalidPhone: 'Por favor ingrese un número de teléfono válido',
+            minGuests: 'Mínimo 6 invitados requeridos',
+            invalidDate: 'Por favor seleccione una fecha futura',
+            invalidTime: 'Por favor seleccione una hora válida',
+            selectMenuOption: 'Por favor seleccione una opción de menú',
+            selectDishes: 'Por favor seleccione el número requerido de platos',
+            quantitiesMismatch: 'Las cantidades totales deben ser iguales al número total de invitados',
+            agreementRequired: 'Debe aceptar los términos para continuar'
           }
         },
         footer: { rights: 'Todos los derechos reservados.', btw: 'IVA' },

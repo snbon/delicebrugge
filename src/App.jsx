@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage.jsx';
 import MenuPage from './pages/MenuPage.jsx';
 import ReservePage from './pages/ReservePage.jsx';
 import GroupMenuPage from './pages/GroupMenuPage.jsx';
+import GroupBookingPage from './pages/GroupBookingPage.jsx';
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, getLanguageFromPath, getPathWithoutLanguage, buildLocalizedUrl } from './utils/languageUtils.js';
 import './App.css';
 
@@ -225,6 +226,7 @@ function App() {
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/reserve" element={<ReservePage />} />
             <Route path="/groupmenu" element={<GroupMenuPage />} />
+            <Route path="/group-booking" element={<GroupBookingPage />} />
             
             {/* Localized routes for other languages */}
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
@@ -245,6 +247,10 @@ function App() {
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
               <Route key={language} path={`/${language}/groupmenu`} element={<GroupMenuPage />} />
+            ))}
+            
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}/group-booking`} element={<GroupBookingPage />} />
             ))}
           </Routes>
         </motion.div>

@@ -1,0 +1,141 @@
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+
+export default function Step2MenuSelection({ state, dispatch, errors, onNext, onBack }) {
+  const { t } = useTranslation();
+
+  const handleMenuSelection = (option) => {
+    dispatch({ type: 'SET_MENU_OPTION', value: option });
+  };
+
+  const getErrorMessage = (field) => {
+    if (!errors[field]) return null;
+    return t(`common.groupBooking.validation.${errors[field]}`);
+  };
+
+  const isFormValid = () => {
+    return state.menuOption !== null;
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto">
+      <div className="surface p-8">
+        <h2 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+          {t('common.groupBooking.menuSelection.title')}
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* Option 1: À la Carte */}
+          <motion.div
+            className={`cursor-pointer transition-all duration-300 ${
+              state.menuOption === 'aLaCarte' ? 'ring-2 ring-brand-500' : ''
+            }`}
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div
+              className={`surface p-6 h-full ${
+                state.menuOption === 'aLaCarte'
+                  ? 'border-brand-500 bg-brand-50'
+                  : 'hover:shadow-lg'
+              }`}
+              onClick={() => handleMenuSelection('aLaCarte')}
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🍽️</span>
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">
+                  {t('common.groupBooking.menuSelection.option1.title')}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed mb-4">
+                  {t('common.groupBooking.menuSelection.option1.description')}
+                </p>
+                <div className="text-sm text-neutral-500">
+                  {state.menuOption === 'aLaCarte' && (
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-medium">
+                      {t('common.groupBooking.menuSelection.select')}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Option 2: Group Menu */}
+          <motion.div
+            className={`cursor-pointer transition-all duration-300 ${
+              state.menuOption === 'groupMenu' ? 'ring-2 ring-brand-500' : ''
+            }`}
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div
+              className={`surface p-6 h-full ${
+                state.menuOption === 'groupMenu'
+                  ? 'border-brand-500 bg-brand-50'
+                  : 'hover:shadow-lg'
+              }`}
+              onClick={() => handleMenuSelection('groupMenu')}
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">👥</span>
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">
+                  {t('common.groupBooking.menuSelection.option2.title')}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed mb-3">
+                  {t('common.groupBooking.menuSelection.option2.description')}
+                </p>
+                <div className="text-lg font-semibold text-brand-600 mb-3">
+                  {t('common.groupBooking.menuSelection.option2.price')}
+                </div>
+                <div className="text-sm text-neutral-500">
+                  {state.menuOption === 'groupMenu' && (
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-medium">
+                      {t('common.groupBooking.menuSelection.select')}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Error Message */}
+        {errors.menuOption && (
+          <div className="text-center mb-6">
+            <p className="text-sm text-red-600">{getErrorMessage('menuOption')}</p>
+          </div>
+        )}
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-between">
+          <motion.button
+            onClick={onBack}
+            className="px-6 py-3 border border-neutral-300 rounded-lg text-neutral-700 hover:bg-neutral-50 transition-colors"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            {t('common.groupBooking.navigation.back')}
+          </motion.button>
+
+          <motion.button
+            onClick={onNext}
+            disabled={!isFormValid()}
+            className={`px-6 py-3 rounded-lg font-semibold text-white transition-all ${
+              isFormValid()
+                ? 'bg-brand-600 hover:bg-brand-700 cursor-pointer'
+                : 'bg-neutral-300 cursor-not-allowed'
+            }`}
+            whileHover={isFormValid() ? { scale: 1.02 } : {}}
+            whileTap={isFormValid() ? { scale: 0.98 } : {}}
+          >
+            {t('common.groupBooking.menuSelection.next')}
+          </motion.button>
+        </div>
+      </div>
+    </div>
+  );
+}
