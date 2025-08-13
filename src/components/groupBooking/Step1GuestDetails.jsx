@@ -112,9 +112,15 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
                 value={state.date}
                 onChange={(e) => handleInputChange('date', e.target.value)}
                 min={getTomorrowDate()}
-                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
+                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 appearance-none touch-manipulation ${
                   errors.date ? 'border-red-500' : 'border-neutral-300'
                 }`}
+                style={{
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'none',
+                  appearance: 'none',
+                  minHeight: '44px'
+                }}
               />
               {errors.date && (
                 <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('date')}</p>
