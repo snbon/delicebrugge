@@ -175,12 +175,26 @@ export default function GroupBookingPage() {
   const nextStep = () => {
     if (currentStep < 6) {
       setCurrentStep(currentStep + 1);
+      // Smooth scroll to top on mobile for better UX
+      if (window.innerWidth < 768) { // md breakpoint
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
   const prevStep = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
+      // Smooth scroll to top on mobile for better UX
+      if (window.innerWidth < 768) { // md breakpoint
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
