@@ -32,16 +32,16 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="surface p-4 sm:p-6 lg:p-8">
-        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 text-center">
+    <div className="w-full max-w-2xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+      <div className="surface p-3 sm:p-4 md:p-6 lg:p-8">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 text-center">
           {t('common.groupBooking.guestDetails.title')}
         </h2>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-5 md:space-y-6">
           {/* Name */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
               {t('common.groupBooking.guestDetails.name')} *
             </label>
             <input
@@ -49,19 +49,19 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
               id="name"
               value={state.name}
               onChange={(e) => handleInputChange('name', e.target.value)}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
                 errors.name ? 'border-red-500' : 'border-neutral-300'
               }`}
               placeholder={t('common.groupBooking.guestDetails.name')}
             />
             {errors.name && (
-              <p className="mt-1 text-sm text-red-600">{getErrorMessage('name')}</p>
+              <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('name')}</p>
             )}
           </div>
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
               {t('common.groupBooking.guestDetails.email')} *
             </label>
             <input
@@ -69,19 +69,19 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
               id="email"
               value={state.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
                 errors.email ? 'border-red-500' : 'border-neutral-300'
               }`}
               placeholder={t('common.groupBooking.guestDetails.email')}
             />
             {errors.email && (
-              <p className="mt-1 text-sm text-red-600">{getErrorMessage('email')}</p>
+              <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('email')}</p>
             )}
           </div>
 
           {/* Phone */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
               {t('common.groupBooking.guestDetails.phone')} *
             </label>
             <input
@@ -89,21 +89,21 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
               id="phone"
               value={state.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
                 errors.phone ? 'border-red-500' : 'border-neutral-300'
               }`}
               placeholder={t('common.groupBooking.guestDetails.phone')}
             />
             {errors.phone && (
-              <p className="mt-1 text-sm text-red-600">{getErrorMessage('phone')}</p>
+              <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('phone')}</p>
             )}
           </div>
 
           {/* Date and Time Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {/* Date */}
             <div>
-              <label htmlFor="date" className="block text-sm font-medium text-neutral-700 mb-2">
+              <label htmlFor="date" className="block text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
                 {t('common.groupBooking.guestDetails.date')} *
               </label>
               <input
@@ -112,25 +112,25 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
                 value={state.date}
                 onChange={(e) => handleInputChange('date', e.target.value)}
                 min={getTomorrowDate()}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
+                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
                   errors.date ? 'border-red-500' : 'border-neutral-300'
                 }`}
               />
               {errors.date && (
-                <p className="mt-1 text-sm text-red-600">{getErrorMessage('date')}</p>
+                <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('date')}</p>
               )}
             </div>
 
             {/* Time */}
             <div>
-              <label htmlFor="time" className="block text-sm font-medium text-neutral-700 mb-2">
+              <label htmlFor="time" className="block text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
                 {t('common.groupBooking.guestDetails.time')} *
               </label>
               <select
                 id="time"
                 value={state.time}
                 onChange={(e) => handleInputChange('time', e.target.value)}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
+                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
                   errors.time ? 'border-red-500' : 'border-neutral-300'
                 }`}
               >
@@ -146,59 +146,62 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
                 })}
               </select>
               {errors.time && (
-                <p className="mt-1 text-sm text-red-600">{getErrorMessage('time')}</p>
+                <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('time')}</p>
               )}
             </div>
           </div>
 
           {/* Number of Guests */}
           <div>
-            <label htmlFor="guests" className="block text-sm font-medium text-neutral-700 mb-2">
+            <label htmlFor="guests" className="block text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
               {t('common.groupBooking.guestDetails.guests')} *
             </label>
-            <input
-              type="number"
+            <select
               id="guests"
               value={state.guests}
-              onChange={(e) => handleInputChange('guests', parseInt(e.target.value) || 6)}
-              min="6"
-              max="50"
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
+              onChange={(e) => handleInputChange('guests', parseInt(e.target.value))}
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
                 errors.guests ? 'border-red-500' : 'border-neutral-300'
               }`}
-            />
-            <p className="mt-1 text-sm text-neutral-600">
+            >
+              {Array.from({ length: 25 }, (_, i) => i + 6).map(guestCount => (
+                <option key={guestCount} value={guestCount}>
+                  {guestCount}
+                </option>
+              ))}
+            </select>
+            <p className="mt-1 text-xs sm:text-sm text-neutral-600">
               {t('common.groupBooking.guestDetails.minGuests')}
             </p>
             {errors.guests && (
-              <p className="mt-1 text-sm text-red-600">{getErrorMessage('guests')}</p>
+              <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('guests')}</p>
             )}
           </div>
 
           {/* Deposit Agreement */}
-          <div className="pt-4">
-            <label className="flex items-start space-x-3 cursor-pointer">
+          <div className="pt-2 sm:pt-4">
+            <label className="flex items-start space-x-2 sm:space-x-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={state.depositAgreement}
                 onChange={(e) => handleInputChange('depositAgreement', e.target.checked)}
-                className="mt-1 w-4 h-4 text-brand-600 border-neutral-300 rounded focus:ring-brand-500"
+                className="mt-1 w-4 h-4 text-brand-600 border-neutral-300 rounded focus:ring-brand-500 flex-shrink-0"
               />
-              <span className="text-sm text-neutral-700 leading-relaxed">
+              <span className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
                 {t('common.groupBooking.guestDetails.depositAgreement')}
               </span>
             </label>
             {errors.depositAgreement && (
-              <p className="mt-2 text-sm text-red-600">{getErrorMessage('depositAgreement')}</p>
+              <p className="mt-2 text-xs sm:text-sm text-red-600">{getErrorMessage('depositAgreement')}</p>
             )}
           </div>
 
           {/* Next Button */}
-          <div className="pt-6">
+          <div className="pt-4 sm:pt-6">
             <motion.button
               onClick={onNext}
               disabled={!isFormValid()}
-              className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold text-white transition-all text-sm sm:text-base ${
+              className={`w-full py-2.5 sm:py-3 md:py-4 px-4 sm:px-6 rounded-lg font-semibold text-white transition-all text-sm sm:text-base ${
                 isFormValid()
                   ? 'bg-brand-600 hover:bg-brand-700 cursor-pointer'
                   : 'bg-neutral-300 cursor-not-allowed'

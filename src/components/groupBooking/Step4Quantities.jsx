@@ -375,7 +375,7 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
         <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 mt-6 sm:mt-8">
           <motion.button
             onClick={onBack}
-            className="px-4 sm:px-6 py-3 border border-neutral-300 rounded-lg text-neutral-700 hover:bg-neutral-50 transition-colors text-sm sm:text-base"
+            className="px-4 sm:px-6 py-3 border border-neutral-300 rounded-lg text-neutral-700 hover:bg-neutral-50 transition-colors text-sm sm:text-base order-2 sm:order-1"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -385,7 +385,7 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
           <motion.button
             onClick={onNext}
             disabled={!isFormValid()}
-            className={`px-4 sm:px-6 py-3 rounded-lg font-semibold text-white transition-all text-sm sm:text-base ${
+            className={`px-4 sm:px-6 py-3 rounded-lg font-semibold text-white transition-all text-sm sm:text-base order-1 sm:order-2 ${
               isFormValid()
                 ? 'bg-brand-600 hover:bg-brand-700 cursor-pointer'
                 : 'bg-neutral-300 cursor-not-allowed'
