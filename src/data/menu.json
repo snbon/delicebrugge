@@ -662,11 +662,11 @@
         {"id":"fish-casserole","names":{"en":"Fish casserole with mashed potatoes","nl":"Vispannetje met puree","fr":"Casserole de poisson avec purée","de":"Fischauflauf mit Kartoffelpüree","es":"Cazuela de pescado con puré de patatas"},"price":27.00},
         {"id":"sliptong","names":{"en":"Sole pan-fried in butter with salad & fries","nl":"Sliptongen in boter gebakken met salade en frieten","fr":"Sole poêlée au beurre avec salade & frites","de":"Seezunge in Butter gebraten mit Salat & Pommes","es":"Lenguado frito en mantequilla con ensalada & patatas fritas"},"price":29.00},
         {"id":"fish-chips","names":{"en":"Fish N’Chips","nl":"Fish N’Chips"},"price":20.00},
-        {"id":"mussels-nature","names":{"en":"Mussels nature","nl":"Mosselen Natuur"},"price":26.00},
-        {"id":"mussels-white-wine","names":{"en":"Mussels with white wine","nl":"Mosselen met Witte Wijn"},"price":28.00},
-        {"id":"mussels-garlic","names":{"en":"Mussels with garlic","nl":"Mosselen met knoflook"},"price":28.00},
-        {"id":"mussels-ww-garlic","names":{"en":"Mussels with white wine & garlic","nl":"Mosselen met witte wijn & knoflook"},"price":30.00},
-        {"id":"mussels-maison","names":{"en":"Mussels Maison Chef (wine, garlic, cream, curry)","nl":"Mosselen Maison Chef (witte wijn, knoflook, room & curry)"},"price":34.00}
+        {"id":"mussels-nature","names":{"en":"Mussels nature","nl":"Mosselen Natuur"},"price":27.00},
+        {"id":"mussels-white-wine","names":{"en":"Mussels with white wine","nl":"Mosselen met Witte Wijn"},"price":29.00},
+        {"id":"mussels-garlic","names":{"en":"Mussels with garlic","nl":"Mosselen met knoflook"},"price":29.00},
+        {"id":"mussels-ww-garlic","names":{"en":"Mussels with white wine & garlic","nl":"Mosselen met witte wijn & knoflook"},"price":31.00},
+        {"id":"mussels-maison","names":{"en":"Mussels Maison Chef (wine, garlic, cream, curry)","nl":"Mosselen Maison Chef (witte wijn, knoflook, room & curry)"},"price":35.00}
       ]
     },
     {
