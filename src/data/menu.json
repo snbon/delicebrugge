@@ -27,7 +27,7 @@
             "de": "Aprikose, Gordon Gin, Weißwein, Orangensaft",
             "es": "Albaricoque, Gordon gin, vino blanco, zumo de naranja"
           },
-          "price": 12.00
+          "price": 14.00
         },
         {
           "id": "aperol",
@@ -38,7 +38,7 @@
             "de": "Aperol Spritz",
             "es": "Aperol Spritz"
           },
-          "price": 11.00
+          "price": 12.00
         },
         {
           "id": "cava",
@@ -49,7 +49,7 @@
             "de": "Cava",
             "es": "Cava"
           },
-          "price": 8.00
+          "price": 9.00
         },
         {
           "id": "prosecco-rose",
@@ -60,7 +60,7 @@
             "de": "Prosecco Rosé",
             "es": "Prosecco Rosé"
           },
-          "price": 9.00
+          "price": 7.00
         },
         {
           "id": "kirr",
@@ -82,7 +82,7 @@
             "de": "Kirr Royale",
             "es": "Kirr Royale"
           },
-          "price": 11.00
+          "price": 12.00
         },
         {
           "id": "martini",
@@ -93,7 +93,7 @@
             "de": "Martini Weiß/Rot",
             "es": "Martini Blanco/Rojo"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "porto",
@@ -104,7 +104,7 @@
             "de": "Porto Weiß/Rot",
             "es": "Oporto Blanco/Rojo"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "sherry",
@@ -115,7 +115,7 @@
             "de": "Sherry Trocken",
             "es": "Jerez Seco"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "pineau",
@@ -126,18 +126,7 @@
             "de": "Pineau Des Charentes",
             "es": "Pineau Des Charentes"
           },
-          "price": 6.5
-        },
-        {
-          "id": "ricard",
-          "names": {
-            "en": "Ricard",
-            "nl": "Ricard",
-            "fr": "Ricard",
-            "de": "Ricard",
-            "es": "Ricard"
-          },
-          "price": 9.00
+          "price": 6.50
         },
         {
           "id": "pisang-orange",
@@ -148,7 +137,18 @@
             "de": "Pisang Orange",
             "es": "Pisang Orange"
           },
-          "price": 10.00
+          "price": 11.00
+        },
+        {
+          "id": "campari-pure",
+          "names": {
+            "en": "Campari Pure",
+            "nl": "Campari Pure",
+            "fr": "Campari Pure",
+            "de": "Campari Pure",
+            "es": "Campari Pure"
+          },
+          "price": 8.00
         },
         {
           "id": "campari-orange",
@@ -159,7 +159,7 @@
             "de": "Campari Orange",
             "es": "Campari Orange"
           },
-          "price": 10.00
+          "price": 11.00
         },
         {
           "id": "picon",
@@ -217,7 +217,7 @@
             "de": "Alkoholfrei",
             "es": "Sin alcohol"
           },
-          "price": 8.00
+          "price": 9.00
         },
         {
           "id": "sterk-dranken",
@@ -249,7 +249,7 @@
             "de": "Johnnie Walker Red",
             "es": "Johnnie Walker Red"
           },
-          "price": 10.00
+          "price": 11.00
         },
         {
           "id": "whisky-jd",
@@ -260,7 +260,7 @@
             "de": "Jack Daniels",
             "es": "Jack Daniels"
           },
-          "price": 11.00
+          "price": 12.00
         },
         {
           "id": "cognac",
@@ -293,7 +293,7 @@
             "de": "Gordon's Gin",
             "es": "Gordon's Gin"
           },
-          "price": 9.5
+          "price": 10.00
         },
         {
           "id": "bombay",
@@ -304,7 +304,7 @@
             "de": "Bombay Safari",
             "es": "Bombay Safari"
           },
-          "price": 11.00
+          "price": 12.00
         },
         {
           "id": "amaretto",
@@ -414,7 +414,7 @@
             "de": "+ Erfrischungsgetränke",
             "es": "+ Refrescos"
           },
-          "price": 4.00
+          "price": 4.50
         }
       ]
     },
@@ -444,7 +444,7 @@
             "de": "50CL €22.00 \n 75CL €32.00",
             "es": "50CL €22.00 \n 75CL €32.00"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "sauvignon-gl",
@@ -480,7 +480,7 @@
             "de": "50CL €22.00 \n 75CL €32.00",
             "es": "50CL €22.00 \n 75CL €32.00"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "ventoux-gl",
@@ -562,17 +562,6 @@
             "es": "75CL €45.00"
           },
           "price": 9.00
-        },
-        {
-          "id": "coupe-champagne",
-          "names": {
-            "en": "Coupe Champagne (Cru)",
-            "nl": "Coupe Champagne (Cru)",
-            "fr": "Coupe Champagne (Cru)",
-            "de": "Champagner-Coupe (Cru)",
-            "es": "Copa de Champagne (Cru)"
-          },
-          "price": 12.00
         }
       ]
     },
@@ -683,7 +672,7 @@
             "de": "Premier Cru Marie-Forget",
             "es": "Premier Cru Marie-Forget"
           },
-          "price": 60.00
+          "price": 65.00
         },
         {
           "id": "laurent-perrier",
@@ -772,7 +761,7 @@
             "de": "Duvel",
             "es": "Duvel"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "karmeliet",
@@ -783,7 +772,7 @@
             "de": "Tripel Karmeliet",
             "es": "Tripel Karmeliet"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "zot-33",
@@ -816,7 +805,7 @@
             "de": "Straffe Hendrik Tripel Draft 33cl",
             "es": "Straffe Hendrik Tripel Draft 33cl"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "zot-bru",
@@ -827,7 +816,7 @@
             "de": "Brugse Zot Braun 33cl",
             "es": "Brugse Zot Rubia 33cl"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "jupiler-na",
@@ -893,7 +882,7 @@
             "de": "Eistee",
             "es": "Té Helado"
           },
-          "price": 4.5
+          "price": 4.50
         },
         {
           "id": "gini",
@@ -904,7 +893,7 @@
             "de": "Gini",
             "es": "Gini"
           },
-          "price": 4.5
+          "price": 4.50
         },
         {
           "id": "looza",
@@ -915,7 +904,7 @@
             "de": "Looza (Apfel/Orange)",
             "es": "Looza (Manzana/Naranja)"
           },
-          "price": 4.5
+          "price": 4.50
         },
         {
           "id": "schweppes-tonic",
@@ -926,7 +915,7 @@
             "de": "Schweppes Tonic",
             "es": "Schweppes Tonic"
           },
-          "price": 4.5
+          "price": 4.50
         },
         {
           "id": "schweppes-agrum",
@@ -937,7 +926,7 @@
             "de": "Schweppes Agrum",
             "es": "Schweppes Agrum"
           },
-          "price": 4.5
+          "price": 4.50
         },
         {
           "id": "water-bru",
@@ -948,7 +937,7 @@
             "de": "Wasser BRU (still/sprudelnd)",
             "es": "Agua BRU (natural/con gas)"
           },
-          "price": 3.5
+          "price": 3.50
         },
         {
           "id": "water-bru-50",
@@ -959,7 +948,7 @@
             "de": "Wasser BRU 50cl (still/sprudelnd)",
             "es": "Agua BRU 50cl (natural/con gas)"
           },
-          "price": 6.5
+          "price": 6.50
         }
       ]
     },
@@ -993,7 +982,7 @@
             "de": "Doppelter Espresso",
             "es": "Espresso Doble"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "Ristretto",
@@ -1059,7 +1048,7 @@
             "de": "Heiße Schokoladenmilch",
             "es": "Leche Chocolate Caliente"
           },
-          "price": 5.5
+          "price": 5.50
         },
         {
           "id": "Supplement Slagroom",
@@ -1070,7 +1059,7 @@
             "de": "Zusatz Schlagsahne",
             "es": "Suplemento Crema Batida"
           },
-          "price": 1.5
+          "price": 1.50
         },
         {
           "id": "Warme melk",
@@ -1081,7 +1070,7 @@
             "de": "Heiße Milch",
             "es": "Leche caliente"
           },
-          "price": 4.5
+          "price": 4.50
         },
         {
           "id": "Warme water",
@@ -1136,7 +1125,7 @@
             "de": "Italienischer Kaffee",
             "es": "Café Italiano"
           },
-          "price": 10.00
+          "price": 11.00
         },
         {
           "id": "Koffie Tia Maria",
@@ -1203,7 +1192,7 @@
             "de": "Knoblauchbrot",
             "es": "Pan de ajo"
           },
-          "price": 4.00
+          "price": 5.00
         },
         {
           "id": "olives",
@@ -1214,7 +1203,7 @@
             "de": "Portion Oliven",
             "es": "Porción de aceitunas"
           },
-          "price": 6.00
+          "price": 7.00
         },
         {
           "id": "bitterballen",
@@ -1225,7 +1214,7 @@
             "de": "Bitterballen",
             "es": "Bitterballen"
           },
-          "price": 10.00
+          "price": 11.00
         },
         {
           "id": "hotmix",
@@ -1243,7 +1232,7 @@
             "de": "Hühnerflügel, Frühlingsrolle, Zwiebelringe, Bitterbal, Torpedo-Garnele",
             "es": "Alitas de pollo, rollito de primavera, aros de cebolla, bitterbal, gamba torpedo"
           },
-          "price": 14.00
+          "price": 16.00
         },
         {
           "id": "croque-monsieur",
@@ -1254,7 +1243,7 @@
             "de": "Croque Monsieur (mit Salat)",
             "es": "Croque Monsieur (con ensalada)"
           },
-          "price": 13.00
+          "price": 14.00
         },
         {
           "id": "croque-madame",
@@ -1265,7 +1254,7 @@
             "de": "Croque Madame (mit Salat)",
             "es": "Croque Madame (con ensalada)"
           },
-          "price": 15.00
+          "price": 16.00
         },
         {
           "id": "croque-boem",
@@ -1276,7 +1265,7 @@
             "de": "Croque Boem-Boem (Spaghettisauce, Salat)",
             "es": "Croque Boem-Boem (salsa de espagueti, ensalada)"
           },
-          "price": 16.00
+          "price": 17.00
         }
       ]
     },
@@ -1338,7 +1327,7 @@
           "id": "boeren-omelet",
           "names": { "en": "Farmer’s omelette", "nl": "Boeren omelet" },
           "descriptions": { "en": "Ham, cheese, mushroom, tomato" },
-          "price": 19.00
+          "price": 20.00
         },
         {
           "id": "salade-grieks",
@@ -1349,7 +1338,7 @@
             "de": "Griechischer Salat",
             "es": "Ensalada griega"
           },
-          "price": 18.00
+          "price": 19.00
         },
         {
           "id": "salade-caesar",
@@ -1360,18 +1349,7 @@
             "de": "Hähnchen-Caesar-Salat",
             "es": "Ensalada César de pollo"
           },
-          "price": 20.00
-        },
-        {
-          "id": "salade-zalm",
-          "names": {
-            "en": "Smoked salmon salad",
-            "nl": "Salade gerookte zalm",
-            "fr": "Salade de saumon fumé",
-            "de": "Salat mit geräuchertem Lachs",
-            "es": "Ensalada de salmón ahumado"
-          },
-          "price": 22.00
+          "price": 21.00
         },
         {
           "id": "salade-geitenkaas",
@@ -1382,7 +1360,7 @@
             "de": "Warmer Ziegenkäsesalat (mit Honig)",
             "es": "Ensalada de queso de cabra caliente (con miel)"
           },
-          "price": 22.00
+          "price": 23.00
         }
       ]
     },
@@ -1406,17 +1384,6 @@
             "es": "Frío: Paté con mermelada de cebolla & tostadas, ensalada"
           },
           "price": 16.00
-        },
-        {
-          "id": "zalm",
-          "names": {
-            "en": "Cold: Smoked salmon with toast & salad",
-            "nl": "Koud: Gerookte zalm met toast & salade",
-            "fr": "Froid: Saumon fumé avec toast & salade",
-            "de": "Kalt: Geräucherter Lachs mit Toast & Salat",
-            "es": "Frío: Salmón ahumado con tostadas & ensalada"
-          },
-          "price": 21.00
         },
         {
           "id": "carpaccio",
@@ -1463,17 +1430,6 @@
           "price": 21.00
         },
         {
-          "id": "scampi-5",
-          "names": {
-            "en": "Hot: Scampi in garlic butter (5)",
-            "nl": "Warm: Scampi in lookboter (5st.)",
-            "fr": "Chaud: Scampi au beurre à l'ail (5)",
-            "de": "Warm: Scampi in Knoblauchbutter (5)",
-            "es": "Caliente: Scampi en mantequilla de ajo (5)"
-          },
-          "price": 19.00
-        },
-        {
           "id": "soep-dag",
           "names": {
             "en": "Soup of the day",
@@ -1482,7 +1438,7 @@
             "de": "Suppe des Tages",
             "es": "Sopa del día"
           },
-          "price": 8.5
+          "price": 8.50
         },
         {
           "id": "vissoep",
@@ -1516,7 +1472,7 @@
             "de": "Vegetarische Spaghetti",
             "es": "Espaguetis vegetariana"
           },
-          "price": 17.5
+          "price": 18.00
         },
         {
           "id": "veg-lasagne",
@@ -1527,7 +1483,7 @@
             "de": "Vegetarische Lasagne",
             "es": "Lasaña vegetariana"
           },
-          "price": 18.5
+          "price": 19.00
         },
         {
           "id": "spag-bolo",
@@ -1538,7 +1494,7 @@
             "de": "Spaghetti Bolognese",
             "es": "Espaguetis boloñesa"
           },
-          "price": 18.5
+          "price": 20.00
         },
         {
           "id": "lasag-bolo",
@@ -1549,7 +1505,7 @@
             "de": "Lasagne Bolognese",
             "es": "Lasaña boloñesa"
           },
-          "price": 19.5
+          "price": 21.00
         },
         {
           "id": "tagliatelle-pesto",
@@ -1560,7 +1516,7 @@
             "de": "Tagliatelle Pesto (Vegi)",
             "es": "Tagliatelle pesto (vegi)"
           },
-          "price": 20.00
+          "price": 22.00
         },
         {
           "id": "tagliatelle-chicken",
@@ -1571,7 +1527,7 @@
             "de": "Tagliatelle mit Hähnchen",
             "es": "Tagliatelle con pollo"
           },
-          "price": 21.00
+          "price": 23.00
         },
         {
           "id": "tagliatelle-salmon",
@@ -1582,7 +1538,7 @@
             "de": "Tagliatelle mit Lachs",
             "es": "Tagliatelle con salmón"
           },
-          "price": 23.00
+          "price": 24.00
         },
         {
           "id": "kids-spag",
@@ -1593,7 +1549,7 @@
             "de": "Kinder Spaghetti Bolognese",
             "es": "Espaguetis boloñesa niños"
           },
-          "price": 12.5
+          "price": 14.00
         },
         {
           "id": "kids-nuggets",
@@ -1604,7 +1560,7 @@
             "de": "Kinder Hähnchen-Nuggets mit Pommes",
             "es": "Nuggets de pollo niños con patatas fritas"
           },
-          "price": 12.5
+          "price": 14.00
         }
       ]
     },
@@ -1700,7 +1656,7 @@
             "de": "Kaninchen auf flämische Art mit Salat & Kroketten",
             "es": "Conejo a la flamenca con ensalada & croquetas"
           },
-          "price": 26.5
+          "price": 26.50
         },
         {
           "id": "veggie-burger",
@@ -1745,11 +1701,11 @@
             "es": "Guarniciones"
           },
           "descriptions": {
-            "en": "Sauces €1.50 (ketchup/mayo/mustard), Mixed salad €9, Bread & butter €3, Fries/croquettes €5, Extra couvert €3",
-            "nl": "Sauzen €1.50 (ketchup/mayo/mosterd), Gemengde salade €9, Brood & boter €3, Frieten/kroketten €5, Extra couvert €3",
-            "fr": "Sauces €1.50 (ketchup/mayo/moutarde), Salade mixte €9, Pain & beurre €3, Frites/croquettes €5, Couvert supplémentaire €3",
-            "de": "Soßen €1.50 (Ketchup/Mayo/Senf), Gemischter Salat €9, Brot & Butter €3, Pommes/Kroketten €5, Zusätzlicher Couvert €3",
-            "es": "Salsas €1.50 (ketchup/mayo/mostaza), Ensalada mixta €9, Pan & mantequilla €3, Patatas fritas/croquetas €5, Cubierto extra €3"
+            "en": "Sauces €1.50 (ketchup/mayo/mustard), Hot veggies €9, Mixed salad €9, Bread & butter €3, Fries/croquettes €5, Extra couvert €3",
+            "nl": "Sauzen €1.50 (ketchup/mayo/mosterd), Warme groeten €9, Gemengde salade €9, Brood & boter €3, Frieten/kroketten €5, Extra couvert €3",
+            "fr": "Sauces €1.50 (ketchup/mayo/moutarde), Légurmes chaud €9, Salade mixte €9, Pain & beurre €3, Frites/croquettes €5, Couvert supplémentaire €3",
+            "de": "Soßen €1.50 (Ketchup/Mayo/Senf), Warmes Gemüse €9, Gemischter Salat €9, Brot & Butter €3, Pommes/Kroketten €5, Zusätzlicher Couvert €3",
+            "es": "Salsas €1.50 (ketchup/mayo/mostaza), Verduras calientes €9, Ensalada mixta €9, Pan & mantequilla €3, Patatas fritas/croquetas €5, Cubierto extra €3"
           }
         }
       ]
@@ -1876,7 +1832,7 @@
             "en": "Waffle with butter & sugar",
             "nl": "Wafel met boter & suiker"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "wafel-slag",
@@ -1884,7 +1840,7 @@
             "en": "Waffle with whipped cream",
             "nl": "Wafel met slagroom"
           },
-          "price": 7.5
+          "price": 7.50
         },
         {
           "id": "wafel-choco",
@@ -1892,7 +1848,7 @@
             "en": "Waffle with chocolate",
             "nl": "Wafel met chocolade"
           },
-          "price": 7.5
+          "price": 7.50
         },
         {
           "id": "mikado",
@@ -1937,7 +1893,7 @@
         {
           "id": "profiterols",
           "names": { "en": "Profiteroles", "nl": "Profiterols" },
-          "price": 8.5
+          "price": 8.50
         },
         {
           "id": "chocomousse",
@@ -2003,7 +1959,7 @@
             "en": "Kids ice cream (with whipped cream)",
             "nl": "Kinderijsje (met slagroom)"
           },
-          "price": 6.5
+          "price": 6.50
         },
         {
           "id": "supplement",
