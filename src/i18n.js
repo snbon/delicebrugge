@@ -92,7 +92,7 @@ const resources = {
           intro: 'Book instantly via our partner widget.',
         },
         groupMenu: {
-          heading: 'MENU €36.50',
+          heading: 'MENU €38.00',
           perPerson: 'per person',
           chooseOne: 'choose one',
           heroDescription: 'Perfect for group bookings and special occasions. Each course offers two delicious options - choose your preference.',
@@ -222,7 +222,7 @@ const resources = {
             option2: {
               title: 'Menu',
               description: 'Enjoy our popular fixed 3-course menu. Perfect for a hassle-free experience with carefully curated dishes.',
-              price: '€36.50 per person'
+              price: '€38.00 per person'
             },
             select: 'Select this option',
             next: 'Next'
@@ -376,7 +376,7 @@ const resources = {
         },
         reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },
         groupMenu: {
-          heading: 'MENU €36.50',
+          heading: 'MENU €38.00',
           perPerson: 'per persoon',
           chooseOne: 'kies er één',
           heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt twee heerlijke opties - kies uw voorkeur.',
@@ -506,7 +506,7 @@ const resources = {
             option2: {
               title: 'Menu',
               description: 'Geniet van ons populaire vaste 3-gangen menu. Perfect voor een zorgeloze ervaring met zorgvuldig samengestelde gerechten.',
-              price: '€36.50 per persoon'
+              price: '€38.00 per persoon'
             },
             select: 'Selecteer deze optie',
             next: 'Volgende'
@@ -589,7 +589,7 @@ const resources = {
           }
         },
         groupMenu: {
-          heading: 'MENU €36.50',
+          heading: 'MENU €38.00',
           perPerson: 'per persoon',
           chooseOne: 'kies er één',
           heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt twee heerlijke opties - kies uw voorkeur.',
@@ -750,7 +750,7 @@ const resources = {
         },
         reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },
         groupMenu: {
-          heading: 'MENU €36.50',
+          heading: 'MENU €38.00',
           perPerson: 'par personne',
           chooseOne: 'choisissez-en un',
           heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat propose deux délicieuses options - choisissez votre préférence.',
@@ -880,7 +880,7 @@ const resources = {
             option2: {
               title: 'Menu',
               description: 'Profitez de notre menu fixe en 3 plats populaire. Parfait pour une expérience sans souci avec des plats soigneusement sélectionnés.',
-              price: '€36.50 par personne'
+              price: '€38.00 par personne'
             },
             select: 'Sélectionner cette option',
             next: 'Suivant'
@@ -963,7 +963,7 @@ const resources = {
           }
         },
         groupMenu: {
-          heading: 'MENU €36.50',
+          heading: 'MENU €38.00',
           perPerson: 'par personne',
           chooseOne: 'choisissez-en un',
           heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre deux délicieuses options - choisissez votre préférence.',
@@ -1118,7 +1118,7 @@ const resources = {
         },
         reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
         groupMenu: {
-          heading: 'MENÜ €36.50',
+          heading: 'MENÜ €38.00',
           perPerson: 'pro Person',
           chooseOne: 'wählen Sie eine',
           heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet zwei köstliche Optionen - wählen Sie Ihre Präferenz.',
@@ -1248,7 +1248,7 @@ const resources = {
             option2: {
               title: 'Menü',
               description: 'Genießen Sie unser beliebtes festes 3-Gänge-Menü. Perfekt für ein sorgenfreies Erlebnis mit sorgfältig kuratierten Gerichten.',
-              price: '€36.50 pro Person'
+              price: '€38.00 pro Person'
             },
             select: 'Diese Option auswählen',
             next: 'Weiter'
@@ -1331,7 +1331,7 @@ const resources = {
           }
         },
         groupMenu: {
-          heading: 'MENÜ €36.50',
+          heading: 'MENÜ €38.00',
           perPerson: 'pro Person',
           chooseOne: 'wählen Sie eine',
           heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet zwei köstliche Optionen - wählen Sie Ihre Präferenz.',
@@ -1486,7 +1486,7 @@ const resources = {
         },
         reserve: { heading: 'Reservar mesa', intro: 'Reserva al instante con nuestro widget.' },
         groupMenu: {
-          heading: 'MENÚ €36.50',
+          heading: 'MENÚ €38.00',
           perPerson: 'por persona',
           chooseOne: 'elija uno',
           heroDescription: 'Ideal para reservas de grupos y ocasiones especiales. Cada plato ofrece dos deliciosas opciones - elija su preferencia.',
@@ -1616,7 +1616,7 @@ const resources = {
             option2: {
               title: 'Menú',
               description: 'Disfrute de nuestro popular menú fijo de 3 platos. Perfecto para una experiencia sin complicaciones con platos cuidadosamente seleccionados.',
-              price: '€36.50 por persona'
+              price: '€38.00 por persona'
             },
             select: 'Seleccionar esta opción',
             next: 'Siguiente'

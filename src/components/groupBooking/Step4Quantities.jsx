@@ -76,7 +76,7 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
 
   const calculateTotalPrice = () => {
     if (state.menuOption === 'groupMenu') {
-      return state.guests * 36.50;
+      return state.guests * 38.00;
     }
     return 0; // For à la carte, we don't show total price in this step
   };

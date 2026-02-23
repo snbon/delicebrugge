@@ -354,7 +354,7 @@ export default function GroupBookingPage() {
           ? `Starters:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('cheese') || dish.includes('shrimp')).map(([dish, qty]) => `  ${qty}x ${dish.includes('cheese') ? 'Homemade cheese croquettes' : 'Homemade shrimp croquettes'}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('steak') || dish.includes('salmon')).map(([dish, qty]) => `  ${qty}x ${dish.includes('steak') ? 'Natural steak' : 'Baked salmon with béarnaise sauce'}`).join('\n')}\n\nDesserts:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('coffee') || dish.includes('dame')).map(([dish, qty]) => `  ${qty}x ${dish.includes('coffee') ? 'Coffee/Tea' : 'Dame Blanche'}`).join('\n')}`
           : `Starters:\n${Object.entries(state.quantities || {}).filter(([dish]) => state.selectedDishes.starters?.includes(dish)).map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {}).filter(([dish]) => state.selectedDishes.mains?.includes(dish)).map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}`,
         special_requests: state.specialRequests || 'None',
-        total_price: state.menuOption === 'groupMenu' ? `€${(state.guests * 36.50).toFixed(2)}` : 'À la carte pricing'
+        total_price: state.menuOption === 'groupMenu' ? `€${(state.guests * 38.00).toFixed(2)}` : 'À la carte pricing'
       };
 
       // Send email using EmailJS
