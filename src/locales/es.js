@@ -64,7 +64,7 @@ const es = {
       reserve: { heading: 'Reservar mesa', intro: 'Reserva al instante con nuestro widget.' },
 
       deliceMenu: {
-        heading: 'Menu Délice €41.00',
+        heading: 'Menu Délice €55.00',
         perPerson: 'por persona',
         chooseOne: 'elija uno',
         heroDescription: 'Ideal para reservas de grupos y ocasiones especiales. Cada plato ofrece deliciosas opciones - elija su preferencia.',
@@ -106,7 +106,7 @@ const es = {
         }
       },
       groupMenu: {
-        heading: 'MENÚ €38.00',
+        heading: 'Menú €38.00',
         perPerson: 'por persona',
         chooseOne: 'elija uno',
         heroDescription: 'Ideal para reservas de grupos y ocasiones especiales. Cada plato ofrece dos deliciosas opciones - elija su preferencia.',

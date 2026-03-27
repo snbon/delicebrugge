@@ -8,11 +8,11 @@ import Section from '../components/Section.jsx';
 export default function GroupMenuPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  
+
   const { optionId } = useParams();
   const location = useLocation();
   const queryOption = new URLSearchParams(location.search).get('option');
-  
+
   const getInitialMenu = () => {
     const rawOption = optionId || queryOption;
     return rawOption === '2' ? 'delice' : 'standard';
@@ -213,10 +213,13 @@ export default function GroupMenuPage() {
           </AnimatePresence>
 
           {/* Group Booking Information */}
-          <Section title={t('common.groupMenu.bookingSection.title')} muted>
+          <Section>
             <div className="surface-soft p-8 sm:p-10 lg:p-12">
               <div className="text-center max-w-4xl mx-auto">
                 <div className="mb-8 sm:mb-10">
+                  <div className="text-sm font-bold text-brand-600 tracking-wider uppercase mb-3">
+                    {t('common.groupMenu.bookingSection.title')}
+                  </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-6">
                     {t('common.groupMenu.bookingSection.heading')}
                   </h2>
