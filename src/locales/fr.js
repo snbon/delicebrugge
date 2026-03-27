@@ -94,6 +94,21 @@ const fr = {
           drink: {
             title: 'Inclus',
             description: 'Café ou Thé\n1 boisson : Un verre de bière locale ou de vin blanc/rosé/rouge inclus'
+          },
+          bookingSection: {
+            title: 'Prêt à réserver votre groupe ?',
+            heading: 'Rendons votre dîner de groupe spécial',
+            detailsIntro: 'Veuillez fournir vos détails, y compris :',
+            detailsList: [
+              'Nombre de personnes dans votre groupe',
+              'Date et heure préférées',
+              'Préférences de plats pour chaque personne',
+              'Exigences alimentaires spéciales ou allergies',
+              'Informations de contact pour confirmation'
+            ],
+            emailButton: '✉️ Envoyer votre demande de réservation de groupe',
+            emailSubject: 'Demande de réservation de groupe',
+            emailBody: 'Bonjour,\n\nJ\'aimerais faire une réservation de groupe pour le Menu Delice €41.00 avec les détails suivants :\n\nNombre total de personnes :\nDate préférée :\nHeure préférée :\n\nPréférences de plats (veuillez spécifier combien de personnes veulent chaque option) :\n- Entrée :\n  • Option 1 (Soupe du jour) : ___ personnes\n  • Option 2 (Croquettes de fromage maison) : ___ personnes\n  • Option 3 (Croquettes de crevettes maison) : ___ personnes\n- Plat principal :\n  • Option 1 (Poulet dans une sauce à la crème avec legumes) : ___ personnes\n  • Option 2 (Lapin à la amande avec salade et croquettes) : ___ personnes\n  • Option 3 (Saumon cuit au four avec sauce béarnaise) : ___ personnes\n- Dessert :\n  • Option 1 (Mousse au chocolat) : ___ personnes\n  • Option 2 (Dame Blanche) : ___ personnes\n\nExigences spéciales ou allergies :\n\nMerci !'
           }
         },
         groupMenu: {
@@ -302,84 +317,6 @@ const fr = {
           }
         },
 
-        deliceMenu: {
-          heading: 'MENU DELICE €41.00',
-          perPerson: 'par personne',
-          chooseOne: 'choisissez-en un',
-          heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre de délicieuses options - choisissez votre préférence.',
-          appetizer: {
-            title: 'Entrée',
-            option1: { name: 'Soupe du jour' },
-            option2: { name: 'Croquettes de fromage maison' },
-            option3: { name: 'Croquettes de crevettes maison' }
-          },
-          mainCourse: {
-            title: 'Plat principal',
-            option1: { name: 'Poulet dans une sauce à la crème avec legumes' },
-            option2: { name: 'Lapin à la amande avec salade et croquettes' },
-            option3: { name: 'Saumon cuit au four avec sauce béarnaise' }
-          },
-          dessert: {
-            title: 'Dessert',
-            option1: { name: 'Mousse au chocolat' },
-            option2: { name: 'Dame Blanche' }
-          },
-          drink: {
-            title: 'Inclus',
-            description: 'Café ou Thé\n1 boisson : Un verre de bière locale ou de vin blanc/rosé/rouge inclus'
-          }
-        },
-        groupMenu: {
-          heading: 'MENU €38.00',
-          perPerson: 'par personne',
-          chooseOne: 'choisissez-en un',
-          heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre deux délicieuses options - choisissez votre préférence.',
-          appetizer: {
-            title: 'Entrée',
-            option1: {
-              name: 'Croquettes de fromage maison'
-},
-            option2: {
-              name: 'Croquettes de crevettes maison'
-}
-          },
-          mainCourse: {
-            title: 'Plat principal',
-            option1: {
-              name: 'Steak nature'
-},
-            option2: {
-              name: 'Saumon cuit avec sauce béarnaise'
-}
-          },
-          dessert: {
-            title: 'Dessert',
-            option1: {
-              name: 'Café/Thé'
-},
-            option2: {
-              name: 'Dame Blanche'
-}
-          },
-
-          description: 'Parfait pour les réservations de groupe et les occasions spéciales. Ce menu préfixé offre une sélection de nos meilleurs plats à un excellent prix.',
-          contactInfo: 'Pour les réservations de groupe, veuillez nous contacter directement.',
-          bookingSection: {
-            title: 'Prêt à réserver votre groupe ?',
-            heading: 'Rendons votre dîner de groupe spécial',
-            detailsIntro: 'Veuillez fournir vos détails, y compris :',
-            detailsList: [
-              'Nombre de personnes dans votre groupe',
-              'Date et heure préférées',
-              'Préférences de plats pour chaque personne (Option 1 ou 2)',
-              'Exigences alimentaires spéciales ou allergies',
-              'Informations de contact pour confirmation'
-            ],
-            emailButton: '✉️ Envoyer votre demande de réservation de groupe',
-            emailSubject: 'Demande de réservation de groupe',
-            emailBody: 'Bonjour,\n\nJe souhaiterais faire une réservation de groupe avec les détails suivants :\n\nNombre total de personnes :\nDate préférée :\nHeure préférée :\n\nPréférences de plats (veuillez spécifier combien de personnes veulent chaque option) :\n- Entrée :\n  • Option 1 (Croquettes de fromage maison) : ___ personnes\n  • Option 2 (Croquettes de crevettes maison) : ___ personnes\n- Plat principal :\n  • Option 1 (Steak nature) : ___ personnes\n  • Option 2 (Saumon cuit avec sauce béarnaise) : ___ personnes\n- Dessert :\n  • Option 1 (Café/Thé) : ___ personnes\n  • Option 2 (Dame Blanche) : ___ personnes\n\nExigences spéciales ou allergies :\n\nMerci !'
-          }
-        },
         footer: { rights: 'Tous droits réservés.', btw: 'TVA' }
 }
 }

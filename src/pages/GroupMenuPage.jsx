@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useParams, useLocation } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Section from '../components/Section.jsx';
 
@@ -8,7 +9,20 @@ export default function GroupMenuPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   
-  const [selectedMenu, setSelectedMenu] = useState('standard');
+  const { optionId } = useParams();
+  const location = useLocation();
+  const queryOption = new URLSearchParams(location.search).get('option');
+  
+  const getInitialMenu = () => {
+    const rawOption = optionId || queryOption;
+    return rawOption === '2' ? 'delice' : 'standard';
+  };
+
+  const [selectedMenu, setSelectedMenu] = useState(getInitialMenu());
+
+  useEffect(() => {
+    setSelectedMenu(getInitialMenu());
+  }, [optionId, queryOption]);
   const menuKey = selectedMenu === 'standard' ? 'groupMenu' : 'deliceMenu';
 
   const MenuChoice = ({ options, courseTitle }) => {
@@ -37,7 +51,7 @@ export default function GroupMenuPage() {
         {/* Options Grid */}
         <div className={`grid gap-6 md:gap-8 ${gridColsClass}`}>
           {options.map((option, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               className="group cursor-pointer"
               whileHover={{ y: -3 }}
@@ -48,7 +62,7 @@ export default function GroupMenuPage() {
                 <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex items-center justify-center">
                   {index + 1}
                 </div>
-                
+
                 <div className="text-center mt-2">
                   <div className="font-bold text-xl text-neutral-900 group-hover:text-brand-700 transition-colors">
                     {getTranslatedName(option)}
@@ -65,30 +79,28 @@ export default function GroupMenuPage() {
   return (
     <div className="overflow-x-hidden">
       <Header />
-      
-      <main className="pt-20">
+
+      <main className="pt-5">
         <div className="container-responsive py-8 sm:py-12 lg:py-16">
-          
+
           {/* Menu Toggle */}
-          <div className="flex justify-center mb-10">
-            <div className="bg-neutral-100 p-1.5 rounded-2xl inline-flex shadow-inner">
+          <div className="flex justify-center mb-2">
+            <div className="bg-neutral-100 p-1 rounded-xl inline-flex shadow-inner items-center">
               <button
                 onClick={() => setSelectedMenu('standard')}
-                className={`px-6 sm:px-8 py-3 rounded-xl text-base sm:text-lg font-bold transition-all duration-300 ${
-                  selectedMenu === 'standard'
-                    ? 'bg-white text-brand-700 shadow-sm transform scale-100 relative z-10'
-                    : 'text-neutral-500 hover:text-neutral-700'
-                }`}
+                className={`px-4 sm:px-6 py-1 rounded-lg text-sm sm:text-base font-bold transition-all duration-300 ${selectedMenu === 'standard'
+                  ? 'bg-white text-brand-700 shadow-sm transform scale-100 relative z-10'
+                  : 'text-neutral-500 hover:text-neutral-700'
+                  }`}
               >
                 {currentLang === 'nl' ? 'Optie 1' : currentLang === 'es' ? 'Opción 1' : 'Option 1'}
               </button>
               <button
                 onClick={() => setSelectedMenu('delice')}
-                className={`px-6 sm:px-8 py-3 rounded-xl text-base sm:text-lg font-bold transition-all duration-300 ${
-                  selectedMenu === 'delice'
-                    ? 'bg-white text-brand-700 shadow-sm transform scale-100 relative z-10'
-                    : 'text-neutral-500 hover:text-neutral-700'
-                }`}
+                className={`px-4 sm:px-6 py-1 rounded-lg text-sm sm:text-base font-bold transition-all duration-300 ${selectedMenu === 'delice'
+                  ? 'bg-white text-brand-700 shadow-sm transform scale-100 relative z-10'
+                  : 'text-neutral-500 hover:text-neutral-700'
+                  }`}
               >
                 {currentLang === 'nl' ? 'Optie 2' : currentLang === 'es' ? 'Opción 2' : 'Option 2'}
               </button>
@@ -105,7 +117,7 @@ export default function GroupMenuPage() {
             >
               {/* Hero Section */}
               <Section>
-                <div className="text-center mb-12 sm:mb-16">
+                <div className="text-center mb-6 sm:mb-8">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -129,20 +141,20 @@ export default function GroupMenuPage() {
               </Section>
 
               {/* Appetizer Course */}
-              <Section title="" className="mb-16 sm:mb-20">
+              <Section title="" className="mb-10 sm:mb-10">
                 <div className="surface p-6 sm:p-8 lg:p-10">
                   <MenuChoice
                     options={
                       selectedMenu === 'standard'
                         ? [
-                            t(`common.groupMenu.appetizer.option1`, { returnObjects: true }),
-                            t(`common.groupMenu.appetizer.option2`, { returnObjects: true })
-                          ]
+                          t(`common.groupMenu.appetizer.option1`, { returnObjects: true }),
+                          t(`common.groupMenu.appetizer.option2`, { returnObjects: true })
+                        ]
                         : [
-                            t(`common.deliceMenu.appetizer.option1`, { returnObjects: true }),
-                            t(`common.deliceMenu.appetizer.option2`, { returnObjects: true }),
-                            t(`common.deliceMenu.appetizer.option3`, { returnObjects: true })
-                          ]
+                          t(`common.deliceMenu.appetizer.option1`, { returnObjects: true }),
+                          t(`common.deliceMenu.appetizer.option2`, { returnObjects: true }),
+                          t(`common.deliceMenu.appetizer.option3`, { returnObjects: true })
+                        ]
                     }
                     courseTitle={t(`common.${menuKey}.appetizer.title`)}
                   />
@@ -156,14 +168,14 @@ export default function GroupMenuPage() {
                     options={
                       selectedMenu === 'standard'
                         ? [
-                            t(`common.groupMenu.mainCourse.option1`, { returnObjects: true }),
-                            t(`common.groupMenu.mainCourse.option2`, { returnObjects: true })
-                          ]
+                          t(`common.groupMenu.mainCourse.option1`, { returnObjects: true }),
+                          t(`common.groupMenu.mainCourse.option2`, { returnObjects: true })
+                        ]
                         : [
-                            t(`common.deliceMenu.mainCourse.option1`, { returnObjects: true }),
-                            t(`common.deliceMenu.mainCourse.option2`, { returnObjects: true }),
-                            t(`common.deliceMenu.mainCourse.option3`, { returnObjects: true })
-                          ]
+                          t(`common.deliceMenu.mainCourse.option1`, { returnObjects: true }),
+                          t(`common.deliceMenu.mainCourse.option2`, { returnObjects: true }),
+                          t(`common.deliceMenu.mainCourse.option3`, { returnObjects: true })
+                        ]
                     }
                     courseTitle={t(`common.${menuKey}.mainCourse.title`)}
                   />
@@ -221,15 +233,15 @@ export default function GroupMenuPage() {
                     </ul>
                   </div>
                 </div>
-                
+
                 <div className="flex justify-center">
                   <motion.a
-                    href={`mailto:${t('common.address.email')}?subject=${encodeURIComponent(t('common.groupMenu.bookingSection.emailSubject'))}&body=${encodeURIComponent(t('common.groupMenu.bookingSection.emailBody'))}`}
+                    href={`mailto:${t('common.address.email')}?subject=${encodeURIComponent(t(`common.${menuKey}.bookingSection.emailSubject`))}&body=${encodeURIComponent(t(`common.${menuKey}.bookingSection.emailBody`))}`}
                     className="btn-secondary inline-flex items-center justify-center text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 shadow-lg hover:shadow-xl transition-shadow"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    {t('common.groupMenu.bookingSection.emailButton')}
+                    {t(`common.${menuKey}.bookingSection.emailButton`)}
                   </motion.a>
                 </div>
               </div>

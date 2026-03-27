@@ -88,6 +88,15 @@ const nl = {
         drink: {
           title: 'Inbegrepen',
           description: 'Koffie of Thee\n1 drankje: Een glas lokaal bier of witte/rosé/rode wijn inbegrepen'
+        },
+        bookingSection: {
+          title: 'Klaar om uw groep te boeken?',
+          heading: 'Laten we uw groepsdiner speciaal maken',
+          detailsIntro: 'Geef alstublieft uw gegevens op, inclusief:',
+          detailsList: ['Aantal mensen in uw groep', 'Gewenste datum en tijd', 'Gerechtvoorkeuren voor elke persoon', 'Eventuele speciale dieetwensen of allergieën', 'Contactgegevens voor bevestiging'],
+          emailButton: '✉️ Verstuur uw groepsboekingsverzoek',
+          emailSubject: 'Groepsboekingsverzoek',
+          emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken voor DELICE MENU €41.00 met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Soep van de dag): ___ mensen\n  • Optie 2 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 3 (Huisgemaakte garnaalkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Waterzooi van kip): ___ mensen\n  • Optie 2 (Konijn op Vlaamse wijze met salade & kroketten): ___ mensen\n  • Optie 3 (Gebakken zalm met bearnaisesaus): ___ mensen\n- Nagerecht:\n  • Optie 1 (Chocolademousse): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nBijzondere wensen of allergieën:\n\nBedankt!'
         }
       },
       groupMenu: {
@@ -296,83 +305,6 @@ const nl = {
         }
       },
 
-      deliceMenu: {
-        heading: 'DELICE MENU €41.00',
-        perPerson: 'per persoon',
-        chooseOne: 'kies er één',
-        heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt heerlijke opties - kies uw voorkeur.',
-        appetizer: {
-          title: 'Voorgerecht',
-          option1: { name: 'Soep van de dag' },
-          option2: { name: 'Huisgemaakte Kaaskroketten' },
-          option3: { name: 'Huisgemaakte Garnaalkroketten' }
-        },
-        mainCourse: {
-          title: 'Hoofdgerecht',
-          option1: { name: 'Waterzooi van kip' },
-          option2: { name: 'Konijn op Vlaamse wijze met salade & kroketten' },
-          option3: { name: 'Gebakken Zalm met Bearnaisesaus' }
-        },
-        dessert: {
-          title: 'Nagerecht',
-          option1: { name: 'Chocolademousse' },
-          option2: { name: 'Dame Blanche' }
-        },
-        drink: {
-          title: 'Inbegrepen',
-          description: 'Koffie of Thee\n1 drankje: Een glas lokaal bier of witte/rosé/rode wijn inbegrepen'
-        }
-      },
-      groupMenu: {
-        heading: 'MENU €38.00',
-        perPerson: 'per persoon',
-        chooseOne: 'kies er één',
-        heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt twee heerlijke opties - kies uw voorkeur.',
-        appetizer: {
-          title: 'Voorgerecht',
-          option1: {
-            name: 'Huisgemaakte Kaaskroketten'
-          },
-          option2: {
-            name: 'Huisgemaakte Garnaalkroketten'
-          }
-        },
-        mainCourse: {
-          title: 'Hoofdgerecht',
-          option1: {
-            name: 'Steak Natuur'
-          },
-          option2: {
-            name: 'Gebakken Zalm met Béarnaisesaus'
-          }
-        },
-        dessert: {
-          title: 'Nagerecht',
-          option1: {
-            name: 'Koffie/Thee'
-          },
-          option2: {
-            name: 'Dame Blanche'
-          }
-        },
-        description: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Dit vooraf vastgesteld menu biedt een selectie van onze beste gerechten tegen een uitstekende waarde.',
-        contactInfo: 'Voor groepsboekingen, neem dan contact met ons op.',
-        bookingSection: {
-          title: 'Klaar om uw groep te boeken?',
-          heading: 'Laten we uw groepsdining speciaal maken',
-          detailsIntro: 'Geef alstublieft uw gegevens op, inclusief:',
-          detailsList: [
-            'Aantal mensen in uw groep',
-            'Gewenste datum en tijd',
-            'Gerechtvoorkeuren voor elke persoon (Optie 1 of 2)',
-            'Eventuele speciale dieetwensen of allergieën',
-            'Contactgegevens voor bevestiging'
-          ],
-          emailButton: '✉️ E-mail uw groepsboekingsverzoek',
-          emailSubject: 'Anfrage für Gruppenbuchung',
-          emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 2 (Huisgemaakte garnalenkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Steak Natuur): ___ mensen\n  • Optie 2 (Gebakken zalm met béarnaisesaus): ___ mensen\n- Nagerecht:\n  • Optie 1 (Koffie/Thee): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nBesondere Anforderungen oder Allergien:\n\nVielen Dank!'
-        }
-      },
       footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' }
     }
   }

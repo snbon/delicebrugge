@@ -88,6 +88,21 @@ const de = {
           drink: {
             title: 'Inbegriffen',
             description: 'Kaffee oder Tee\n1 Getränk: Ein Glas lokales Bier oder Weiß-/Rosé-/Rotwein inklusive'
+          },
+          bookingSection: {
+            title: 'Bereit für Ihre Gruppenbuchung?',
+            heading: 'Lassen Sie uns Ihr Gruppendinner besonders machen',
+            detailsIntro: 'Bitte geben Sie Ihre Details an, einschließlich:',
+            detailsList: [
+              'Anzahl der Personen in Ihrer Gruppe',
+              'Bevorzugtes Datum und Uhrzeit',
+              'Gerichtspräferenzen für jede Person',
+              'Besondere Ernährungsbedürfnisse oder Allergien',
+              'Kontaktinformationen zur Bestätigung'
+            ],
+            emailButton: '✉️ Senden Sie Ihre Gruppenbuchungsanfrage',
+            emailSubject: 'Gruppenbuchungsanfrage',
+            emailBody: 'Hallo,\n\nIch möchte eine Gruppenbuchung für das DELICE MENÜ €41.00 mit folgenden Details vornehmen:\n\nGesamtanzahl Personen:\nBevorzugtes Datum:\nBevorzugte Uhrzeit:\n\nGerichtspräferenzen (bitte geben Sie an, wie viele Personen jede Option wünschen):\n- Vorspeise:\n  • Option 1 (Tagessuppe): ___ Personen\n  • Option 2 (Hausgemachte Käsekroketten): ___ Personen\n  • Option 3 (Hausgemachte Garnelenkroketten): ___ Personen\n- Hauptgericht:\n  • Option 1 (Eintopf - hunh mit gemüse): ___ Personen\n  • Option 2 (Kaninchen aif amische art mit Salat und Kroketten): ___ Personen\n  • Option 3 (Gebackener Lachs mit Sauce Bearnaise): ___ Personen\n- Dessert:\n  • Option 1 (Schokoladenmousse): ___ Personen\n  • Option 2 (Dame Blanche): ___ Personen\n\nBesondere Bedürfnisse oder Allergien:\n\nVielen Dank!'
           }
         },
         groupMenu: {
@@ -296,84 +311,6 @@ const de = {
           }
         },
 
-        deliceMenu: {
-          heading: 'DELICE MENÜ €41.00',
-          perPerson: 'pro Person',
-          chooseOne: 'wählen Sie eine',
-          heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet köstliche Optionen - wählen Sie Ihre Präferenz.',
-          appetizer: {
-            title: 'Vorspeise',
-            option1: { name: 'Tagessuppe' },
-            option2: { name: 'Hausgemachte Käsekroketten' },
-            option3: { name: 'Hausgemachte Garnelenkroketten' }
-          },
-          mainCourse: {
-            title: 'Hauptgericht',
-            option1: { name: 'Eintopf - hunh mit gemüse' },
-            option2: { name: 'Kaninchen aif amische art mit Salat und Kroketten' },
-            option3: { name: 'Gebackener Lachs mit Sauce Bearnaise' }
-          },
-          dessert: {
-            title: 'Nachspeise',
-            option1: { name: 'Schokoladenmousse' },
-            option2: { name: 'Dame Blanche' }
-          },
-          drink: {
-            title: 'Inbegriffen',
-            description: 'Kaffee oder Tee\n1 Getränk: Ein Glas lokales Bier oder Weiß-/Rosé-/Rotwein inklusive'
-          }
-        },
-        groupMenu: {
-          heading: 'MENÜ €38.00',
-          perPerson: 'pro Person',
-          chooseOne: 'wählen Sie eine',
-          heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet zwei köstliche Optionen - wählen Sie Ihre Präferenz.',
-          appetizer: {
-            title: 'Vorspeise',
-            option1: {
-              name: 'Hausgemachte Käsekroketten'
-},
-            option2: {
-              name: 'Hausgemachte Garnelenkroketten'
-}
-          },
-          mainCourse: {
-            title: 'Hauptgericht',
-            option1: {
-              name: 'Steak Natur'
-},
-            option2: {
-              name: 'Gebackener Lachs mit Béarnaisesauce'
-}
-          },
-          dessert: {
-            title: 'Nachspeise',
-            option1: {
-              name: 'Kaffee/Tee'
-},
-            option2: {
-              name: 'Dame Blanche'
-}
-          },
-
-          description: 'Ideal für Gruppenbuchungen und besondere Anlässe. Dieses vorgefertigte Menü bietet eine Auswahl unserer besten Gerichte zu einem hervorragenden Preis.',
-          contactInfo: 'Für Gruppenbuchungen wenden Sie sich bitte direkt an uns.',
-          bookingSection: {
-            title: 'Bereit, Ihre Gruppe zu buchen?',
-            heading: 'Lassen Sie uns Ihr Gruppenessen besonders machen',
-            detailsIntro: 'Bitte geben Sie Ihre Details an, einschließlich:',
-            detailsList: [
-              'Anzahl der Personen in Ihrer Gruppe',
-              'Bevorzugtes Datum und Uhrzeit',
-              'Gerichtsvorlieben für jede Person (Option 1 oder 2)',
-              'Besondere Ernährungsanforderungen oder Allergien',
-              'Kontaktinformationen zur Bestätigung'
-            ],
-            emailButton: '✉️ E-Mail-Anfrage für Gruppenbuchung senden',
-            emailSubject: 'Anfrage für Gruppenbuchung',
-            emailBody: 'Hallo,\n\nIch möchte eine Gruppenbuchung mit den folgenden Details machen:\n\nGesamtanzahl der Personen:\nBevorzugtes Datum:\nBevorzugte Uhrzeit:\n\nGerichtsvorlieben (bitte geben Sie an, wie viele Personen jede Option möchten):\n- Vorspeise:\n  • Option 1 (Hausgemachte Käsekroketten): ___ Personen\n  • Option 2 (Hausgemachte Garnelenkroketten): ___ Personen\n- Hauptgericht:\n  • Option 1 (Steak Natur): ___ Personen\n  • Option 2 (Gebackener Lachs mit Béarnaisesauce): ___ Personen\n- Nachspeise:\n  • Option 1 (Kaffee/Tee): ___ Personen\n  • Option 2 (Dame Blanche): ___ Personen\n\nBesondere Anforderungen oder Allergien:\n\nVielen Dank!'
-          }
-        },
         footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' }
 }
 }

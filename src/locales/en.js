@@ -113,6 +113,21 @@ const en = {
         drink: {
           title: 'Included',
           description: 'Coffee or Tea\n1 drink: A Glass of local beer or white/rosé/red wine included'
+        },
+        bookingSection: {
+          title: 'Ready to book your group?',
+          heading: 'Let\'s make your group dinner special',
+          detailsIntro: 'Please provide your details, including:',
+          detailsList: [
+            'Number of people in your group',
+            'Preferred date and time',
+            'Dish preferences for each person',
+            'Any special dietary requirements or allergies',
+            'Contact information for confirmation'
+          ],
+          emailButton: '✉️ Send your group booking request',
+          emailSubject: 'Group booking request',
+          emailBody: 'Hello,\n\nI would like to make a group booking for DELICE MENU €41.00 with the following details:\n\nTotal number of people:\nPreferred date:\nPreferred time:\n\nDish preferences (please specify how many people want each option):\n- Appetizer:\n  • Option 1 (Soup of the day): ___ people\n  • Option 2 (Homemade cheese croquettes): ___ people\n  • Option 3 (Homemade shrimp croquettes): ___ people\n- Main Course:\n  • Option 1 (Chicken in cream sauce with vegetables): ___ people\n  • Option 2 (Flemish rabbit with salad and croquettes): ___ people\n  • Option 3 (Baked salmon with bearnaise sauce): ___ people\n- Dessert:\n  • Option 1 (Chocolate mousse): ___ people\n  • Option 2 (Dame Blanche): ___ people\n\nSpecial requirements or allergies:\n\nThank you!'
         }
       },
       groupMenu: {

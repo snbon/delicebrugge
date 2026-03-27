@@ -225,7 +225,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/reserve" element={<ReservePage />} />
-            <Route path="/groupmenu" element={<GroupMenuPage />} />
+            <Route path="/groupmenu/:optionId?" element={<GroupMenuPage />} />
             <Route path="/group-booking" element={<GroupBookingPage />} />
             
             {/* Localized routes for other languages */}
@@ -246,7 +246,7 @@ function App() {
             ))}
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
-              <Route key={language} path={`/${language}/groupmenu`} element={<GroupMenuPage />} />
+              <Route key={language} path={`/${language}/groupmenu/:optionId?`} element={<GroupMenuPage />} />
             ))}
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
