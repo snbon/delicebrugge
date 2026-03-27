@@ -68,6 +68,34 @@ const fr = {
 }
 },
         reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },
+
+        deliceMenu: {
+          heading: 'Menu Delice €41.00',
+          perPerson: 'par personne',
+          chooseOne: 'choisissez-en un',
+          heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre de délicieuses options - choisissez votre préférence.',
+          appetizer: {
+            title: 'Entrée',
+            option1: { name: 'Soupe du jour' },
+            option2: { name: 'Croquettes de fromage maison' },
+            option3: { name: 'Croquettes de crevettes maison' }
+          },
+          mainCourse: {
+            title: 'Plat principal',
+            option1: { name: 'Poulet dans une sauce à la crème avec legumes' },
+            option2: { name: 'Lapin à la amande avec salade et croquettes' },
+            option3: { name: 'Saumon cuit au four avec sauce béarnaise' }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: { name: 'Mousse au chocolat' },
+            option2: { name: 'Dame Blanche' }
+          },
+          drink: {
+            title: 'Inclus',
+            description: 'Café ou Thé\n1 boisson : Un verre de bière locale ou de vin blanc/rosé/rouge inclus'
+          }
+        },
         groupMenu: {
           heading: 'MENU €38.00',
           perPerson: 'par personne',
@@ -183,7 +211,35 @@ const fr = {
                 pasta: 'Pâtes',
                 kidsMenu: 'Menu enfant'
               },
-              groupMenu: {
+      
+        deliceMenu: {
+          heading: 'MENU DELICE €41.00',
+          perPerson: 'par personne',
+          chooseOne: 'choisissez-en un',
+          heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre de délicieuses options - choisissez votre préférence.',
+          appetizer: {
+            title: 'Entrée',
+            option1: { name: 'Soupe du jour' },
+            option2: { name: 'Croquettes de fromage maison' },
+            option3: { name: 'Croquettes de crevettes maison' }
+          },
+          mainCourse: {
+            title: 'Plat principal',
+            option1: { name: 'Poulet dans une sauce à la crème avec legumes' },
+            option2: { name: 'Lapin à la amande avec salade et croquettes' },
+            option3: { name: 'Saumon cuit au four avec sauce béarnaise' }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: { name: 'Mousse au chocolat' },
+            option2: { name: 'Dame Blanche' }
+          },
+          drink: {
+            title: 'Inclus',
+            description: 'Café ou Thé\n1 boisson : Un verre de bière locale ou de vin blanc/rosé/rouge inclus'
+          }
+        },
+        groupMenu: {
                 appetizer: 'Entrée',
                 mainCourse: 'Plat Principal',
                 dessert: 'Dessert',
@@ -243,6 +299,34 @@ const fr = {
             selectDishes: 'Veuillez sélectionner le nombre requis de plats',
             quantitiesMismatch: 'Les quantités totales doivent être égales au nombre total d\'invités',
             agreementRequired: 'Vous devez accepter les conditions pour continuer'
+          }
+        },
+
+        deliceMenu: {
+          heading: 'MENU DELICE €41.00',
+          perPerson: 'par personne',
+          chooseOne: 'choisissez-en un',
+          heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre de délicieuses options - choisissez votre préférence.',
+          appetizer: {
+            title: 'Entrée',
+            option1: { name: 'Soupe du jour' },
+            option2: { name: 'Croquettes de fromage maison' },
+            option3: { name: 'Croquettes de crevettes maison' }
+          },
+          mainCourse: {
+            title: 'Plat principal',
+            option1: { name: 'Poulet dans une sauce à la crème avec legumes' },
+            option2: { name: 'Lapin à la amande avec salade et croquettes' },
+            option3: { name: 'Saumon cuit au four avec sauce béarnaise' }
+          },
+          dessert: {
+            title: 'Dessert',
+            option1: { name: 'Mousse au chocolat' },
+            option2: { name: 'Dame Blanche' }
+          },
+          drink: {
+            title: 'Inclus',
+            description: 'Café ou Thé\n1 boisson : Un verre de bière locale ou de vin blanc/rosé/rouge inclus'
           }
         },
         groupMenu: {

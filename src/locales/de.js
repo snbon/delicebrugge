@@ -62,6 +62,34 @@ const de = {
 }
 },
         reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
+
+        deliceMenu: {
+          heading: 'DELICE MENÜ €41.00',
+          perPerson: 'pro Person',
+          chooseOne: 'wählen Sie eine',
+          heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet köstliche Optionen - wählen Sie Ihre Präferenz.',
+          appetizer: {
+            title: 'Vorspeise',
+            option1: { name: 'Tagessuppe' },
+            option2: { name: 'Hausgemachte Käsekroketten' },
+            option3: { name: 'Hausgemachte Garnelenkroketten' }
+          },
+          mainCourse: {
+            title: 'Hauptgericht',
+            option1: { name: 'Eintopf - hunh mit gemüse' },
+            option2: { name: 'Kaninchen aif amische art mit Salat und Kroketten' },
+            option3: { name: 'Gebackener Lachs mit Sauce Bearnaise' }
+          },
+          dessert: {
+            title: 'Nachspeise',
+            option1: { name: 'Schokoladenmousse' },
+            option2: { name: 'Dame Blanche' }
+          },
+          drink: {
+            title: 'Inbegriffen',
+            description: 'Kaffee oder Tee\n1 Getränk: Ein Glas lokales Bier oder Weiß-/Rosé-/Rotwein inklusive'
+          }
+        },
         groupMenu: {
           heading: 'MENÜ €38.00',
           perPerson: 'pro Person',
@@ -177,7 +205,35 @@ const de = {
               pasta: 'Pasta',
               kidsMenu: 'Kindermenü'
             },
-            groupMenu: {
+    
+        deliceMenu: {
+          heading: 'DELICE MENÜ €41.00',
+          perPerson: 'pro Person',
+          chooseOne: 'wählen Sie eine',
+          heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet köstliche Optionen - wählen Sie Ihre Präferenz.',
+          appetizer: {
+            title: 'Vorspeise',
+            option1: { name: 'Tagessuppe' },
+            option2: { name: 'Hausgemachte Käsekroketten' },
+            option3: { name: 'Hausgemachte Garnelenkroketten' }
+          },
+          mainCourse: {
+            title: 'Hauptgericht',
+            option1: { name: 'Eintopf - hunh mit gemüse' },
+            option2: { name: 'Kaninchen aif amische art mit Salat und Kroketten' },
+            option3: { name: 'Gebackener Lachs mit Sauce Bearnaise' }
+          },
+          dessert: {
+            title: 'Nachspeise',
+            option1: { name: 'Schokoladenmousse' },
+            option2: { name: 'Dame Blanche' }
+          },
+          drink: {
+            title: 'Inbegriffen',
+            description: 'Kaffee oder Tee\n1 Getränk: Ein Glas lokales Bier oder Weiß-/Rosé-/Rotwein inklusive'
+          }
+        },
+        groupMenu: {
               appetizer: 'Vorspeise',
               mainCourse: 'Hauptgericht',
               dessert: 'Dessert',
@@ -237,6 +293,34 @@ const de = {
             selectDishes: 'Bitte wählen Sie die erforderliche Anzahl von Gerichten',
             quantitiesMismatch: 'Gesamtmengen müssen der Gesamtgästezahl entsprechen',
             agreementRequired: 'Sie müssen den Bedingungen zustimmen, um fortzufahren'
+          }
+        },
+
+        deliceMenu: {
+          heading: 'DELICE MENÜ €41.00',
+          perPerson: 'pro Person',
+          chooseOne: 'wählen Sie eine',
+          heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet köstliche Optionen - wählen Sie Ihre Präferenz.',
+          appetizer: {
+            title: 'Vorspeise',
+            option1: { name: 'Tagessuppe' },
+            option2: { name: 'Hausgemachte Käsekroketten' },
+            option3: { name: 'Hausgemachte Garnelenkroketten' }
+          },
+          mainCourse: {
+            title: 'Hauptgericht',
+            option1: { name: 'Eintopf - hunh mit gemüse' },
+            option2: { name: 'Kaninchen aif amische art mit Salat und Kroketten' },
+            option3: { name: 'Gebackener Lachs mit Sauce Bearnaise' }
+          },
+          dessert: {
+            title: 'Nachspeise',
+            option1: { name: 'Schokoladenmousse' },
+            option2: { name: 'Dame Blanche' }
+          },
+          drink: {
+            title: 'Inbegriffen',
+            description: 'Kaffee oder Tee\n1 Getränk: Ein Glas lokales Bier oder Weiß-/Rosé-/Rotwein inklusive'
           }
         },
         groupMenu: {
