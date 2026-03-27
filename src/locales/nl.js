@@ -2,7 +2,7 @@ const nl = {
   translation: {
     common: {
       brandName: 'Délice Brugge',
-      travellersChoice: 'Travellers\' Choice 2022, 2023 & 2024',
+      travellersChoice: 'Travellers\' Choice 2022, 2023, 2024 & 2025',
       nav: { home: 'Home', menu: 'Menu', reserve: 'Reserveren', language: 'Taal' },
       cta: { bookNow: 'Reserveer nu', viewMenu: 'Bekijk menu' },
       address: {
@@ -44,7 +44,7 @@ const nl = {
         features: [
           'Familiale gastvrijheid in een knusse bistro bij het Minnewaterpark',
           'Belgische klassiekers met zorg en seizoensingrediënten',
-          'Geliefd bij reizigers — Travellers\' Choice 2022–2024',
+          'Geliefd bij reizigers — Travellers\' Choice 2022–2025',
           'Sterke prijs-kwaliteit: royale porties, lokale bieren, warme service',
         ],
         recommendationsHeading: 'Aanraders van de chef',

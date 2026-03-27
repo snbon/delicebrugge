@@ -2,7 +2,7 @@ const en = {
   translation: {
     common: {
       brandName: 'Délice Brugge',
-      travellersChoice: "Traveller's Choice 2022, 2023 & 2024",
+      travellersChoice: "Traveller's Choice 2022, 2023, 2024 & 2025",
       nav: {
         home: 'Home',
         menu: 'Menu',
@@ -27,7 +27,7 @@ const en = {
       seo: {
         title: 'Délice Brugge | Authentic Belgian Restaurant in Minnewaterpark, Bruges',
         description:
-          'Family-owned Belgian restaurant in the heart of Bruges. Enjoy Carbonade Flamande, mussels, steak, and local beers in a cozy setting near Minnewaterpark. Traveller\'s Choice 2022–2024.'
+          'Family-owned Belgian restaurant in the heart of Bruges. Enjoy Carbonade Flamande, mussels, steak, and local beers in a cozy setting near Minnewaterpark. Traveller\'s Choice 2022–2025.'
       },
       about: {
         heading: 'About us',
@@ -52,7 +52,7 @@ const en = {
         features: [
           'Family-owned hospitality in a cozy bistro near Minnewaterpark',
           'Belgian classics made with care and seasonal ingredients',
-          'Loved by travelers — Traveller\'s Choice 2022–2024',
+          'Loved by travelers — Traveller\'s Choice 2022–2025',
           'Great value: generous portions, local beers, warm service',
         ],
         recommendationsHeading: "Chef's recommendations",
