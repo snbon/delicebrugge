@@ -270,8 +270,6 @@ function App() {
               <div className="mt-2">
                 <span className="font-semibold mr-1">{t('common.address.phone')}:</span>
                 <a className="hover:text-brand-700" href={`tel:${t('common.address.phone1')}`}>{t('common.address.phone1')}</a>
-                <span className="mx-2">·</span>
-                <a className="hover:text-brand-700" href={`tel:${t('common.address.phone2')}`}>{t('common.address.phone2')}</a>
               </div>
               <div className="mt-1">
                 <a className="hover:text-brand-700" href={`mailto:${t('common.address.email')}`}>{t('common.address.email')}</a>

@@ -13,7 +13,6 @@ const nl = {
         closed: 'Gesloten op woensdag',
         phone: 'Telefoon',
         phone1: '050 33 16 49',
-        phone2: '+32 495 60 00 41',
         email: 'info@delicebrugge.be'
       },
       seo: {
