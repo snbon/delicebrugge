@@ -158,16 +158,16 @@ const nl = {
         subtitle: 'Voor groepen van 6 of meer gasten',
         welcome: {
           greeting: 'Beste Gast,',
-          description: 'Voor groepsboekingen hebben we 2 formules die u van tevoren moet kiezen met een aanbetaling. We doen dit voor efficiëntie en om kwaliteit te garanderen.',
+          description: 'Voor groepsboekingen hebben we 2 formules die u van tevoren moet kiezen met een voorschot. We doen dit voor efficiëntie en om kwaliteit te garanderen.',
           option1: {
-            title: 'Optie 1: À la Carte',
-            description: 'Kies 5 verschillende hoofdgerechten en 5 voorgerechten indien van toepassing, uit ons à la carte menu.'
+            title: 'Optie 1: Aangepast À la Carte Menu',
+            description: 'Stel een persoonlijk menu samen voor uw groep! Kies eerst tot 5 voorgerechten en 5 hoofdgerechten. Geef daarna exact aan hoeveel van elk uw gasten wensen.'
           },
           option2: {
-            title: 'Optie 2: Menu',
-            description: 'Kies ons bekende en populaire menu. Geef alstublieft van tevoren uw keuzes voor de 3-gangen maaltijd op.'
+            title: 'Optie 2: Vast 3-Gangen Groepsmenu',
+            description: 'Geniet van ons populaire 3-gangenmenu (€38 per persoon) met 2 keuzes per gang. Laat ons simpelweg weten hoeveel gasten welke opties wensen.'
           },
-          bookNow: 'Nu Boeken'
+          bookNow: 'Nu Starten'
         },
         steps: {
           step1: 'Gastgegevens',
@@ -186,18 +186,18 @@ const nl = {
           time: 'Tijd',
           guests: 'Aantal gasten',
           minGuests: 'Minimum 6 gasten vereist',
-          depositAgreement: 'Ik ga akkoord met het betalen van een aanbetaling per groep en accepteer het annuleringsbeleid (niet-restitueerbaar indien geannuleerd binnen 6 uur voor de reservering).',
+          depositAgreement: 'Ik ga akkoord met het betalen van een voorschot per groep en accepteer het annuleringsbeleid (niet-restitueerbaar indien geannuleerd binnen 6 uur voor de reservering).',
           next: 'Volgende'
         },
         menuSelection: {
           title: 'Menukeuze',
           option1: {
-            title: 'À la Carte',
-            description: 'Kies 5 voorgerechten en 5 hoofdgerechten uit ons volledige restaurantmenu. Deze optie stelt u in staat om uw groepsmaaltijd te personaliseren uit onze à la carte aanbiedingen.'
+            title: 'Aangepast À la Carte Menu',
+            description: 'Stel een persoonlijk menu samen voor uw groep! Kies eerst tot 5 voorgerechten en 5 hoofdgerechten. Geef daarna exact aan hoeveel van elk uw gasten wensen.'
           },
           option2: {
-            title: 'Menu',
-            description: 'Geniet van ons populaire vaste 3-gangen menu. Perfect voor een zorgeloze ervaring met zorgvuldig samengestelde gerechten.',
+            title: 'Vast 3-Gangen Groepsmenu',
+            description: 'Geniet van ons populaire 3-gangenmenu (€38 per persoon) met 2 keuzes per gang. Laat ons simpelweg weten hoeveel gasten welke opties wensen.',
             price: '€38.00 per persoon'
           },
           select: 'Selecteer deze optie',
@@ -272,7 +272,7 @@ const nl = {
           dishes: 'Gerechten & Aantallen',
           specialRequests: 'Speciale verzoeken',
           totalPrice: 'Totaalprijs',
-          confirmAgreement: 'Ik bevestig dat de bovenstaande gegevens correct zijn en begrijp dat een aanbetaling vereist zal zijn om de boeking te bevestigen.',
+          confirmAgreement: 'Ik bevestig dat de bovenstaande gegevens correct zijn en begrijp dat een voorschot vereist zal zijn om de boeking te bevestigen.',
           submit: 'Boeking indienen',
           submitting: 'Indienen...',
           labels: {

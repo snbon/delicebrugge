@@ -1,10 +1,55 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [dayError, setDayError] = useState('');
+
+  // Define leave periods here (Format: YYYY-MM-DD)
+  const LEAVE_PERIODS = [
+    { start: '', end: '' } // ADD VACATION DATES HERE! 
+  ];
 
   const handleInputChange = (field, value) => {
+    if (field === 'date' && value) {
+      const selectedDate = new Date(value);
+      const selectedTime = selectedDate.getTime();
+      let leaveEndDateStr = null;
+
+      // Check if selected date falls in any leave period
+      for (const period of LEAVE_PERIODS) {
+        const startTime = new Date(period.start).getTime();
+        const endTime = new Date(period.end).getTime();
+
+        if (selectedTime >= startTime && selectedTime <= endTime) {
+          const parts = period.end.split('-');
+          leaveEndDateStr = `${parts[2]}/${parts[1]}/${parts[0]}`; // DD/MM/YYYY format
+          break;
+        }
+      }
+
+      if (leaveEndDateStr) {
+        const msgMap = {
+          en: `Sorry, we are on leave until ${leaveEndDateStr}`,
+          nl: `Sorry, we zijn met verlof tot ${leaveEndDateStr}`,
+          fr: `Désolé, nous sommes en congé jusqu'au ${leaveEndDateStr}`,
+          de: `Entschuldigung, wir sind im Urlaub bis zum ${leaveEndDateStr}`,
+          es: `Lo sentimos, estamos de vacaciones hasta el ${leaveEndDateStr}`
+        };
+        const lang = (i18n.language || 'en').split('-')[0];
+        setDayError(msgMap[lang] || msgMap.en);
+        dispatch({ type: 'UPDATE_FIELD', field, value: '' });
+        return;
+      }
+
+      if (selectedDate.getDay() === 3) { // 3 = Wednesday
+        setDayError(t('common.address.closed') || 'Closed on Wednesday');
+        dispatch({ type: 'UPDATE_FIELD', field, value: '' });
+        return;
+      }
+      setDayError('');
+    }
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
 
@@ -25,6 +70,7 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
       state.email.trim() &&
       state.phone.trim() &&
       state.date &&
+      !dayError &&
       state.time &&
       state.guests >= 6 &&
       state.depositAgreement
@@ -49,9 +95,8 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
               id="name"
               value={state.name}
               onChange={(e) => handleInputChange('name', e.target.value)}
-              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
-                errors.name ? 'border-red-500' : 'border-neutral-300'
-              }`}
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${errors.name ? 'border-red-500' : 'border-neutral-300'
+                }`}
               placeholder={t('common.groupBooking.guestDetails.name')}
             />
             {errors.name && (
@@ -69,9 +114,8 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
               id="email"
               value={state.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
-              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
-                errors.email ? 'border-red-500' : 'border-neutral-300'
-              }`}
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${errors.email ? 'border-red-500' : 'border-neutral-300'
+                }`}
               placeholder={t('common.groupBooking.guestDetails.email')}
             />
             {errors.email && (
@@ -89,9 +133,8 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
               id="phone"
               value={state.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
-              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
-                errors.phone ? 'border-red-500' : 'border-neutral-300'
-              }`}
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${errors.phone ? 'border-red-500' : 'border-neutral-300'
+                }`}
               placeholder={t('common.groupBooking.guestDetails.phone')}
             />
             {errors.phone && (
@@ -112,9 +155,8 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
                 value={state.date}
                 onChange={(e) => handleInputChange('date', e.target.value)}
                 min={getTomorrowDate()}
-                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 appearance-none touch-manipulation ${
-                  errors.date ? 'border-red-500' : 'border-neutral-300'
-                }`}
+                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 appearance-none touch-manipulation ${(errors.date || dayError) ? 'border-red-500' : 'border-neutral-300'
+                  }`}
                 style={{
                   WebkitAppearance: 'none',
                   MozAppearance: 'none',
@@ -122,7 +164,10 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
                   minHeight: '44px'
                 }}
               />
-              {errors.date && (
+              {dayError && (
+                <p className="mt-1 text-xs sm:text-sm text-red-600">{dayError}</p>
+              )}
+              {errors.date && !dayError && (
                 <p className="mt-1 text-xs sm:text-sm text-red-600">{getErrorMessage('date')}</p>
               )}
             </div>
@@ -136,9 +181,8 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
                 id="time"
                 value={state.time}
                 onChange={(e) => handleInputChange('time', e.target.value)}
-                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
-                  errors.time ? 'border-red-500' : 'border-neutral-300'
-                }`}
+                className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${errors.time ? 'border-red-500' : 'border-neutral-300'
+                  }`}
               >
                 {Array.from({ length: 21 }, (_, i) => {
                   const hour = Math.floor(i / 2) + 11;
@@ -166,9 +210,8 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
               id="guests"
               value={state.guests}
               onChange={(e) => handleInputChange('guests', parseInt(e.target.value))}
-              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${
-                errors.guests ? 'border-red-500' : 'border-neutral-300'
-              }`}
+              className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 ${errors.guests ? 'border-red-500' : 'border-neutral-300'
+                }`}
             >
               {Array.from({ length: 25 }, (_, i) => i + 6).map(guestCount => (
                 <option key={guestCount} value={guestCount}>
@@ -207,11 +250,10 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
             <motion.button
               onClick={onNext}
               disabled={!isFormValid()}
-              className={`w-full py-2.5 sm:py-3 md:py-4 px-4 sm:px-6 rounded-lg font-semibold text-white transition-all text-sm sm:text-base ${
-                isFormValid()
-                  ? 'bg-brand-600 hover:bg-brand-700 cursor-pointer'
-                  : 'bg-neutral-300 cursor-not-allowed'
-              }`}
+              className={`w-full py-2.5 sm:py-3 md:py-4 px-4 sm:px-6 rounded-lg font-semibold text-white transition-all text-sm sm:text-base ${isFormValid()
+                ? 'bg-brand-600 hover:bg-brand-700 cursor-pointer'
+                : 'bg-neutral-300 cursor-not-allowed'
+                }`}
               whileHover={isFormValid() ? { scale: 1.02 } : {}}
               whileTap={isFormValid() ? { scale: 0.98 } : {}}
             >

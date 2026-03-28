@@ -172,14 +172,14 @@ const fr = {
           greeting: 'Cher Invité,',
           description: 'Pour les réservations de groupe, nous avons 2 formules que vous devez choisir à l\'avance avec un acompte. Nous le faisons pour l\'efficacité et pour garantir la qualité.',
           option1: {
-            title: 'Option 1: À la Carte',
-            description: 'Choisissez 5 plats principaux différents et 5 entrées si applicable, dans notre menu à la carte.'
+            title: 'Option 1 : Menu À la Carte Personnalisé',
+            description: 'Créez un menu personnalisé pour votre groupe ! Sélectionnez jusqu\'à 5 entrées et 5 plats principaux. Ensuite, précisez exactement combien de chaque plat vos invités désirent.'
           },
           option2: {
-            title: 'Option 2: Menu',
-            description: 'Choisissez notre menu populaire et bien connu. Veuillez fournir vos choix pour le repas en 3 plats à l\'avance.'
+            title: 'Option 2 : Menu de Groupe Fixe',
+            description: 'Profitez de notre menu 3 services (38 € par personne) avec 2 choix par service. C\'est un choix sans tracas ! Dites-nous simplement combien d\'invités souhaitent quelles options.'
           },
-          bookNow: 'Réserver Maintenant'
+          bookNow: 'Commencer Maintenant'
         },
         steps: {
           step1: 'Détails des Invités',
@@ -204,12 +204,12 @@ const fr = {
         menuSelection: {
           title: 'Sélection du Menu',
           option1: {
-            title: 'À la Carte',
-            description: 'Choisissez 5 entrées et 5 plats principaux dans notre menu complet du restaurant. Cette option vous permet de personnaliser votre repas de groupe à partir de nos offres à la carte.'
+            title: 'Menu À la Carte Personnalisé',
+            description: 'Créez un menu personnalisé pour votre groupe ! Sélectionnez jusqu\'à 5 entrées et 5 plats principaux. Ensuite, précisez exactement combien de chaque plat vos invités désirent.'
           },
           option2: {
-            title: 'Menu',
-            description: 'Profitez de notre menu fixe en 3 plats populaire. Parfait pour une expérience sans souci avec des plats soigneusement sélectionnés.',
+            title: 'Menu de Groupe Fixe',
+            description: 'Profitez de notre menu 3 services (38 € par personne) avec 2 choix par service. C\'est un choix sans tracas ! Dites-nous simplement combien d\'invités souhaitent quelles options.',
             price: '€38.00 par personne'
           },
           select: 'Sélectionner cette option',

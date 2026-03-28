@@ -191,14 +191,14 @@ const en = {
           greeting: 'Dear Guest,',
           description: 'For group bookings, we have 2 formulas that you have to choose in advance with a deposit. We do this for efficiency and to guarantee quality.',
           option1: {
-            title: 'Option 1: À la Carte',
-            description: 'Choose 5 different main dishes and 5 starters if applicable, from our à la carte menu.'
+            title: 'Option 1: Custom À la Carte Menu',
+            description: 'Create a personalized menu for your group! First, select up to 5 starters and 5 main dishes from our full menu. Then, specify exactly how many of each dish your guests want.'
           },
           option2: {
-            title: 'Option 2: Menu',
-            description: 'Choose our well-known and popular menu. Please provide your choices of the 3-course meal in advance.'
+            title: 'Option 2: Fixed 3-Course Group Menu',
+            description: 'Enjoy our popular 3-course menu (€38 per person) with 2 options per course. This is a hassle-free choice! Just let us know how many guests want which options.'
           },
-          bookNow: 'Book Now'
+          bookNow: 'Start Now'
         },
         steps: {
           step1: 'Guest Details',
@@ -223,12 +223,12 @@ const en = {
         menuSelection: {
           title: 'Menu Selection',
           option1: {
-            title: 'À la Carte',
-            description: 'Choose 5 starters and 5 mains from our full restaurant menu. This option allows you to personalize your group meal from our à la carte offerings.'
+            title: 'Custom À la Carte Menu',
+            description: 'Create a personalized menu for your group! First, select up to 5 starters and 5 main dishes from our full menu. Then, specify exactly how many of each dish your guests want.'
           },
           option2: {
-            title: 'Menu',
-            description: 'Enjoy our popular fixed 3-course menu. Perfect for a hassle-free experience with carefully curated dishes.',
+            title: 'Fixed 3-Course Group Menu',
+            description: 'Enjoy our popular 3-course menu (€38 per person) with 2 options per course. This is a hassle-free choice! Just let us know how many guests want which options.',
             price: '€38.00 per person'
           },
           select: 'Select this option',

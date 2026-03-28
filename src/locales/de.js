@@ -166,14 +166,14 @@ const de = {
           greeting: 'Lieber Gast,',
           description: 'Für Gruppenbuchungen haben wir 2 Formeln, die Sie im Voraus mit einer Anzahlung wählen müssen. Wir tun dies für Effizienz und um Qualität zu garantieren.',
           option1: {
-            title: 'Option 1: À la Carte',
-            description: 'Wählen Sie 5 verschiedene Hauptgerichte und 5 Vorspeisen, falls zutreffend, aus unserem À-la-Carte-Menü.'
+            title: 'Option 1: Individuelles À-la-carte-Menü',
+            description: 'Erstellen Sie ein Menü für Ihre Gruppe! Wählen Sie bis zu 5 Vorspeisen und 5 Hauptgerichte. Geben Sie dann genau an, wie viele von jedem Gericht Ihre Gäste wünschen.'
           },
           option2: {
-            title: 'Option 2: Menü',
-            description: 'Wählen Sie unser bekanntes und beliebtes Menü. Bitte geben Sie im Voraus Ihre Wünsche für das 3-Gänge-Menü an.'
+            title: 'Option 2: Festes 3-Gänge-Gruppenmenü',
+            description: 'Genießen Sie unser beliebtes 3-Gänge-Menü (38 € pro Person) mit 2 Optionen pro Gang. Lassen Sie uns einfach wissen, wie viele Gäste welche Optionen wünschen.'
           },
-          bookNow: 'Jetzt Buchen'
+          bookNow: 'Jetzt Starten'
         },
         steps: {
           step1: 'Gastdetails',
@@ -198,12 +198,12 @@ const de = {
         menuSelection: {
           title: 'Menüauswahl',
           option1: {
-            title: 'À la Carte',
-            description: 'Wählen Sie 5 Vorspeisen und 5 Hauptgerichte aus unserem vollständigen Restaurantmenü. Diese Option ermöglicht es Ihnen, Ihre Gruppenmahlzeit aus unseren À-la-Carte-Angeboten zu personalisieren.'
+            title: 'Individuelles À-la-carte-Menü',
+            description: 'Erstellen Sie ein Menü für Ihre Gruppe! Wählen Sie bis zu 5 Vorspeisen und 5 Hauptgerichte. Geben Sie dann genau an, wie viele von jedem Gericht Ihre Gäste wünschen.'
           },
           option2: {
-            title: 'Menü',
-            description: 'Genießen Sie unser beliebtes festes 3-Gänge-Menü. Perfekt für ein sorgenfreies Erlebnis mit sorgfältig kuratierten Gerichten.',
+            title: 'Festes 3-Gänge-Gruppenmenü',
+            description: 'Genießen Sie unser beliebtes 3-Gänge-Menü (38 € pro Person) mit 2 Optionen pro Gang. Lassen Sie uns einfach wissen, wie viele Gäste welche Optionen wünschen.',
             price: '€38.00 pro Person'
           },
           select: 'Diese Option auswählen',

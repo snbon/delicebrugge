@@ -166,14 +166,14 @@ const es = {
           greeting: 'Estimado Invitado,',
           description: 'Para reservas de grupo, tenemos 2 fórmulas que debe elegir por adelantado con un depósito. Lo hacemos por eficiencia y para garantizar la calidad.',
           option1: {
-            title: 'Opción 1: À la Carte',
-            description: 'Elija 5 platos principales diferentes y 5 entrantes si corresponde, de nuestro menú à la carte.'
+            title: 'Opción 1: Menú a la Carta Personalizado',
+            description: '¡Cree un menú personalizado! Primero, seleccione hasta 5 entrantes y 5 platos principales. Luego, especifique exactamente cuántos de cada plato desean sus invitados.'
           },
           option2: {
-            title: 'Opción 2: Menú',
-            description: 'Elija nuestro conocido y popular menú. Por favor proporcione sus elecciones para la comida de 3 platos por adelantado.'
+            title: 'Opción 2: Menú de Grupo Fijo',
+            description: 'Disfrute de nuestro menú de 3 platos (38 € por persona) con 2 opciones por plato. ¡Es una elección sin complicaciones! Solo díganos cuántos invitados desean qué opciones.'
           },
-          bookNow: 'Reservar Ahora'
+          bookNow: 'Comenzar Ahora'
         },
         steps: {
           step1: 'Detalles de Invitados',
@@ -198,12 +198,12 @@ const es = {
         menuSelection: {
           title: 'Selección de Menú',
           option1: {
-            title: 'À la Carte',
-            description: 'Elija 5 entrantes y 5 platos principales de nuestro menú completo del restaurante. Esta opción le permite personalizar su comida de grupo de nuestras ofertas à la carte.'
+            title: 'Menú a la Carta Personalizado',
+            description: '¡Cree un menú personalizado! Primero, seleccione hasta 5 entrantes y 5 platos principales. Luego, especifique exactamente cuántos de cada plato desean sus invitados.'
           },
           option2: {
-            title: 'Menú',
-            description: 'Disfrute de nuestro popular menú fijo de 3 platos. Perfecto para una experiencia sin complicaciones con platos cuidadosamente seleccionados.',
+            title: 'Menú de Grupo Fijo',
+            description: 'Disfrute de nuestro menú de 3 platos (38 € por persona) con 2 opciones por plato. ¡Es una elección sin complicaciones! Solo díganos cuántos invitados desean qué opciones.',
             price: '€38.00 por persona'
           },
           select: 'Seleccionar esta opción',
