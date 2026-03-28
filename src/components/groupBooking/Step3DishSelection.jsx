@@ -459,7 +459,7 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
                   : 'text-neutral-500 hover:text-neutral-700'
               }`}
             >
-              Delice Menu (€55)
+              {t('common.groupBooking.dishSelection.deliceMenu.heading')}
             </button>
           </div>
         </div>

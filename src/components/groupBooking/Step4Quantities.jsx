@@ -117,7 +117,7 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
 
   const calculateTotalPrice = () => {
     if (state.menuOption === 'groupMenu') {
-      return state.guests * (state.groupMenuType === 'delice' ? 55.00 : 38.00);
+      return state.guests * (state.groupMenuType === 'delice' ? 51.00 : 38.00);
     }
     return 0; // For à la carte, we don't show total price in this step
   };

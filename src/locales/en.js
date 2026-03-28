@@ -131,7 +131,7 @@ const en = {
           ],
           emailButton: '✉️ Send your group booking request',
           emailSubject: 'Group booking request',
-          emailBody: 'Hello,\n\nI would like to make a group booking for DELICE MENU €41.00 with the following details:\n\nTotal number of people:\nPreferred date:\nPreferred time:\n\nDish preferences (please specify how many people want each option):\n- Appetizer:\n  • Option 1 (Soup of the day): ___ people\n  • Option 2 (Homemade cheese croquettes): ___ people\n  • Option 3 (Homemade shrimp croquettes): ___ people\n- Main Course:\n  • Option 1 (Chicken in cream sauce with vegetables): ___ people\n  • Option 2 (Flemish rabbit with salad and croquettes): ___ people\n  • Option 3 (Baked salmon with bearnaise sauce): ___ people\n- Dessert:\n  • Option 1 (Chocolate mousse): ___ people\n  • Option 2 (Dame Blanche): ___ people\n\nSpecial requirements or allergies:\n\nThank you!'
+          emailBody: 'Hello,\n\nI would like to make a group booking for DELICE MENU €51.00 with the following details:\n\nTotal number of people:\nPreferred date:\nPreferred time:\n\nDish preferences (please specify how many people want each option):\n- Appetizer:\n  • Option 1 (Soup of the day): ___ people\n  • Option 2 (Homemade cheese croquettes): ___ people\n  • Option 3 (Homemade shrimp croquettes): ___ people\n- Main Course:\n  • Option 1 (Chicken in cream sauce with vegetables): ___ people\n  • Option 2 (Flemish rabbit with salad and croquettes): ___ people\n  • Option 3 (Baked salmon with bearnaise sauce): ___ people\n- Dessert:\n  • Option 1 (Chocolate mousse): ___ people\n  • Option 2 (Dame Blanche): ___ people\n\nSpecial requirements or allergies:\n\nThank you!'
         }
       },
       groupMenu: {
@@ -196,7 +196,7 @@ const en = {
           },
           option2: {
             title: 'Option 2: Fixed 3-Course Group Menu',
-            description: 'Enjoy our popular 3-course menu (€38 per person) with 2 options per course. This is a hassle-free choice! Just let us know how many guests want which options.'
+            description: 'Enjoy our fixed 3-course group menus: the standard menu (€38 per person) or the extended Delice menu (€51 per person), each with choices per course. Hassle-free—just tell us how many guests want each option.'
           },
           bookNow: 'Start Now'
         },
@@ -228,8 +228,8 @@ const en = {
           },
           option2: {
             title: 'Fixed 3-Course Group Menu',
-            description: 'We offer two hassle-free fixed menus to choose from: our popular 3-course menu (€38) or our extensive Delice Menu (€55).',
-            price: '€38 or €55 per person'
+            description: 'We offer two hassle-free fixed menus: our popular 3-course menu (€38) or our extensive Delice Menu (€51).',
+            price: '€38 or €51 per person'
           },
           select: 'Select this option',
           next: 'Next'
@@ -251,7 +251,7 @@ const en = {
           },
 
           deliceMenu: {
-            heading: 'DELICE MENU €41.00',
+            heading: 'DELICE MENU €51.00',
             perPerson: 'per person',
             chooseOne: 'choose one',
             heroDescription: 'Perfect for group bookings and special occasions. Each course offers delicious options - choose your preference.',

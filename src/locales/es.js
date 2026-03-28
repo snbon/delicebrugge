@@ -106,7 +106,7 @@ const es = {
           ],
           emailButton: '✉️ Enviar solicitud de reserva de grupo',
           emailSubject: 'Solicitud de reserva de grupo',
-          emailBody: 'Hola,\n\nMe gustaría hacer una reserva de grupo para el MENU DELICE €41.00 con los siguientes detalles:\n\nNúmero total de personas:\nFecha preferida:\nHora preferida:\n\nPreferencias de platos (por favor indique cuántas personas desean cada opción):\n- Entrante:\n  • Opción 1 (Sopa del día): ___ personas\n  • Opción 2 (Croquetas de queso caseras): ___ personas\n  • Opción 3 (Croquetas de gambas caseras): ___ personas\n- Plato principal:\n  • Opción 1 (Pollo en salsa de crema con verduras): ___ personas\n  • Opción 2 (Conejo a la flamenca con ensalada y croquetas): ___ personas\n  • Opción 3 (Salmón al horno con salsa bearnesa): ___ personas\n- Postre:\n  • Opción 1 (Mousse de chocolate): ___ personas\n  • Opción 2 (Dame Blanche): ___ personas\n\nNecesidades especiales o alergias:\n\n¡Gracias!'
+          emailBody: 'Hola,\n\nMe gustaría hacer una reserva de grupo para el MENU DELICE €51.00 con los siguientes detalles:\n\nNúmero total de personas:\nFecha preferida:\nHora preferida:\n\nPreferencias de platos (por favor indique cuántas personas desean cada opción):\n- Entrante:\n  • Opción 1 (Sopa del día): ___ personas\n  • Opción 2 (Croquetas de queso caseras): ___ personas\n  • Opción 3 (Croquetas de gambas caseras): ___ personas\n- Plato principal:\n  • Opción 1 (Pollo en salsa de crema con verduras): ___ personas\n  • Opción 2 (Conejo a la flamenca con ensalada y croquetas): ___ personas\n  • Opción 3 (Salmón al horno con salsa bearnesa): ___ personas\n- Postre:\n  • Opción 1 (Mousse de chocolate): ___ personas\n  • Opción 2 (Dame Blanche): ___ personas\n\nNecesidades especiales o alergias:\n\n¡Gracias!'
         }
       },
       groupMenu: {
@@ -171,7 +171,7 @@ const es = {
           },
           option2: {
             title: 'Opción 2: Menú de Grupo Fijo',
-            description: 'Disfrute de nuestro menú de 3 platos (38 € por persona) con 2 opciones por plato. ¡Es una elección sin complicaciones! Solo díganos cuántos invitados desean qué opciones.'
+            description: 'Disfrute de nuestros menús de grupo fijos de 3 platos: el menú estándar (38 € por persona) o el Menú Délice ampliado (51 € por persona), cada uno con opciones por plato. Sin complicaciones—indíquenos cuántos invitados quieren cada opción.'
           },
           bookNow: 'Comenzar Ahora'
         },
@@ -203,8 +203,8 @@ const es = {
           },
           option2: {
             title: 'Menú de Grupo Fijo',
-            description: 'Ofrecemos dos menús fijos sin complicaciones: nuestro popular menú de 3 platos (38 €) o nuestro extenso Menú Délice (55 €).',
-            price: '38 € o 55 € por persona'
+            description: 'Ofrecemos dos menús fijos sin complicaciones: nuestro popular menú de 3 platos (38 €) o nuestro extenso Menú Délice (51 €).',
+            price: '38 € o 51 € por persona'
           },
           select: 'Seleccionar esta opción',
           next: 'Siguiente'
@@ -226,7 +226,7 @@ const es = {
           },
 
           deliceMenu: {
-            heading: 'MENÚ DELICE €41.00',
+            heading: 'MENÚ DELICE €51.00',
             perPerson: 'por persona',
             chooseOne: 'elija uno',
             heroDescription: 'Ideal para reservas de grupos y ocasiones especiales. Cada plato ofrece deliciosas opciones - elija su preferencia.',

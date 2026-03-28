@@ -59,10 +59,17 @@ export default function Step6ThankYou({ state }) {
 
   const calculateTotalPrice = () => {
     if (state.menuOption === 'groupMenu') {
-      return state.guests * 38.00;
+      return state.guests * (state.groupMenuType === 'delice' ? 51.00 : 38.00);
     }
     return 0; // For à la carte, we don't show total price
   };
+
+  const chosenMenuTitle =
+    state.menuOption === 'aLaCarte'
+      ? t('common.groupBooking.menuSelection.option1.title')
+      : state.groupMenuType === 'delice'
+        ? 'Delice Group Menu (€51)'
+        : t('common.groupBooking.menuSelection.option2.title');
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -171,18 +178,12 @@ export default function Step6ThankYou({ state }) {
               </div>
             ))}
 
-            {/* Menu Option */}
-            {renderSummarySection(t('common.groupBooking.summary.menuOption'), (
+            {/* Chosen menu */}
+            {renderSummarySection(chosenMenuTitle, (
               <div>
-                <p className="font-medium text-neutral-900">
-                  {state.menuOption === 'aLaCarte' 
-                    ? t('common.groupBooking.menuSelection.option1.title')
-                    : t('common.groupBooking.menuSelection.option2.title')
-                  }
-                </p>
                 {state.menuOption === 'groupMenu' && (
                   <p className="text-sm text-neutral-600 mt-1">
-                    {t('common.groupBooking.menuSelection.option2.price')}
+                    {state.groupMenuType === 'delice' ? '€51.00 per person' : '€38.00 per person'}
                   </p>
                 )}
               </div>

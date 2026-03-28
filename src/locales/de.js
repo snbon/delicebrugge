@@ -106,7 +106,7 @@ const de = {
           ],
           emailButton: '✉️ Senden Sie Ihre Gruppenbuchungsanfrage',
           emailSubject: 'Gruppenbuchungsanfrage',
-          emailBody: 'Hallo,\n\nIch möchte eine Gruppenbuchung für das DELICE MENÜ €41.00 mit folgenden Details vornehmen:\n\nGesamtanzahl Personen:\nBevorzugtes Datum:\nBevorzugte Uhrzeit:\n\nGerichtspräferenzen (bitte geben Sie an, wie viele Personen jede Option wünschen):\n- Vorspeise:\n  • Option 1 (Tagessuppe): ___ Personen\n  • Option 2 (Hausgemachte Käsekroketten): ___ Personen\n  • Option 3 (Hausgemachte Garnelenkroketten): ___ Personen\n- Hauptgericht:\n  • Option 1 (Eintopf - hunh mit gemüse): ___ Personen\n  • Option 2 (Kaninchen aif amische art mit Salat und Kroketten): ___ Personen\n  • Option 3 (Gebackener Lachs mit Sauce Bearnaise): ___ Personen\n- Dessert:\n  • Option 1 (Schokoladenmousse): ___ Personen\n  • Option 2 (Dame Blanche): ___ Personen\n\nBesondere Bedürfnisse oder Allergien:\n\nVielen Dank!'
+          emailBody: 'Hallo,\n\nIch möchte eine Gruppenbuchung für das DELICE MENÜ €51.00 mit folgenden Details vornehmen:\n\nGesamtanzahl Personen:\nBevorzugtes Datum:\nBevorzugte Uhrzeit:\n\nGerichtspräferenzen (bitte geben Sie an, wie viele Personen jede Option wünschen):\n- Vorspeise:\n  • Option 1 (Tagessuppe): ___ Personen\n  • Option 2 (Hausgemachte Käsekroketten): ___ Personen\n  • Option 3 (Hausgemachte Garnelenkroketten): ___ Personen\n- Hauptgericht:\n  • Option 1 (Eintopf - hunh mit gemüse): ___ Personen\n  • Option 2 (Kaninchen aif amische art mit Salat und Kroketten): ___ Personen\n  • Option 3 (Gebackener Lachs mit Sauce Bearnaise): ___ Personen\n- Dessert:\n  • Option 1 (Schokoladenmousse): ___ Personen\n  • Option 2 (Dame Blanche): ___ Personen\n\nBesondere Bedürfnisse oder Allergien:\n\nVielen Dank!'
         }
       },
       groupMenu: {
@@ -171,7 +171,7 @@ const de = {
           },
           option2: {
             title: 'Option 2: Festes 3-Gänge-Gruppenmenü',
-            description: 'Genießen Sie unser beliebtes 3-Gänge-Menü (38 € pro Person) mit 2 Optionen pro Gang. Lassen Sie uns einfach wissen, wie viele Gäste welche Optionen wünschen.'
+            description: 'Genießen Sie unsere festen 3-Gänge-Gruppenmenüs: das Standardmenü (38 € pro Person) oder das umfangreiche Delice-Menü (51 € pro Person), jeweils mit Wahlmöglichkeiten pro Gang. Unkompliziert—teilen Sie uns mit, wie viele Gäste welche Option wünschen.'
           },
           bookNow: 'Jetzt Starten'
         },
@@ -203,8 +203,8 @@ const de = {
           },
           option2: {
             title: 'Festes 3-Gänge-Gruppenmenü',
-            description: 'Wir Bieten zwei sorgenfreie feste Menüs an: unser beliebtes 3-Gänge-Menü (38 €) oder unser umfangreiches Delice-Menü (55 €).',
-            price: '38 € oder 55 € pro Person'
+            description: 'Wir bieten zwei sorgenfreie feste Menüs an: unser beliebtes 3-Gänge-Menü (38 €) oder unser umfangreiches Delice-Menü (51 €).',
+            price: '38 € oder 51 € pro Person'
           },
           select: 'Diese Option auswählen',
           next: 'Weiter'
@@ -226,7 +226,7 @@ const de = {
           },
 
           deliceMenu: {
-            heading: 'DELICE MENÜ €41.00',
+            heading: 'DELICE MENÜ €51.00',
             perPerson: 'pro Person',
             chooseOne: 'wählen Sie eine',
             heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet köstliche Optionen - wählen Sie Ihre Präferenz.',

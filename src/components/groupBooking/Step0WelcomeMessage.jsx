@@ -31,12 +31,14 @@ export default function Step0WelcomeMessage({ onNext }) {
             {/* Option 1 */}
             <div className="bg-white border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
               <div className="absolute top-0 left-0 w-1 h-full bg-brand-500"></div>
-              <div className="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center mb-4 border border-brand-100">
-                <span className="text-brand-600 font-bold">1</span>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0 border border-brand-100">
+                  <span className="text-xl font-bold text-brand-600">1</span>
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                  {t('common.groupBooking.welcome.option1.title')}
+                </h3>
               </div>
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                {t('common.groupBooking.welcome.option1.title')}
-              </h3>
               <p className="text-neutral-600 text-sm leading-relaxed">
                 {t('common.groupBooking.welcome.option1.description')}
               </p>
@@ -45,12 +47,14 @@ export default function Step0WelcomeMessage({ onNext }) {
             {/* Option 2 */}
             <div className="bg-white border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
               <div className="absolute top-0 left-0 w-1 h-full bg-brand-500"></div>
-              <div className="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center mb-4 border border-brand-100">
-                <span className="text-brand-600 font-bold">2</span>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0 border border-brand-100">
+                  <span className="text-xl font-bold text-brand-600">2</span>
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                  {t('common.groupBooking.welcome.option2.title')}
+                </h3>
               </div>
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                {t('common.groupBooking.welcome.option2.title')}
-              </h3>
               <p className="text-neutral-600 text-sm leading-relaxed">
                 {t('common.groupBooking.welcome.option2.description')}
               </p>

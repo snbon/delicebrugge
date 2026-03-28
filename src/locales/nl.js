@@ -100,7 +100,7 @@ const nl = {
           detailsList: ['Aantal mensen in uw groep', 'Gewenste datum en tijd', 'Gerechtvoorkeuren voor elke persoon', 'Eventuele speciale dieetwensen of allergieën', 'Contactgegevens voor bevestiging'],
           emailButton: '✉️ Verstuur uw groepsboekingsverzoek',
           emailSubject: 'Groepsboekingsverzoek',
-          emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken voor DELICE MENU €41.00 met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Soep van de dag): ___ mensen\n  • Optie 2 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 3 (Huisgemaakte garnaalkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Waterzooi van kip): ___ mensen\n  • Optie 2 (Konijn op Vlaamse wijze met salade & kroketten): ___ mensen\n  • Optie 3 (Gebakken zalm met bearnaisesaus): ___ mensen\n- Nagerecht:\n  • Optie 1 (Chocolademousse): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nBijzondere wensen of allergieën:\n\nBedankt!'
+          emailBody: 'Hallo,\n\nIk zou graag een groepsboeking willen maken voor DELICE MENU €51.00 met de volgende gegevens:\n\nTotaal aantal mensen:\nGewenste datum:\nGewenste tijd:\n\nGerechtvoorkeuren (geef alstublieft aan hoeveel mensen elke optie willen):\n- Voorgerecht:\n  • Optie 1 (Soep van de dag): ___ mensen\n  • Optie 2 (Huisgemaakte kaaskroketten): ___ mensen\n  • Optie 3 (Huisgemaakte garnaalkroketten): ___ mensen\n- Hoofdgerecht:\n  • Optie 1 (Waterzooi van kip): ___ mensen\n  • Optie 2 (Konijn op Vlaamse wijze met salade & kroketten): ___ mensen\n  • Optie 3 (Gebakken zalm met bearnaisesaus): ___ mensen\n- Nagerecht:\n  • Optie 1 (Chocolademousse): ___ mensen\n  • Optie 2 (Dame Blanche): ___ mensen\n\nBijzondere wensen of allergieën:\n\nBedankt!'
         }
       },
       groupMenu: {
@@ -165,7 +165,7 @@ const nl = {
           },
           option2: {
             title: 'Optie 2: Vast 3-Gangen Groepsmenu',
-            description: 'Geniet van ons populaire 3-gangenmenu (€38 per persoon) met 2 keuzes per gang. Laat ons simpelweg weten hoeveel gasten welke opties wensen.'
+            description: 'Geniet van onze vaste 3-gangen groepsmenu\'s: het standaardmenu (€38 per persoon) of het uitgebreide Delice-menu (€51 per persoon), elk met keuzes per gang. Zorgeloos—laat ons weten hoeveel gasten welke optie wensen.'
           },
           bookNow: 'Nu Starten'
         },
@@ -197,8 +197,8 @@ const nl = {
           },
           option2: {
             title: 'Vast 3-Gangen Groepsmenu',
-            description: 'We bieden twee zorgeloze vaste menu\'s aan: ons populaire 3-gangenmenu (€38) of ons uitgebreide Delice Menu (€55).',
-            price: '€38 of €55 per persoon'
+            description: 'We bieden twee zorgeloze vaste menu\'s aan: ons populaire 3-gangenmenu (€38) of ons uitgebreide Delice Menu (€51).',
+            price: '€38 of €51 per persoon'
           },
           select: 'Selecteer deze optie',
           next: 'Volgende'
@@ -220,7 +220,7 @@ const nl = {
           },
 
           deliceMenu: {
-            heading: 'DELICE MENU €41.00',
+            heading: 'DELICE MENU €51.00',
             perPerson: 'per persoon',
             chooseOne: 'kies er één',
             heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt heerlijke opties - kies uw voorkeur.',

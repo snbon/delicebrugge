@@ -26,7 +26,7 @@ const initialState = {
   
   // Step 2: Menu Selection
   menuOption: null, // 'aLaCarte' or 'groupMenu'
-  groupMenuType: 'standard', // 'standard' (38) or 'delice' (55)
+  groupMenuType: 'standard', // 'standard' (38) or 'delice' (51)
   
   // Step 3: Dish Selection
   selectedDishes: {
@@ -365,7 +365,7 @@ export default function GroupBookingPage() {
         booking_date: state.date,
         booking_time: state.time,
         number_of_guests: state.guests,
-        menu_option: state.menuOption === 'aLaCarte' ? 'À la Carte' : (state.groupMenuType === 'delice' ? 'Delice Group Menu (€55)' : 'Standard Group Menu (€38)'),
+        menu_option: state.menuOption === 'aLaCarte' ? 'À la Carte' : (state.groupMenuType === 'delice' ? 'Delice Group Menu (€51)' : 'Standard Group Menu (€38)'),
 
         quantities_summary: `Starters:\n${Object.entries(state.quantities || {})
           .filter(([dish]) => state.selectedDishes.starters?.includes(dish))
@@ -376,7 +376,7 @@ export default function GroupBookingPage() {
           .map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}` : ''}`,
         special_requests: state.specialRequests || 'None',
         total_price: state.menuOption === 'groupMenu' 
-          ? `€${(state.guests * (state.groupMenuType === 'delice' ? 55.00 : 38.00)).toFixed(2)}` 
+          ? `€${(state.guests * (state.groupMenuType === 'delice' ? 51.00 : 38.00)).toFixed(2)}` 
           : 'À la carte pricing'
       };
 
