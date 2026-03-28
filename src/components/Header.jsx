@@ -62,6 +62,7 @@ export default function Header({ transparent = false }) {
   const homeUrl = buildLocalizedUrl('/', currentLanguage);
   const menuUrl = buildLocalizedUrl('/menu', currentLanguage);
   const reserveUrl = buildLocalizedUrl('/reserve', currentLanguage);
+  const travelGuidesUrl = buildLocalizedUrl('/travelguides', currentLanguage);
 
   useEffect(() => {
     lastYRef.current = window.scrollY || 0;
@@ -106,6 +107,7 @@ export default function Header({ transparent = false }) {
           <NavLink to={homeUrl} className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.home')}</NavLink>
           <NavLink to={menuUrl} className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.menu')}</NavLink>
           <NavLink to={reserveUrl} className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.reserve')}</NavLink>
+          {/*<NavLink to={travelGuidesUrl} className={({ isActive }) => `hidden sm:inline text-sm font-semibold hover:text-brand-700 ${isActive ? 'text-brand-700' : 'text-neutral-800'}`}>{t('common.nav.travelGuides')}</NavLink> */}
           <div className="hidden md:block"><LanguageSwitcher /></div>
           {/* Desktop book now */}
           <div className="hidden md:block">
@@ -132,6 +134,7 @@ export default function Header({ transparent = false }) {
           <NavLink onClick={() => setOpen(false)} to={homeUrl} className="text-base font-semibold text-neutral-900">{t('common.nav.home')}</NavLink>
           <NavLink onClick={() => setOpen(false)} to={menuUrl} className="text-base font-semibold text-neutral-900">{t('common.nav.menu')}</NavLink>
           <NavLink onClick={() => setOpen(false)} to={reserveUrl} className="text-base font-semibold text-neutral-900">{t('common.nav.reserve')}</NavLink>
+          {/* <NavLink onClick={() => setOpen(false)} to={travelGuidesUrl} className="text-base font-semibold text-neutral-900">{t('common.nav.travelGuides')}</NavLink> */}
           <div className="pt-2"><LanguageSwitcher /></div>
         </div>
       </div>

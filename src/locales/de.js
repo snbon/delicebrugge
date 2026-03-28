@@ -3,7 +3,7 @@ const de = {
     common: {
       brandName: 'Délice Brugge',
       travellersChoice: 'Travellers\' Choice 2022, 2023, 2024 & 2025',
-      nav: { home: 'Start', menu: 'Speisekarte', reserve: 'Reservieren', language: 'Sprache' },
+      nav: { home: 'Start', menu: 'Speisekarte', reserve: 'Reservieren', travelGuides: 'Reiseführer', language: 'Sprache' },
       cta: { bookNow: 'Jetzt reservieren', viewMenu: 'Speisekarte ansehen' },
       address: {
         heading: 'Anfahrt',
@@ -317,6 +317,122 @@ const de = {
         }
       },
 
+      travelGuides: {
+        heading: 'Reiseführer-Buchung',
+        subtitle: 'Individuelle Gruppenmenüs für Reiseführer & Reiseveranstalter',
+        welcome: {
+          greeting: 'Lieber Reiseführer,',
+          description: 'Stellen Sie ein vollständig individuelles Menü für Ihre Gruppe zusammen. Wählen Sie die Gänge aus, die Sie einschließen möchten, wählen Sie Gerichte und legen Sie Mengen fest. Perfekt für Reisegruppen, die ein maßgeschneidertes Esserlebnis wünschen.',
+          altOption: 'Für Gruppen unter 10 Personen oder wenn Sie ein voreingestelltes Menü / à la carte mit festen Mengen suchen?',
+          altLink: 'Zur Gruppenbuchung',
+          startNow: 'Jetzt Starten'
+        },
+        steps: {
+          step1: 'Gänge',
+          step2: 'Gerichte',
+          step3: 'Mengen',
+          step4: 'Details',
+          step5: 'Übersicht',
+          step6: 'Bestätigt'
+        },
+        courseSelection: {
+          title: 'Gänge Auswählen',
+          subtitle: 'Wählen Sie, welche Gänge in Ihr Gruppenmenü aufgenommen werden sollen',
+          starters: 'Vorspeisen',
+          mainCourse: 'Hauptgericht',
+          desserts: 'Desserts',
+          drink: '1 Getränk nach Wahl (Glas)',
+          mainRequired: 'Pflicht',
+          next: 'Weiter'
+        },
+        dishSelection: {
+          title: 'Gerichte Auswählen',
+          subtitle: 'Wählen Sie bis zu 5 Gerichte pro Gang',
+          infoNote: 'Sie können bis zu 5 verschiedene Gerichte pro Gang auswählen. Im nächsten Schritt weisen Sie die Mengen pro Gericht zu.',
+          drinkSection: '1 Getränk nach Wahl',
+          drinkDescription: '1 Glas Wein (weiß / rosé / rot), Erfrischungsgetränke oder lokales Bier',
+          drinkPrice: '5,00 € pro Person',
+          drinkIncluded: 'In Ihrer Auswahl enthalten',
+          next: 'Weiter',
+          sections: {
+            starters: 'Vorspeisen',
+            vleesgerechten: 'Fleischgerichte',
+            visgerechtenMosselen: 'Fisch & Muscheln',
+            pasta: 'Pasta',
+            desserts: 'Desserts'
+          }
+        },
+        quantities: {
+          title: 'Mengen Zuweisen',
+          subtitle: 'Legen Sie die Anzahl der Portionen pro Gericht fest',
+          quantity: 'Menge',
+          assigned: 'zugewiesen',
+          assignPortions: 'Weisen Sie genau {{guests}} Portionen pro Gang zu.',
+          subtotal: 'Zwischensumme',
+          startersSubtotal: 'Zwischensumme Vorspeisen',
+          mainsSubtotal: 'Zwischensumme Hauptgericht',
+          dessertsSubtotal: 'Zwischensumme Desserts',
+          drinkTotal: 'Getränke (5 € × {{guests}} Gäste)',
+          grandTotal: 'Geschätzter Gesamtpreis',
+          perPerson: 'pro Person',
+          priceNote: 'Dies ist ein geschätzter Preis. Eine Anzahlung wird zur Bestätigung Ihrer Buchung angefordert.',
+          next: 'Weiter'
+        },
+        userDetails: {
+          title: 'Ihre Daten',
+          name: 'Kontaktname',
+          email: 'E-Mail-Adresse',
+          phone: 'Telefonnummer',
+          date: 'Gewünschtes Datum',
+          time: 'Gewünschte Uhrzeit',
+          guests: 'Anzahl der Gäste',
+          minGuests: 'Gruppen von 10 bis 30 Personen. Für kleinere Gruppen nutzen Sie bitte die Gruppenbuchungsseite.',
+          depositAgreement: 'Ich stimme zu, eine Anzahlung pro Gruppe zu leisten, und akzeptiere die Stornierungsbedingungen (nicht erstattungsfähig bei Stornierung innerhalb von 6 Stunden vor der Reservierung).',
+          next: 'Weiter'
+        },
+        summary: {
+          title: 'Prüfen & Bestätigen',
+          contactInfo: 'Kontaktinformationen',
+          bookingDetails: 'Buchungsdetails',
+          selectedCourses: 'Ausgewählte Gänge',
+          dishesQuantities: 'Gerichte & Mengen',
+          pricingBreakdown: 'Preisaufschlüsselung',
+          depositNote: 'Eine Anzahlung ist erforderlich, um Ihre Reservierung zu bestätigen. Unser Team wird Sie innerhalb von 24 Stunden mit Zahlungsdetails kontaktieren.',
+          confirmAgreement: 'Ich bestätige, dass die oben genannten Angaben korrekt sind, und verstehe, dass eine Anzahlung erforderlich ist, um diese Buchung zu sichern.',
+          submit: 'Buchung Einreichen',
+          submitting: 'Wird eingereicht...',
+          labels: {
+            name: 'Name',
+            email: 'E-Mail',
+            phone: 'Telefon',
+            guests: 'Anzahl der Gäste',
+            date: 'Datum',
+            time: 'Uhrzeit',
+            quantity: 'Anz.'
+          }
+        },
+        thankYou: {
+          title: 'Buchungsanfrage Erhalten!',
+          message: 'Vielen Dank für Ihre Reiseführer-Buchungsanfrage. Wir haben Ihre individuellen Menüauswahlen erhalten und werden uns innerhalb von 24 Stunden mit Ihnen in Verbindung setzen, um Ihre Reservierung zu bestätigen.',
+          summaryTitle: 'Buchungsübersicht',
+          whatNext: 'Was passiert als nächstes?',
+          whatNextDescription: 'Unser Team wird Ihre Buchungsanfrage prüfen und sich innerhalb von 24 Stunden mit Ihnen in Verbindung setzen, um Ihre Reservierung zu bestätigen und die Anzahlung zu arrangieren. Bitte überprüfen Sie Ihre E-Mail auf Aktualisierungen.'
+        },
+        validation: {
+          required: 'Dieses Feld ist erforderlich',
+          invalidEmail: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+          minGuests: 'Gruppen von 10 bis 30 Personen erforderlich',
+          invalidDate: 'Bitte wählen Sie ein zukünftiges Datum',
+          closedDay: 'Wir sind mittwochs geschlossen',
+          selectDishes: 'Bitte wählen Sie mindestens 1 Gericht für diesen Gang',
+          maxDishes: 'Sie können maximal 5 Gerichte pro Gang auswählen',
+          quantitiesMismatch: 'Gesamtmengen müssen {{guests}} (Gesamtgästezahl) entsprechen',
+          agreementRequired: 'Sie müssen den Bedingungen zustimmen, um fortzufahren'
+        },
+        navigation: {
+          back: 'Zurück'
+        }
+      },
       footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' }
     }
   }

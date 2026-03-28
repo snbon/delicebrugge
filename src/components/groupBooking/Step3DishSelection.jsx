@@ -312,7 +312,7 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
             {/* Category Header */}
             <div className="flex items-center space-x-3">
               <span className="text-2xl">{category.icon}</span>
-              <h4 className="text-lg font-semibold text-neutral-800">{category.title}</h4>
+              <h4 className="text-sm sm:text-base font-semibold text-neutral-800">{category.title}</h4>
               <div className="flex-1 h-px bg-neutral-200"></div>
             </div>
             
@@ -391,7 +391,7 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
       {/* Starters */}
       <div>
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-          <h3 className="text-xl font-semibold text-neutral-900">
+          <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
             {t('common.groupBooking.dishSelection.starters')}
           </h3>
           <div className="bg-brand-50 border border-brand-100 rounded-lg py-1.5 px-3">
@@ -412,7 +412,7 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
       {/* Main Dishes */}
       <div>
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-          <h3 className="text-xl font-semibold text-neutral-900">
+          <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
             {t('common.groupBooking.dishSelection.mains')}
           </h3>
           <div className="bg-brand-50 border border-brand-100 rounded-lg py-1.5 px-3">
@@ -467,7 +467,7 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
         {/* Appetizer */}
         <div>
           <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+            <h3 className="text-base sm:text-lg font-semibold text-neutral-900 mb-4">
               {t('common.groupBooking.dishSelection.groupMenu.appetizer')}
             </h3>
             <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
@@ -478,7 +478,7 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
         {/* Main Course */}
         <div className="mt-12">
           <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+            <h3 className="text-base sm:text-lg font-semibold text-neutral-900 mb-4">
               {t('common.groupBooking.dishSelection.groupMenu.mainCourse')}
             </h3>
             <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
@@ -489,7 +489,7 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
         {/* Dessert */}
         <div className="mt-12">
           <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+            <h3 className="text-base sm:text-lg font-semibold text-neutral-900 mb-4">
               {t('common.groupBooking.dishSelection.groupMenu.dessert')}
             </h3>
             <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>

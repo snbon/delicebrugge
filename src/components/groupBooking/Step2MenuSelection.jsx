@@ -46,7 +46,7 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
                   <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-xl font-bold text-brand-600">1</span>
                   </div>
-                  <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-semibold text-neutral-900 leading-tight">
                     {t('common.groupBooking.menuSelection.option1.title')}
                   </h3>
                 </div>
@@ -85,14 +85,14 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
                   <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-xl font-bold text-brand-600">2</span>
                   </div>
-                  <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-semibold text-neutral-900 leading-tight">
                     {t('common.groupBooking.menuSelection.option2.title')}
                   </h3>
                 </div>
                 <p className="text-neutral-600 leading-relaxed mb-3">
                   {t('common.groupBooking.menuSelection.option2.description')}
                 </p>
-                <div className="text-lg font-semibold text-brand-600 mb-3 mt-4">
+                <div className="text-sm sm:text-base font-semibold text-brand-600 mb-3 mt-4">
                   {t('common.groupBooking.menuSelection.option2.price')}
                 </div>
                 <div className="text-sm text-neutral-500">

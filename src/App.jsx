@@ -7,6 +7,7 @@ import MenuPage from './pages/MenuPage.jsx';
 import ReservePage from './pages/ReservePage.jsx';
 import GroupMenuPage from './pages/GroupMenuPage.jsx';
 import GroupBookingPage from './pages/GroupBookingPage.jsx';
+import TravelGuidesPage from './pages/TravelGuidesPage.jsx';
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, getLanguageFromPath, getPathWithoutLanguage, buildLocalizedUrl } from './utils/languageUtils.js';
 import './App.css';
 
@@ -227,7 +228,8 @@ function App() {
             <Route path="/reserve" element={<ReservePage />} />
             <Route path="/groupmenu/:optionId?" element={<GroupMenuPage />} />
             <Route path="/group-booking" element={<GroupBookingPage />} />
-            
+            <Route path="/travelguides" element={<TravelGuidesPage />} />
+
             {/* Localized routes for other languages */}
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
               <Route key={language} path={`/${language}`} element={<Navigate to={`/${language}/`} replace />} />
@@ -243,7 +245,7 @@ function App() {
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
               <Route key={language} path={`/${language}/reserve`} element={<ReservePage />} />
-            ))}
+            ))} 
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
               <Route key={language} path={`/${language}/groupmenu/:optionId?`} element={<GroupMenuPage />} />
@@ -251,6 +253,10 @@ function App() {
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
               <Route key={language} path={`/${language}/group-booking`} element={<GroupBookingPage />} />
+            ))}
+
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}/travelguides`} element={<TravelGuidesPage />} />
             ))}
           </Routes>
         </motion.div>
@@ -282,6 +288,9 @@ function App() {
                 <FooterLanguageSwitcher />
               </div>
             </div>
+          </div>
+          <div className="border-t border-neutral-100 mt-6 pt-4 text-center text-xs text-neutral-400">
+            built by <a href="https://baghlabs.com" target="_blank" rel="noreferrer noopener" className="font-bold underline underline-offset-2 hover:text-neutral-600">baghlabs</a>
           </div>
         </div>
       </footer>

@@ -3,7 +3,7 @@ const es = {
     common: {
       brandName: 'Délice Brugge',
       travellersChoice: 'Traveller\'s Choice 2022, 2023, 2024 y 2025',
-      nav: { home: 'Inicio', menu: 'Menú', reserve: 'Reservas', language: 'Idioma' },
+      nav: { home: 'Inicio', menu: 'Menú', reserve: 'Reservas', travelGuides: 'Guías de Viaje', language: 'Idioma' },
       cta: { bookNow: 'Reservar ahora', viewMenu: 'Ver menú' },
       address: {
         heading: 'Dónde estamos',
@@ -314,6 +314,122 @@ const es = {
           selectDishes: 'Por favor seleccione el número requerido de platos',
           quantitiesMismatch: 'Las cantidades totales deben ser iguales al número total de invitados',
           agreementRequired: 'Debe aceptar los términos para continuar'
+        }
+      },
+      travelGuides: {
+        heading: 'Reserva para Guías de Viaje',
+        subtitle: 'Menús de grupo personalizados para guías de viaje y operadores turísticos',
+        welcome: {
+          greeting: 'Estimado Guía de Viaje,',
+          description: 'Cree un menú completamente personalizado para su grupo. Elija los platos que desea incluir, seleccione los platos y establezca las cantidades. Perfecto para grupos de turistas que desean una experiencia gastronómica a medida.',
+          altOption: '¿Para grupos de menos de 10 comensales, o busca un menú preestablecido / à la carte con cantidades fijas?',
+          altLink: 'Ir a Reserva de Grupo',
+          startNow: 'Comenzar Ahora'
+        },
+        steps: {
+          step1: 'Platos',
+          step2: 'Comidas',
+          step3: 'Cantidades',
+          step4: 'Datos',
+          step5: 'Resumen',
+          step6: 'Confirmado'
+        },
+        courseSelection: {
+          title: 'Seleccionar Platos',
+          subtitle: 'Elija qué platos incluir en su menú de grupo',
+          starters: 'Entrantes',
+          mainCourse: 'Plato Principal',
+          desserts: 'Postres',
+          drink: '1 Bebida a Elegir (copa)',
+          mainRequired: 'Obligatorio',
+          next: 'Siguiente'
+        },
+        dishSelection: {
+          title: 'Seleccionar Comidas',
+          subtitle: 'Elija hasta 5 comidas por plato',
+          infoNote: 'Puede seleccionar hasta 5 comidas diferentes por plato. En el siguiente paso asignará las cantidades por comida.',
+          drinkSection: '1 Bebida a Elegir',
+          drinkDescription: '1 copa de vino (blanco / rosado / tinto), refrescos o cerveza local',
+          drinkPrice: '5,00 € por persona',
+          drinkIncluded: 'Incluido en su selección',
+          next: 'Siguiente',
+          sections: {
+            starters: 'Entrantes',
+            vleesgerechten: 'Carnes',
+            visgerechtenMosselen: 'Pescados y Mejillones',
+            pasta: 'Pasta',
+            desserts: 'Postres'
+          }
+        },
+        quantities: {
+          title: 'Asignar Cantidades',
+          subtitle: 'Establezca el número de porciones por comida',
+          quantity: 'Cantidad',
+          assigned: 'asignado(s)',
+          assignPortions: 'Asigne exactamente {{guests}} porciones por plato.',
+          subtotal: 'Subtotal',
+          startersSubtotal: 'Subtotal entrantes',
+          mainsSubtotal: 'Subtotal plato principal',
+          dessertsSubtotal: 'Subtotal postres',
+          drinkTotal: 'Bebidas (5 € × {{guests}} comensales)',
+          grandTotal: 'Total Estimado',
+          perPerson: 'por persona',
+          priceNote: 'Este es un precio estimado. Se solicitará un depósito para confirmar su reserva.',
+          next: 'Siguiente'
+        },
+        userDetails: {
+          title: 'Sus Datos',
+          name: 'Nombre de Contacto',
+          email: 'Dirección de Correo Electrónico',
+          phone: 'Número de Teléfono',
+          date: 'Fecha Preferida',
+          time: 'Hora Preferida',
+          guests: 'Número de Comensales',
+          minGuests: 'Grupos de 10 a 30 comensales. Para grupos más pequeños, use la página de Reserva de Grupo.',
+          depositAgreement: 'Acepto pagar un depósito por grupo y acepto la política de cancelación (no reembolsable si se cancela dentro de las 6 horas antes de la reserva).',
+          next: 'Siguiente'
+        },
+        summary: {
+          title: 'Revisar y Confirmar',
+          contactInfo: 'Información de Contacto',
+          bookingDetails: 'Detalles de la Reserva',
+          selectedCourses: 'Platos Seleccionados',
+          dishesQuantities: 'Comidas y Cantidades',
+          pricingBreakdown: 'Desglose de Precios',
+          depositNote: 'Se requerirá un depósito para confirmar su reserva. Nuestro equipo le contactará dentro de 24 horas con los detalles de pago.',
+          confirmAgreement: 'Confirmo que los datos anteriores son correctos y entiendo que se requerirá un depósito para asegurar esta reserva.',
+          submit: 'Enviar Reserva',
+          submitting: 'Enviando...',
+          labels: {
+            name: 'Nombre',
+            email: 'Correo',
+            phone: 'Teléfono',
+            guests: 'Número de Comensales',
+            date: 'Fecha',
+            time: 'Hora',
+            quantity: 'cant.'
+          }
+        },
+        thankYou: {
+          title: '¡Solicitud de Reserva Recibida!',
+          message: 'Gracias por su solicitud de reserva como guía de viaje. Hemos recibido sus selecciones de menú personalizado y le contactaremos dentro de 24 horas para confirmar su reserva.',
+          summaryTitle: 'Resumen de la Reserva',
+          whatNext: '¿Qué ocurre ahora?',
+          whatNextDescription: 'Nuestro equipo revisará su solicitud de reserva y le contactará dentro de 24 horas para confirmar su reserva y organizar el depósito. Por favor, revise su correo electrónico para recibir actualizaciones.'
+        },
+        validation: {
+          required: 'Este campo es obligatorio',
+          invalidEmail: 'Por favor ingrese una dirección de correo electrónico válida',
+          minGuests: 'Se requieren grupos de 10 a 30 comensales',
+          invalidDate: 'Por favor seleccione una fecha futura',
+          closedDay: 'Estamos cerrados los miércoles',
+          selectDishes: 'Por favor seleccione al menos 1 comida para este plato',
+          maxDishes: 'Puede seleccionar un máximo de 5 comidas por plato',
+          quantitiesMismatch: 'Las cantidades totales deben ser iguales a {{guests}} (número total de comensales)',
+          agreementRequired: 'Debe aceptar los términos para continuar'
+        },
+        navigation: {
+          back: 'Atrás'
         }
       },
       footer: { rights: 'Todos los derechos reservados.', btw: 'IVA' }

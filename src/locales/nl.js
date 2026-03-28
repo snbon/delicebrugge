@@ -3,7 +3,7 @@ const nl = {
     common: {
       brandName: 'Délice Brugge',
       travellersChoice: 'Travellers\' Choice 2022, 2023, 2024 & 2025',
-      nav: { home: 'Home', menu: 'Menu', reserve: 'Reserveren', language: 'Taal' },
+      nav: { home: 'Home', menu: 'Menu', reserve: 'Reserveren', travelGuides: 'Reisgidsen', language: 'Taal' },
       cta: { bookNow: 'Reserveer nu', viewMenu: 'Bekijk menu' },
       address: {
         heading: 'Locatie',
@@ -311,6 +311,122 @@ const nl = {
         }
       },
 
+      travelGuides: {
+        heading: 'Boeking voor Reisgidsen',
+        subtitle: 'Op maat gemaakte groepsmenu\'s voor reisgidsen & touroperators',
+        welcome: {
+          greeting: 'Beste Reisgids,',
+          description: 'Stel een volledig aangepast menu samen voor uw groep. Kies welke gangen u wilt opnemen, selecteer gerechten en stel hoeveelheden in. Perfect voor reisgroepen die een persoonlijke dinervaring willen.',
+          altOption: 'Voor groepen onder de 10 gasten, of op zoek naar een vooraf ingesteld menu / à la carte met vaste hoeveelheden?',
+          altLink: 'Ga naar Groepsboeking',
+          startNow: 'Start Nu'
+        },
+        steps: {
+          step1: 'Gangen',
+          step2: 'Gerechten',
+          step3: 'Hoeveelheden',
+          step4: 'Gegevens',
+          step5: 'Samenvatting',
+          step6: 'Bevestigd'
+        },
+        courseSelection: {
+          title: 'Selecteer Gangen',
+          subtitle: 'Kies welke gangen u wilt opnemen in uw groepsmenu',
+          starters: 'Voorgerechten',
+          mainCourse: 'Hoofdgerecht',
+          desserts: 'Desserts',
+          drink: '1 Drank naar Keuze (glas)',
+          mainRequired: 'Verplicht',
+          next: 'Volgende'
+        },
+        dishSelection: {
+          title: 'Selecteer Gerechten',
+          subtitle: 'Kies tot 5 gerechten per gang',
+          infoNote: 'U kunt tot 5 verschillende gerechten per gang selecteren. In de volgende stap stelt u de hoeveelheden per gerecht in.',
+          drinkSection: '1 Drank naar Keuze',
+          drinkDescription: '1 glas wijn (wit / rosé / rood), frisdranken of lokaal bier',
+          drinkPrice: '€5,00 per persoon',
+          drinkIncluded: 'Opgenomen in uw selectie',
+          next: 'Volgende',
+          sections: {
+            starters: 'Voorgerechten',
+            vleesgerechten: 'Vleesgerechten',
+            visgerechtenMosselen: 'Vis & Mosselen',
+            pasta: 'Pasta',
+            desserts: 'Desserts'
+          }
+        },
+        quantities: {
+          title: 'Hoeveelheden Toewijzen',
+          subtitle: 'Wijs het aantal porties toe per gerecht',
+          quantity: 'Hoeveelheid',
+          assigned: 'toegewezen',
+          assignPortions: 'Wijs exact {{guests}} porties toe per gang.',
+          subtotal: 'Subtotaal',
+          startersSubtotal: 'Subtotaal voorgerechten',
+          mainsSubtotal: 'Subtotaal hoofdgerecht',
+          dessertsSubtotal: 'Subtotaal desserts',
+          drinkTotal: 'Dranken (€5 × {{guests}} gasten)',
+          grandTotal: 'Geschatte Totaalprijs',
+          perPerson: 'per persoon',
+          priceNote: 'Dit is een geschatte prijs. Een aanbetaling wordt gevraagd om uw boeking te bevestigen.',
+          next: 'Volgende'
+        },
+        userDetails: {
+          title: 'Uw Gegevens',
+          name: 'Contactnaam',
+          email: 'E-mailadres',
+          phone: 'Telefoonnummer',
+          date: 'Gewenste Datum',
+          time: 'Gewenste Tijd',
+          guests: 'Aantal Gasten',
+          minGuests: 'Groepen van 10 tot 30 gasten. Voor kleinere groepen, gebruik de Groepsboeking pagina.',
+          depositAgreement: 'Ik ga akkoord met het betalen van een aanbetaling per groep en accepteer het annuleringsbeleid (niet-restitueerbaar bij annulering binnen 6 uur voor de reservering).',
+          next: 'Volgende'
+        },
+        summary: {
+          title: 'Beoordelen & Bevestigen',
+          contactInfo: 'Contactinformatie',
+          bookingDetails: 'Boekingsdetails',
+          selectedCourses: 'Geselecteerde Gangen',
+          dishesQuantities: 'Gerechten & Hoeveelheden',
+          pricingBreakdown: 'Prijsoverzicht',
+          depositNote: 'Een aanbetaling is vereist om uw reservering te bevestigen. Ons team neemt binnen 24 uur contact met u op met betalingsgegevens.',
+          confirmAgreement: 'Ik bevestig dat de bovenstaande gegevens correct zijn en begrijp dat een aanbetaling vereist is om deze boeking vast te leggen.',
+          submit: 'Boeking Indienen',
+          submitting: 'Bezig met indienen...',
+          labels: {
+            name: 'Naam',
+            email: 'E-mail',
+            phone: 'Telefoon',
+            guests: 'Aantal Gasten',
+            date: 'Datum',
+            time: 'Tijd',
+            quantity: 'aantal'
+          }
+        },
+        thankYou: {
+          title: 'Boekingsverzoek Ontvangen!',
+          message: 'Bedankt voor uw boekingsverzoek als reisgids. We hebben uw aangepaste menuselecties ontvangen en nemen binnen 24 uur contact met u op om uw reservering te bevestigen.',
+          summaryTitle: 'Boekingsoverzicht',
+          whatNext: 'Wat gebeurt er nu?',
+          whatNextDescription: 'Ons team bekijkt uw boekingsverzoek en neemt binnen 24 uur contact met u op om uw reservering te bevestigen en de aanbetaling te regelen. Controleer uw e-mail voor updates.'
+        },
+        validation: {
+          required: 'Dit veld is verplicht',
+          invalidEmail: 'Voer een geldig e-mailadres in',
+          minGuests: 'Groepen van 10 tot 30 gasten vereist',
+          invalidDate: 'Selecteer een toekomstige datum',
+          closedDay: 'We zijn gesloten op woensdag',
+          selectDishes: 'Selecteer minimaal 1 gerecht voor deze gang',
+          maxDishes: 'U kunt maximaal 5 gerechten per gang selecteren',
+          quantitiesMismatch: 'Totaal hoeveelheden moeten gelijk zijn aan {{guests}} (totaal aantal gasten)',
+          agreementRequired: 'U moet akkoord gaan met de voorwaarden om door te gaan'
+        },
+        navigation: {
+          back: 'Terug'
+        }
+      },
       footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' }
     }
   }
