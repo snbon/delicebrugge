@@ -196,15 +196,15 @@ const es = {
           next: 'Siguiente'
         },
         menuSelection: {
-          title: 'Selección de Menú',
+          title: 'Elige tu fórmula',
           option1: {
             title: 'Menú a la Carta Personalizado',
             description: '¡Cree un menú personalizado! Primero, seleccione hasta 5 entrantes y 5 platos principales. Luego, especifique exactamente cuántos de cada plato desean sus invitados.'
           },
           option2: {
             title: 'Menú de Grupo Fijo',
-            description: 'Disfrute de nuestro menú de 3 platos (38 € por persona) con 2 opciones por plato. ¡Es una elección sin complicaciones! Solo díganos cuántos invitados desean qué opciones.',
-            price: '€38.00 por persona'
+            description: 'Ofrecemos dos menús fijos sin complicaciones: nuestro popular menú de 3 platos (38 €) o nuestro extenso Menú Délice (55 €).',
+            price: '38 € o 55 € por persona'
           },
           select: 'Seleccionar esta opción',
           next: 'Siguiente'
@@ -267,7 +267,9 @@ const es = {
           totalGuests: 'Total de invitados:',
           validationError: 'Las cantidades totales deben ser iguales al número total de invitados',
           specialRequests: 'Solicitudes especiales (opcional)',
-          priceNote: 'Nota: Este precio no incluye bebidas o extras. Esto es una indicación del precio del menú.',
+          priceNote: 'Nota: Este precio no incluye bebidas ni extras. Esta es una indicación del precio del menú. No es necesario que pague esta cantidad ahora. Solo pagará un depósito, que solicitaremos por correo electrónico después de confirmar su reserva.',
+          assigned: 'asignado',
+          assignPortions: 'Por favor, asigne exactamente {{guests}} porciones por cada plato.',
           next: 'Siguiente'
         },
         summary: {

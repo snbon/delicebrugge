@@ -41,19 +41,21 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
               }`}
               onClick={() => handleMenuSelection('aLaCarte')}
             >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🍽️</span>
+              <div className="text-left">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-brand-600">1</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                    {t('common.groupBooking.menuSelection.option1.title')}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  {t('common.groupBooking.menuSelection.option1.title')}
-                </h3>
                 <p className="text-neutral-600 leading-relaxed mb-4">
                   {t('common.groupBooking.menuSelection.option1.description')}
                 </p>
                 <div className="text-sm text-neutral-500">
                   {state.menuOption === 'aLaCarte' && (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-medium">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-medium mt-2">
                       {t('common.groupBooking.menuSelection.select')}
                     </span>
                   )}
@@ -78,22 +80,24 @@ export default function Step2MenuSelection({ state, dispatch, errors, onNext, on
               }`}
               onClick={() => handleMenuSelection('groupMenu')}
             >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">👥</span>
+              <div className="text-left">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-brand-600">2</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                    {t('common.groupBooking.menuSelection.option2.title')}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  {t('common.groupBooking.menuSelection.option2.title')}
-                </h3>
                 <p className="text-neutral-600 leading-relaxed mb-3">
                   {t('common.groupBooking.menuSelection.option2.description')}
                 </p>
-                <div className="text-lg font-semibold text-brand-600 mb-3">
+                <div className="text-lg font-semibold text-brand-600 mb-3 mt-4">
                   {t('common.groupBooking.menuSelection.option2.price')}
                 </div>
                 <div className="text-sm text-neutral-500">
                   {state.menuOption === 'groupMenu' && (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-medium">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-medium mt-1">
                       {t('common.groupBooking.menuSelection.select')}
                     </span>
                   )}

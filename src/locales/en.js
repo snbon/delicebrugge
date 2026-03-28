@@ -221,15 +221,15 @@ const en = {
           next: 'Next'
         },
         menuSelection: {
-          title: 'Menu Selection',
+          title: 'Choose your formula',
           option1: {
             title: 'Custom À la Carte Menu',
             description: 'Create a personalized menu for your group! First, select up to 5 starters and 5 main dishes from our full menu. Then, specify exactly how many of each dish your guests want.'
           },
           option2: {
             title: 'Fixed 3-Course Group Menu',
-            description: 'Enjoy our popular 3-course menu (€38 per person) with 2 options per course. This is a hassle-free choice! Just let us know how many guests want which options.',
-            price: '€38.00 per person'
+            description: 'We offer two hassle-free fixed menus to choose from: our popular 3-course menu (€38) or our extensive Delice Menu (€55).',
+            price: '€38 or €55 per person'
           },
           select: 'Select this option',
           next: 'Next'
@@ -292,7 +292,9 @@ const en = {
           totalGuests: 'Total guests:',
           validationError: 'Total quantities must equal total guest count',
           specialRequests: 'Special requests (optional)',
-          priceNote: 'Note: This price does not include drinks or extras. This is an indication of the menu price.',
+          priceNote: 'Note: This price does not include drinks or extras. This is an indication of the menu price. You do not need to pay this amount now. You will only pay a deposit, which we will request via email after confirming your reservation.',
+          assigned: 'assigned',
+          assignPortions: 'Please assign exactly {{guests}} portions for each course.',
           next: 'Next'
         },
         summary: {

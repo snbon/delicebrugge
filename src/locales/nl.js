@@ -190,15 +190,15 @@ const nl = {
           next: 'Volgende'
         },
         menuSelection: {
-          title: 'Menukeuze',
+          title: 'Kies uw formule',
           option1: {
             title: 'Aangepast À la Carte Menu',
             description: 'Stel een persoonlijk menu samen voor uw groep! Kies eerst tot 5 voorgerechten en 5 hoofdgerechten. Geef daarna exact aan hoeveel van elk uw gasten wensen.'
           },
           option2: {
             title: 'Vast 3-Gangen Groepsmenu',
-            description: 'Geniet van ons populaire 3-gangenmenu (€38 per persoon) met 2 keuzes per gang. Laat ons simpelweg weten hoeveel gasten welke opties wensen.',
-            price: '€38.00 per persoon'
+            description: 'We bieden twee zorgeloze vaste menu\'s aan: ons populaire 3-gangenmenu (€38) of ons uitgebreide Delice Menu (€55).',
+            price: '€38 of €55 per persoon'
           },
           select: 'Selecteer deze optie',
           next: 'Volgende'
@@ -261,7 +261,9 @@ const nl = {
           totalGuests: 'Totaal gasten:',
           validationError: 'Totaal aantallen moeten gelijk zijn aan totaal gastenaantal',
           specialRequests: 'Speciale verzoeken (optioneel)',
-          priceNote: 'Opmerking: Deze prijs omvat geen dranken of extra\'s. Dit is een indicatie van de menuprijs.',
+          priceNote: 'Opmerking: Deze prijs is exclusief dranken of extra\'s. Dit is een indicatie van de menuprijs. U hoeft dit bedrag nu niet te betalen. U betaalt enkel een voorschot, dat we per e-mail aanvragen na bevestiging van uw reservering.',
+          assigned: 'toegewezen',
+          assignPortions: 'Wijs aub exact {{guests}} porties toe per gang.',
           next: 'Volgende'
         },
         summary: {

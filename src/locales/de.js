@@ -196,15 +196,15 @@ const de = {
           next: 'Weiter'
         },
         menuSelection: {
-          title: 'Menüauswahl',
+          title: 'Wählen Sie Ihre Formel',
           option1: {
             title: 'Individuelles À-la-carte-Menü',
             description: 'Erstellen Sie ein Menü für Ihre Gruppe! Wählen Sie bis zu 5 Vorspeisen und 5 Hauptgerichte. Geben Sie dann genau an, wie viele von jedem Gericht Ihre Gäste wünschen.'
           },
           option2: {
             title: 'Festes 3-Gänge-Gruppenmenü',
-            description: 'Genießen Sie unser beliebtes 3-Gänge-Menü (38 € pro Person) mit 2 Optionen pro Gang. Lassen Sie uns einfach wissen, wie viele Gäste welche Optionen wünschen.',
-            price: '€38.00 pro Person'
+            description: 'Wir Bieten zwei sorgenfreie feste Menüs an: unser beliebtes 3-Gänge-Menü (38 €) oder unser umfangreiches Delice-Menü (55 €).',
+            price: '38 € oder 55 € pro Person'
           },
           select: 'Diese Option auswählen',
           next: 'Weiter'
@@ -267,7 +267,9 @@ const de = {
           totalGuests: 'Gesamtgäste:',
           validationError: 'Gesamtmengen müssen der Gesamtgästezahl entsprechen',
           specialRequests: 'Besondere Anfragen (optional)',
-          priceNote: 'Hinweis: Dieser Preis umfasst keine Getränke oder Extras. Dies ist eine Angabe des Menüpreises.',
+          priceNote: 'Hinweis: Dieser Preis beinhaltet keine Getränke oder Extras. Dies ist ein Richtwert für den Menüpreis. Sie müssen diesen Betrag jetzt nicht bezahlen. Sie zahlen nur eine Anzahlung, die wir nach Bestätigung Ihrer Reservierung per E-Mail anfordern.',
+          assigned: 'zugewiesen',
+          assignPortions: 'Bitte weisen Sie genau {{guests}} Portionen für jeden Gang zu.',
           next: 'Weiter'
         },
         summary: {

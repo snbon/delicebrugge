@@ -202,15 +202,15 @@ const fr = {
           next: 'Suivant'
         },
         menuSelection: {
-          title: 'Sélection du Menu',
+          title: 'Choisissez votre formule',
           option1: {
             title: 'Menu À la Carte Personnalisé',
             description: 'Créez un menu personnalisé pour votre groupe ! Sélectionnez jusqu\'à 5 entrées et 5 plats principaux. Ensuite, précisez exactement combien de chaque plat vos invités désirent.'
           },
           option2: {
             title: 'Menu de Groupe Fixe',
-            description: 'Profitez de notre menu 3 services (38 € par personne) avec 2 choix par service. C\'est un choix sans tracas ! Dites-nous simplement combien d\'invités souhaitent quelles options.',
-            price: '€38.00 par personne'
+            description: 'Nous proposons deux menus fixes sans tracas : notre menu 3 services populaire (38 €) ou notre grand Menu Délice (55 €).',
+            price: '38 € ou 55 € par personne'
           },
           select: 'Sélectionner cette option',
           next: 'Suivant'
@@ -273,7 +273,9 @@ const fr = {
           totalGuests: 'Total des invités:',
           validationError: 'Les quantités totales doivent être égales au nombre total d\'invités',
           specialRequests: 'Demandes spéciales (optionnel)',
-          priceNote: 'Note: Ce prix n\'inclut pas les boissons ou extras. Ceci est une indication du prix du menu.',
+          priceNote: 'Remarque : Ce prix n\'inclut pas les boissons ni les extras. Il s\'agit d\'une indication du prix du menu. Vous n\'avez pas à payer ce montant maintenant. Vous ne paierez qu\'un acompte, que nous vous demanderons par e-mail après confirmation de votre réservation.',
+          assigned: 'attribué',
+          assignPortions: 'Veuillez attribuer exactement {{guests}} portions pour chaque plat.',
           next: 'Suivant'
         },
         summary: {

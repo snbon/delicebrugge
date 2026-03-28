@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import menuData from '../../data/menu.json';
@@ -88,6 +89,47 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
       { 
         id: 'dame-blanche', 
         name: t('common.groupMenu.dessert.option2', { returnObjects: true }).name || 'Dame Blanche'
+      }
+    ]
+  };
+
+  const deliceMenuDishes = {
+    starters: [
+      { 
+        id: 'delice-soup', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option1', { returnObjects: true }).name || 'Soup of the day'
+      },
+      { 
+        id: 'delice-cheese', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option2', { returnObjects: true }).name || 'Homemade cheese croquettes'
+      },
+      { 
+        id: 'delice-shrimp', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option3', { returnObjects: true }).name || 'Homemade shrimp croquettes'
+      }
+    ],
+    mains: [
+      { 
+        id: 'delice-chicken', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option1', { returnObjects: true }).name || 'Chicken in cream sauce'
+      },
+      { 
+        id: 'delice-rabbit', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option2', { returnObjects: true }).name || 'Flemish rabbit'
+      },
+      { 
+        id: 'delice-salmon', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option3', { returnObjects: true }).name || 'Baked salmon'
+      }
+    ],
+    desserts: [
+      { 
+        id: 'delice-mousse', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.dessert.option1', { returnObjects: true }).name || 'Chocolate mousse'
+      },
+      { 
+        id: 'delice-dame', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.dessert.option2', { returnObjects: true }).name || 'Dame Blanche'
       }
     ]
   };
@@ -192,17 +234,65 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
       );
     }
 
-    return (
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
-          {dishes.map((dish) => (
-            <div key={dish.id} className="surface p-5 h-24 flex flex-col justify-center">
-              <div className="text-center">
-                <h4 className="font-semibold text-neutral-900 text-base leading-tight">{dish.name}</h4>
-              </div>
-            </div>
-          ))}
+    const renderDishCard = (dish) => (
+      <div key={dish.id} className="surface p-3 sm:p-5 min-h-[5rem] sm:min-h-[6rem] flex flex-col justify-center w-full lg:flex-1 max-w-[18rem] lg:max-w-none shadow-sm border border-neutral-100">
+        <div className="text-center">
+          <h4 className="font-semibold text-neutral-900 text-sm sm:text-base leading-tight px-2">{dish.name}</h4>
         </div>
+      </div>
+    );
+
+    const renderOr = (key) => (
+      <span key={key} className="text-brand-500 font-medium text-lg italic my-1 md:my-0">
+        {t('common.groupBooking.dishSelection.groupMenu.or')}
+      </span>
+    );
+
+    if (dishes.length === 2) {
+      return (
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 w-full max-w-4xl mx-auto">
+          {renderDishCard(dishes[0])}
+          {renderOr('or-1')}
+          {renderDishCard(dishes[1])}
+        </div>
+      );
+    }
+
+    if (dishes.length === 3) {
+      return (
+        <div className="flex flex-col items-center gap-4 lg:gap-6 w-full max-w-6xl mx-auto">
+          {/* Desktop Single Row */}
+          <div className="hidden lg:flex flex-row items-center justify-center gap-6 w-full">
+            {renderDishCard(dishes[0])}
+            {renderOr('or-1-desk')}
+            {renderDishCard(dishes[1])}
+            {renderOr('or-2-desk')}
+            {renderDishCard(dishes[2])}
+          </div>
+
+          {/* Tablet/Mobile 2-Row Layout */}
+          <div className="flex lg:hidden flex-col items-center gap-4 md:gap-6 w-full">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 w-full">
+              {renderDishCard(dishes[0])}
+              {renderOr('or-1-mob')}
+              {renderDishCard(dishes[1])}
+            </div>
+            {renderOr('or-2-mob')}
+            {renderDishCard(dishes[2])}
+          </div>
+        </div>
+      );
+    }
+
+    // Default fallback
+    return (
+      <div className="flex flex-col md:flex-row items-center justify-center flex-wrap gap-4 md:gap-6 w-full max-w-4xl mx-auto">
+        {dishes.map((dish, index) => (
+          <React.Fragment key={dish.id}>
+            {index > 0 && renderOr(`or-${index}`)}
+            {renderDishCard(dish)}
+          </React.Fragment>
+        ))}
       </div>
     );
   };
@@ -300,12 +390,19 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
     <div className="space-y-8">
       {/* Starters */}
       <div>
-        <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-          {t('common.groupBooking.dishSelection.starters')}
-        </h3>
-        <p className="text-sm text-neutral-600 mb-4">
-          {t('common.groupBooking.dishSelection.selectUpTo')} 5 {t('common.groupBooking.dishSelection.items')} (minimum 1 per course)
-        </p>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+          <h3 className="text-xl font-semibold text-neutral-900">
+            {t('common.groupBooking.dishSelection.starters')}
+          </h3>
+          <div className="bg-brand-50 border border-brand-100 rounded-lg py-1.5 px-3">
+            <p className="text-brand-800 font-medium text-sm">
+              {t('common.groupBooking.dishSelection.selectUpTo')} <span className="font-bold">5</span> {t('common.groupBooking.dishSelection.items')} 
+              <span className="inline-block ml-2 px-2 py-0.5 bg-brand-600 text-white text-xs rounded-full font-semibold tracking-wide">
+                MIN 1 PER COURSE
+              </span>
+            </p>
+          </div>
+        </div>
         {renderDishGrid('starters', starters || [], 5)}
         {errors.starters && (
           <p className="mt-2 text-sm text-red-600">{getErrorMessage('starters')}</p>
@@ -314,12 +411,19 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
 
       {/* Main Dishes */}
       <div>
-        <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-          {t('common.groupBooking.dishSelection.mains')}
-        </h3>
-        <p className="text-sm text-neutral-600 mb-4">
-          {t('common.groupBooking.dishSelection.selectUpTo')} 5 {t('common.groupBooking.dishSelection.items')} (minimum 1 per course)
-        </p>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+          <h3 className="text-xl font-semibold text-neutral-900">
+            {t('common.groupBooking.dishSelection.mains')}
+          </h3>
+          <div className="bg-brand-50 border border-brand-100 rounded-lg py-1.5 px-3">
+            <p className="text-brand-800 font-medium text-sm">
+              {t('common.groupBooking.dishSelection.selectUpTo')} <span className="font-bold">5</span> {t('common.groupBooking.dishSelection.items')} 
+              <span className="inline-block ml-2 px-2 py-0.5 bg-brand-600 text-white text-xs rounded-full font-semibold tracking-wide">
+                MIN 1 PER COURSE
+              </span>
+            </p>
+          </div>
+        </div>
         {renderMainDishesWithCategories()}
         {errors.mains && (
           <p className="mt-2 text-sm text-red-600">{getErrorMessage('mains')}</p>
@@ -328,51 +432,73 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
     </div>
   );
 
-  const renderGroupMenuSelection = () => (
-    <div className="space-y-8">
-      {/* Appetizer */}
-      <div>
-        <div className="text-center mb-6">
-          <h3 className="text-xl font-semibold text-neutral-900 mb-2">
-            {t('common.groupMenu.appetizer.title')}
-          </h3>
-          <p className="text-base font-normal text-brand-600 mb-3">
-            {t('common.groupMenu.chooseOne')}
-          </p>
-          <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
-        </div>
-        {renderGroupMenuDishes('starters', groupMenuDishes.starters)}
-      </div>
+  const renderGroupMenuSelection = () => {
+    const isDelice = state.groupMenuType === 'delice';
+    const activeDishes = isDelice ? deliceMenuDishes : groupMenuDishes;
 
-      {/* Main Course */}
-      <div>
-        <div className="text-center mb-6">
-          <h3 className="text-xl font-semibold text-neutral-900 mb-2">
-            {t('common.groupMenu.mainCourse.title')}
-          </h3>
-          <p className="text-base font-normal text-brand-600 mb-3">
-            {t('common.groupMenu.chooseOne')}
-          </p>
-          <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+    return (
+      <div className="space-y-8">
+        {/* Toggle UI */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex bg-neutral-100 p-1 rounded-xl">
+            <button
+              onClick={() => dispatch({ type: 'SET_GROUP_MENU_TYPE', value: 'standard' })}
+              className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+                !isDelice
+                  ? 'bg-white text-neutral-900 shadow-sm'
+                  : 'text-neutral-500 hover:text-neutral-700'
+              }`}
+            >
+              Group Menu (€38)
+            </button>
+            <button
+              onClick={() => dispatch({ type: 'SET_GROUP_MENU_TYPE', value: 'delice' })}
+              className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+                isDelice
+                  ? 'bg-white text-neutral-900 shadow-sm'
+                  : 'text-neutral-500 hover:text-neutral-700'
+              }`}
+            >
+              Delice Menu (€55)
+            </button>
+          </div>
         </div>
-        {renderGroupMenuDishes('mains', groupMenuDishes.mains)}
-      </div>
 
-      {/* Dessert */}
-      <div>
-        <div className="text-center mb-6">
-          <h3 className="text-xl font-semibold text-neutral-900 mb-2">
-            {t('common.groupMenu.dessert.title')}
-          </h3>
-          <p className="text-base font-normal text-brand-600 mb-3">
-            {t('common.groupMenu.chooseOne')}
-          </p>
-          <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+        {/* Appetizer */}
+        <div>
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+              {t('common.groupBooking.dishSelection.groupMenu.appetizer')}
+            </h3>
+            <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+          </div>
+          {renderGroupMenuDishes('starters', activeDishes.starters)}
         </div>
-        {renderGroupMenuDishes('desserts', groupMenuDishes.desserts)}
+
+        {/* Main Course */}
+        <div className="mt-12">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+              {t('common.groupBooking.dishSelection.groupMenu.mainCourse')}
+            </h3>
+            <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+          </div>
+          {renderGroupMenuDishes('mains', activeDishes.mains)}
+        </div>
+
+        {/* Dessert */}
+        <div className="mt-12">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+              {t('common.groupBooking.dishSelection.groupMenu.dessert')}
+            </h3>
+            <div className="w-20 h-0.5 bg-brand-600 mx-auto"></div>
+          </div>
+          {renderGroupMenuDishes('desserts', activeDishes.desserts)}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -380,9 +506,12 @@ export default function Step3DishSelection({ state, dispatch, errors, onNext, on
         <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-2 text-center">
           {t('common.groupBooking.dishSelection.title')}
         </h2>
-        <p className="text-sm text-neutral-600 mb-4 sm:mb-6 text-center">
-          {t('common.groupBooking.dishSelection.subtitle')}
-        </p>
+        
+        <div className="mb-6 sm:mb-8 text-center bg-brand-50 border border-brand-100 rounded-lg py-3 px-4 max-w-2xl mx-auto">
+          <p className="text-brand-800 font-medium">
+            {t('common.groupBooking.dishSelection.subtitle')}
+          </p>
+        </div>
 
         {state.menuOption === 'aLaCarte' && renderALaCarteSelection()}
         {state.menuOption === 'groupMenu' && renderGroupMenuSelection()}

@@ -26,6 +26,7 @@ const initialState = {
   
   // Step 2: Menu Selection
   menuOption: null, // 'aLaCarte' or 'groupMenu'
+  groupMenuType: 'standard', // 'standard' (38) or 'delice' (55)
   
   // Step 3: Dish Selection
   selectedDishes: {
@@ -50,6 +51,7 @@ const initialState = {
 const ACTIONS = {
   UPDATE_FIELD: 'UPDATE_FIELD',
   SET_MENU_OPTION: 'SET_MENU_OPTION',
+  SET_GROUP_MENU_TYPE: 'SET_GROUP_MENU_TYPE',
   SELECT_DISH: 'SELECT_DISH',
   UPDATE_QUANTITY: 'UPDATE_QUANTITY',
   SET_ERRORS: 'SET_ERRORS',
@@ -67,16 +69,31 @@ function bookingReducer(state, action) {
         [action.field]: action.value
       };
     
+    case ACTIONS.SET_GROUP_MENU_TYPE: {
+      const isDelice = action.value === 'delice';
+      return {
+        ...state,
+        groupMenuType: action.value,
+        selectedDishes: {
+          starters: isDelice ? ['delice-soup', 'delice-cheese', 'delice-shrimp'] : ['cheese-croquettes', 'shrimp-croquettes'],
+          mains: isDelice ? ['delice-chicken', 'delice-rabbit', 'delice-salmon'] : ['natural-steak', 'baked-salmon'],
+          desserts: isDelice ? ['delice-mousse', 'delice-dame'] : ['coffee-tea', 'dame-blanche']
+        },
+        quantities: {}
+      };
+    }
+
     case ACTIONS.SET_MENU_OPTION:
       if (action.value === 'groupMenu') {
+        const isDelice = state.groupMenuType === 'delice';
         // For Group Menu, automatically select all dishes
         return {
           ...state,
           menuOption: action.value,
           selectedDishes: {
-            starters: ['cheese-croquettes', 'shrimp-croquettes'],
-            mains: ['natural-steak', 'baked-salmon'],
-            desserts: ['coffee-tea', 'dame-blanche']
+            starters: isDelice ? ['delice-soup', 'delice-cheese', 'delice-shrimp'] : ['cheese-croquettes', 'shrimp-croquettes'],
+            mains: isDelice ? ['delice-chicken', 'delice-rabbit', 'delice-salmon'] : ['natural-steak', 'baked-salmon'],
+            desserts: isDelice ? ['delice-mousse', 'delice-dame'] : ['coffee-tea', 'dame-blanche']
           },
           quantities: {}
         };
@@ -348,13 +365,19 @@ export default function GroupBookingPage() {
         booking_date: state.date,
         booking_time: state.time,
         number_of_guests: state.guests,
-                    menu_option: state.menuOption === 'aLaCarte' ? 'À la Carte' : 'Menu',
+        menu_option: state.menuOption === 'aLaCarte' ? 'À la Carte' : (state.groupMenuType === 'delice' ? 'Delice Group Menu (€55)' : 'Standard Group Menu (€38)'),
 
-        quantities_summary: state.menuOption === 'groupMenu'
-          ? `Starters:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('cheese') || dish.includes('shrimp')).map(([dish, qty]) => `  ${qty}x ${dish.includes('cheese') ? 'Homemade cheese croquettes' : 'Homemade shrimp croquettes'}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('steak') || dish.includes('salmon')).map(([dish, qty]) => `  ${qty}x ${dish.includes('steak') ? 'Natural steak' : 'Baked salmon with béarnaise sauce'}`).join('\n')}\n\nDesserts:\n${Object.entries(state.quantities || {}).filter(([dish]) => dish.includes('coffee') || dish.includes('dame')).map(([dish, qty]) => `  ${qty}x ${dish.includes('coffee') ? 'Coffee/Tea' : 'Dame Blanche'}`).join('\n')}`
-          : `Starters:\n${Object.entries(state.quantities || {}).filter(([dish]) => state.selectedDishes.starters?.includes(dish)).map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {}).filter(([dish]) => state.selectedDishes.mains?.includes(dish)).map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}`,
+        quantities_summary: `Starters:\n${Object.entries(state.quantities || {})
+          .filter(([dish]) => state.selectedDishes.starters?.includes(dish))
+          .map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}\n\nMains:\n${Object.entries(state.quantities || {})
+          .filter(([dish]) => state.selectedDishes.mains?.includes(dish))
+          .map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}${state.menuOption === 'groupMenu' ? `\n\nDesserts:\n${Object.entries(state.quantities || {})
+          .filter(([dish]) => state.selectedDishes.desserts?.includes(dish))
+          .map(([dish, qty]) => `  ${qty}x ${dish}`).join('\n')}` : ''}`,
         special_requests: state.specialRequests || 'None',
-        total_price: state.menuOption === 'groupMenu' ? `€${(state.guests * 38.00).toFixed(2)}` : 'À la carte pricing'
+        total_price: state.menuOption === 'groupMenu' 
+          ? `€${(state.guests * (state.groupMenuType === 'delice' ? 55.00 : 38.00)).toFixed(2)}` 
+          : 'À la carte pricing'
       };
 
       // Send email using EmailJS

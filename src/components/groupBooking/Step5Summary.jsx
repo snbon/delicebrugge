@@ -57,6 +57,47 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
     ]
   };
 
+  const deliceMenuDishes = {
+    starters: [
+      { 
+        id: 'delice-soup', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option1', { returnObjects: true }).name || 'Soup of the day'
+      },
+      { 
+        id: 'delice-cheese', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option2', { returnObjects: true }).name || 'Homemade cheese croquettes'
+      },
+      { 
+        id: 'delice-shrimp', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option3', { returnObjects: true }).name || 'Homemade shrimp croquettes'
+      }
+    ],
+    mains: [
+      { 
+        id: 'delice-chicken', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option1', { returnObjects: true }).name || 'Chicken in cream sauce'
+      },
+      { 
+        id: 'delice-rabbit', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option2', { returnObjects: true }).name || 'Flemish rabbit'
+      },
+      { 
+        id: 'delice-salmon', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option3', { returnObjects: true }).name || 'Baked salmon'
+      }
+    ],
+    desserts: [
+      { 
+        id: 'delice-mousse', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.dessert.option1', { returnObjects: true }).name || 'Chocolate mousse'
+      },
+      { 
+        id: 'delice-dame', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.dessert.option2', { returnObjects: true }).name || 'Dame Blanche'
+      }
+    ]
+  };
+
   const handleConfirmAgreementChange = (value) => {
     dispatch({ type: 'UPDATE_FIELD', field: 'confirmAgreement', value });
   };
@@ -68,7 +109,7 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
 
   const calculateTotalPrice = () => {
     if (state.menuOption === 'groupMenu') {
-      return state.guests * 38.00;
+      return state.guests * (state.groupMenuType === 'delice' ? 55.00 : 38.00);
     }
     return 0; // For à la carte, we don't show total price
   };
@@ -88,7 +129,9 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
       const allDishes = [...starters, ...mains];
       return allDishes.find(d => d.id === dishId)?.name || dishId;
     } else {
-      const allDishes = [...groupMenuDishes.starters, ...groupMenuDishes.mains, ...groupMenuDishes.desserts];
+      const isDelice = state.groupMenuType === 'delice';
+      const activeDishes = isDelice ? deliceMenuDishes : groupMenuDishes;
+      const allDishes = [...activeDishes.starters, ...activeDishes.mains, ...activeDishes.desserts];
       return allDishes.find(d => d.id === dishId)?.name || dishId;
     }
   };
@@ -154,12 +197,12 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
               <p className="font-medium text-neutral-900">
                 {state.menuOption === 'aLaCarte' 
                   ? t('common.groupBooking.menuSelection.option1.title')
-                  : t('common.groupBooking.menuSelection.option2.title')
+                  : (state.groupMenuType === 'delice' ? 'Delice Group Menu (€55)' : t('common.groupBooking.menuSelection.option2.title'))
                 }
               </p>
               {state.menuOption === 'groupMenu' && (
                 <p className="text-sm text-neutral-600 mt-1">
-                  {t('common.groupBooking.menuSelection.option2.price')}
+                  {state.groupMenuType === 'delice' ? '€55.00 per person' : t('common.groupBooking.menuSelection.option2.price')}
                 </p>
               )}
             </div>

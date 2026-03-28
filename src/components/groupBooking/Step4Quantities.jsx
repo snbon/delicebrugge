@@ -57,6 +57,47 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
     ]
   };
 
+  const deliceMenuDishes = {
+    starters: [
+      { 
+        id: 'delice-soup', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option1', { returnObjects: true }).name || 'Soup of the day'
+      },
+      { 
+        id: 'delice-cheese', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option2', { returnObjects: true }).name || 'Homemade cheese croquettes'
+      },
+      { 
+        id: 'delice-shrimp', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.appetizer.option3', { returnObjects: true }).name || 'Homemade shrimp croquettes'
+      }
+    ],
+    mains: [
+      { 
+        id: 'delice-chicken', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option1', { returnObjects: true }).name || 'Chicken in cream sauce'
+      },
+      { 
+        id: 'delice-rabbit', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option2', { returnObjects: true }).name || 'Flemish rabbit'
+      },
+      { 
+        id: 'delice-salmon', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.mainCourse.option3', { returnObjects: true }).name || 'Baked salmon'
+      }
+    ],
+    desserts: [
+      { 
+        id: 'delice-mousse', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.dessert.option1', { returnObjects: true }).name || 'Chocolate mousse'
+      },
+      { 
+        id: 'delice-dame', 
+        name: t('common.groupBooking.dishSelection.deliceMenu.dessert.option2', { returnObjects: true }).name || 'Dame Blanche'
+      }
+    ]
+  };
+
   const handleQuantityChange = (dishId, quantity) => {
     dispatch({
       type: 'UPDATE_QUANTITY',
@@ -76,7 +117,7 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
 
   const calculateTotalPrice = () => {
     if (state.menuOption === 'groupMenu') {
-      return state.guests * 38.00;
+      return state.guests * (state.groupMenuType === 'delice' ? 55.00 : 38.00);
     }
     return 0; // For à la carte, we don't show total price in this step
   };
@@ -153,64 +194,47 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
 
     const starterQuantities = getCourseQuantities('starters');
     const mainQuantities = getCourseQuantities('mains');
-    const isStarterValid = starterQuantities === state.guests;
-    const isMainValid = mainQuantities === state.guests;
+    const isComplete = starterQuantities === state.guests && mainQuantities === state.guests;
 
     return (
       <div className="space-y-6">
-        <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-          {t('common.groupBooking.quantities.title')}
-        </h3>
-        
-        <div className="bg-neutral-50 p-4 rounded-lg">
-          <p className="text-sm text-neutral-600 mb-4">
-            For à la carte selections, you can specify quantities for each dish based on your group's preferences.
-          </p>
-        </div>
-
-        {/* Quantity Validation for À la Carte */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className={`p-4 rounded-lg border ${
-            isStarterValid ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
-          }`}>
-            <p className="text-sm font-medium text-neutral-900 mb-1">
-              Starters: {starterQuantities} / {state.guests}
+        {!isComplete && (
+          <div className="bg-brand-50 p-4 rounded-lg border border-brand-100 text-center mb-8">
+            <p className="text-brand-800 font-medium">
+              {t('common.groupBooking.quantities.assignPortions', { guests: state.guests })}
             </p>
-            {!isStarterValid && (
-              <p className="text-xs text-red-600">
-                {starterQuantities < state.guests ? 'Need more quantities' : 'Too many quantities'}
-              </p>
-            )}
           </div>
-          <div className={`p-4 rounded-lg border ${
-            isMainValid ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
-          }`}>
-            <p className="text-sm font-medium text-neutral-900 mb-1">
-              Main Dishes: {mainQuantities} / {state.guests}
-            </p>
-            {!isMainValid && (
-              <p className="text-xs text-red-600">
-                {mainQuantities < state.guests ? 'Need more quantities' : 'Too many quantities'}
-              </p>
-            )}
-          </div>
-        </div>
+        )}
 
         {/* Starters Section */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-neutral-900 border-b border-neutral-200 pb-2">
-            Starters
-          </h4>
+        <div className="space-y-4 mb-8">
+          <div className="flex justify-between items-center border-b border-neutral-200 pb-2">
+            <h4 className="text-lg font-semibold text-neutral-900">
+              {t('common.groupBooking.dishSelection.groupMenu.appetizer')}
+            </h4>
+            <span className={`text-sm font-medium px-2.5 py-1 rounded-full ${
+              starterQuantities === state.guests ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
+            }`}>
+              {starterQuantities} / {state.guests} {t('common.groupBooking.quantities.assigned')}
+            </span>
+          </div>
           {allSelectedDishes.filter(({ course }) => course === 'starters').map(({ id, name, course }) => 
             renderDishQuantityRow(id, name, course)
           )}
         </div>
 
         {/* Main Dishes Section */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-neutral-900 border-b border-neutral-200 pb-2">
-            Main Dishes
-          </h4>
+        <div className="space-y-4 mb-8">
+          <div className="flex justify-between items-center border-b border-neutral-200 pb-2">
+            <h4 className="text-lg font-semibold text-neutral-900">
+              {t('common.groupBooking.dishSelection.groupMenu.mainCourse')}
+            </h4>
+            <span className={`text-sm font-medium px-2.5 py-1 rounded-full ${
+              mainQuantities === state.guests ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
+            }`}>
+              {mainQuantities} / {state.guests} {t('common.groupBooking.quantities.assigned')}
+            </span>
+          </div>
           {allSelectedDishes.filter(({ course }) => course === 'mains').map(({ id, name, course }) => 
             renderDishQuantityRow(id, name, course)
           )}
@@ -220,127 +244,102 @@ export default function Step4Quantities({ state, dispatch, errors, onNext, onBac
   };
 
   const renderGroupMenuQuantities = () => {
+    const isDelice = state.groupMenuType === 'delice';
+    const activeDishes = isDelice ? deliceMenuDishes : groupMenuDishes;
+
     // For Group Menu, show ALL dishes with quantity inputs
     const allGroupMenuDishes = [
-      ...groupMenuDishes.starters.map(dish => ({ id: dish.id, name: dish.name, course: 'starters' })),
-      ...groupMenuDishes.mains.map(dish => ({ id: dish.id, name: dish.name, course: 'mains' })),
-      ...groupMenuDishes.desserts.map(dish => ({ id: dish.id, name: dish.name, course: 'desserts' }))
+      ...activeDishes.starters.map(dish => ({ id: dish.id, name: dish.name, course: 'starters' })),
+      ...activeDishes.mains.map(dish => ({ id: dish.id, name: dish.name, course: 'mains' })),
+      ...activeDishes.desserts.map(dish => ({ id: dish.id, name: dish.name, course: 'desserts' }))
     ];
 
     // For Group Menu, each course should have quantities equal to guest count
     const starterQuantities = getCourseQuantities('starters');
     const mainQuantities = getCourseQuantities('mains');
     const dessertQuantities = getCourseQuantities('desserts');
-    
-    const isStarterValid = starterQuantities === state.guests;
-    const isMainValid = mainQuantities === state.guests;
-    const isDessertValid = dessertQuantities === state.guests;
-    
-    const isQuantityValid = isStarterValid && isMainValid && isDessertValid;
+    const isComplete = starterQuantities === state.guests && mainQuantities === state.guests && dessertQuantities === state.guests;
 
     return (
       <div className="space-y-6">
-        <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-          {t('common.groupBooking.quantities.title')}
-        </h3>
-
-        {/* Price Note */}
-        <div className="bg-brand-50 p-4 rounded-lg border border-brand-200">
-          <p className="text-sm text-brand-800">
-            {t('common.groupBooking.quantities.priceNote')}
-          </p>
-        </div>
-
-        {/* Course Quantity Validation */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-          <div className={`p-4 rounded-lg border ${
-            isStarterValid ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
-          }`}>
-            <p className="text-sm font-medium text-neutral-900 mb-1">
-              Appetizers: {starterQuantities} / {state.guests}
-            </p>
-            {!isStarterValid && (
-              <p className="text-xs text-red-600">
-                {starterQuantities < state.guests ? 'Need more quantities' : 'Too many quantities'}
-              </p>
-            )}
-          </div>
-          <div className={`p-4 rounded-lg border ${
-            isMainValid ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
-          }`}>
-            <p className="text-sm font-medium text-neutral-900 mb-1">
-              Main Dishes: {mainQuantities} / {state.guests}
-            </p>
-            {!isMainValid && (
-              <p className="text-xs text-red-600">
-                {mainQuantities < state.guests ? 'Need more quantities' : 'Too many quantities'}
-              </p>
-            )}
-          </div>
-          <div className={`p-4 rounded-lg border ${
-            isDessertValid ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
-          }`}>
-            <p className="text-sm font-medium text-neutral-900 mb-1">
-              Desserts: {dessertQuantities} / {state.guests}
-            </p>
-            {!isDessertValid && (
-              <p className="text-xs text-red-600">
-                {dessertQuantities < state.guests ? 'Need more quantities' : 'Too many quantities'}
-              </p>
-            )}
-          </div>
-        </div>
-
-        {/* Quantity Validation Error */}
-        {!isQuantityValid && (
-          <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-            <p className="text-sm text-red-800">
-              Each course must have quantities equal to the total guest count ({state.guests})
+        {!isComplete && (
+          <div className="bg-brand-50 p-4 rounded-lg border border-brand-100 text-center mb-8">
+            <p className="text-brand-800 font-medium">
+              {t('common.groupBooking.quantities.assignPortions', { guests: state.guests })}
             </p>
           </div>
         )}
 
         {/* Dish Quantities */}
         {/* Starters Section */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-neutral-900 border-b border-neutral-200 pb-2">
-            Appetizers
-          </h4>
+        <div className="space-y-4 mb-8">
+          <div className="flex justify-between items-center border-b border-neutral-200 pb-2">
+            <h4 className="text-lg font-semibold text-neutral-900">
+              {t('common.groupBooking.dishSelection.groupMenu.appetizer')}
+            </h4>
+            <span className={`text-sm font-medium px-2.5 py-1 rounded-full ${
+              starterQuantities === state.guests ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
+            }`}>
+              {starterQuantities} / {state.guests} {t('common.groupBooking.quantities.assigned')}
+            </span>
+          </div>
           {allGroupMenuDishes.filter(({ course }) => course === 'starters').map(({ id, name, course }) => 
             renderDishQuantityRow(id, name, course)
           )}
         </div>
 
         {/* Main Dishes Section */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-neutral-900 border-b border-neutral-200 pb-2">
-            Main Dishes
-          </h4>
+        <div className="space-y-4 mb-8">
+          <div className="flex justify-between items-center border-b border-neutral-200 pb-2">
+            <h4 className="text-lg font-semibold text-neutral-900">
+              {t('common.groupBooking.dishSelection.groupMenu.mainCourse')}
+            </h4>
+            <span className={`text-sm font-medium px-2.5 py-1 rounded-full ${
+              mainQuantities === state.guests ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
+            }`}>
+              {mainQuantities} / {state.guests} {t('common.groupBooking.quantities.assigned')}
+            </span>
+          </div>
           {allGroupMenuDishes.filter(({ course }) => course === 'mains').map(({ id, name, course }) => 
             renderDishQuantityRow(id, name, course)
           )}
         </div>
 
         {/* Desserts Section */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-neutral-900 border-b border-neutral-200 pb-2">
-            Desserts
-          </h4>
+        <div className="space-y-4 mb-8">
+          <div className="flex justify-between items-center border-b border-neutral-200 pb-2">
+            <h4 className="text-lg font-semibold text-neutral-900">
+              {t('common.groupBooking.dishSelection.groupMenu.dessert')}
+            </h4>
+            <span className={`text-sm font-medium px-2.5 py-1 rounded-full ${
+              dessertQuantities === state.guests ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
+            }`}>
+              {dessertQuantities} / {state.guests} {t('common.groupBooking.quantities.assigned')}
+            </span>
+          </div>
           {allGroupMenuDishes.filter(({ course }) => course === 'desserts').map(({ id, name, course }) => 
             renderDishQuantityRow(id, name, course)
           )}
         </div>
 
         {/* Total Price */}
-        <div className="bg-neutral-50 p-4 rounded-lg">
-          <div className="flex justify-between items-center">
+        <div className="bg-neutral-50 p-4 rounded-lg mt-8">
+          <div className="flex justify-between items-center mb-2">
             <span className="font-medium text-neutral-900">
               {t('common.groupBooking.summary.totalPrice')}:
             </span>
-            <span className="text-xl font-bold text-brand-600">
+            <span className="text-xl font-bold text-neutral-900">
               €{calculateTotalPrice().toFixed(2)}
             </span>
           </div>
+            <div className="mt-4 p-3 sm:p-4 bg-brand-50 border border-brand-200 rounded-lg flex items-start gap-3">
+              <svg className="w-5 h-5 text-brand-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="text-sm text-brand-800 font-medium leading-relaxed">
+                {t('common.groupBooking.quantities.priceNote')}
+              </p>
+            </div>
         </div>
       </div>
     );
