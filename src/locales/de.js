@@ -58,6 +58,11 @@ const de = {
           carbonade: { name: 'Carbonade Flamande', desc: 'Belgischer Bierschmorbraten, mit Pommes.' },
           mussels: { name: 'Miesmuscheln', desc: 'Frische Muscheln nach belgischer Art.' },
           rabbitPrunes: { name: 'Steak', desc: 'Traditionelle belgische Steak-Spezialität.' }
+        },
+        groupBanner: {
+          title: 'Gruppe von 6 oder mehr Personen?',
+          description: 'Für Gruppen ab 6 Personen bieten wir spezielle Gruppenmenüs an. Wir tun dies aus Effizienzgründen und um die Qualität zu garantieren.',
+          button: 'Gruppenmenü ansehen'
         }
       },
       reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },

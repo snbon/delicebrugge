@@ -80,6 +80,11 @@ const en = {
             name: 'Steak',
             desc: 'Traditional Belgian steak specialty.'
           }
+        },
+        groupBanner: {
+          title: 'Group of 6 or more?',
+          description: 'For groups of 6 or more, you have the option to choose from our special group menus. We do this for efficiency and to guarantee quality.',
+          button: 'View Group Menu'
         }
       },
       reserve: {

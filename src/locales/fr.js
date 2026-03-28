@@ -64,6 +64,11 @@ const fr = {
           chickenCream: { name: 'Poulet à la crème', desc: 'Classique réconfortant à la sauce crémeuse.' },
           vegLasagne: { name: 'Lasagne végétarienne', desc: 'Légumes, tomate et fromage, gratinés.' },
           chocMousse: { name: 'Mousse au chocolat', desc: 'Mousse au chocolat belge riche et aérienne.' }
+        },
+        groupBanner: {
+          title: 'Groupe de 6 personnes ou plus ?',
+          description: 'Pour les groupes de 6 personnes ou plus, vous avez la possibilité de choisir parmi nos menus de groupe spéciaux. Nous faisons cela pour plus d\'efficacité et pour garantir la qualité.',
+          button: 'Voir le Menu de Groupe'
         }
       },
       reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },

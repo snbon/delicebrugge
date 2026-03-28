@@ -58,6 +58,11 @@ const nl = {
           carbonade: { name: 'Stoofvlees', desc: 'Belgische runderstoof met bier, geserveerd met frietjes.' },
           mussels: { name: 'Mosselen', desc: 'Verse mosselen op klassieke Belgische wijze.' },
           rabbitPrunes: { name: 'Steak', desc: 'Traditionele Belgische steak specialiteit.' }
+        },
+        groupBanner: {
+          title: 'Groep van 6 of meer?',
+          description: 'Voor groepen van 6 of meer bieden wij speciale groepsmenu\'s aan. We doen dit voor de efficiëntie en om kwaliteit te garanderen.',
+          button: 'Bekijk Groepsmenu'
         }
       },
       reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },

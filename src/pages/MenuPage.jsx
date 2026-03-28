@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { NavLink, useLocation } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Section from '../components/Section.jsx';
 import MenuCard from '../components/MenuCard.jsx';
 import menuData from '../data/menu.json';
 import SectionTabs from '../components/SectionTabs.jsx';
+import { getLanguageFromPath, buildLocalizedUrl } from '../utils/languageUtils.js';
 
 const tabs = [
   { key: 'classics', i18nKey: 'common.menu.sections.classics' },
@@ -17,6 +19,10 @@ export default function MenuPage() {
   const { i18n, t } = useTranslation();
   const [activeTab, setActiveTab] = useState('classics');
   const [menu] = useState(menuData);
+  const location = useLocation();
+
+  const currentLanguage = getLanguageFromPath(location.pathname);
+  const groupMenuUrl = buildLocalizedUrl('/groupmenu', currentLanguage);
 
   // Build menu tabs from JSON (fallback to translations if JSON missing)
   const fallbackItems = t('common.menu.items', { returnObjects: true });
@@ -103,6 +109,23 @@ export default function MenuPage() {
             </div>
           </Section>
         )}
+
+        {/* Group Banner Section */}
+        <div className="mt-12 sm:mt-16 border-t border-neutral-200 pt-12">
+          <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-6 sm:p-8 border border-neutral-200 shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 -m-6 w-24 h-24 bg-brand-50 rounded-full blur-xl opacity-50 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 -m-6 w-24 h-24 bg-brand-50 rounded-full blur-xl opacity-50 pointer-events-none"></div>
+            
+            <h2 className="display-font text-xl sm:text-2xl font-bold text-neutral-900 mb-3 relative z-10">{t('common.menu.groupBanner.title')}</h2>
+            <p className="text-neutral-600 mb-6 whitespace-pre-line text-base relative z-10">{t('common.menu.groupBanner.description')}</p>
+            <NavLink 
+              to={groupMenuUrl} 
+              className="inline-flex items-center justify-center bg-neutral-900 text-white px-6 py-2.5 text-sm rounded-full font-medium hover:bg-neutral-800 transition-colors relative z-10"
+            >
+              {t('common.menu.groupBanner.button')}
+            </NavLink>
+          </div>
+        </div>
       </div>
     </div>
   );

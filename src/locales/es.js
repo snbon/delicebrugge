@@ -58,6 +58,11 @@ const es = {
           carbonade: { name: 'Carbonade flamande', desc: 'Estofado de ternera a la cerveza belga con patatas fritas.' },
           mussels: { name: 'Mejillones', desc: 'Mejillones frescos al estilo belga.' },
           rabbitPrunes: { name: 'Bistec', desc: 'Especialidad belga tradicional.' }
+        },
+        groupBanner: {
+          title: '¿Grupo de 6 o más?',
+          description: 'Para grupos de 6 o más personas, ofrecemos menús especiales para grupos. Hacemos esto por eficiencia y para garantizar la calidad.',
+          button: 'Ver Menú de Grupo'
         }
       },
       reserve: { heading: 'Reservar mesa', intro: 'Reserva al instante con nuestro widget.' },
