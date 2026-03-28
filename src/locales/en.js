@@ -88,7 +88,7 @@ const en = {
       },
 
       deliceMenu: {
-        heading: 'Delice Menu €55.00',
+        heading: 'Delice Menu €51.00',
         perPerson: 'per person',
         chooseOne: 'choose one',
         heroDescription: 'Perfect for group bookings and special occasions. Each course offers delicious options - choose your preference.',

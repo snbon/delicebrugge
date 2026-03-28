@@ -63,7 +63,7 @@ const nl = {
       reserve: { heading: 'Reserveer een tafel', intro: 'Boek direct via onze partnerwidget.' },
 
       deliceMenu: {
-        heading: 'Delice Menu €55.00',
+        heading: 'Delice Menu €51.00',
         perPerson: 'per persoon',
         chooseOne: 'kies er één',
         heroDescription: 'Perfect voor groepsboekingen en bijzondere gelegenheden. Elke gang biedt heerlijke opties - kies uw voorkeur.',

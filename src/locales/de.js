@@ -63,7 +63,7 @@ const de = {
       reserve: { heading: 'Tisch reservieren', intro: 'Buchen Sie direkt über das Partner-Widget.' },
 
       deliceMenu: {
-        heading: 'Delice Menü €55.00',
+        heading: 'Delice Menü €51.00',
         perPerson: 'pro Person',
         chooseOne: 'wählen Sie eine',
         heroDescription: 'Ideal für Gruppenbuchungen und besondere Anlässe. Jeder Gang bietet köstliche Optionen - wählen Sie Ihre Präferenz.',

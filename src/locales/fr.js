@@ -69,7 +69,7 @@ const fr = {
       reserve: { heading: 'Réserver une table', intro: 'Réservez instantanément via notre widget partenaire.' },
 
       deliceMenu: {
-        heading: 'Menu Delice €55.00',
+        heading: 'Menu Delice €51.00',
         perPerson: 'par personne',
         chooseOne: 'choisissez-en un',
         heroDescription: 'Parfait pour les réservations de groupe et les occasions spéciales. Chaque plat offre de délicieuses options - choisissez votre préférence.',
