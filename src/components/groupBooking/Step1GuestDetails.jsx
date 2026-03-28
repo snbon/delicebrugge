@@ -78,8 +78,8 @@ export default function Step1GuestDetails({ state, dispatch, errors, onNext }) {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-      <div className="surface p-3 sm:p-4 md:p-6 lg:p-8">
+    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="surface p-4 sm:p-6 lg:p-8">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 text-center">
           {t('common.groupBooking.guestDetails.title')}
         </h2>

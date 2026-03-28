@@ -35,7 +35,7 @@ export default function Step0WelcomeMessage({ onNext }) {
                 <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0 border border-brand-100">
                   <span className="text-xl font-bold text-brand-600">1</span>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                <h3 className="text-base sm:text-lg font-semibold text-neutral-900 leading-tight">
                   {t('common.groupBooking.welcome.option1.title')}
                 </h3>
               </div>
@@ -51,7 +51,7 @@ export default function Step0WelcomeMessage({ onNext }) {
                 <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0 border border-brand-100">
                   <span className="text-xl font-bold text-brand-600">2</span>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                <h3 className="text-base sm:text-lg font-semibold text-neutral-900 leading-tight">
                   {t('common.groupBooking.welcome.option2.title')}
                 </h3>
               </div>

@@ -93,14 +93,14 @@ export default function Step6ThankYou({ state }) {
 
   const renderSummarySection = (title, children) => (
     <div className="bg-neutral-50 p-6 rounded-lg">
-      <h3 className="text-lg font-semibold text-neutral-900 mb-4">{title}</h3>
+      <h3 className="text-sm sm:text-base font-semibold text-neutral-900 mb-3">{title}</h3>
       {children}
     </div>
   );
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="surface p-8">
+    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="surface p-4 sm:p-6 lg:p-8">
         {/* Thank You Message */}
         <div className="text-center mb-8">
           <motion.div
@@ -116,7 +116,7 @@ export default function Step6ThankYou({ state }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl font-bold text-neutral-900 mb-4"
+            className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4"
           >
             {t('common.groupBooking.thankYou.title')}
           </motion.h2>
@@ -125,7 +125,7 @@ export default function Step6ThankYou({ state }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base text-neutral-600 max-w-2xl mx-auto leading-relaxed"
           >
             {t('common.groupBooking.thankYou.message')}
           </motion.p>
@@ -137,7 +137,7 @@ export default function Step6ThankYou({ state }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <h3 className="text-xl font-bold text-neutral-900 mb-6 text-center">
+          <h3 className="text-base sm:text-lg font-bold text-neutral-900 mb-6 text-center">
             {t('common.groupBooking.thankYou.summary')}
           </h3>
 
@@ -274,7 +274,7 @@ export default function Step6ThankYou({ state }) {
                 <span className="text-lg font-medium text-neutral-900">
                   Total for {state.guests} guests
                 </span>
-                <span className="text-2xl font-bold text-brand-600">
+                <span className="text-xl sm:text-2xl font-bold text-brand-600">
                   €{calculateTotalPrice().toFixed(2)}
                 </span>
               </div>

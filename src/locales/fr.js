@@ -3,7 +3,7 @@ const fr = {
     common: {
       brandName: 'Délice Brugge',
       travellersChoice: 'Travellers\' Choice 2022, 2023, 2024 & 2025',
-      nav: { home: 'Accueil', menu: 'Menu', reserve: 'Réserver', language: 'Langue' },
+      nav: { home: 'Accueil', menu: 'Menu', reserve: 'Réserver', travelGuides: 'Guides de Voyage', language: 'Langue' },
       cta: { bookNow: 'Réserver', viewMenu: 'Voir le menu' },
       address: {
         heading: 'Nous trouver',
@@ -323,6 +323,122 @@ const fr = {
         }
       },
 
+      travelGuides: {
+        heading: 'Réservation Guides de Voyage',
+        subtitle: 'Menus de groupe personnalisés pour guides de voyage & voyagistes',
+        welcome: {
+          greeting: 'Cher Guide de Voyage,',
+          description: 'Créez un menu entièrement personnalisé pour votre groupe. Choisissez les plats à inclure, sélectionnez les mets et définissez les quantités. Parfait pour les groupes de touristes qui souhaitent une expérience gastronomique sur mesure.',
+          altOption: 'Pour les groupes de moins de 10 convives, ou vous recherchez un menu prédéfini / à la carte avec des quantités fixes ?',
+          altLink: 'Aller à la Réservation de Groupe',
+          startNow: 'Commencer'
+        },
+        steps: {
+          step1: 'Plats',
+          step2: 'Mets',
+          step3: 'Quantités',
+          step4: 'Coordonnées',
+          step5: 'Récapitulatif',
+          step6: 'Confirmé'
+        },
+        courseSelection: {
+          title: 'Sélectionner les Plats',
+          subtitle: 'Choisissez les plats à inclure dans votre menu de groupe',
+          starters: 'Entrées',
+          mainCourse: 'Plat Principal',
+          desserts: 'Desserts',
+          drink: '1 Boisson au Choix (verre)',
+          mainRequired: 'Obligatoire',
+          next: 'Suivant'
+        },
+        dishSelection: {
+          title: 'Sélectionner les Mets',
+          subtitle: 'Choisissez jusqu\'à 5 mets par plat',
+          infoNote: 'Vous pouvez sélectionner jusqu\'à 5 mets différents par plat. Vous assignerez les quantités par met à l\'étape suivante.',
+          drinkSection: '1 Boisson au Choix',
+          drinkDescription: '1 verre de vin (blanc / rosé / rouge), boissons fraîches ou bière locale',
+          drinkPrice: '5,00 € par personne',
+          drinkIncluded: 'Inclus dans votre sélection',
+          next: 'Suivant',
+          sections: {
+            starters: 'Entrées',
+            vleesgerechten: 'Viandes',
+            visgerechtenMosselen: 'Poissons & Moules',
+            pasta: 'Pâtes',
+            desserts: 'Desserts'
+          }
+        },
+        quantities: {
+          title: 'Assigner les Quantités',
+          subtitle: 'Définissez le nombre de portions par met',
+          quantity: 'Quantité',
+          assigned: 'assigné(s)',
+          assignPortions: 'Assignez exactement {{guests}} portions par plat.',
+          subtotal: 'Sous-total',
+          startersSubtotal: 'Sous-total entrées',
+          mainsSubtotal: 'Sous-total plat principal',
+          dessertsSubtotal: 'Sous-total desserts',
+          drinkTotal: 'Boissons (5 € × {{guests}} convives)',
+          grandTotal: 'Total Estimé',
+          perPerson: 'par personne',
+          priceNote: 'C\'est un prix estimatif. Un acompte sera demandé pour confirmer votre réservation.',
+          next: 'Suivant'
+        },
+        userDetails: {
+          title: 'Vos Coordonnées',
+          name: 'Nom du Contact',
+          email: 'Adresse E-mail',
+          phone: 'Numéro de Téléphone',
+          date: 'Date Souhaitée',
+          time: 'Heure Souhaitée',
+          guests: 'Nombre de Convives',
+          minGuests: 'Groupes de 10 à 30 convives. Pour les petits groupes, utilisez la page Réservation de Groupe.',
+          depositAgreement: 'J\'accepte de payer un acompte par groupe et j\'accepte la politique d\'annulation (non remboursable en cas d\'annulation dans les 6 heures précédant la réservation).',
+          next: 'Suivant'
+        },
+        summary: {
+          title: 'Vérifier & Confirmer',
+          contactInfo: 'Informations de Contact',
+          bookingDetails: 'Détails de la Réservation',
+          selectedCourses: 'Plats Sélectionnés',
+          dishesQuantities: 'Mets & Quantités',
+          pricingBreakdown: 'Détail des Prix',
+          depositNote: 'Un acompte sera nécessaire pour confirmer votre réservation. Notre équipe vous contactera dans les 24 heures avec les détails de paiement.',
+          confirmAgreement: 'Je confirme que les informations ci-dessus sont correctes et je comprends qu\'un acompte sera nécessaire pour sécuriser cette réservation.',
+          submit: 'Soumettre la Réservation',
+          submitting: 'Envoi en cours...',
+          labels: {
+            name: 'Nom',
+            email: 'E-mail',
+            phone: 'Téléphone',
+            guests: 'Nombre de Convives',
+            date: 'Date',
+            time: 'Heure',
+            quantity: 'qté'
+          }
+        },
+        thankYou: {
+          title: 'Demande de Réservation Reçue !',
+          message: 'Merci pour votre demande de réservation guide de voyage. Nous avons reçu vos sélections de menu personnalisé et vous contacterons dans les 24 heures pour confirmer votre réservation.',
+          summaryTitle: 'Récapitulatif de la Réservation',
+          whatNext: 'Que se passe-t-il ensuite ?',
+          whatNextDescription: 'Notre équipe examinera votre demande de réservation et vous contactera dans les 24 heures pour confirmer votre réservation et organiser le dépôt. Veuillez vérifier votre e-mail pour les mises à jour.'
+        },
+        validation: {
+          required: 'Ce champ est obligatoire',
+          invalidEmail: 'Veuillez entrer une adresse e-mail valide',
+          minGuests: 'Groupes de 10 à 30 convives requis',
+          invalidDate: 'Veuillez sélectionner une date future',
+          closedDay: 'Nous sommes fermés le mercredi',
+          selectDishes: 'Veuillez sélectionner au moins 1 met pour ce plat',
+          maxDishes: 'Vous pouvez sélectionner maximum 5 mets par plat',
+          quantitiesMismatch: 'Les quantités totales doivent être égales à {{guests}} (nombre total de convives)',
+          agreementRequired: 'Vous devez accepter les conditions pour continuer'
+        },
+        navigation: {
+          back: 'Retour'
+        }
+      },
       footer: { rights: 'Tous droits réservés.', btw: 'TVA' }
     }
   }

@@ -7,6 +7,7 @@ const en = {
         home: 'Home',
         menu: 'Menu',
         reserve: 'Reserve',
+        travelGuides: 'Travel Guides',
         language: 'Language'
       },
       cta: {
@@ -339,6 +340,122 @@ const en = {
           selectDishes: 'Please select the required number of dishes',
           quantitiesMismatch: 'Total quantities must equal total guest count',
           agreementRequired: 'You must agree to the terms to continue'
+        }
+      },
+      travelGuides: {
+        heading: 'Travel Guides Booking',
+        subtitle: 'Custom group menus for travel guides & tour operators',
+        welcome: {
+          greeting: 'Dear Travel Guide,',
+          description: 'Create a fully custom menu for your group. Select the courses you want to include, choose dishes, and set quantities. Perfect for tour groups who want a tailored dining experience.',
+          altOption: 'For groups under 10 guests, or looking for a preset menu / à la carte with fixed quantities?',
+          altLink: 'Go to Group Booking instead',
+          startNow: 'Start Now'
+        },
+        steps: {
+          step1: 'Courses',
+          step2: 'Dishes',
+          step3: 'Quantities',
+          step4: 'Details',
+          step5: 'Summary',
+          step6: 'Confirmed'
+        },
+        courseSelection: {
+          title: 'Select Courses',
+          subtitle: 'Choose which courses to include in your group menu',
+          starters: 'Starters',
+          mainCourse: 'Main Course',
+          desserts: 'Desserts',
+          drink: '1 Drink of Choice (glass)',
+          mainRequired: 'Required',
+          next: 'Next'
+        },
+        dishSelection: {
+          title: 'Select Dishes',
+          subtitle: 'Choose up to 5 dishes per course',
+          infoNote: 'You can select up to 5 different dishes per course. You will assign quantities per dish in the next step.',
+          drinkSection: '1 Drink of Choice',
+          drinkDescription: '1 glass of wine (white / rosé / red), cold drinks, or local beer',
+          drinkPrice: '€5.00 per person',
+          drinkIncluded: 'Included in your selection',
+          next: 'Next',
+          sections: {
+            starters: 'Starters',
+            vleesgerechten: 'Meat Dishes',
+            visgerechtenMosselen: 'Fish & Mussels',
+            pasta: 'Pasta',
+            desserts: 'Desserts'
+          }
+        },
+        quantities: {
+          title: 'Assign Quantities',
+          subtitle: 'Assign the number of portions for each dish',
+          quantity: 'Quantity',
+          assigned: 'assigned',
+          assignPortions: 'Assign exactly {{guests}} portions per course.',
+          subtotal: 'Subtotal',
+          startersSubtotal: 'Starters subtotal',
+          mainsSubtotal: 'Main course subtotal',
+          dessertsSubtotal: 'Desserts subtotal',
+          drinkTotal: 'Drinks (€5 × {{guests}} guests)',
+          grandTotal: 'Estimated Total',
+          perPerson: 'per person',
+          priceNote: 'This is an estimated price. A deposit will be requested to confirm your booking.',
+          next: 'Next'
+        },
+        userDetails: {
+          title: 'Your Details',
+          name: 'Contact Name',
+          email: 'Email Address',
+          phone: 'Phone Number',
+          date: 'Preferred Date',
+          time: 'Preferred Time',
+          guests: 'Number of Guests',
+          minGuests: 'Groups of 10 to 30 guests. For smaller groups, use the Group Booking page.',
+          depositAgreement: 'I agree to pay a deposit per group and accept the cancellation policy (non-refundable if cancelled within 6 hours before reservation).',
+          next: 'Next'
+        },
+        summary: {
+          title: 'Review & Confirm',
+          contactInfo: 'Contact Information',
+          bookingDetails: 'Booking Details',
+          selectedCourses: 'Selected Courses',
+          dishesQuantities: 'Dishes & Quantities',
+          pricingBreakdown: 'Pricing Breakdown',
+          depositNote: 'A deposit will be required to confirm your reservation. Our team will contact you with payment details within 24 hours.',
+          confirmAgreement: 'I confirm that the above details are correct and understand that a deposit will be required to secure this booking.',
+          submit: 'Submit Booking',
+          submitting: 'Submitting...',
+          labels: {
+            name: 'Name',
+            email: 'Email',
+            phone: 'Phone',
+            guests: 'Number of Guests',
+            date: 'Date',
+            time: 'Time',
+            quantity: 'qty'
+          }
+        },
+        thankYou: {
+          title: 'Booking Request Received!',
+          message: 'Thank you for your travel guide booking request. We have received your custom menu selections and will contact you within 24 hours to confirm your reservation.',
+          summaryTitle: 'Booking Summary',
+          whatNext: 'What happens next?',
+          whatNextDescription: 'Our team will review your booking request and contact you within 24 hours to confirm your reservation and arrange the deposit. Please check your email for updates.'
+        },
+        validation: {
+          required: 'This field is required',
+          invalidEmail: 'Please enter a valid email address',
+          minGuests: 'Groups of 10 to 30 guests required',
+          invalidDate: 'Please select a future date',
+          closedDay: 'We are closed on Wednesdays',
+          selectDishes: 'Please select at least 1 dish for this course',
+          maxDishes: 'You can select a maximum of 5 dishes per course',
+          quantitiesMismatch: 'Total quantities must equal {{guests}} (total guest count)',
+          agreementRequired: 'You must agree to the terms to continue'
+        },
+        navigation: {
+          back: 'Back'
         }
       },
       footer: {

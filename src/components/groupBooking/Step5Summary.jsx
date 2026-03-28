@@ -142,15 +142,15 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
 
   const renderSummarySection = (title, children) => (
     <div className="bg-neutral-50 p-6 rounded-lg">
-      <h3 className="text-lg font-semibold text-neutral-900 mb-4">{title}</h3>
+      <h3 className="text-sm sm:text-base font-semibold text-neutral-900 mb-3">{title}</h3>
       {children}
     </div>
   );
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="surface p-8">
-        <h2 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="surface p-4 sm:p-6 lg:p-8">
+        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-6 text-center">
           {t('common.groupBooking.summary.title')}
         </h2>
 
@@ -236,7 +236,7 @@ export default function Step5Summary({ state, dispatch, errors, onNext, onBack, 
           {state.menuOption === 'groupMenu' && renderSummarySection(t('common.groupBooking.summary.totalPrice'), (
             <div className="space-y-3">
               <div className="flex justify-end">
-                <span className="text-2xl font-bold text-brand-600">
+                <span className="text-xl sm:text-2xl font-bold text-brand-600">
                   €{calculateTotalPrice().toFixed(2)}
                 </span>
               </div>
