@@ -1,14 +1,21 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import { NavLink } from 'react-router-dom';
 import Hero from '../components/Hero.jsx';
 import Section from '../components/Section.jsx';
 import MenuCard from '../components/MenuCard.jsx';
 import GalleryCarousel from '../components/GalleryCarousel.jsx';
+import { getLanguageFromPath, buildLocalizedUrl } from '../utils/languageUtils.js';
 
 export default function HomePage() {
   const { t } = useTranslation();
+  const location = useLocation();
+  
+  // Get current language and build localized URLs
+  const currentLanguage = getLanguageFromPath(location.pathname);
+  const reserveUrl = buildLocalizedUrl('/reserve', currentLanguage);
 
   return (
     <div className="overflow-x-hidden">
@@ -17,7 +24,7 @@ export default function HomePage() {
 
       <Section title={t('common.about.heading')} muted>
         <div className="surface-soft p-6 sm:p-8">
-          <div className="typography max-w-3xl">
+          <div className="typography">
             <p>{t('common.about.copy')}</p>
             <p>{t('common.about.extraSeo')}</p>
           </div>
@@ -56,7 +63,7 @@ export default function HomePage() {
             <div className="display-font text-2xl text-neutral-900">{t('common.home.ctaHeading')}</div>
             <div className="text-neutral-700 mt-1">{t('common.home.ctaSub')}</div>
           </div>
-          <NavLink to="/reserve" className="btn-primary w-full sm:w-auto text-center">{t('common.cta.bookNow')}</NavLink>
+          <NavLink to={reserveUrl} className="btn-primary w-full sm:w-auto text-center">{t('common.cta.bookNow')}</NavLink>
         </div>
       </Section>
 

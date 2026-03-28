@@ -1,10 +1,18 @@
 import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import heroImage from '../assets/delicebrugge-tagliatellekip.JPG';
+import { getLanguageFromPath, buildLocalizedUrl } from '../utils/languageUtils.js';
 
 export default function Hero() {
   const { t } = useTranslation();
+  const location = useLocation();
+  
+  // Get current language and build localized URLs
+  const currentLanguage = getLanguageFromPath(location.pathname);
+  const reserveUrl = buildLocalizedUrl('/reserve', currentLanguage);
+  const menuUrl = buildLocalizedUrl('/menu', currentLanguage);
+  
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -35,8 +43,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 flex items-center gap-3"
           >
-            <NavLink className="btn-primary" to="/reserve">{t('common.cta.bookNow')}</NavLink>
-            <NavLink className="btn-secondary" to="/menu">{t('common.cta.viewMenu')}</NavLink>
+            <NavLink className="btn-primary" to={reserveUrl}>{t('common.cta.bookNow')}</NavLink>
+            <NavLink className="btn-secondary" to={menuUrl}>{t('common.cta.viewMenu')}</NavLink>
           </motion.div>
           <div className="mt-6 text-sm text-neutral-200">{t('common.travellersChoice')}</div>
         </div>

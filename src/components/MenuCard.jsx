@@ -8,7 +8,7 @@ export default function MenuCard({ title, description, price, currency = '€' }
             <div className="ml-auto text-sm font-semibold text-neutral-900 tabular-nums">{currency}{Number(price).toFixed(2)}</div>
           )}
         </div>
-        <div className="mt-1 text-sm text-neutral-700 leading-relaxed">{description}</div>
+        <div className="mt-1 text-sm text-neutral-700 leading-relaxed whitespace-pre-line">{description}</div>
       </div>
     </div>
   );
