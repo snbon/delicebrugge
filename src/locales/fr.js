@@ -439,6 +439,11 @@ const fr = {
           back: 'Retour'
         }
       },
+      notFound: {
+        heading: '404 – Page introuvable',
+        body: "La page que vous recherchez n'existe pas.",
+        cta: "Retour à l'accueil"
+      },
       footer: { rights: 'Tous droits réservés.', btw: 'TVA' }
     }
   }

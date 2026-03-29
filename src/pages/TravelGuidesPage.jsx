@@ -13,6 +13,7 @@ import TGStep5Summary from '../components/travelGuides/TGStep5Summary.jsx';
 import TGStep6ThankYou from '../components/travelGuides/TGStep6ThankYou.jsx';
 import menuData from '../data/menu.json';
 
+
 const initialState = {
   // Step 1: Course selection
   selectedCourses: {

@@ -432,6 +432,11 @@ const es = {
           back: 'Atrás'
         }
       },
+      notFound: {
+        heading: '404 – Página no encontrada',
+        body: 'La página que buscas no existe.',
+        cta: 'Volver al inicio'
+      },
       footer: { rights: 'Todos los derechos reservados.', btw: 'IVA' }
     }
   }

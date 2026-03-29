@@ -427,6 +427,11 @@ const nl = {
           back: 'Terug'
         }
       },
+      notFound: {
+        heading: '404 – Pagina niet gevonden',
+        body: 'De pagina die je zoekt bestaat niet.',
+        cta: 'Terug naar huis'
+      },
       footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' }
     }
   }

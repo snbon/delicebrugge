@@ -458,6 +458,11 @@ const en = {
           back: 'Back'
         }
       },
+      notFound: {
+        heading: '404 – Page not found',
+        body: "The page you're looking for doesn't exist.",
+        cta: 'Back to home'
+      },
       footer: {
         rights: 'All rights reserved.',
         btw: 'VAT'

@@ -8,6 +8,7 @@ import ReservePage from './pages/ReservePage.jsx';
 import GroupMenuPage from './pages/GroupMenuPage.jsx';
 import GroupBookingPage from './pages/GroupBookingPage.jsx';
 import TravelGuidesPage from './pages/TravelGuidesPage.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, getLanguageFromPath, getPathWithoutLanguage, buildLocalizedUrl } from './utils/languageUtils.js';
 import './App.css';
 
@@ -228,7 +229,8 @@ function App() {
             <Route path="/reserve" element={<ReservePage />} />
             <Route path="/groupmenu/:optionId?" element={<GroupMenuPage />} />
             <Route path="/group-booking" element={<GroupBookingPage />} />
-            <Route path="/travelguides" element={<TravelGuidesPage />} />
+            {/* TODO: reactivate TravelGuidesPage — replace <NotFoundPage /> with <TravelGuidesPage /> */}
+            <Route path="/travelguides" element={<NotFoundPage />} />
 
             {/* Localized routes for other languages */}
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
@@ -255,9 +257,12 @@ function App() {
               <Route key={language} path={`/${language}/group-booking`} element={<GroupBookingPage />} />
             ))}
 
+            {/* TODO: reactivate TravelGuidesPage — replace <NotFoundPage /> with <TravelGuidesPage /> */}
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
-              <Route key={language} path={`/${language}/travelguides`} element={<TravelGuidesPage />} />
+              <Route key={language} path={`/${language}/travelguides`} element={<NotFoundPage />} />
             ))}
+
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </motion.div>
       </main>

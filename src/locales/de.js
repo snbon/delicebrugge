@@ -433,6 +433,11 @@ const de = {
           back: 'Zurück'
         }
       },
+      notFound: {
+        heading: '404 – Seite nicht gefunden',
+        body: 'Die gesuchte Seite existiert nicht.',
+        cta: 'Zurück zur Startseite'
+      },
       footer: { rights: 'Alle Rechte vorbehalten.', btw: 'MwSt.' }
     }
   }
