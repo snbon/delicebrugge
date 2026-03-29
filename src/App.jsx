@@ -227,6 +227,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/reserve" element={<ReservePage />} />
+            {/* BookingNinja widget pushes /booknow to the URL bar — redirect back to /reserve */}
+            <Route path="/booknow" element={<Navigate to="/reserve" replace />} />
             <Route path="/groupmenu/:optionId?" element={<GroupMenuPage />} />
             <Route path="/group-booking" element={<GroupBookingPage />} />
             {/* TODO: reactivate TravelGuidesPage — replace <NotFoundPage /> with <TravelGuidesPage /> */}
@@ -247,7 +249,11 @@ function App() {
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
               <Route key={language} path={`/${language}/reserve`} element={<ReservePage />} />
-            ))} 
+            ))}
+            {/* FIX: Current fallback is BookingNinja widget pushes /booknow — redirect back to /{lang}/reserve */}
+            {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
+              <Route key={language} path={`/${language}/booknow`} element={<Navigate to={`/${language}/reserve`} replace />} />
+            ))}
             
             {SUPPORTED_LANGUAGES.filter(lang => lang !== DEFAULT_LANGUAGE).map(language => (
               <Route key={language} path={`/${language}/groupmenu/:optionId?`} element={<GroupMenuPage />} />
