@@ -100,7 +100,7 @@ export default function Header({ transparent = false }) {
     }`}>
       <div className="container-responsive h-14 flex items-center justify-between">
         <NavLink to={homeUrl} className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <img src="/logodelice.png" alt={t('common.brandName')} className="h-11 md:h-15 lg:h-18 w-auto" />
+          <img src="/logodelice.png" alt={t('common.brandName')} className="h-12 md:h-20 lg:h-25 w-auto" />
           <span className="sr-only">{t('common.brandName')}</span>
         </NavLink>
         <nav className="flex items-center gap-4">
